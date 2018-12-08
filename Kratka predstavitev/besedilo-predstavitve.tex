@@ -1,0 +1,143 @@
+\documentclass[a4paper,9pt]{article}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\newtheorem{izrek}{Izrek}
+\newtheorem{trditev}{Trditev}
+\newtheorem{pripomba}{Pripomba}
+\newtheorem{definicija}{Definicija}
+\newtheorem{primer}{Primer}
+
+
+\begin{document}
+
+Kako je sploh prišlo do Fareyevega zaporedja? V Londonu je v 18. stoletju izhajal zbornik ``The Ladies Diary: or, the Woman's Almanack'', ki je povezoval ljubitelje matematičnih ugank. Leta 1747 se je v njem pojavilo naslednje vprašanje: Najti je potrebno število ulomkov različnih vrednosti, manjših od 1, katerih imenovalec ni večji od 100. Z drugimi besedami, iščemo okrajšane ulomke na [0,1] z imenovalcem $\leq100$. Leta 1751 je R. Flitcon objavil pravilni odgovor 3003. Ulomki so bili vedno bolj zanimivi; v času francoske revolucije, ko so prehajali na desetiški sistem, so bile sestavljene številne tabele za pretvarjanje med ulomki in decimalnim zapisom. Znana avtorja sta Charles Haros in Henry Goodwyn, ki sta neodvisno zapisala vse okrajšane ulomke na [0,1] z imenovalci, manjšimi od določenega števila. Angleški geolog John Farey je verjetno na podlagi njunih ugotovitev 1816. leta objavil seznam ulomkov z nekaterimi lastnostmi, zato zaporedje danes nosi njegovo ime.
+
+\begin{definicija}
+Fareyevo zaporedje reda n oz.\ n-to Fareyevo zaporedje je množica racionalnih števil $\frac{p}{q}$ urejenih po velikosti, kjer sta $p$ in $q$ tuji si števili, ter velja $0 \leq p \leq q \leq n$. Označimo ga z $F_n$.
+
+Ekvivalentno, $F_n$ vsebuje vse okrajšane ulomke med 0 in 1 z imenovalci, kvečjemu enakimi $n$.
+\end{definicija}
+
+\begin{primer}
+\(F_1 = \{\frac{0}{1}, \frac{1}{1}\} \)
+
+\(F_2 = \{\frac{0}{1}, \frac{1}{2}, \frac{1}{1}\} \)
+
+\(F_3 = \{\frac{0}{1}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{1}{1}\} \)
+
+\(F_4 = \{\frac{0}{1}, \frac{1}{4}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{1}{1}\} \)
+
+\(F_5 = \{\frac{0}{1}, \frac{1}{5}, \frac{1}{4}, \frac{1}{3}, \frac{2}{5}, \frac{1}{2}, \frac{3}{5}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{1}{1}\} \)
+\end{primer}
+
+Sosednja člena v Fareyevem zaporedju imenujemo Fareyeva soseda.
+
+\begin{definicija}
+Naj bosta $\frac{a}{b}$ in $\frac{c}{d}$ sosednja člena nekega Fareyevega zaporedja. Člen \[\frac{a+c}{b+d} \] imenujemo medianta.
+\end{definicija}
+
+S kratkim računom lahko pokažemo, da je medianta okrajšan ulomek in da leži med prvotnima ulomkoma.
+ \(\frac{a}{b} < \frac{c}{d}\) velja  \(\frac{a}{b} < \frac{a+c}{b+d} < \frac{c}{d}\) .
+
+\begin{trditev}
+Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). $\frac{a}{b}$ in $\frac{c}{d}$ sta Fareyeva soseda v $F_n$ natanko tedaj, ko velja \(bc - ad = 1\).
+\end{trditev}
+
+Spomnimo se, da se preslikava \( \varphi \colon \mathbb{N} \rightarrow  \mathbb{N}\), ki za vsako naravno število $n$ prešteje števila, tuja $n$, imenuje Eulerjeva funkcija $\varphi$.
+
+\begin{definicija}
+Naj bo $\varphi(n)$ Eulerjeva funkcija. Dolžina Fareyevega zaporedja je
+\[  |F_{n}| = |F_{n-1}| + \varphi(n). \]
+\end{definicija}
+
+\begin{trditev}
+Asimptotično se dolžina Fareyevega zaporedja obnaša kot
+\[  |F_{n}|\sim\frac{3n^2}{\pi^2}. \]
+\end{trditev}
+
+Z mediantami iz danega Fareyevega zaporedja dobivamo nove člene in zaporedja višjih redov, zato z zaporedjem konstruiramo vsa $\mathbb{Q}$ na [0,1]. Če dodamo še ulomek $\frac{1}{0}$, ki predsatvlja $\infty$, $\mathbb{Q}$ razširimo na celotno realno os. Z zaporedji $\mathbb{Q}$ lahko aproksimiramo $\mathbb{R}\backslash\mathbb{Q}$. Npr. Fibonaccijevo zaporedje dobimo kot RLRLRL\ldots (Stern-Brocotovo drevo).
+
+\begin{definicija}
+Zaporedje Fibonaccijevih ulomkov definiramo kot
+\[ \frac{1}{2}, \frac{1}{3}, \frac{2}{5}, \frac{3}{8}, \dots , \frac{\varphi_m}{\varphi_{m+2}}, \dots \]
+\end{definicija}
+
+\begin{trditev}
+Sosednja Fibonaccijeva ulomka sta Fareyeva soseda.
+\end{trditev}
+
+\begin{definicija}
+Fordov krog C($\frac{p}{q}$) je krog v zgornji polravnini, ki se abscisne osi dotika v točki $\frac{p}{q}$ in ima polmer $\frac{1}{2q^2}$. Pri tem sta p in q tuji si števili. 
+\end{definicija}
+
+Množica Fordovih krogov je v bijekciji z $F_{n}$. S pomočjo lastnosti Fareyevega zaporedja lahko dokažemo nekatere geometrijske lastnosti Fordovih krogov.
+
+Ukvarjala se bom še z Riemannovo hipotezo, ki je znana tudi kot 8. Hilbertov problem (skupaj s praštevilskimi dvojčki in Goldbachovo domnevo). Imenovana je po Bernhardu Riemannu, ki ga je zanimalo obnašanje velikih praštevil.
+
+\begin{definicija}
+Riemannova funkcija zeta je za
+ $s\in\mathbb{C}\backslash\{1\}$
+definirana kot
+\[ \zeta(s) = \sum_{n=1}^{\infty}\frac{1}{n^s}, \]
+\end{definicija}
+
+kar je ekvivalentno Eulerjevi formuli
+\[ \zeta(s) = \prod_{p}\frac{1}{1-p^{-s}}=\frac{1}{1-2^{-s}}\cdot\frac{1}{1-3^{-s}}\cdot\frac{1}{1-5^{-s}}\cdots \]
+Funkcija absolutno konvergira za vse $s$, $Re(s)>1$ in je meromorfna. Njene trivialne ničle so -2, -4, -6 \ldots (Bernoullijevi polinomi).
+
+Riemannova hipoteza: Vse netrivialne ničle Riemannove funkcije zeta ležijo na premici $s=\frac{1}{2}+it$.
+
+\begin{definicija}
+M\"obiusova funkcija je definirana kot
+\[
+\mu(k) = \left\{
+\begin{array}{rl}
+0 & ;\ \mbox{razcep k na prafaktorje vsebuje kvadrat}\\
+(-1)^p & ;\  \mbox{k je produkt p različnih praštevil.}
+\end{array}
+\right.
+\]
+\end{definicija}
+
+\begin{primer}
+\[ \mu(1)=1 \]
+\[ \mu(2)=(-1)^{1}=-1 \]
+\[ \mu(4)=\mu(2^{2})=0 \]
+\[ \mu(6)=\mu(2\cdot3)=(-1)^{2}=1 \]
+\end{primer}
+
+\begin{definicija}
+Mertensova funkcija je definirana kot
+\[ M(n)=\sum_{k\leq n}\mu(k).\]
+\end{definicija}
+
+\begin{primer}
+\[ M(2)=\mu(1)+\mu(2)=1+(-1)=0 \]
+\[ M(3)=\mu(1)+\mu(2)+\mu(3)=1+(-1)+(-1)=-1 \]
+\end{primer}
+
+\begin{definicija}
+Naj bosta $L(n)$ dolžina Fareyevega zaporedja $F_{n}$ in $r_{v}$ njegov v-ti element. Definiramo razliko
+\[ \delta_{v}= r_{v}-v/L(n). \]
+\end{definicija}
+
+\begin{primer}
+\[ F_5 = \{\frac{0}{1}, \frac{1}{5}, \frac{1}{4}, \frac{1}{3}, \frac{2}{5}, \frac{1}{2}, \frac{3}{5}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{1}{1}\} \]
+\[ L(5) = 11 \]
+\[ \delta_{1} = \frac{0}{1} - \frac{1}{11} = -\frac{1}{11} \]
+\[ \delta_{2} = \frac{1}{5} - \frac{2}{11} = \frac{1}{55} \]
+\end{primer}
+
+
+Vemo, da je Riemannova hipoteza ekvivalnetna desni strani, tj., da je rast Mertensove funkcije omejena s funkcijo $n^{1/2+\varepsilon}$ za vsak $\varepsilon > 0$. V nalogi bom dokazala zgornjo ekvivalenco, kar pomeni, da je Riemannova hipoteza ekvivalentna problemu s Fareyevim zaporedjem.
+Za vsak $\varepsilon > 0$ 
+\[ \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) \iff M(n) = o(n^{1/2+\varepsilon}). \]
+
+To je približen okvir moje diplomske naloge. Če bo dopuščal čas, se bom posvetila še algebraičnim in geometrijskim dokazom lastnosti Fordovih krogov.
+
+\end{document}
