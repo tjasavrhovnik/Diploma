@@ -70,7 +70,7 @@ Vrnimo se k v uvodu omenjeni nalogi o številu ulomkov različnih vrednosti, man
 % Eulerjeva funkcija
 
 \begin{definicija}
-Preslikava \( \varphi \colon \mathbb{N} \rightarrow  \mathbb{N}\), ki za vsako naravno število $n$ prešteje števila, tuja $n$, se imenuje Eulerjeva funkcija $\varphi$.
+Preslikava \( \varphi \colon \mathbb{N} \rightarrow  \mathbb{N}\), ki za vsako naravno število $n$ prešteje števila, manjša od $n$, ki so $n$ tuja, se imenuje Eulerjeva funkcija $\varphi$.
 \end{definicija}
 
 \begin{trditev}
@@ -188,14 +188,52 @@ To pomeni, da $b + d$ in $a + c$ nimata skupnega faktorja, zato je ulomek $\frac
 
 Flitconova metoda za izračun števila okrajšanih ulomkov nas pripelje do naslednje rekurzivne definicije dolžine Fareyeva zaporedja.
 
-\begin{definicija}
+\begin{trditev}
 Naj bo $\varphi(n)$ Eulerjeva funkcija. Dolžina Fareyevega zaporedja je
 \[  |F_{n}| = |F_{n-1}| + \varphi(n). \]
-\end{definicija}
+\end{trditev}
 
 \begin{opomba}
-Z upoštevanjem vrednosti $|F_{1}| = 2$ iz definicije sledi \[  |F_{n}| = \sum_{i=1}^n \varphi(i) + 1. \]
+Z upoštevanjem vrednosti $|F_{1}| = 2$ iz zgornje trditve sledi \[  |F_{n}| = \sum_{i=1}^n \varphi(i) + 1. \]
 \end{opomba}
+
+\begin{trditev}
+Asimptotično se dolžina Fareyevega zaporedja obnaša kot
+\[  |F_{n}|\sim\frac{3n^2}{\pi^2}. \]
+\end{trditev}
+
+\begin{dokaz}
+Asimptotično obnašanje bomo izračunali s pomočjo ocene vrednosti vsote \( \sum_{i=1}^n \varphi(i) \).
+Spomnimo se, da je \[ \varphi(n) = n \prod_{p|n} (1 - \frac{1}{p}) = n - \sum \frac{n}{p} + \sum \frac{n}{pp'} - \cdots , \]
+kjer so $p$, $p'$ praštevilski delitelji števila $n$.  Z upoštevanjem M\"obiusove funkcije je zadnja vsota enaka
+\[ \varphi(n) = n \sum_{d|n} \frac{\mu(d)}{d} .\]
+Sedaj računajmo vsoto 
+
+\begin{align*}
+\sum_{i=1}^n \varphi(i)
+  &= \sum_{i=1}^n i \sum_{d|i} \frac{\mu(d)}{d} = \sum_{dd'\leq n}d' \mu(d) = 
+    \sum_{d=1}^n \mu(d) \sum_{d'=1}^{\lfloor \frac{n}{d} \rfloor} d' \\
+  &= \frac{1}{2} \sum_{d=1}^{n} \mu(d) (\lfloor \frac{n}{d} \rfloor ^2 + \lfloor \frac{n}{d} \rfloor) =
+    \frac{1}{2} \sum_{d=1}^{n} \mu(d) (\frac{n^2}{d^2} + O(\frac{n}{d})) \\
+  &= \frac{1}{2}n^2 \sum_{d=1}^{n} \frac{\mu(d)}{d^2} + O(n \sum_{d=1}^{n} \frac{1}{d}) \\
+  &\stackrel{(1)}{=} \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} - \frac{1}{2}n^2 \sum_{d=n+1}^{\infty} \frac{\mu(d)}{d^2} + O(n \ln{n}) \\
+  &= \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} + O(n^2\sum_{d=n+1}^{\infty} \frac{1}{d^2}) + O(n \ln{n}) \\
+  & \stackrel{(2)}{=} \frac{n^2}{2 \zeta(2)} + O(n) + O(n \ln{n}) \stackrel{(3)}{=} \frac{3n^2}{\pi^2} + O(n \ln{n})
+\end{align*}
+
+V enakosti (1) smo zadnji sumand ocenili navzgor s pomočjo Taylorjevega razvoja funkcije $\ln$
+\[ \ln{(1+x)} = \sum_{n=1}^{\infty} (-1)^{n+1} \frac{x^n}{n}.\]
+
+V enakosti (2) smo uporabili naslednjo oceno:
+\[ n^2 \sum_{d=n+1}^{\infty} \frac{1}{d^2} \leq n^2 \sum_{d=n+1}^{\infty} \frac{1}{d(d-1)} = 
+n^2 \sum_{d=n+1}^{\infty} (- \frac{1}{d} + \frac{1}{d-1}) = n^2 \frac{1}{n} = n.\]
+
+V enakosti (3) smo za izračun funkcije $\zeta(2)$ uporabili znano vrednost
+\[ \zeta(2) = \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.\]
+
+Po opombi nad trditvijo sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
+ 
+\end{dokaz}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
