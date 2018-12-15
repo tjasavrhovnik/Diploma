@@ -74,6 +74,7 @@ Preslikava \( \varphi \colon \mathbb{N} \rightarrow  \mathbb{N}\), ki za vsako n
 \end{definicija}
 
 \begin{trditev}
+\label{trd:MultipEuler}
 Če sta $k$ in $l$ tuji si števili, velja $\varphi (kl) = \varphi (k) \varphi (l)$, torej je Eulerjeva funkcija multiplikativna.
 \end{trditev}
 
@@ -88,21 +89,23 @@ s čimer je multiplikativnost dokazana.
 \end{dokaz}
 
 \begin{trditev}
-\[ \varphi(n) = n \prod_{p|n} (1 - \frac{1}{p}), \] kjer so $p$ prafaktorji števila $n$.
+\label{trd:EulerPrastProd}
+\[ \varphi(n) = n \prod_{p|n} \left (1 - \frac{1}{p} \right ), \] kjer so $p$ prafaktorji števila $n$.
 \end{trditev}
 
 \begin{dokaz}
 Zapišimo $n$ kot produkt prafaktorjev, \( n = \prod_{i=1}^m p_i^{r_i}, r_i \in \mathbb{N}, p_i \in \mathbb{P} \) $\forall i$.
 $\varphi(p^{r})$ prešteje vsa števila, manjša od $p^r$, ki so tuja $p^r$. To so natanko tista, ki niso deljiva s praštevilom $p$. Večkratnikov $p$ med števili $1, 2, \ldots, p^r-1$ je toliko kot večkratnikov $p$ med števili $1, 2, \ldots, p^r$, teh pa je \( \frac{p^r}{p} = p^{r-1}. \)
-Torej je \[ \varphi(p^r) = (p^r - 1) - (p^{r-1} - 1) = p^r - p^{r-1} = p^r(1 - \frac{1}{p}). \] 
+Torej je \[ \varphi(p^r) = (p^r - 1) - (p^{r-1} - 1) = p^r - p^{r-1} = p^r \left (1 - \frac{1}{p} \right). \] 
 Z upoštevanjem multiplikativnosti funkcije $\varphi$ dobimo
 
-\begin{equation}
-\begin{split}
- \varphi(n) & = \varphi(\prod_{i=1}^m p_i^{r_i}) = \prod_{i=1}^m \varphi(p_i^{r_i}) = \prod_{i=1}^m p_i^{r_i}(1 - \frac{1}{p_i}) \\
-& = \prod_{i=1}^m p_i^{r_i} \times \prod_{i=1}^m (1 - \frac{1}{p_i}) = n \prod_{i=1}^m (1 - \frac{1}{p_i}) = n \prod_{p|n} (1 - \frac{1}{p}).
-\end{split}
-\end{equation}
+\begin{align*}
+ \varphi(n) 
+ &= \varphi \left (\prod_{i=1}^m p_i^{r_i} \right ) = \prod_{i=1}^m \varphi (p_i^{r_i} ) = 
+ \prod_{i=1}^m p_i^{r_i} \left (1 - \frac{1}{p_i} \right ) \\
+ &= \prod_{i=1}^m p_i^{r_i} \times \prod_{i=1}^m \left (1 - \frac{1}{p_i} \right ) = 
+ n \prod_{i=1}^m \left (1 - \frac{1}{p_i} \right ) = n \prod_{p|n} \left (1 - \frac{1}{p} \right ).
+\end{align*}
 
 \end{dokaz}
 
@@ -112,7 +115,7 @@ Z upoštevanjem multiplikativnosti funkcije $\varphi$ dobimo
 Obstajajo 3003 racionalna števila $\frac{p}{q}, 0 < \frac{p}{q} < 1$ s $q \leq 100$.
 \end{trditev}
 
-Namesto formalnega dokaza trditve bomo predstavili Flitconovo rešitev. Naredimo tabelo s tremi stolpci in 99 vrsticami. V prvi stolpec vsake vrstice napišemo po eno izmed naravnih števil od 2 do 100. V drugi stolpec posamezne vrstice zapišemo naravno število iz prvega stolpca kot produkt prafaktorjev, v tretji stolpec pa vrednost $\varphi(n)$. Pomagamo si s TRDITEV 2.2, 2.3. Vsota vrednosti v tretjem stolpcu nam da število iskanih ulomkov. Res, vsak $\varphi(n)$ nam pove število okrajšanih ulomkov med 0 in 1 z imenovalcem $n$, vsota Eulerjevih funkcij pa število vseh okrajšanih ulomkov med 0 in 1 z imenovalci med 2 in 100. \footnote{Čeprav Flitcon ne omenja Eulerjeve funkcije $\varphi(n)$, je uporabil njene lastnosti v svoji matematično manj formalni metodi.}
+Namesto formalnega dokaza trditve bomo predstavili Flitconovo rešitev. Naredimo tabelo s tremi stolpci in 99 vrsticami. V prvi stolpec vsake vrstice napišemo po eno izmed naravnih števil od 2 do 100. V drugi stolpec posamezne vrstice zapišemo naravno število iz prvega stolpca kot produkt prafaktorjev, v tretji stolpec pa vrednost $\varphi(n)$. Pomagamo si s trditvama~\ref{trd:MultipEuler} in \ref{trd:EulerPrastProd}. Vsota vrednosti v tretjem stolpcu nam da število iskanih ulomkov. Res, vsak $\varphi(n)$ nam pove število okrajšanih ulomkov med 0 in 1 z imenovalcem $n$, vsota Eulerjevih funkcij pa število vseh okrajšanih ulomkov med 0 in 1 z imenovalci med 2 in 100. \footnote{Čeprav Flitcon ne omenja Eulerjeve funkcije $\varphi(n)$, je uporabil njene lastnosti v svoji matematično manj formalni metodi.}
 
 Neodvisno od Flitconove rešitve je francoski matematik Charles Haros leta 1802 sestavil enak seznam ulomkov, vendar na precej zaneslivejši način. Haros se dela ni lotil z željo po reševanju aritmetične naloge, pač pa je pisal tabele za pretvarjanje med ulomki in decimalnim zapisom ter obratno. V Franciji so namreč v času revolucije konec 18. stoletja uvajali nov metrični sistem, ki je med drugim zahteval uporabo decimalnega zapisa. Tabele so bile objavljene v \emph{Journal de l'Ecole Polytechnique}, primerom ter algoritmom za pretvarjanje pa so bile dodane skice dokazov in nekatere lastnosti zaporedja ulomkov, ki so kasneje postali znani pod imenom Fareyevo zaporedje. 
 
@@ -128,15 +131,15 @@ Ekvivalentno, $F_n$ vsebuje vse okrajšane ulomke med 0 in 1 z imenovalci, kveč
 \end{definicija}
 
 \begin{primer}
-\(F_1 = \{\frac{0}{1}, \frac{1}{1}\} \)
+\(F_1 = \left \{\frac{0}{1}, \frac{1}{1} \right \} \)
 
-\(F_2 = \{\frac{0}{1}, \frac{1}{2}, \frac{1}{1}\} \)
+\(F_2 = \left \{\frac{0}{1}, \frac{1}{2}, \frac{1}{1} \right \} \)
 
-\(F_3 = \{\frac{0}{1}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{1}{1}\} \)
+\(F_3 = \left \{\frac{0}{1}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{1}{1} \right \} \)
 
-\(F_4 = \{\frac{0}{1}, \frac{1}{4}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{1}{1}\} \)
+\(F_4 = \left \{\frac{0}{1}, \frac{1}{4}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{1}{1} \right \} \)
 
-\(F_5 = \{\frac{0}{1}, \frac{1}{5}, \frac{1}{4}, \frac{1}{3}, \frac{2}{5}, \frac{1}{2}, \frac{3}{5}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{1}{1}\} \)
+\(F_5 = \left \{\frac{0}{1}, \frac{1}{5}, \frac{1}{4}, \frac{1}{3}, \frac{2}{5}, \frac{1}{2}, \frac{3}{5}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{1}{1}\right \} \)
 \end{primer}
 
 V zgornjih primerih opazimo, da za vsaka sosednja člena v Fareyevem zaporedju velja, da je križni produkt obeh števcev in imenovalcev po absolutni vrednosti enak 1.  To se bo izkazalo za pomembno opazko, zato definiramo naslednji pojem.
@@ -189,12 +192,14 @@ To pomeni, da $b + d$ in $a + c$ nimata skupnega faktorja, zato je ulomek $\frac
 Flitconova metoda za izračun števila okrajšanih ulomkov nas pripelje do naslednje rekurzivne definicije dolžine Fareyeva zaporedja.
 
 \begin{trditev}
-Naj bo $\varphi(n)$ Eulerjeva funkcija. Dolžina Fareyevega zaporedja je
+\label{trd:DolzinaZap}
+Naj bo $\varphi(n)$ Eulerjeva funkcija. Dolžina Fareyevega zaporedja reda n je
 \[  |F_{n}| = |F_{n-1}| + \varphi(n). \]
 \end{trditev}
 
 \begin{opomba}
-Z upoštevanjem vrednosti $|F_{1}| = 2$ iz zgornje trditve sledi \[  |F_{n}| = \sum_{i=1}^n \varphi(i) + 1. \]
+\label{op:AsimptotDolzina}
+Z upoštevanjem vrednosti $|F_{1}| = 2$ iz trditve~\ref{trd:DolzinaZap} sledi \[  |F_{n}| = \sum_{i=1}^n \varphi(i) + 1. \]
 \end{opomba}
 
 \begin{trditev}
@@ -204,7 +209,7 @@ Asimptotično se dolžina Fareyevega zaporedja obnaša kot
 
 \begin{dokaz}
 Asimptotično obnašanje bomo izračunali s pomočjo ocene vrednosti vsote \( \sum_{i=1}^n \varphi(i) \).
-Spomnimo se, da je \[ \varphi(n) = n \prod_{p|n} (1 - \frac{1}{p}) = n - \sum \frac{n}{p} + \sum \frac{n}{pp'} - \cdots , \]
+Spomnimo se, da je \[ \varphi(n) = n \prod_{p|n} \left (1 - \frac{1}{p} \right ) = n - \sum \frac{n}{p} + \sum \frac{n}{pp'} - \cdots , \]
 kjer so $p$, $p'$ praštevilski delitelji števila $n$.  Z upoštevanjem M\"obiusove funkcije je zadnja vsota enaka
 \[ \varphi(n) = n \sum_{d|n} \frac{\mu(d)}{d} .\]
 Sedaj računajmo vsoto 
@@ -212,13 +217,13 @@ Sedaj računajmo vsoto
 \begin{align*}
 \sum_{i=1}^n \varphi(i)
   &= \sum_{i=1}^n i \sum_{d|i} \frac{\mu(d)}{d} = \sum_{dd'\leq n}d' \mu(d) = 
-    \sum_{d=1}^n \mu(d) \sum_{d'=1}^{\lfloor \frac{n}{d} \rfloor} d' \\
-  &= \frac{1}{2} \sum_{d=1}^{n} \mu(d) (\lfloor \frac{n}{d} \rfloor ^2 + \lfloor \frac{n}{d} \rfloor) =
-    \frac{1}{2} \sum_{d=1}^{n} \mu(d) (\frac{n^2}{d^2} + O(\frac{n}{d})) \\
-  &= \frac{1}{2}n^2 \sum_{d=1}^{n} \frac{\mu(d)}{d^2} + O(n \sum_{d=1}^{n} \frac{1}{d}) \\
+    \sum_{d=1}^n \mu(d) \sum_{d'=1}^{\left \lfloor \frac{n}{d} \right \rfloor} d' \\
+  &= \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\left \lfloor \frac{n}{d} \right \rfloor ^2 + \left \lfloor \frac{n}{d} \right \rfloor \right) =
+    \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\frac{n^2}{d^2} + O \left (\frac{n}{d} \right) \right) \\
+  &= \frac{1}{2}n^2 \sum_{d=1}^{n} \frac{\mu(d)}{d^2} + O \left (n \sum_{d=1}^{n} \frac{1}{d} \right ) \\
   &\stackrel{(1)}{=} \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} - \frac{1}{2}n^2 \sum_{d=n+1}^{\infty} \frac{\mu(d)}{d^2} + O(n \ln{n}) \\
-  &= \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} + O(n^2\sum_{d=n+1}^{\infty} \frac{1}{d^2}) + O(n \ln{n}) \\
-  & \stackrel{(2)}{=} \frac{n^2}{2 \zeta(2)} + O(n) + O(n \ln{n}) \stackrel{(3)}{=} \frac{3n^2}{\pi^2} + O(n \ln{n})
+  &= \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} + O \left (n^2\sum_{d=n+1}^{\infty} \frac{1}{d^2} \right ) + O(n \ln{n}) \\
+  & \stackrel{(2)}{=} \frac{n^2}{2 \zeta(2)} + O(n) + O(n \ln{n}) \stackrel{(3)}{=} \frac{3n^2}{\pi^2} + O(n \ln{n}).
 \end{align*}
 
 V enakosti (1) smo zadnji sumand ocenili navzgor s pomočjo Taylorjevega razvoja funkcije $\ln$
@@ -226,12 +231,12 @@ V enakosti (1) smo zadnji sumand ocenili navzgor s pomočjo Taylorjevega razvoja
 
 V enakosti (2) smo uporabili naslednjo oceno:
 \[ n^2 \sum_{d=n+1}^{\infty} \frac{1}{d^2} \leq n^2 \sum_{d=n+1}^{\infty} \frac{1}{d(d-1)} = 
-n^2 \sum_{d=n+1}^{\infty} (- \frac{1}{d} + \frac{1}{d-1}) = n^2 \frac{1}{n} = n.\]
+n^2 \sum_{d=n+1}^{\infty} \left (- \frac{1}{d} + \frac{1}{d-1} \right ) = n^2 \frac{1}{n} = n.\]
 
 V enakosti (3) smo za izračun funkcije $\zeta(2)$ uporabili znano vrednost
 \[ \zeta(2) = \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.\]
 
-Po opombi nad trditvijo sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
+Po opombi~\ref{op:AsimptotDolzina} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
  
 \end{dokaz}
 
