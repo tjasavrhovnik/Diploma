@@ -203,9 +203,22 @@ Z upoštevanjem vrednosti $|F_{1}| = 2$ iz trditve~\ref{trd:DolzinaZap} sledi \[
 \end{opomba}
 
 \begin{trditev}
+\label{trd:AsimptotDolzina}
 Asimptotično se dolžina Fareyevega zaporedja obnaša kot
 \[  |F_{n}|\sim\frac{3n^2}{\pi^2}. \]
 \end{trditev}
+
+Preden dokažemo zgornjo trditev, definirajmo naslednjo oznako, ki jo bomo v dokazu uporabljali.
+
+\begin{definicija}
+Notacija veliki O predstavlja množico funkcij, ki so po absolutni vrednosti do multiplikativne konstante manjše od dane funkcije.
+
+Natančneje, funkcja $f$ pripada razredu $O(g)$, če obstajata konstanta $M$ in $x_{0}$, tako da za vsak $x > x_{0}$ velja $|f(x)| \leq M \cdot |g(x)|$.
+
+Pišemo $f \in O(g)$ oziroma $f = O(g)$.
+\end{definicija}
+
+Sedaj lahko dokažemo trditev~\ref{trd:AsimptotDolzina}.
 
 \begin{dokaz}
 Asimptotično obnašanje bomo izračunali s pomočjo ocene vrednosti vsote \( \sum_{i=1}^n \varphi(i) \).
