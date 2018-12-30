@@ -208,14 +208,49 @@ Asimptotično se dolžina Fareyevega zaporedja obnaša kot
 \[  |F_{n}|\sim\frac{3n^2}{\pi^2}. \]
 \end{trditev}
 
-Preden dokažemo zgornjo trditev, definirajmo naslednjo oznako, ki jo bomo v dokazu uporabljali.
+Preden dokažemo zgornjo trditev, potrebujemo naslednje definicije oznake in funkcij, ki jih bomo v dokazu uporabljali.
 
 \begin{definicija}
 Notacija veliki O predstavlja množico funkcij, ki so po absolutni vrednosti do multiplikativne konstante manjše od dane funkcije.
 
-Natančneje, funkcja $f$ pripada razredu $O(g)$, če obstajata konstanta $M$ in $x_{0}$, tako da za vsak $x > x_{0}$ velja $|f(x)| \leq M \cdot |g(x)|$.
+Natančneje, funkcija $f$ pripada razredu $O(g)$, če obstajata konstanta $M$ in $x_{0}$, tako da za vsak $x > x_{0}$ velja $|f(x)| \leq M \cdot |g(x)|$.
 
 Pišemo $f \in O(g)$ oziroma $f = O(g)$.
+\end{definicija}
+
+\begin{definicija}
+Preslikava \( \mu: \mathbb{N} \to \mathbb{N} \), definirana kot
+\[
+\mu(n) = \left\{
+\begin{array}{rl}
+0 & ;\ \mbox{n je deljiv s kvadratom praštevila}\\
+(-1)^p & ;\  \mbox{n je produkt p različnih praštevil,}
+\end{array}
+\right.
+\]
+se imenuje M\"obiusova funkcija.
+
+\end{definicija}
+
+\begin{primer}
+\( \mu(1)=1 \)
+
+\( \mu(2)=(-1)^{1}=-1=\mu(3) \)
+
+\( \mu(4)=\mu(2^{2})=0 \)
+
+\( \mu(6)=\mu(2\cdot3)=(-1)^{2}=1 \)
+
+\( \mu(8)=\mu(2\cdot2^{2})=0 \)
+
+\( \mu(18)=\mu(2\cdot3^{2})=0 \)
+\end{primer}
+
+\begin{definicija}
+Riemannova funkcija zeta je za
+ $s\in\mathbb{C}\backslash\{1\}$
+definirana kot
+\[ \zeta(s) = \sum_{n=1}^{\infty}\frac{1}{n^s}. \]
 \end{definicija}
 
 Sedaj lahko dokažemo trditev~\ref{trd:AsimptotDolzina}.
