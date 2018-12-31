@@ -56,12 +56,17 @@
 
 \begin{document}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Uvod}
+
 Zgodovina Fareyevega zaporedja sega v London 18. stoletja. Med letoma 1704 in 1841 je izhajal letni zbornik ``The Ladies Diary: or, the Woman's Almanack'', ki je povezoval ljubitelje matematičnih ugank. Bralce so namreč nagovarjali k pošiljanju in reševanju aritmetičnih problemov, ki so bili v zborniku objavljeni. Leta 1747 se je pojavilo naslednje vprašanje: Najti je potrebno število ulomkov različnih vrednosti, manjših od 1, katerih imenovalec ni večji od 100.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Fareyevo zaporedje}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Zgodovina Fareyevega zaporedja}
 
@@ -121,7 +126,9 @@ Neodvisno od Flitconove rešitve je francoski matematik Charles Haros leta 1802 
 
 Posebej zanimiva je zgodba o pivovarju in ljubiteljskemu matematiku Henryju Goodwynu. Čeprav ni imel formalne izobrazbe, se je navduševal nad zanostjo in tehniko, sestavljal različne tabele in računal, kako izboljšati svoje poslovanje. Po upokojitvi se je vse bolj posvečal matematiki -- tako je med letoma 1816 in 1823 objavil več člankov s tabelami okrajšanih ulomkov. Njegovo delo sta opazila znameniti francoski matematik Augustin Louis Cauchy in John Farey, geolog, po komer se obravnavano zaporedje okrajšanih ulomkov imenuje. Vemo, da je Cauchy prispeval nekaj dokazov lastnosti Fareyevega zaporedja, v nasprotju pa ostaja neznano, ali sta Goodwyn in Farey zaporedje in nekatere njegove lastnosti odkrila neodvisno od Harosa, bodisi sta vedela za njegove ugotovitve. Farey je najverjetneje na podlagi Goodwynovih tabel maja 1816 v pismu časopisu \emph{The Philosophical Magazine and Journal} z naslovom \emph{On a curious Property of vulgar Fractions} predstavil medianto, najpomembnejšo lastnost zaporedja. Čeprav zaporedje morda neupravičeno nosi ime Johna Fareya, pa ne smemo spregledati njegovega prispevka k raziskovanju matematike v glasbi, vzorcev, astronomije in seveda geologije.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fareyevo zaporedje
+
 \subsection{O Fareyevem zaporedju}
 
 \begin{definicija}
@@ -148,6 +155,8 @@ V zgornjih primerih opazimo, da za vsaka sosednja člena v Fareyevem zaporedju v
 Sosednja člena v Fareyevem zaporedju imenujemo Fareyeva soseda.
 \end{definicija}
 
+% medianta
+
 \begin{definicija}
 Naj bosta $\frac{a}{b}$ in $\frac{c}{d}$ sosednja člena nekega Fareyevega zaporedja. Člen \[\frac{a+c}{b+d} \] imenujemo medianta.
 \end{definicija}
@@ -162,6 +171,8 @@ Poračunajmo razliko med členoma
 \[\frac{c}{d} - \frac{a+c}{b+d} = \frac{bc+cd-ad-cd}{d(b+d)} = \frac{bc-ad}{d(b+d)} = \frac{1}{d(b+d)} > 0.\]
 Zveza torej velja. 
 \end{dokaz}
+
+% lastnosti 
 
 \begin{trditev}
 Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). $\frac{a}{b}$ in $\frac{c}{d}$ sta Fareyeva soseda v $F_n$ natanko tedaj, ko velja \(bc - ad = 1\).
@@ -189,6 +200,8 @@ Naj za $\frac{a}{b} < \frac{c}{d}$ velja $bc - ad = 1$. Dokazati želimo, da je 
 To pomeni, da $b + d$ in $a + c$ nimata skupnega faktorja, zato je ulomek $\frac{a+c}{b+d}$ okrajšan.
 \end{dokaz}
 
+% dolžina zaporedja
+
 Flitconova metoda za izračun števila okrajšanih ulomkov nas pripelje do naslednje rekurzivne definicije dolžine Fareyeva zaporedja.
 
 \begin{trditev}
@@ -207,6 +220,8 @@ Z upoštevanjem vrednosti $|F_{1}| = 2$ iz trditve~\ref{trd:DolzinaZap} sledi \[
 Asimptotično se dolžina Fareyevega zaporedja obnaša kot
 \[  |F_{n}|\sim\frac{3n^2}{\pi^2}. \]
 \end{trditev}
+
+% definicije pred dokazom
 
 Preden dokažemo zgornjo trditev, potrebujemo naslednje definicije oznake in funkcij, ki jih bomo v dokazu uporabljali.
 
@@ -253,6 +268,8 @@ definirana kot
 \[ \zeta(s) = \sum_{n=1}^{\infty}\frac{1}{n^s}. \]
 \end{definicija}
 
+% dokaz asimptotskega obnašanja
+
 Sedaj lahko dokažemo trditev~\ref{trd:AsimptotDolzina}.
 
 \begin{dokaz}
@@ -288,7 +305,45 @@ Po opombi~\ref{op:AsimptotDolzina} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O
  
 \end{dokaz}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Fordovi krogi}
+
+\begin{definicija}
+Fordov krog C($\frac{p}{q}$) je krog v zgornji polravnini, ki se abscisne osi dotika v točki $\frac{p}{q}$ in ima polmer $\frac{1}{2q^2}$. Pri tem sta p in q tuji si števili. 
+\end{definicija}
+
+\begin{trditev}
+Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta tangentna natanko tedaj, ko velja \( |bc-ad|=1. \)
+\end{trditev}
+
+\begin{dokaz}
+
+Trditev bomo dokazali tako, da bomo dokazali implikaciji v desno in levo.
+Naj za Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) velja $\frac{a}{b} < \frac{c}{d}$.
+Naj bodo D središče kroga C($\frac{a}{b}$), E središče kroga C($\frac{c}{d}$) in F presečišče navpične premice skozi točko D z vodoravno premico skozi točko E.
+
+\( (\Rightarrow) \)
+Denimo, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) tangentna. Vemo, da se dotikata abscisne osi zaporedoma v točkah $\frac{a}{b}$ in $\frac{c}{d}$, njuna polmera pa merita $\frac{1}{2b^2}$ in $\frac{1}{2d^2}$. Od tod lahko izračunamo razdalje $|DF|$, $|EF|$ in $|DE|$. Po konstrukciji je trikotnik $DFE$ pravokoten s pravim kotom v oglišču $F$, zato velja Pitagorov izrek
+\[ |EF|^2 + |DF|^2 = |DE|^2. \]
+Če dolžine izrazimo z $a, b, c$ in $d$, dobimo enakost
+\[ \left (\frac{c}{d} - \frac{a}{b} \right )^2 + \left (\frac{1}{2b^2} - \frac{1}{2d^2} \right )^2 = \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2. \]
+Ko odpravimo oklepaje, opazimo, da se nekateri členi odštejejo. Nato odpravimo ulomke in dobljeno enakost poenostavimo.
+\[  \frac{c^2}{d^2} - \frac{2ac}{bd} + \frac{a^2}{b^2} + \frac{1}{4b^4} - \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} = \frac{1}{4b^4} + \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} \]
+\[ b^{2}c^{2} - 2abcd + a^{2}d^{2} - 1 = 0 \]
+\[  (bc-ad)^2 = 1 \]
+\[ |bc-ad|=1 \]
+
+Implikacija v desno je s tem dokazana.
+
+\( (\Leftarrow) \)
+Sedaj naj velja $|bc-ad|=1$. To je ekvivalentno enakosti $ (bc-ad)^2 = 1, $ kar lahko po obratnem postopku kot zgoraj prepišemo v obliko 
+\[ \left (\frac{c}{d} - \frac{a}{b} \right )^2 + \left (\frac{1}{2b^2} - \frac{1}{2d^2} \right )^2 = \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2. \]
+To pomeni, da je dolžina hipotenuze pravokotnega trikotnika $DFE$ enaka vsoti dolžin polmerov Fordovih krogov C($\frac{a}{b}$) in C($\frac{c}{d}$), torej sta kroga tangentna.
+
+\end{dokaz}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Slovar strokovnih izrazov}
 
