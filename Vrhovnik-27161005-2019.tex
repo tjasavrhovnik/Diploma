@@ -379,8 +379,13 @@ pomeni, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{a+c}{b+d}$) tangentna.
 
 V dokazu trditve~\ref{trd:FordTangentnost} smo konstruirali pravokotni trikotnik, določen s središčema tangentnih Fordovih krogov in presečiščem premic skozi središči.
 
+\begin{definicija}
+Trojica naravnih števil $(a,b,c)$, za katero velja $a^2+b^2=c^2$, se imenuje pitagorejska trojica.
+Pitagorejska trojica je primitivna, če števila $a$, $b$, in $c$ nimajo skupnega faktorja.
+\end{definicija}
+
 \begin{trditev}
-Pravokotna trikotnika, ki pripadata poljubnima paroma Fordovih sosedov, določata različni pitagorejski trojici.
+Pravokotna trikotnika, ki pripadata poljubnima paroma Fordovih sosedov, določata različni primitivni pitagorejski trojici.
 \end{trditev}
 
 \begin{dokaz}
@@ -388,9 +393,9 @@ Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) ter C($\frac{a'}{b'}$) in C($\fra
 
 Pa denimo, da sta si trikotnika $DFE$ in $D'F'E'$ podobna. Tedaj obstaja naravno število $\lambda\ne{1}$, tako da za dolžine stranic obeh pravokotnih trikotnikov veljajo naslednje zveze:
 \begin{eqnarray}
-\frac{1}{2b^2}-\frac{1}{2d^2} &=& \lambda (\frac{1}{2b'^2}-\frac{1}{2d'^2}) \\
-\frac{1}{2b^2}+\frac{1}{2d^2} &=& \lambda (\frac{1}{2b'^2}+\frac{1}{2d'^2}) \\
-\frac{c}{d}-\frac{a}{b} &=& \lambda(\frac{c'}{d'}-\frac{a'}{b'})
+\frac{1}{2b^2}-\frac{1}{2d^2} &=& \lambda \left (\frac{1}{2b'^2}-\frac{1}{2d'^2} \right ) \\
+\frac{1}{2b^2}+\frac{1}{2d^2} &=& \lambda \left (\frac{1}{2b'^2}+\frac{1}{2d'^2} \right ) \\
+\frac{c}{d}-\frac{a}{b} &=& \lambda \left (\frac{c'}{d'}-\frac{a'}{b'} \right ).
 \end{eqnarray}
 
 Če seštejemo prvi dve enačbi, dobimo
@@ -402,7 +407,7 @@ b' = \sqrt\lambda b.
 
 Enačbo (3) lahko poenostavimo, saj gre za para Fordovih sosedov. Velja
 \begin{equation}
-\frac{1}{bd} = \frac{bc-ad}{bd} = \frac{c}{d}-\frac{a}{b} = \lambda (\frac{c'}{d'}-\frac{a'}{b'}) = \lambda \frac{b'c'-a'd'}{b'd'} = \lambda \frac{1}{b'd'}
+\frac{1}{bd} = \frac{bc-ad}{bd} = \frac{c}{d}-\frac{a}{b} = \lambda \left (\frac{c'}{d'}-\frac{a'}{b'} \right ) = \lambda \frac{b'c'-a'd'}{b'd'} = \lambda \frac{1}{b'd'}.
 \end{equation}
 
 Iz (4) in (5) sledi 
@@ -412,7 +417,7 @@ Iz (4) in (5) sledi
 d' = \sqrt\lambda d.
 \end{gather}
 
-Nazadnje še v pogoj za tangentnost Fordovih krogov C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) vstavimo (4) in (6):
+Nazadnje še v pogoj za tangentnost Fordovih krogov C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) vstavimo zvezi (4) in (6):
 \begin{gather}
 b'c'-a'd' = 1 \nonumber \\
 \sqrt\lambda bc' - a' \sqrt\lambda d = 1 \nonumber \\
@@ -440,6 +445,8 @@ To pa je možno le tedaj, ko je $\lambda=1.$ Prišli smo v protislovje, kar pome
 \bibitem{hardy} G.~H.~Hardy in E.~M.~Wright, \emph{An introduction to the theory of numbers}, 4th ed., Oxford University Press, Oxford, 1960.
 
 \bibitem{TNBook} A.~Hatcher, \emph{Topology of numbers}, verzija junij 2018, [ogled 31.~10.~2018], dostopno na \url{https://pi.math.cornell.edu/~hatcher/TN/TNpage.html}.
+
+\bibitem{strnad} M.~Strnad, \emph{Pitagorov izrek pred Pitagorom}, Presek \textbf{17} (1989) 8--11; dostopno tudi na \url{http://www.presek.si/17/966-Strnad.pdf}.
 
 \end{thebibliography}
 
