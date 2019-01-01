@@ -319,9 +319,12 @@ Po opombi~\ref{op:AsimptotDolzina} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O
 Fordov krog C($\frac{p}{q}$) je krog v zgornji polravnini, ki se abscisne osi dotika v točki $\frac{p}{q}$ in ima polmer $\frac{1}{2q^2}$. Pri tem sta $p$ in $q$ tuji si števili. 
 \end{definicija}
 
-Z izbiro polmera dolžine $\frac{1}{2q^2}$ dosežemo, da sta poljubna Fordova kroga bodisi tangentna bodisi disjunktna. Za tangentne Fordove kroge velja naslednja lastnost, ki lastnost Fareyevih sosedov prenese v jezik geometrije. 
+Fordovi krogi so definirani za vsak okrajšan ulomek, torej vsakemu racionalnemu številu lahko enolično priredimo Fordov krog. Zaradi simetrije jih je dovolj obravnavati na intervalu $[0,1]$, obenem pa se zavedati, da jih lahko induktivno razširimo na celotno realno os.
+
+Z izbiro polmera dolžine $\frac{1}{2q^2}$ dosežemo, da sta poljubna Fordova kroga bodisi tangentna bodisi disjunktna. Za tangentne Fordove kroge veljata naslednji lastnosti, ki lastnosti Fareyevih sosedov preneseta v jezik geometrije. 
 
 \begin{trditev}
+\label{trd:FordTangentnost}
 Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta tangentna natanko tedaj, ko velja \( |bc-ad|=1. \)
 \end{trditev}
 
@@ -360,7 +363,6 @@ Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) Fordova soseda. Tedaj obstaja eno
 \end{trditev}
 
 \begin{dokaz}
-
 Po definiciji Fordovih krogov vemo, da sta $\frac{a}{b}$ in $\frac{c}{d}$ okrajšana ulomka in zaradi tangentnosti Fareyeva soseda v nekem Fareyevem zaporedju (razširjenem na celotno realno os). Po lemi~\ref{lema:MediantaOkrUlom} je njuna medianta $\frac{a+c}{b+d}$ tudi okrajšan ulomek, torej obstaja natanko en Fordov krog C($\frac{a+c}{b+d}$). 
 
 Dokažimo še, da je C($\frac{a+c}{b+d}$) tangenten na izbrana kroga. Ker sta C($\frac{a}{b}$) in C($\frac{c}{d}$) Fordova soseda, velja zveza 
@@ -372,6 +374,54 @@ Podobno
 \[ |bc-ad|=|bc-ad+ab-ab|=|(a+c)b-(b+d)a|=1 \]
 pomeni, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{a+c}{b+d}$) tangentna.
 \end{dokaz}
+
+% Pitagorejske trojice
+
+V dokazu trditve~\ref{trd:FordTangentnost} smo konstruirali pravokotni trikotnik, določen s središčema tangentnih Fordovih krogov in presečiščem premic skozi središči.
+
+\begin{trditev}
+Pravokotna trikotnika, ki pripadata poljubnima paroma Fordovih sosedov, določata različni pitagorejski trojici.
+\end{trditev}
+
+\begin{dokaz}
+Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) ter C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) poljubna različna para Fordovih sosedov. Brez škode za splošnost naj velja $\frac{a}{b}<\frac{c}{d}$ in $\frac{a'}{b'}<\frac{c'}{d'}$. Naj prvemu paru Fordovih sosedov pripada pravokotni trikotnik $DFE$, drugemu paru pa pravokotni trikotnik $D'F'E'$. Dokazati želimo, da si trikotnika nista podobna.
+
+Pa denimo, da sta si trikotnika $DFE$ in $D'F'E'$ podobna. Tedaj obstaja naravno število $\lambda\ne{1}$, tako da za dolžine stranic obeh pravokotnih trikotnikov veljajo naslednje zveze:
+\begin{eqnarray}
+\frac{1}{2b^2}-\frac{1}{2d^2} &=& \lambda (\frac{1}{2b'^2}-\frac{1}{2d'^2}) \\
+\frac{1}{2b^2}+\frac{1}{2d^2} &=& \lambda (\frac{1}{2b'^2}+\frac{1}{2d'^2}) \\
+\frac{c}{d}-\frac{a}{b} &=& \lambda(\frac{c'}{d'}-\frac{a'}{b'})
+\end{eqnarray}
+
+Če seštejemo prvi dve enačbi, dobimo
+\begin{gather}
+\frac{1}{b^2} = \lambda \frac{1}{b'^2} \nonumber \\
+b'^2 = \lambda b^2 \nonumber \\
+b' = \sqrt\lambda b.
+\end{gather}
+
+Enačbo (3) lahko poenostavimo, saj gre za para Fordovih sosedov. Velja
+\begin{equation}
+\frac{1}{bd} = \frac{bc-ad}{bd} = \frac{c}{d}-\frac{a}{b} = \lambda (\frac{c'}{d'}-\frac{a'}{b'}) = \lambda \frac{b'c'-a'd'}{b'd'} = \lambda \frac{1}{b'd'}
+\end{equation}
+
+Iz (4) in (5) sledi 
+\begin{gather}
+\frac{1}{bd}=\lambda \frac{1}{\sqrt\lambda bd'} \nonumber \\
+\frac{1}{d} = \frac{\sqrt\lambda}{d'} \nonumber \\
+d' = \sqrt\lambda d.
+\end{gather}
+
+Nazadnje še v pogoj za tangentnost Fordovih krogov C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) vstavimo (4) in (6):
+\begin{gather}
+b'c'-a'd' = 1 \nonumber \\
+\sqrt\lambda bc' - a' \sqrt\lambda d = 1 \nonumber \\
+\sqrt\lambda (bc'-a'd) = 1.
+\end{gather}
+
+To pa je možno le tedaj, ko je $\lambda=1.$ Prišli smo v protislovje, kar pomeni, da si trikotnika nista podobna.
+\end{dokaz}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
