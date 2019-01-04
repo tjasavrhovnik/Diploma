@@ -102,7 +102,7 @@ Vrednost Eulerjeve funkcije je enaka
 
 \begin{dokaz}
 Zapišimo $n$ kot produkt prafaktorjev, \( n=\prod_{i=1}^m p_i^{r_i} \), kjer so $r_i \in \mathbb{N}$ in $p_i$ praštevila.
-$\varphi(p^{r})$ prešteje vsa števila, manjša od $p^r$, ki so tuja $p^r$. To so natanko tista, ki niso deljiva s praštevilom $p$. Večkratnikov $p$ med števili $1, 2, \ldots, p^r-1$ je toliko kot večkratnikov $p$ med števili $1, 2, \ldots, p^r$, teh pa je \( \frac{p^r}{p} = p^{r-1}. \)
+Funkcija $\varphi(p^{r})$ prešteje vsa števila, manjša od $p^r$, ki so tuja $p^r$. To so natanko tista, ki niso deljiva s praštevilom $p$. Večkratnikov $p$ med števili $1, 2, \ldots, p^r-1$ je toliko kot večkratnikov $p$ med števili $1, 2, \ldots, p^r$, teh pa je \( \frac{p^r}{p} = p^{r-1}. \)
 Torej je 
 \[ \varphi(p^r) = (p^r - 1) - (p^{r-1} - 1) = p^r - p^{r-1} = p^r \left (1 - \frac{1}{p} \right). \] 
 Z upoštevanjem multiplikativnosti funkcije $\varphi$ dobimo
@@ -123,7 +123,7 @@ kar smo želeli dokazati.
 Obstajajo $3003$ racionalna števila $\frac{p}{q}$, za katera velja $0<\frac{p}{q}<1$ ter je $q \leq 100$.
 \end{trditev}
 
-Namesto formalnega dokaza trditve bomo predstavili Flitconovo rešitev. Naredimo tabelo s tremi stolpci in 99 vrsticami. V prvi stolpec vsake vrstice napišemo po eno izmed naravnih števil od $2$ do $100$. V drugi stolpec posamezne vrstice zapišemo naravno število iz prvega stolpca kot produkt prafaktorjev, v tretji stolpec pa vrednost $\varphi(n)$. Pomagamo si s trditvama~\ref{trd:MultipEuler} in \ref{trd:EulerPrastProd}. Vsota vrednosti v tretjem stolpcu nam da število iskanih ulomkov. Res, vsak $\varphi(n)$ nam pove število okrajšanih ulomkov med $0$ in $1$ z imenovalcem $n$, vsota Eulerjevih funkcij pa število vseh okrajšanih ulomkov med $0$ in $1$ z imenovalci med $2$ in $100$. \footnote{Čeprav Flitcon ne omenja Eulerjeve funkcije $\varphi(n)$, je uporabil njene lastnosti v svoji matematično manj formalni metodi.}
+Namesto formalnega dokaza trditve bomo predstavili Flitconovo rešitev. Naredimo tabelo s tremi stolpci in 99 vrsticami. V prvi stolpec vsake vrstice napišemo po eno izmed naravnih števil od $2$ do $100$. V drugi stolpec posamezne vrstice zapišemo naravno število iz prvega stolpca kot produkt prafaktorjev, v tretji stolpec pa vrednost $\varphi(n)$. Pomagamo si s trditvama~\ref{trd:MultipEuler} in \ref{trd:EulerPrastProd}. Vsota vrednosti v tretjem stolpcu nam da število iskanih ulomkov. Res, vsak $\varphi(n)$ nam pove število okrajšanih ulomkov med $0$ in $1$ z imenovalcem $n$, vsota vrednosti Eulerjeve funkcije $\varphi(n)$ za vsa števila $n$ med $2$ in $100$ pa število vseh okrajšanih ulomkov med $0$ in $1$ z imenovalci med $2$ in $100$. \footnote{Čeprav Flitcon ne omenja Eulerjeve funkcije $\varphi(n)$, je uporabil njene lastnosti v svoji matematično manj formalni metodi.}
 
 Neodvisno od Flitconove rešitve je francoski matematik Charles Haros leta 1802 sestavil enak seznam ulomkov, vendar na precej bolj zanesljiv način. Haros se dela ni lotil z željo po reševanju aritmetične naloge, pač pa je pisal tabele za pretvarjanje med ulomki in decimalnim zapisom ter obratno. V Franciji so namreč v času revolucije konec 18. stoletja uvajali nov metrični sistem, ki je med drugim zahteval uporabo decimalnega zapisa. Tabele so bile objavljene v časniku \emph{Journal de l'Ecole Polytechnique}, primerom ter algoritmom za pretvarjanje pa so bile dodane skice dokazov in nekatere lastnosti zaporedja ulomkov, ki so kasneje postali znani pod imenom \emph{Fareyevo zaporedje}. 
 
@@ -142,6 +142,8 @@ Ekvivalentno, $F_n$ vsebuje vse okrajšane ulomke med $0$ in $1$ z imenovalci, k
 \end{definicija}
 
 \begin{primer}
+Poglejmo si prvih nekaj Fareyevih zapredij.
+
 \(F_1 = \left \{\frac{0}{1}, \frac{1}{1} \right \} \)
 
 \(F_2 = \left \{\frac{0}{1}, \frac{1}{2}, \frac{1}{1} \right \} \)
@@ -157,7 +159,7 @@ Ekvivalentno, $F_n$ vsebuje vse okrajšane ulomke med $0$ in $1$ z imenovalci, k
 Če pogoj $0 \leq p \leq q \leq n$ v definiciji~\ref{def:Farey} omilimo v pogoj $0 \leq p,q \leq n$, okrajšane ulomke z intervala $[0,1]$ razširimo na interval $[0, \infty)$. V primeru, ko za $p$ in $q$ dovoljujemo tudi negativna cela števila, dobimo okrajšane ulomke na celotni realni osi.
 \end{opomba}
 
-V zgornjih primerih opazimo, da za vsaka sosednja člena Fareyevega zaporedja velja, da je križni produkt obeh števcev in imenovalcev po absolutni vrednosti enak $1$.  To se bo izkazalo za pomembno opazko, zato definiramo naslednji pojem.
+V zgornjih primerih opazimo, da za vsaka sosednja člena Fareyevega zaporedja velja naslednje. Če števec prvega ulomka množimo z imenovalcem drugega in nato vlogi ulomkov zamenjamo, je razlika obeh produktov po absolutni vrednosti enaka $1$. To se bo izkazalo za pomembno opazko, zato vpeljemo pojem, ki sledi.
 
 \begin{definicija}
 Sosednja člena v Fareyevem zaporedju imenujemo \emph{Fareyeva soseda}.
@@ -183,7 +185,7 @@ Zveza torej velja.
 % lastnosti 
 %
 \begin{trditev}
-Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). $\frac{a}{b}$ in $\frac{c}{d}$ sta Fareyeva soseda v $F_n$ natanko tedaj, ko velja \(bc - ad = 1\).
+Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). Ulomka $\frac{a}{b}$ in $\frac{c}{d}$ sta Fareyeva soseda v $F_n$ natanko tedaj, ko velja \(bc - ad = 1\).
 \end{trditev}
 
 \begin{dokaz}
@@ -230,6 +232,11 @@ Asimptotično se dolžina Fareyevega zaporedja obnaša kot
 \[  |F_{n}|\sim\frac{3n^2}{\pi^2}. \]
 \end{trditev}
 
+\begin{opomba}
+Simbol $\sim$ v trditvi~\ref{trd:AsimptotDolzina} označuje asimptotično ekvivalentno obnašanje dveh funkcij.
+Po definiciji za funkciji $f(x)$ in $g(x)$ velja $f(x) \sim g(x)$ natanko tedaj, ko je $ \lim_{x \to \infty} \frac{f(x)}{g(x)} = 1$.
+\end{opomba}
+
 % definicije pred dokazom
 %
 Preden dokažemo zgornjo trditev, definirajmo naslednjo oznako in dve funkciji, ki jih bomo v dokazu potrebovali.
@@ -237,7 +244,7 @@ Preden dokažemo zgornjo trditev, definirajmo naslednjo oznako in dve funkciji, 
 \begin{definicija}
 \emph{Notacija veliki O} predstavlja množico funkcij, ki so po absolutni vrednosti do multiplikativne konstante manjše od dane funkcije.
 
-Natančneje, funkcija $f$ pripada razredu $O(g)$, če obstajata taki konstanta $M$ in $x_{0}$, da za vsak $x > x_{0}$ velja $|f(x)| \leq M \cdot |g(x)|$.
+Natančneje, funkcija $f$ pripada razredu $O(g)$, če obstajata taki konstanti $M$ in $x_{0}$, da za vsak $x > x_{0}$ velja $|f(x)| \leq M \cdot |g(x)|$.
 
 Pišemo $f \in O(g)$ oziroma $f = O(g)$.
 \end{definicija}
@@ -247,8 +254,8 @@ Preslikava \( \mu\colon \mathbb{N} \to \mathbb{N} \), definirana kot
 \[
 \mu(n) = \left\{
 \begin{array}{rl}
-0 & ;\ \mbox{n je deljiv s kvadratom praštevila}\\
-(-1)^p & ;\  \mbox{n je produkt p različnih praštevil,}
+0 & ;\ \mbox{$n$ je deljiv s kvadratom praštevila}\\
+(-1)^p & ;\  \mbox{$n$ je produkt $p$ različnih praštevil,}
 \end{array}
 \right.
 \]
@@ -256,6 +263,8 @@ se imenuje \emph{M\"obiusova funkcija}.
 \end{definicija}
 
 \begin{primer}
+Izračunajmo vrednosti M\"obiusove funkcije za nekaj naravnih števil.
+
 \( \mu(1)=1 \)
 
 \( \mu(2)=(-1)^{1}=-1=\mu(3) \)
