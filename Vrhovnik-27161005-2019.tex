@@ -60,7 +60,7 @@
 %
 \section{Uvod}
 
-Zgodovina \emph{Fareyevega zaporedja} sega v London 18. stoletja. Med letoma 1704 in 1841 je izhajal letni zbornik \emph{The Ladies Diary: or, the Woman's Almanack}, ki je povezoval ljubitelje matematičnih ugank. Bralce so namreč nagovarjali k pošiljanju in reševanju aritmetičnih problemov, ki so bili v zborniku objavljeni. Leta 1747 se je pojavilo naslednje vprašanje: Najti je potrebno število ulomkov različnih vrednosti, manjših od $1$, katerih imenovalec ni večji od $100$.
+Zgodovina Fareyevega zaporedja sega v London 18. stoletja. Med letoma 1704 in 1841 je izhajal letni zbornik \emph{The Ladies Diary: or, the Woman's Almanack}, ki je povezoval ljubitelje matematičnih ugank. Bralce so namreč nagovarjali k pošiljanju in reševanju aritmetičnih problemov, ki so bili v zborniku objavljeni. Leta 1747 se je pojavilo naslednje vprašanje: Najti je potrebno število ulomkov različnih vrednosti, manjših od $1$, katerih imenovalec ni večji od $100$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -70,12 +70,12 @@ Zgodovina \emph{Fareyevega zaporedja} sega v London 18. stoletja. Med letoma 170
 %
 \subsection{Zgodovina Fareyevega zaporedja}
 
-Vrnimo se k v uvodu omenjeni nalogi o številu ulomkov različnih vrednosti, manjših od $1$, z imenovalci kvečjemu $100$. Prvi odgovor na članek je bila tabela ulomkov z imenovalci manjšimi od $10$, nato pa še dve tabeli z rezultatoma $3055$ in $4851$. Leta 1751 je R.~Flitcon objavil pravilni odgovor $3003$, kateremu je dodal tudi opis postopka. Preden ga razložimo, si oglejmo \emph{Eulerjevo funkcijo} in njene lastnosti, ki nas bo pripeljala do rešitve. 
+Vrnimo se k v uvodu omenjeni nalogi o številu ulomkov različnih vrednosti, manjših od $1$, z imenovalci kvečjemu $100$. Prvi odgovor na članek je bila tabela ulomkov z imenovalci manjšimi od $10$, nato pa še dve tabeli z rezultatoma $3055$ in $4851$. Leta 1751 je R.~Flitcon objavil pravilni odgovor $3003$, kateremu je dodal tudi opis postopka. Preden ga razložimo, si oglejmo Eulerjevo funkcijo in njene lastnosti, ki nas bo pripeljala do rešitve. 
 %
 % Eulerjeva funkcija
 
 \begin{definicija}
-Preslikava \( \varphi \colon \mathbb{N} \rightarrow  \mathbb{N}\), ki za vsako naravno število $n$ prešteje števila, manjša od $n$, ki so $n$ tuja, se imenuje \emph{Eulerjeva funkcija} $\varphi$.
+Preslikava \( \varphi \colon \mathbb{N} \rightarrow \mathbb{N}\), ki za vsako naravno število $n$ prešteje števila, manjša od $n$, ki so $n$ tuja, se imenuje \emph{Eulerjeva funkcija} $\varphi$.
 \end{definicija}
 
 \begin{trditev}
@@ -89,7 +89,7 @@ Naj $\mathbb{Z}_{k}^\ast $ označuje grupo vseh obrnljivih elementov grupe $\mat
 Dobimo zvezi
 \[ |\mathbb{Z}_{kl}^\ast| = \varphi(kl), \]
 \[ |\mathbb{Z}_{k}^\ast| |\mathbb{Z}_{l}^\ast| = \varphi(k) \varphi(l).\]
-Ker je preslikava \( \psi \colon \mathbb{Z}_{kl}^\ast \rightarrow \mathbb{Z}_{k}^\ast \times \mathbb{Z}_{l}^\ast \) za tuji števili $k$ in $l$ izomorfizem grup in je moč kartezičnega produkta dveh množic enaka produktu njunih moči, sledi 
+Znano je, da je preslikava \( \psi \colon \mathbb{Z}_{kl}^\ast \rightarrow \mathbb{Z}_{k}^\ast \times \mathbb{Z}_{l}^\ast \) za tuji naravni števili $k$ in $l$ izomorfizem grup. Ker je moč kartezičnega produkta dveh množic enaka produktu njunih moči, sledi 
 \[ \varphi(kl) = |\mathbb{Z}_{kl}^\ast| = |\mathbb{Z}_{k}^\ast| |\mathbb{Z}_{l}^\ast| = \varphi(k) \varphi(l), \]
 s čimer je multiplikativnost dokazana.
 \end{dokaz}
@@ -101,7 +101,7 @@ Vrednost Eulerjeve funkcije je enaka
 \end{trditev}
 
 \begin{dokaz}
-Zapišimo $n$ kot produkt prafaktorjev, \( n=\prod_{i=1}^m p_i^{r_i} \), kjer so $r_i \in \mathbb{N}$ in $p_i$ praštevila.
+Zapišimo $n$ kot produkt prafaktorjev, \(n=\prod_{i=1}^m p_i^{r_i}\), kjer so $r_i \in \mathbb{N}$ in $p_i$ praštevila.
 Funkcija $\varphi(p^{r})$ prešteje vsa števila, manjša od $p^r$, ki so tuja $p^r$. To so natanko tista, ki niso deljiva s praštevilom $p$. Večkratnikov $p$ med števili $1, 2, \ldots, p^r-1$ je toliko kot večkratnikov $p$ med števili $1, 2, \ldots, p^r$, teh pa je \( \frac{p^r}{p} = p^{r-1}. \)
 Torej je 
 \[ \varphi(p^r) = (p^r - 1) - (p^{r-1} - 1) = p^r - p^{r-1} = p^r \left (1 - \frac{1}{p} \right). \] 
@@ -123,11 +123,11 @@ kar smo želeli dokazati.
 Obstajajo $3003$ racionalna števila $\frac{p}{q}$, za katera velja $0<\frac{p}{q}<1$ ter je $q \leq 100$.
 \end{trditev}
 
-Namesto formalnega dokaza trditve bomo predstavili Flitconovo rešitev. Naredimo tabelo s tremi stolpci in 99 vrsticami. V prvi stolpec vsake vrstice napišemo po eno izmed naravnih števil od $2$ do $100$. V drugi stolpec posamezne vrstice zapišemo naravno število iz prvega stolpca kot produkt prafaktorjev, v tretji stolpec pa vrednost $\varphi(n)$. Pomagamo si s trditvama~\ref{trd:MultipEuler} in \ref{trd:EulerPrastProd}. Vsota vrednosti v tretjem stolpcu nam da število iskanih ulomkov. Res, vsak $\varphi(n)$ nam pove število okrajšanih ulomkov med $0$ in $1$ z imenovalcem $n$, vsota vrednosti Eulerjeve funkcije $\varphi(n)$ za vsa števila $n$ med $2$ in $100$ pa število vseh okrajšanih ulomkov med $0$ in $1$ z imenovalci med $2$ in $100$. \footnote{Čeprav Flitcon ne omenja Eulerjeve funkcije $\varphi(n)$, je uporabil njene lastnosti v svoji matematično manj formalni metodi.}
+Namesto formalnega dokaza trditve bomo predstavili Flitconovo rešitev. Naredimo tabelo s tremi stolpci in 99 vrsticami. V prvi stolpec vsake vrstice napišemo po eno izmed naravnih števil od $2$ do $100$. V drugi stolpec posamezne vrstice zapišemo naravno število iz prvega stolpca kot produkt prafaktorjev, v tretji stolpec pa vrednost $\varphi(n)$. Pomagamo si s trditvama~\ref{trd:MultipEuler} in \ref{trd:EulerPrastProd}. Vsota vrednosti v tretjem stolpcu nam da število iskanih ulomkov. Res, vsak $\varphi(n)$ nam pove število okrajšanih ulomkov med $0$ in $1$ z imenovalcem $n$, vsota vrednosti Eulerjeve funkcije $\varphi(n)$ za vsa števila $n$ med $2$ in $100$ pa število vseh okrajšanih ulomkov med $0$ in $1$ z imenovalci med $2$ in $100$. \footnote{Čeprav Flitcon ne omenja Eulerjeve funkcije $\varphi$, je uporabil njene lastnosti v svoji matematično manj formalni metodi.}
 
-Neodvisno od Flitconove rešitve je francoski matematik Charles Haros leta 1802 sestavil enak seznam ulomkov, vendar na precej bolj zanesljiv način. Haros se dela ni lotil z željo po reševanju aritmetične naloge, pač pa je pisal tabele za pretvarjanje med ulomki in decimalnim zapisom ter obratno. V Franciji so namreč v času revolucije konec 18. stoletja uvajali nov metrični sistem, ki je med drugim zahteval uporabo decimalnega zapisa. Tabele so bile objavljene v časniku \emph{Journal de l'Ecole Polytechnique}, primerom ter algoritmom za pretvarjanje pa so bile dodane skice dokazov in nekatere lastnosti zaporedja ulomkov, ki so kasneje postali znani pod imenom \emph{Fareyevo zaporedje}. 
+Neodvisno od Flitconove rešitve je francoski matematik Charles Haros leta 1802 sestavil enak seznam ulomkov, vendar na precej bolj zanesljiv način. Haros se dela ni lotil z željo po reševanju aritmetične naloge, pač pa je pisal tabele za pretvarjanje med ulomki in decimalnim zapisom ter obratno. V Franciji so namreč v času revolucije konec 18. stoletja uvajali nov metrični sistem, ki je med drugim zahteval uporabo decimalnega zapisa. Tabele so bile objavljene v časniku \emph{Journal de l'Ecole Polytechnique}, primerom ter algoritmom za pretvarjanje pa so bile dodane skice dokazov in nekatere lastnosti zaporedja ulomkov, ki so kasneje postali znani pod imenom Fareyevo zaporedje. 
 
-Posebej zanimiva je zgodba o pivovarju in ljubiteljskemu matematiku Henryju Goodwynu. Čeprav ni imel formalne izobrazbe, se je navduševal nad znanostjo in tehniko, sestavljal različne tabele in računal, kako izboljšati svoje poslovanje. Po upokojitvi se je vse bolj posvečal matematiki -- tako je med letoma 1816 in 1823 objavil več člankov s tabelami okrajšanih ulomkov. Njegovo delo sta opazila znameniti francoski matematik Augustin Louis Cauchy in John Farey, geolog, po komer se obravnavano zaporedje okrajšanih ulomkov imenuje. Vemo, da je Cauchy prispeval nekaj dokazov lastnosti \emph{Fareyevega zaporedja}, v nasprotju pa ostaja neznano, ali sta Goodwyn in Farey zaporedje in nekatere njegove lastnosti odkrila neodvisno od Harosa, bodisi sta vedela za njegove ugotovitve. Farey je najverjetneje na podlagi Goodwynovih tabel maja 1816 v pismu časopisu \emph{The Philosophical Magazine and Journal} z naslovom \emph{On a curious Property of vulgar Fractions} predstavil \emph{medianto}, najpomembnejšo lastnost zaporedja. Čeprav zaporedje morda neupravičeno nosi ime Johna Fareya, pa ne smemo spregledati njegovega prispevka k raziskovanju matematike v glasbi, vzorcev, astronomije in seveda geologije.
+Posebej zanimiva je zgodba o pivovarju in ljubiteljskemu matematiku Henryju Goodwynu. Čeprav ni imel formalne izobrazbe, se je navduševal nad znanostjo in tehniko, sestavljal različne tabele in računal, kako izboljšati svoje poslovanje. Po upokojitvi se je vse bolj posvečal matematiki -- tako je med letoma 1816 in 1823 objavil več člankov s tabelami okrajšanih ulomkov. Njegovo delo sta opazila znameniti francoski matematik Augustin Louis Cauchy in John Farey, geolog, po komer se obravnavano zaporedje okrajšanih ulomkov imenuje. Vemo, da je Cauchy prispeval nekaj dokazov lastnosti Fareyevega zaporedja, v nasprotju pa ostaja neznano, ali sta Goodwyn in Farey zaporedje in nekatere njegove lastnosti odkrila neodvisno od Harosa, bodisi sta vedela za njegove ugotovitve. Farey je najverjetneje na podlagi Goodwynovih tabel maja 1816 v pismu časopisu \emph{The Philosophical Magazine and Journal} z naslovom \emph{On a curious Property of vulgar Fractions} predstavil medianto, najpomembnejšo lastnost zaporedja. Čeprav zaporedje morda neupravičeno nosi ime Johna Fareya, pa ne smemo spregledati njegovega prispevka k raziskovanju matematike v glasbi, vzorcev, astronomije in seveda geologije.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fareyevo zaporedje
@@ -177,8 +177,9 @@ Za medianto okrajšanih ulomkov \(\frac{a}{b} < \frac{c}{d}\) velja  \(\frac{a}{
 
 \begin{dokaz}
 Poračunajmo razliki med členoma
-\[\frac{a+c}{b+d} - \frac{a}{b} = \frac{ab+bc-ab-ad}{b(b+d)} = \frac{bc-ad}{b(b+d)} = \frac{1}{b(b+d)} > 0\] in
-\[\frac{c}{d} - \frac{a+c}{b+d} = \frac{bc+cd-ad-cd}{d(b+d)} = \frac{bc-ad}{d(b+d)} = \frac{1}{d(b+d)} > 0.\]
+\[\frac{a+c}{b+d} - \frac{a}{b} = \frac{ab+bc-ab-ad}{b(b+d)} = \frac{bc-ad}{b(b+d)} > 0\] in
+\[\frac{c}{d} - \frac{a+c}{b+d} = \frac{bc+cd-ad-cd}{d(b+d)} = \frac{bc-ad}{d(b+d)} > 0.\]
+Obe neenakosti sledita iz dejstva, da je \(\frac{a}{b} < \frac{c}{d}\), kjer so \(a, b, c, d \in \mathbb{N} \), zato je \( ad < bc.\)
 Zveza torej velja. 
 \end{dokaz}
 
@@ -189,9 +190,11 @@ Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). Ulomka $\frac{a}{b}$ in 
 \end{trditev}
 
 \begin{dokaz}
-$(\Rightarrow)$ Denimo, da sta $\frac{a}{b}$ in $\frac{p}{q}$ ter $\frac{p}{q}$ in $\frac{c}{d}$ Fareyeva soseda. Dokaz bo potekal z indukcijo na $n$.
+$(\Rightarrow)$ Dokaz bo potekal z indukcijo na $n$.
 Za $n=1$ je $F_n = \{\frac{0}{1}, \frac{1}{1}\}$, $bc - ad = 1\cdot1 - 0\cdot1 = 1$, zato osnovni korak velja.
-Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Če je $b+d \leq n+1$, je \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Sicer je $b+d \geq n+1$ in \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) ter po indukcijski predpostavki $bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
+Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Nove člene zaporedja dobimo z računanjem mediant. Če je $b+d > n+1,$ $\frac{a+c}{b+d} \notin F_{n+1}$ in \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) ter po indukcijski predpostavki $bc - ad = 1$. 
+Če je $b+d < n+1,$ je $\frac{a+c}{b+d}$ že nek člen v zaporedju $F_n$ in uporabimo indukcijsko predpostavko. 
+Če je $b+d = n+1$, je \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
 
 $(\Leftarrow)$ Obratno, naj bodo $\frac{a}{b}$, $\frac{p}{q}$ in $\frac{c}{d}$ členi poljubnega Fareyevega zaporedja, za katere velja $\frac{a}{b} <\frac{p}{q} < \frac{c}{d}$ in $bp - aq = qc - pd = 1$. S preureditvijo te enakosti dobimo
 \[ bp + pd = aq + qc \]
@@ -217,7 +220,7 @@ Flitconova metoda za izračun števila okrajšanih ulomkov nas pripelje do nasle
 
 \begin{trditev}
 \label{trd:DolzinaZap}
-Naj bo $\varphi(n)$ Eulerjeva funkcija. Dolžina Fareyevega zaporedja reda n je
+Naj bo $\varphi$ Eulerjeva funkcija. Dolžina Fareyevega zaporedja reda n je
 \[  |F_{n}| = |F_{n-1}| + \varphi(n). \]
 \end{trditev}
 
