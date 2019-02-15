@@ -185,6 +185,9 @@ Zveza torej velja.
 
 % lastnosti 
 %
+Kako dobimo člen Fareyevega zaporedja reda $(n+1)$?
+Označimo iskani okrajšan ulomek s $\frac{k}{n+1}$. Seveda sta $k, n \in\mathbb{N}, k < n+1$ tuji si števili. Zato obstajata enolično določeni naravni števili $a < b$, da velja $a(n+1)-bk=1.$ S preoblikovanjem zadnje enakosti dobimo zvezo $a(n+1-b)-b(k-a)=1,$ kar pomeni, da sta si tudi naravni števili $k-a$ in $n+1-b$ tuji. Brez škode za splošnost naj bo $k-a<n+1-b.$ Zato lahko tvorimo okrajšan ulomek $\frac{k-a}{n+1-b}$, ki pripada nekemu Fareyevemu zaporedju. Prav tako je okrajšan ulomek $\frac{a}{b}$ element nekega Fareyevega zaporedja. Sedaj prepišimo ulomek $\frac{k}{n+1}$ v $\frac{a+(k-a)}{b+(n+1-b)},$ kar pa je medianta ulomkov $\frac{a}{b}$ in $\frac{k-a}{n+1-b}.$ Dokazali smo, da iz danega Fareyevega zaporedja člene zaporedja višjega reda dobimo z računanjem mediant.
+
 \begin{trditev}
 Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). Ulomka $\frac{a}{b}$ in $\frac{c}{d}$ sta Fareyeva soseda v $F_n$ natanko tedaj, ko velja \(bc - ad = 1\).
 \end{trditev}
