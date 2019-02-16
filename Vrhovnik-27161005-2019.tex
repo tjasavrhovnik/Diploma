@@ -195,15 +195,15 @@ Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). Ulomka $\frac{a}{b}$ in 
 \begin{dokaz}
 $(\Rightarrow)$ Dokaz bo potekal z indukcijo na $n$.
 Za $n=1$ je $F_n = \{\frac{0}{1}, \frac{1}{1}\}$, $bc - ad = 1\cdot1 - 0\cdot1 = 1$, zato osnovni korak velja.
-Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Vemo, da nove člene zaporedja dobimo z računanjem mediant. Če je $b+d > n+1,$ $\frac{a+c}{b+d} \notin F_{n+1}$ in \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) ter po indukcijski predpostavki $bc - ad = 1$. 
+Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Vemo, da nove člene zaporedja dobimo z računanjem mediant. Če je $b+d > n+1,$ potem $\frac{a+c}{b+d} \notin F_{n+1}$ in je \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) ter po indukcijski predpostavki $bc - ad = 1$. 
 Če je $b+d < n+1,$ je $\frac{a+c}{b+d}$ že nek člen v zaporedju $F_n$ in uporabimo indukcijsko predpostavko. 
 Če je $b+d = n+1$, je \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
 
 $(\Leftarrow)$ Obratno, naj bodo $\frac{a}{b}$, $\frac{p}{q}$ in $\frac{c}{d}$ členi poljubnega Fareyevega zaporedja, za katere velja $\frac{a}{b} <\frac{p}{q} < \frac{c}{d}$ in $bp - aq = qc - pd = 1$. S preureditvijo te enakosti dobimo
-\[ bp + pd = aq + qc \]
-\[ p(b + d) = q(a + c) \]
-\[ \frac{p}{q} = \frac{a+c}{b+d}, \]
-od koder sledi, da sta $\frac{a}{b}$ in $\frac{p}{q}$ ter $\frac{p}{q}$ in $\frac{c}{d}$ Fareyeva soseda.
+\[ bp + pd = aq + qc, \]
+\[ p(b + d) = q(a + c), \]
+\[ \frac{p}{q} = \frac{a+c}{b+d}. \]
+Vidimo, da je $\frac{p}{q}$ medianta ulomkov $\frac{a}{b}$ in $\frac{c}{d},$ od tod pa sledi, da sta $\frac{a}{b}$ in $\frac{p}{q}$ ter $\frac{p}{q}$ in $\frac{c}{d}$ Fareyeva soseda.
 \end{dokaz}
 
 \begin{lema}
@@ -357,10 +357,10 @@ Denimo, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) tangentna. Vem
 Če dolžine izrazimo z $a, b, c$ in $d$, dobimo enakost
 \[ \left (\frac{c}{d} - \frac{a}{b} \right )^2 + \left (\frac{1}{2b^2} - \frac{1}{2d^2} \right )^2 = \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2. \]
 Ko odpravimo oklepaje, opazimo, da se nekateri členi odštejejo. Nato odpravimo ulomke in dobljeno enakost poenostavimo.
-\[  \frac{c^2}{d^2} - \frac{2ac}{bd} + \frac{a^2}{b^2} + \frac{1}{4b^4} - \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} = \frac{1}{4b^4} + \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} \]
-\[ b^{2}c^{2} - 2abcd + a^{2}d^{2} - 1 = 0 \]
-\[  (bc-ad)^2 = 1 \]
-\[ |bc-ad|=1 \]
+\[  \frac{c^2}{d^2} - \frac{2ac}{bd} + \frac{a^2}{b^2} + \frac{1}{4b^4} - \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} = \frac{1}{4b^4} + \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4}, \]
+\[ b^{2}c^{2} - 2abcd + a^{2}d^{2} - 1 = 0, \]
+\[  (bc-ad)^2 = 1, \]
+\[ |bc-ad|=1. \]
 
 Implikacija v desno je s tem dokazana.
 
@@ -412,16 +412,16 @@ Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) ter C($\frac{a'}{b'}$) in C($\fra
 Pa denimo, da sta si trikotnika $DFE$ in $D'F'E'$ podobna. Tedaj obstaja tako naravno število $\lambda\ne{1}$, da za dolžine stranic obeh pravokotnih trikotnikov veljajo naslednje zveze:
 %
 \begin{align}
-\frac{1}{2b^2}-\frac{1}{2d^2} &= \lambda \left (\frac{1}{2b'^2}-\frac{1}{2d'^2} \right ) \\
-\frac{1}{2b^2}+\frac{1}{2d^2} &= \lambda \left (\frac{1}{2b'^2}+\frac{1}{2d'^2} \right ) \\
+\frac{1}{2b^2}-\frac{1}{2d^2} &= \lambda \left (\frac{1}{2b'^2}-\frac{1}{2d'^2} \right ), \\
+\frac{1}{2b^2}+\frac{1}{2d^2} &= \lambda \left (\frac{1}{2b'^2}+\frac{1}{2d'^2} \right ), \\
 \frac{c}{d}-\frac{a}{b} &= \lambda \left (\frac{c'}{d'}-\frac{a'}{b'} \right ).
 \end{align}
 
 Če seštejemo prvi dve enačbi, dobimo
 %
 \begin{align}
-\frac{1}{b^2} &= \lambda \frac{1}{b'^2} \nonumber \\
-b'^2 &= \lambda b^2 \nonumber \\
+\frac{1}{b^2} &= \lambda \frac{1}{b'^2}, \nonumber \\
+b'^2 &= \lambda b^2, \nonumber \\
 b' &= \sqrt\lambda b.
 \end{align}
 
@@ -433,16 +433,16 @@ Enačbo (3) lahko poenostavimo, saj gre za para Fordovih sosedov. Velja
 Iz (4) in (5) sledi 
 %
 \begin{align}
-\frac{1}{bd} &=\lambda \frac{1}{\sqrt\lambda bd'} \nonumber \\
-\frac{1}{d} &= \frac{\sqrt\lambda}{d'} \nonumber \\
+\frac{1}{bd} &=\lambda \frac{1}{\sqrt\lambda bd'}, \nonumber \\
+\frac{1}{d} &= \frac{\sqrt\lambda}{d'}, \nonumber \\
 d' &= \sqrt\lambda d.
 \end{align}
 
 Nazadnje še v pogoj za tangentnost Fordovih krogov C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) vstavimo zvezi (4) in (6):
 %
 \begin{align}
-b'c'-a'd' &= 1 \nonumber \\
-\sqrt\lambda bc' - a' \sqrt\lambda d &= 1 \nonumber \\
+b'c'-a'd' &= 1, \nonumber \\
+\sqrt\lambda bc' - a' \sqrt\lambda d &= 1, \nonumber \\
 \sqrt\lambda (bc'-a'd) &= 1.
 \end{align}
 
