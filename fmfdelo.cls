@@ -6,7 +6,7 @@
 %-----------------------------------------------------------------------------
 
 % Nalozimo pakete, ki ponujajo enostavno programiranje.
-\RequirePackage{ifthen, keyval}
+\RequirePackage{etoolbox, ifthen, keyval}
 
 % Definiramo pomozne ukaze.
 \newcommand{\@ifthen}[2]{\ifthenelse{#1}{#2}{\relax}}
@@ -64,7 +64,8 @@
     bookmarksopen, bookmarksdepth=3,
     pdfauthor=\@avtor,
     pdftitle=\@naslov,
-    pdfsubject=\@povzetek,
+    pdfproducer={pdfTeX},
+    pdfsubject={matematika},
     pdfkeywords=\@kljucnebesede}
   \RequirePackage[a-1b]{pdfx}
   \let\C\undefined
@@ -134,7 +135,7 @@
 \newcommand{\geslo}[2]{\noindent\textbf{#1}\hspace*{3mm}\hangindent=\parindent\hangafter=1 #2\par}
 
 % Ukaz za izpis začetnih strani.
-\AtBeginDocument{%
+\AfterEndPreamble{%
 
 % od tod do povzetka ne spreminjaj nicesar
 \thispagestyle{empty}
