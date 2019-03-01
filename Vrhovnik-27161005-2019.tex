@@ -340,9 +340,40 @@ Po opombi~\ref{op:AsimptotDolzina} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O
 \emph{Fordov krog} C($\frac{p}{q}$) je krog v zgornji polravnini, ki se abscisne osi dotika v točki $\frac{p}{q}$ in ima polmer $\frac{1}{2q^2}$. Pri tem sta $p$ in $q$ tuji si števili. 
 \end{definicija}
 
-Fordovi krogi so definirani za vsak okrajšan ulomek, torej lahko vsakemu racionalnemu številu enolično priredimo Fordov krog. Zaradi simetrije jih je dovolj obravnavati na intervalu $[0,1]$, obenem pa se zavedati, da jih lahko induktivno razširimo na celotno realno os.
+Ker so Fordovi krogi definirani za vsak okrajšan ulomek, lahko poljubnemu racionalnemu številu enolično priredimo Fordov krog. Iz analize vemo, da je množica racionalnih števil gosta podmnožica množice realnih števil, abscisna os pa je geometrijska predstavitev le-te. Zato poljubno majhen interval na abscisni osi vsebuje neskončno mnogo dotikališč Fordovih krogov.
 
-Z izbiro polmera dolžine $\frac{1}{2q^2}$ dosežemo, da sta poljubna Fordova kroga bodisi tangentna bodisi disjunktna. Za tangentne Fordove kroge veljata naslednji lastnosti, ki lastnosti Fareyevih sosedov preneseta v jezik geometrije. 
+Zaradi simetrije je Fordove kroge dovolj obravnavati na intervalu $[0,1]$, obenem pa se zavedati, da jih lahko induktivno razširimo na celotno realno os.
+
+\begin{trditev}
+\label{trd:FordDisjTang}
+Fordova kroga, ki pripadata različnima okrajšanima ulomkoma, sta bodisi tangentna bodisi disjunktna.
+\end{trditev}
+
+\begin{dokaz}
+Naj za Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) velja $\frac{a}{b} < \frac{c}{d}$.
+Naj bodo A središče kroga C($\frac{a}{b}$), B središče kroga C($\frac{c}{d}$) in C presečišče navpične premice skozi točko B z vodoravno premico skozi točko A. Naj bosta še D in E presečišči daljice AB s Fordovima krogoma C($\frac{a}{b}$) in C($\frac{c}{d}$).
+
+Vemo, da se kroga dotikata abscisne osi zaporedoma v točkah $\frac{a}{b}$ in $\frac{c}{d}$, njuna polmera pa merita $\frac{1}{2b^2}$ in $\frac{1}{2d^2}$. Od tod lahko izračunamo razdalje $|AB|$, $|AC|$ in $|BC|$.
+Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, zato velja Pitagorov izrek
+\[ |AB|^2 = |AC|^2 + |BC|^2. \]
+Če dolžine izrazimo z $a, b, c$ in $d$, dobimo enakost
+%
+\begin{align*}
+|AB|^2 
+  &= \left (\frac{c}{d} - \frac{a}{b} \right )^2 + \left (\frac{1}{2d^2} - \frac{1}{2b^2} \right )^2 \\ 
+  &= \left (\frac{bc-ad}{bd} \right )^2 + \frac{1}{4b^4} - \frac{1}{2b^2d^2} + \frac{1}{4d^4} \\
+  &= \frac{(bc-ad)^2}{b^2d^2} + \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2 - \frac{1}{b^2d^2} \\
+  &= \frac{(bc-ad)^2-1}{b^2d^2} + (|AD|^2 + |EB|^2).
+\end{align*}
+
+Če je $|bc-ad|>1$, je $|AB|^2 > |AD|^2 + |EB|^2$ in Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta disjunktna.
+
+Če je $|bc-ad|=1$, je $|AB|^2 = |AD|^2 + |EB|^2$ in Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta tangentna.
+
+Če je $|bc-ad|<1$, je $|bc-ad|=0,$ saj smo v množici celih števil. Sledi $\frac{a}{b} = \frac{c}{d},$ kar vodi v protislovje s predpostavko trditve.
+\end{dokaz}
+
+Za tangentne Fordove kroge veljata naslednji lastnosti, ki lastnosti Fareyevih sosedov preneseta v jezik geometrije.
 
 \begin{trditev}
 \label{trd:FordTangentnost}
@@ -351,28 +382,17 @@ Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta tangentna natanko tedaj, 
 
 \begin{dokaz}
 %
-Trditev bomo dokazali tako, da bomo dokazali implikaciji v desno in levo.
-Naj za Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) velja $\frac{a}{b} < \frac{c}{d}$.
-Naj bodo D središče kroga C($\frac{a}{b}$), E središče kroga C($\frac{c}{d}$) in F presečišče navpične premice skozi točko D z vodoravno premico skozi točko E.
+Ponovno vpeljimo točke na Fordovih krogih kot v prejšnjem dokazu. Implikacijo v levo smo že izpeljali, zato si oglejmo še implikacijo v desno.
 
-\( (\Rightarrow) \)
-Denimo, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) tangentna. Vemo, da se dotikata abscisne osi zaporedoma v točkah $\frac{a}{b}$ in $\frac{c}{d}$, njuna polmera pa merita $\frac{1}{2b^2}$ in $\frac{1}{2d^2}$. Od tod lahko izračunamo razdalje $|DF|$, $|EF|$ in $|DE|$. Po konstrukciji je trikotnik $DFE$ pravokoten s pravim kotom v oglišču $F$, zato velja Pitagorov izrek
-\[ |EF|^2 + |DF|^2 = |DE|^2. \]
-Če dolžine izrazimo z $a, b, c$ in $d$, dobimo enakost
+Denimo, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) tangentna. Potem za pravokotni trikotnik, ki ga določata, velja Pitagorov izrek 
+\[ |AC|^2 + |BC|^2 = |AB|^2 \] oziroma
 \[ \left (\frac{c}{d} - \frac{a}{b} \right )^2 + \left (\frac{1}{2b^2} - \frac{1}{2d^2} \right )^2 = \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2. \]
 Ko odpravimo oklepaje, opazimo, da se nekateri členi odštejejo. Nato odpravimo ulomke in dobljeno enakost poenostavimo.
 \[  \frac{c^2}{d^2} - \frac{2ac}{bd} + \frac{a^2}{b^2} + \frac{1}{4b^4} - \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} = \frac{1}{4b^4} + \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4}, \]
 \[ b^{2}c^{2} - 2abcd + a^{2}d^{2} - 1 = 0, \]
 \[  (bc-ad)^2 = 1, \]
 \[ |bc-ad|=1. \]
-
-Implikacija v desno je s tem dokazana.
-
-\( (\Leftarrow) \)
-Sedaj naj velja $|bc-ad|=1$. To je ekvivalentno enakosti $ (bc-ad)^2 = 1, $ kar lahko po obratnem postopku kot zgoraj prepišemo v obliko 
-\[ \left (\frac{c}{d} - \frac{a}{b} \right )^2 + \left (\frac{1}{2b^2} - \frac{1}{2d^2} \right )^2 = \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2. \]
-To pomeni, da je dolžina hipotenuze pravokotnega trikotnika $DFE$ enaka vsoti dolžin polmerov Fordovih krogov C($\frac{a}{b}$) in C($\frac{c}{d}$), torej sta kroga tangentna.
-%
+Trditev je s tem dokazana.
 \end{dokaz}
 
 \begin{definicija}
@@ -398,7 +418,7 @@ pomeni, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{a+c}{b+d}$) tangentna.
 
 % Pitagorejske trojice
 %
-V dokazu trditve~\ref{trd:FordTangentnost} smo konstruirali pravokotni trikotnik, določen s središčema tangentnih Fordovih krogov in presečiščem premic skozi središči. Spomnimo se znane definicije iz teorije števil, ki izhaja iz evklidske geometrije. 
+V dokazu trditve~\ref{trd:FordDisjTang} smo konstruirali pravokotni trikotnik, določen s središčema tangentnih Fordovih krogov in presečiščem premic skozi središči. Spomnimo se znane definicije iz teorije števil, ki izhaja iz evklidske geometrije. 
 
 \begin{definicija}
 Trojica naravnih števil $(a,b,c)$, za katero velja $a^2+b^2=c^2$, se imenuje \emph{pitagorejska trojica}.
