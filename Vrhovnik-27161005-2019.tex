@@ -373,6 +373,7 @@ Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, za
 Če je $|bc-ad|<1$, je $|bc-ad|=0,$ saj smo v množici celih števil. Sledi $\frac{a}{b} = \frac{c}{d},$ kar vodi v protislovje s predpostavko trditve.
 \end{dokaz}
 
+% Fordovi sosedi
 Za tangentne Fordove kroge veljata naslednji lastnosti, ki lastnosti Fareyevih sosedov preneseta v jezik geometrije.
 
 \begin{trditev}
@@ -414,6 +415,41 @@ od koder sledi, da sta Fordova kroga C($\frac{a+c}{b+d}$) in C($\frac{c}{d}$) ta
 Podobno
 \[ |bc-ad|=|bc-ad+ab-ab|=|(a+c)b-(b+d)a|=1 \]
 pomeni, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{a+c}{b+d}$) tangentna.
+\end{dokaz}
+
+% konstrukcija Fordovih sosedov
+Naslednji izrek pove, kako konstruiramo množico vseh Fordovih sosedov danega Fordovega kroga.
+
+\begin{izrek}
+Naj bosta kroga C($\frac{p}{q}$) in C($\frac{P}{Q}$) Fordova soseda. Vse Fordove sosede Fordovega kroga C($\frac{p}{q}$) lahko zapišemo v obliki C($\frac{P_n}{Q_n}$), kjer je $\frac{P_n}{Q_n} = \frac{P+np}{Q+nq}$ in $n$ preteče vsa cela števila.
+\end{izrek}
+
+\begin{dokaz}
+%
+Najprej dokažimo, da sta Fordova kroga C($\frac{p}{q}$) in C($\frac{P_n}{Q_n}$) res Fordova soseda. Računajmo
+\[ |qP_{n} - pQ_{n}| = |q(P+np) - p(Q+nq)| = |qP+qnp-pQ-pnq| = |qP-pQ| = 1. \]
+Zadnja enakost velja po predpostavki, da sta C($\frac{p}{q}$) in C($\frac{P}{Q}$) Fordova soseda.
+
+Sedaj preverimo, če obstajajo še Fordovi sosedi, ki niso zgornje oblike. Opazovali bomo zaporedje Fordovih krogov $\mathcal{M} = \{ \mathrm{C}(\frac{P_n}{Q_n}); n\in\Z \}.$
+Iz računa
+\begin{align*}
+|Q_{n}P_{n+1} - P_{n}Q_{n+1}| 
+  &= |(Q+nq)(P+(n+1)p) - (P+np)(Q+(n+1)q)| \\ 
+  &= |QP + (n+1)Qp + nPq + n(n+1)pq \\
+  &   - PQ - (n+1)Pq - npQ - n(n+1)pq| \\
+  &= |Qp - pQ| \\
+  &= 1
+\end{align*}
+sledi, da sta zaporedna elementa zaporedja $\mathcal{M}$ Fordova soseda.
+Ulomek $\frac{P_n}{Q_n}$, ki predstavlja Fordov krog C($\frac{P_n}{Q_n}$), lahko zapišemo kot
+\begin{align*}
+\frac{P_n}{Q_n}
+  &= \frac{P+np}{Q+nq} = \frac{Pq+npq}{q(Q+nq)} = \frac{Pq+npq+pQ-pQ}{q(Q+nq)} = \frac{p(Q+nq) + (Pq-pQ)}{q(Q+nq)} \\
+  &= \frac{p}{q} + \frac{Pq-pQ}{q(Q+nq)} = \frac{p}{q} \pm \frac{1}{q(Q+nq)} = \frac{p}{q} \pm \frac{1}{q^2 \left (n+\frac{Q}{q} \right)}.
+\end{align*}
+V limiti, ko gre $n$ preko vseh meja, gre $\frac{P_n}{Q_n}$ proti $\frac{p}{q}.$
+Ugotovili smo, da Fordovi krogi oblike C($\frac{P_n}{Q_n}$) geometrijsko tvorijo obroč okroli Fordovega kroga C($\frac{p}{q}$). Z njim so namreč vsi tangentni, prav tako pa so tangentni tudi na svojega predhodnika in naslednika v zaporedju $\mathcal{M}$. Njihova dotikališča z abscisno osjo konvergirajo proti točki $\frac{p}{q},$ ki je dotikališče danega Fordovega kroga C($\frac{p}{q}$), zaradi medsebojne tangentnosti pa so njihovi polmeri vse manjši. Zato ne obstaja Fordov krog, tangenten na C($\frac{p}{q}$), ki ni zgornje oblike, ki ne seka katerega izmed krogov iz zaporedja $\mathcal{M}$.
+%
 \end{dokaz}
 
 % Pitagorejske trojice
