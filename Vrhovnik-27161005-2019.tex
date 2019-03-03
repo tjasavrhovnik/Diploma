@@ -221,8 +221,11 @@ Naj za $\frac{a}{b} < \frac{c}{d}$ velja $bc - ad = 1$. Dokazati želimo, da je 
 kar pomeni, da $b+d$ in $a+c$ nimata skupnega faktorja. Ulomek $\frac{a+c}{b+d}$ je torej okrajšan.
 \end{dokaz}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % dolžina zaporedja
 %
+\subsection{Dolžina Fareyevega zaporedja}
+
 Flitconova metoda za izračun števila okrajšanih ulomkov nas pripelje do naslednje rekurzivne formule dolžine Fareyevega zaporedja.
 
 \begin{trditev}
@@ -460,7 +463,7 @@ Ugotovili smo, da Fordovi krogi oblike C($\frac{P_n}{Q_n}$) geometrijsko tvorijo
 V dokazu trditve~\ref{trd:FordDisjTang} smo konstruirali pravokotni trikotnik, določen s središčema tangentnih Fordovih krogov in presečiščem premic skozi središči. Spomnimo se znane definicije iz teorije števil, ki izhaja iz evklidske geometrije. 
 
 \begin{definicija}
-Trojica naravnih števil $(a,b,c)$, za katero velja $a^2+b^2=c^2$, se imenuje \emph{pitagorejska trojica}.
+Trojica naravnih števil $(a,b,c)$, za katero velja $a^2+b^2=c^2$, se imenuje \emph{pitagorejska trojica}\footnote{Pojem pitagorejska trojica nosi ime slavnega starogrškega matematika Pitagore (okoli 570~pr.~n.~št.--495~pr.~n.~št.), ki ga poznamo predvsem po Pitagorovem izreku.}.
 Pitagorejska trojica je \emph{primitivna}, če števila $a$, $b$, in $c$ nimajo skupnega faktorja.
 \end{definicija}
 
@@ -514,10 +517,23 @@ To pa je možno le tedaj, ko je $\lambda=1.$ Prispeli smo do protislovja, kar po
 \end{dokaz}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%posplositve
+% Posplositve
 \subsection{Posplošeni Fordovi krogi}
+
 V prejšnjem razdelku smo se ukvarjali s Fordovimi krogi, ki so bili enolično določeni z racionalnim številom. Natančneje, za dan okrajšan ulomek $\frac{p}{q}$ smo konstruirali Fordov korg na zgornji polravnini evklidkse ravnine, ki se abscisne osi dotika v točki $\frac{p}{q}$, njegov polmer pa meri $\frac{1}{2q^2}.$
 Nadaljujemo lahko s splošnejšimi Fordovimi krogi, ki so definirani na povsem enak način, le da imajo polmer enak $\frac{1}{2hq^2},$ kjer je $h$ poljubno realno število. Imenujemo jih tudi Speiserjevi\footnote{Andreas Speiser, 10.~6.~1885--12.~10.~1970, švicarski matematik, ki se je ukvarjal s teorijo števil in teorijo grup.} krogi. Če izberemo $h=1,$ dobimo običajne Fordove kroge.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fordove krogle
+\subsection{Fordove krogle}
+
+Naj bosta sedaj števili $p$ in $q$ elementa množice Gaussovih celih števil, ki je definirana kot $\mathbb{Z}\left[{i}\right] = \{a+bi; a,b \in \Z \}.$ Zapišimo $p = p'+ip''$ in $q = q'+iq'',$ kjer so $p', p'', q', q'' \in \Z.$ Definirajmo ulomek 
+\[ \frac{p}{q} = \frac{p'+ip''}{q+iq''} = \frac{(p'+ip'')(q'-iq'')}{(q'+iq'')(q'-iq'')} = \frac{p'q'+p''q''}{q'^2+q''^2} + i \frac{p''q'-p'q''}{q'^2+q''^2}, \]
+ki pripada kompleksnim številom, in ga okrajšajmo. Geometrijsko predstavlja točko v Gaussovi $xy$-ravnini z realno in imaginarno koordinato. Gaussovo ravnino postavimo v prostor, določen z osjo $z$, pravokotno na Gaussovo ravnino, in opazujmo podprostor, ki pripada pozitivnim vrednostim na $z$-osi. Analogno Fordovm krogom v ravnini pridemo do naslednjega pojma. 
+
+\begin{definicija}
+\emph{Fordova krogla} je krogla v zgornjem polprostoru, definiranem kot zgoraj, ki se $xy$-ravnine dotika v točki, določeni s $\frac{p}{q}$, njen polmer pa meri $\frac{1}{2|q|^2}.$
+\end{definicija}
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
