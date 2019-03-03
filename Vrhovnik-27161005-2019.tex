@@ -528,12 +528,40 @@ Nadaljujemo lahko s splošnejšimi Fordovimi krogi, ki so definirani na povsem e
 \subsection{Fordove krogle}
 
 Naj bosta sedaj števili $p$ in $q$ elementa množice Gaussovih celih števil, ki je definirana kot $\mathbb{Z}\left[{i}\right] = \{a+bi; a,b \in \Z \}.$ Zapišimo $p = p'+ip''$ in $q = q'+iq'',$ kjer so $p', p'', q', q'' \in \Z.$ Definirajmo ulomek 
-\[ \frac{p}{q} = \frac{p'+ip''}{q+iq''} = \frac{(p'+ip'')(q'-iq'')}{(q'+iq'')(q'-iq'')} = \frac{p'q'+p''q''}{q'^2+q''^2} + i \frac{p''q'-p'q''}{q'^2+q''^2}, \]
+\[ \frac{p}{q} = \frac{p'+ip''}{q'+iq''} = \frac{(p'+ip'')(q'-iq'')}{(q'+iq'')(q'-iq'')} = \frac{p'q'+p''q''}{q'^2+q''^2} + i \frac{p''q'-p'q''}{q'^2+q''^2}, \]
 ki pripada kompleksnim številom, in ga okrajšajmo. Geometrijsko predstavlja točko v Gaussovi $xy$-ravnini z realno in imaginarno koordinato. Gaussovo ravnino postavimo v prostor, določen z osjo $z$, pravokotno na Gaussovo ravnino, in opazujmo podprostor, ki pripada pozitivnim vrednostim na $z$-osi. Analogno Fordovm krogom v ravnini pridemo do naslednjega pojma. 
 
 \begin{definicija}
-\emph{Fordova krogla} je krogla v zgornjem polprostoru, definiranem kot zgoraj, ki se $xy$-ravnine dotika v točki, določeni s $\frac{p}{q}$, njen polmer pa meri $\frac{1}{2|q|^2}.$
+\emph{Fordova krogla} S($\frac{p}{q}$), kjer je $\frac{p}{q}$ okrajšan ulomek v množici kompleksnih števil, je krogla v zgornjem polprostoru, definiranem kot zgoraj, ki se $xy$-ravnine dotika v točki, določeni s $\frac{p}{q}$, njen polmer pa meri $\frac{1}{2|q|^2}.$
 \end{definicija}
+
+% lastnosti
+Na analogen način trditvam, ki opisujejo lastnosti Fordovih krogov, lahko izpeljemo in dokažemo lastnosti Fordovih krogel. Omenimo le nekatere izmed njih.
+
+Poljubno majhen zaprt pravokotnik v $xy$-ravnini vsebuje neskončno mnogo dotikališč Fordovih krogel.
+
+V dokazu trditve \ref{trd:FordDisjTang} smo konstruirali pravokotni trikotnik, določen z dvema Fordovima krogoma. Naj točki $\frac{p}{q}$ in $\frac{P}{Q}$ določata Fordovi krogli ter konstruirajmo pravokotni trikotnik $ABC$ kot prej. Iz zveze
+\begin{align*}
+|AB|^2 
+  &= \left |\frac{P}{Q} - \frac{p}{q} \right|^2 + \left |\frac{1}{2|Q|^2} - \frac{1}{2|q|^2} \right|^2 = \frac{|Pq-pQ|^2-1}{|Q|^2|q|^2} + |AD|^2 + |EB|^2
+\end{align*}
+sledi:
+če je $|Pq-pQ|>1,$ je $|AB|^2>|AD|^2+|EB|^2$ in krogli sta disjunktni;
+sicer je $|Pq-pQ|=1,$ zato je $|AB|^2=|AD|^2+|EB|^2$ in krogli sta tangentni.
+
+Naj bosta S($\frac{p}{q}$) in S($\frac{P}{Q}$) tangentni Fordovi krogli. Kot prej tangentne Fordove krogle na kroglo S($\frac{p}{q}$) konstruiramo s pomočjo formule
+\[ \frac{P_n}{Q_n} = \frac{P+np}{Q+nq}, \]
+le da tokrat $n$ pripada množici Gaussovih celih števil. 
+Nadalje nas zanima, koliko Fordovih krogel je tangentnih na kroglo S($\frac{P_n}{Q_n}$).
+Uporabimo pogoj za tangentnost, izpeljan zgoraj. Računamo
+\begin{align*} 
+|P_{n}Q_{m} - P_{m}Q_{n}| 
+  &= |(P+np)(Q+mq) - (P+mp)(Q+nq)| \\
+  &= |PQ+mPq+npQ+mnpq-PQ-nqP-mpQ-mnpq| \\
+  &= |Pq-pQ| |m-n| = 1.
+\end{align*}
+%
+Sledi, da je $|m-n|=1,$ torej je $m-n \in \{1, -1, i, -i \}.$ Ugotovili smo, da je vsaka Fordova krogla, ki je tangentna na dano Fordovo kroglo, tangentna še na štiri druge Fordove krogle. Velja, da so te edine tangentne krogle.
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
