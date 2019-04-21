@@ -563,6 +563,55 @@ Uporabimo pogoj za tangentnost, izpeljan zgoraj. Računamo
 %
 Sledi, da je $|m-n|=1,$ torej je $m-n \in \{1, -1, i, -i \}.$ Ugotovili smo, da je vsaka Fordova krogla, ki je tangentna na dano Fordovo kroglo, tangentna še na štiri druge Fordove krogle. Velja, da so te edine tangentne krogle.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mobiusove transformacije na Fordovih krogih
+\subsection{M\"{o}biusove transformacije na Fordovih krogih}
+
+Do sedaj smo Fordove kroge obravnavali s pomočjo geometrijskih sredstev. V tem poglavju bomo preko algebre prišli do znanih rezultatov o Fordovih krogih.
+Geometrijske objekte si bomo predstavljali v kompleksni ravnini, torej bo točka s koordinatama $(x,y)$ opisana s kompleksnim številom $z=x+iy$.
+
+% Mobiusova transformacija
+Najprej se spomnimo naslednjega pojma iz kompleksne analize.
+\begin{definicija}
+Preslikava \( f \colon \mathbb{CP}^{1} \rightarrow \mathbb{CP}^{1} \), definirana s predpisom \( f(z) = \frac{az+c}{bz+d} \), kjer so $a,b,c,d \in \mathbb{C}$ in $ad-bc \neq 0$, se imenuje \emph{M\"{o}biusova transformacija}.
+\end{definicija} 
+
+\begin{opomba}
+Simbol $ \mathbb{CP}^{1}$ označuje \emph{Riemannovo sfero}, to je kompaktifikacijo kompleksne ravnine z eno točko, kar zapišemo kot $\mathbb{CP}^{1} = \mathbb{C} \cup \{\infty\}$.
+\end{opomba}
+
+\begin{opomba}
+Števila $a,b,c,d$ lahko pomnožimo s poljubnim neničelnim kompleksnim številom, zato lahko predpostavimo, da je $ad-bc=1$.
+\end{opomba}
+
+M\"{o}biusova transformacija je meromorfna in bijektivna preslikava, identična preslikava $id(z)=z$ je M\"{o}biusova transformacija, prav tako je kompozitum M\"{o}biusovih transformacij spet M\"{o}biusova transformacija. Množica takih preslikav tako tvori grupo za kompozitum. 
+Preslikavo $f$ lahko zapišemo v matrični obliki
+\[
+\mathbf{A}\ =
+\left[
+\begin{array}{cc}
+a & c \\
+b & d \\
+\end{array}
+\right],
+\]
+kjer so $a,b,c,d \in \mathbb{C}$. Ker velja $ad-bc=1$, je matrika $A \in {SL}_{2}(\mathbb{C})$. Zato bomo M\"{o}biusove transformacije predstavljali s splošno linearno grupo ${SL}_{2}(\mathbb{C})$.
+
+Ključen pri izpeljavi rezultatov o Fordovih krogih je pojem, ki ga v algebri pogosto uporabljamo.
+
+\begin{definicija}
+\emph{Delovanje grupe} $G$ na množico $M$ je taka preslikava \( \circ \colon G \times M \rightarrow M \), za katero velja:
+\begin{enumerate}
+	\item \( e \circ \alpha = \alpha \) za vsak $ \alpha \in M$, kjer je $e$ enota grupe $G$, 
+	\item \( g \circ (h \circ \alpha) = (gh) \circ \alpha \) za vsak $\alpha \in M$ in vsaka $g,h \in G$.
+\end{enumerate}
+
+Ekvivalentno, delovanje grupe $G$ na množico $M$ je homomorfizem iz grupe $G$ v grupo permutacij množice $M$.
+\end{definicija}
+
+\begin{definicija}
+Fordov krog C($\frac{1}{0}$), katerega polmer je neskončen, je premica $\mathbb{R} + i$.
+\end{definicija}
+
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
