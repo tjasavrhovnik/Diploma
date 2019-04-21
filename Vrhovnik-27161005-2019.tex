@@ -636,8 +636,9 @@ b & d \\
 \right]
 \in {SL}_{2}(\mathbb{Z}).
 \]
-Vemo , da M\"{o}biusova transformacija slika premice in krožnice v premice in krožnice. Da bomo dokazali, da Fordove kroge preslika v Fordove kroge, bomo pokazali, da grupa ${SL}_{2}(\mathbb{Z})$ deluje na množico Fordovih krogov.
-S krajšim računom lahko preverimo, da je grupa ${SL}_{2}(\mathbb{Z})$ generirana z matrikama 
+Vemo, da tovrstna preslikava slika premice in krožnice v premice in krožnice. Ideja dokaza je pokazati, da grupa ${SL}_{2}(\mathbb{Z})$ deluje na množico Fordovih krogov.
+
+S krajšim računom se lahko prepričamo, da je grupa ${SL}_{2}(\mathbb{Z})$ generirana z matrikama 
 \(
 \left[
 \begin{array}{cc}
@@ -659,19 +660,29 @@ To pomeni, da je vsako M\"{o}biusovo transformacijo moč zapisati kot kompozitum
 
 Preslikava $z \mapsto z+1$ je translacija, zato zgornje očitno velja.
 
-Oglejmo si še preslikavo $z \mapsto -\frac{1}{z}$. Naj bo original Fordov krog s polmerom $r$ in središčem v $\alpha$, predstavljen z enačbo $ |z-\alpha|=r$. Prepišimo enačbo v
+Kaj pa preslikava $z \mapsto -\frac{1}{z}$? Najprej si oglejmo splošen primer. Naj bo original Fordov krog s polmerom $r$ in središčem v $\alpha$, predstavljen z enačbo $ |z-\alpha|=r$. Prepišimo enačbo v
 \begin{align}
 (z-\alpha)( \bar{z}-\bar{\alpha}) &= r^2, \nonumber \\
 z\bar{z} - \alpha \bar{z} - \bar{\alpha} z + \alpha \bar{\alpha} - r^2 &= 0
 \end{align}
 in označimo $R = \alpha \bar{\alpha} - r^2$. Polmer lahko izrazimo kot $r = \sqrt{|\alpha|^2-R}$.
 Preslikajmo original s preslikavo $z \mapsto -\frac{1}{z}$. Enačba slike se glasi
- \begin{align}
+\begin{align}
 \left(-\frac{1}{z}\right)\left(-\frac{1}{\bar{z}}\right) + \alpha \frac{1}{\bar{z}} + \bar{\alpha} \frac{1}{z} + R &= 0, \nonumber \\
 1 + \alpha z + \bar{\alpha} \bar{z} + Rz \bar{z} &= 0, \nonumber \\
 z \bar{z} + \frac{\bar{\alpha}}{R} \bar{z} + \frac{\alpha}{R} z + \frac{1}{R} &= 0.
 \end{align}
+Sedaj vzemimo Fordov krog C($\frac{p}{q}$). Njegov polmer meri $\frac{1}{2q^2}$, središče pa je v točki $\frac{p}{q} +i \frac{1}{2q^2}$.
+Izračunajmo
+\[ R = \alpha \bar{\alpha} - r^2 = \left(\frac{p}{q} + i\frac{1}{2q^2} \right) \left(\frac{p}{q} - i\frac{1}{2q^2} \right) - \frac{1}{4q^4} 
+= \frac{p^2}{q^2} + \frac{1}{4q^4} - \frac{1}{4q^4} = \frac{p^2}{q^2} \]
+in preverimo, da je slika izbranega Fordovega kroga tudi Fordov krog. Res, središče slike je po enačbi (9) v točki
+\[ -\frac{\bar{\alpha}}{R} = - \frac{\frac{p}{q} - i \frac{1}{2q^2}}{\frac{p^2}{q^2}} = - \frac{q}{p} + i \frac{1}{2p^2}, \]
+polmer pa meri
+\[ \sqrt{ \left| - \frac{\bar{\alpha}}{R} \right|^2 - \frac{1}{R} } = \sqrt{ \frac{\bar{\alpha}}{R} \frac{\alpha}{R} - \frac{1}{R} } 
+= \frac{1}{R} \sqrt{|\alpha|^2 - R} =  \frac{1}{R} \frac{1}{2q^2} = \frac{q^2}{2p^2 q^2} = \frac{1}{2p^2}. \]
 
+Dokazali smo, da preslikavi, ki generirata grupo M\"{o}biusovih transformacij, Fordov krog preslikata v Fordov krog z intervala $[n,n+1]$ za $n \in \mathbb{Z}$. Da dobimo Fordov krog z intervala $[0,1]$, moramo prvotno preslikavo komponirati z $n$ translacijami v levo (za $-1$). Ker identiteta slika Fordov krog vase in je kompozitum M\"{o}biusovih transformacij dobro definiran, grupa ${SL}_{2}(\mathbb{Z})$ res deluje na množico Fordovih krogov.
 \end{dokaz}
 
 %
