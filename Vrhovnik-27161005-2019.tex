@@ -581,6 +581,7 @@ Simbol $ \mathbb{CP}^{1}$ označuje \emph{Riemannovo sfero}, to je kompaktifikac
 
 \begin{opomba}
 Števila $a,b,c,d$ lahko pomnožimo s poljubnim neničelnim kompleksnim številom, zato lahko predpostavimo, da je $ad-bc=1$.
+Dodatno, v našem primeru bo dovolj obravnavati le $a,b,c,d \in \mathbb{Z}$.
 \end{opomba}
 
 M\"{o}biusova transformacija je meromorfna in bijektivna preslikava, identična preslikava $id(z)=z$ je M\"{o}biusova transformacija, prav tako je kompozitum M\"{o}biusovih transformacij spet M\"{o}biusova transformacija. Množica takih preslikav tako tvori grupo za kompozitum. 
@@ -594,8 +595,9 @@ b & d \\
 \end{array}
 \right],
 \]
-kjer so $a,b,c,d \in \mathbb{C}$. Ker velja $ad-bc=1$, je matrika $A \in {SL}_{2}(\mathbb{C})$. Zato bomo M\"{o}biusove transformacije predstavljali s splošno linearno grupo ${SL}_{2}(\mathbb{C})$.
+kjer so $a,b,c,d \in \mathbb{Z}$. Ker velja $ad-bc=1$, je matrika $A \in {SL}_{2}(\mathbb{Z})$. Zato bomo M\"{o}biusove transformacije predstavljali s splošno linearno grupo ${SL}_{2}(\mathbb{Z})$.
 
+% Delovanje grupe na množico
 Ključen pri izpeljavi rezultatov o Fordovih krogih je pojem, ki ga v algebri pogosto uporabljamo.
 
 \begin{definicija}
@@ -608,9 +610,69 @@ Ključen pri izpeljavi rezultatov o Fordovih krogih je pojem, ki ga v algebri po
 Ekvivalentno, delovanje grupe $G$ na množico $M$ je homomorfizem iz grupe $G$ v grupo permutacij množice $M$.
 \end{definicija}
 
+\begin{primer}
+Naj bo $G$ grupa permutacij $n$ elementov, torej $G = S_{n}$, $M$ pa naj bo množica $M = \{1,2, \ldots, n \}$.
+Delovanje grupe $G$ na množico $M$ je preslikava \( \circ \colon G \times M \rightarrow M \) s predpisom \( (\pi, \alpha) \mapsto \pi(\alpha) = \pi \circ \alpha \).
+\end{primer}
+
+% Fordovi krogi
 \begin{definicija}
 Fordov krog C($\frac{1}{0}$), katerega polmer je neskončen, je premica $\mathbb{R} + i$.
 \end{definicija}
+
+\begin{izrek}
+M\"{o}biusova transformacija slika Fordove kroge v Fordove kroge.
+\end{izrek}
+
+\begin{dokaz}
+Naj bo M\"{o}biusova transformacija dana z matriko 
+\[
+\mathbf{A}\ =
+\left[
+\begin{array}{cc}
+a & c \\
+b & d \\
+\end{array}
+\right]
+\in {SL}_{2}(\mathbb{Z}).
+\]
+Vemo , da M\"{o}biusova transformacija slika premice in krožnice v premice in krožnice. Da bomo dokazali, da Fordove kroge preslika v Fordove kroge, bomo pokazali, da grupa ${SL}_{2}(\mathbb{Z})$ deluje na množico Fordovih krogov.
+S krajšim računom lahko preverimo, da je grupa ${SL}_{2}(\mathbb{Z})$ generirana z matrikama 
+\(
+\left[
+\begin{array}{cc}
+1 & 1 \\
+0 & 1 \\
+\end{array}
+\right]
+\)
+in
+\(
+\left[
+\begin{array}{cc}
+0 & -1 \\
+1 & 0 \\
+\end{array}
+\right]
+\).
+To pomeni, da je vsako M\"{o}biusovo transformacijo moč zapisati kot kompozitum preslikav $z \mapsto z+1$ in $z \mapsto -\frac{1}{z}$, ki ustrezata generatorjema. Trdimo, da M\"{o}biusova transformacija preslika Fordov krog z intervala $ [0,1]$ v Fordov krog z intervala $[n,n+1]$, kjer $n$ pripada množici celih števil. 
+
+Preslikava $z \mapsto z+1$ je translacija, zato zgornje očitno velja.
+
+Oglejmo si še preslikavo $z \mapsto -\frac{1}{z}$. Naj bo original Fordov krog s polmerom $r$ in središčem v $\alpha$, predstavljen z enačbo $ |z-\alpha|=r$. Prepišimo enačbo v
+\begin{align}
+(z-\alpha)( \bar{z}-\bar{\alpha}) &= r^2, \nonumber \\
+z\bar{z} - \alpha \bar{z} - \bar{\alpha} z + \alpha \bar{\alpha} - r^2 &= 0
+\end{align}
+in označimo $R = \alpha \bar{\alpha} - r^2$. Polmer lahko izrazimo kot $r = \sqrt{|\alpha|^2-R}$.
+Preslikajmo original s preslikavo $z \mapsto -\frac{1}{z}$. Enačba slike se glasi
+ \begin{align}
+\left(-\frac{1}{z}\right)\left(-\frac{1}{\bar{z}}\right) + \alpha \frac{1}{\bar{z}} + \bar{\alpha} \frac{1}{z} + R &= 0, \nonumber \\
+1 + \alpha z + \bar{\alpha} \bar{z} + Rz \bar{z} &= 0, \nonumber \\
+z \bar{z} + \frac{\bar{\alpha}}{R} \bar{z} + \frac{\alpha}{R} z + \frac{1}{R} &= 0.
+\end{align}
+
+\end{dokaz}
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
