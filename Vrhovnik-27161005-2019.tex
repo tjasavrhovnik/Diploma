@@ -572,6 +572,7 @@ Geometrijske objekte si bomo predstavljali v kompleksni ravnini, torej bo točka
 % Mobiusova transformacija
 Najprej se spomnimo naslednjega pojma iz kompleksne analize.
 \begin{definicija}
+\label{def:MobTransformacija}
 Preslikava \( f \colon \mathbb{CP}^{1} \rightarrow \mathbb{CP}^{1} \), definirana s predpisom \( f(z) = \frac{az+c}{bz+d} \), kjer so $a,b,c,d \in \mathbb{C}$ in $ad-bc \neq 0$, se imenuje \emph{M\"{o}biusova transformacija}.
 \end{definicija} 
 
@@ -621,6 +622,7 @@ Fordov krog C($\frac{1}{0}$), katerega polmer je neskončen, je premica $\mathbb
 \end{definicija}
 
 \begin{izrek}
+\label{izr:MobDelovanje}
 M\"{o}biusova transformacija slika Fordove kroge v Fordove kroge.
 \end{izrek}
 
@@ -684,6 +686,45 @@ polmer pa meri
 
 Dokazali smo, da preslikavi, ki generirata grupo M\"{o}biusovih transformacij, Fordov krog preslikata v Fordov krog z intervala $[n,n+1]$ za $n \in \mathbb{Z}$. Da dobimo Fordov krog z intervala $[0,1]$, moramo prvotno preslikavo komponirati z $n$ translacijami v levo (za $-1$). Ker identiteta slika Fordov krog vase in je kompozitum M\"{o}biusovih transformacij dobro definiran, grupa ${SL}_{2}(\mathbb{Z})$ res deluje na množico Fordovih krogov.
 \end{dokaz}
+
+% tangentnost in Mobiusova transformacija
+\begin{trditev}
+M\"{o}biusova transformacija 
+\[
+\mathbf{A}\ =
+\left[
+\begin{array}{cc}
+a & c \\
+b & d \\
+\end{array}
+\right]
+\in {SL}_{2}(\mathbb{Z}).
+\]
+ohranja tangentnost Fordovih krogov.
+\end{trditev}
+
+\begin{dokaz}
+Kot v definiciji \ref{def:MobTransformacija} zapišimo M\"{o}biusovo transformacijo v obliki $f(z) = \frac{az+c}{bz+d}$, kjer so $a,b,c,d \in \mathbb{Z}$ in velja $ad-bc=1$. 
+Vzemimo Fordova kroga C($\frac{e}{f}$) in C($\frac{g}{h}$) in poglejmo, kam se preslikata. 
+Ker velja izrek \ref{izr:MobDelovanje} in je Fordov krog enolično določen s točko, v kateri se dotika realne osi v kompleksni ravnini, je dovolj poznati sliko te točke.
+Izračunajmo
+\[ f \left(\frac{e}{f} \right) = \frac{a \frac{e}{f} + c}{b \frac{e}{f} + d} = \frac{ae + cf}{be + df}, \]
+od koder sledi, da se Fordov krog C($\frac{e}{f}$) preslika v Fordov krog C($\frac{ae+cf}{be+df}$).
+Podobno,
+\[ f \left(\frac{g}{h} \right) = \frac{a \frac{g}{h} + c}{b \frac{g}{h} + d} = \frac{ag + ch}{bg + dh}, \]
+in C($\frac{g}{h}$) se preslika v C($\frac{ag+ch}{bg+dh}$).
+Označimo \( e' = ae+cf, f' = be+df, g' = ag+ch \) in $h' = bg+dh$. Računajmo
+\[ e'h'-f'g' = (ae+cf)(bg+dh) - (be+df)(ag+ch) = (ad - bc)(eh - fg), \]
+\[ |e'h'-f'g'| = |ad-bc| |eh-fg| = |eh-fg|. \]
+Iz zadnje enakosti in trditve \ref{trd:FordTangentnost} sledi, da sta Fordova kroga tangentna natanko tedaj, ko sta tangentni njuni sliki, kar smo želeli pokazati.
+\end{dokaz}
+
+\begin{primer}
+Oglejmo si nekaj primerov, kam M\"{o}biusova transformacija preslika Fordove kroge.
+Kot smo videli v zgornjem dokazu, je dovolj poznati sliko točke v presečišču Fordovega kroga in realne osi. 
+
+Fordov korg C($\frac{0}{1}$) se realne osi dotika v točki $(0,0)$, kar je v jeziku kompleksnih števil enako $0$, njegov polmer pa meri $\frac{1}{2}$. Ker je $f(0) = \frac{a \cdot 0 + c}{b \cdot 0 + d} = \frac{c}{d}$, se C($\frac{0}{1}$) preslika v Fordov krog C($\frac{c}{d}$).
+\end{primer}
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
