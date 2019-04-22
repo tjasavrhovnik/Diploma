@@ -347,6 +347,10 @@ Ker so Fordovi krogi definirani za vsak okrajšan ulomek, lahko poljubnemu racio
 
 Zaradi simetrije je Fordove kroge dovolj obravnavati na intervalu $[0,1]$, obenem pa se zavedati, da jih lahko induktivno razširimo na celotno realno os.
 
+\begin{opomba}
+Iz definicije zaradi pogoja o tujosti števil $p$ in $q$ neposredno sledi, da je množica Fordovih krogov v bijekciji s Fareyevim zapredjem.
+\end{opomba}
+
 \begin{trditev}
 \label{trd:FordDisjTang}
 Fordova kroga, ki pripadata različnima okrajšanima ulomkoma, sta bodisi tangentna bodisi disjunktna.
@@ -446,8 +450,7 @@ Iz računa
   &= |Qp - pQ| \\
   &= 1
 \end{align*}
-sledi, da sta zaporedna elementa zaporedja $\mathcal{M}$ Fordova soseda.
-Ulomek $\frac{P_n}{Q_n}$, ki predstavlja Fordov krog C($\frac{P_n}{Q_n}$), lahko zapišemo kot
+sledi, da sta zaporedna elementa zaporedja $\mathcal{M}$ Fordova soseda. Ulomek $\frac{P_n}{Q_n}$, ki predstavlja Fordov krog C($\frac{P_n}{Q_n}$), lahko zapišemo kot
 \begin{align*}
 \frac{P_n}{Q_n}
   &= \frac{P+np}{Q+nq} = \frac{Pq+npq}{q(Q+nq)} = \frac{Pq+npq+pQ-pQ}{q(Q+nq)} = \frac{p(Q+nq) + (Pq-pQ)}{q(Q+nq)} \\
@@ -520,16 +523,16 @@ To pa je možno le tedaj, ko je $\lambda=1.$ Prispeli smo do protislovja, kar po
 % Posplositve
 \subsection{Posplošeni Fordovi krogi}
 
-V prejšnjem razdelku smo se ukvarjali s Fordovimi krogi, ki so bili enolično določeni z racionalnim številom. Natančneje, za dan okrajšan ulomek $\frac{p}{q}$ smo konstruirali Fordov korg na zgornji polravnini evklidkse ravnine, ki se abscisne osi dotika v točki $\frac{p}{q}$, njegov polmer pa meri $\frac{1}{2q^2}.$
-Nadaljujemo lahko s splošnejšimi Fordovimi krogi, ki so definirani na povsem enak način, le da imajo polmer enak $\frac{1}{2hq^2},$ kjer je $h$ poljubno realno število. Imenujemo jih tudi Speiserjevi\footnote{Andreas Speiser, 10.~6.~1885--12.~10.~1970, švicarski matematik, ki se je ukvarjal s teorijo števil in teorijo grup.} krogi. Če izberemo $h=1,$ dobimo običajne Fordove kroge.
+V prejšnjem razdelku smo se ukvarjali s Fordovimi krogi, ki so bili enolično določeni z racionalnim številom. Natančneje, za dan okrajšan ulomek $\frac{p}{q}$ smo konstruirali Fordov krog na zgornji polravnini evklidske ravnine, ki se abscisne osi dotika v točki $\frac{p}{q}$, njegov polmer pa meri $\frac{1}{2q^2}.$
+Nadaljujemo lahko s splošnejšimi Fordovimi krogi, ki so definirani na povsem enak način, le da imajo polmer enak $\frac{1}{2hq^2},$ pri čemer je $h$ poljubno realno število. Imenujemo jih tudi Speiserjevi\footnote{Andreas Speiser, 10.~6.~1885--12.~10.~1970, švicarski matematik, ki se je ukvarjal s teorijo števil in teorijo grup.} krogi. Če izberemo $h=1,$ dobimo običajne Fordove kroge.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fordove krogle
 \subsection{Fordove krogle}
 
-Naj bosta sedaj števili $p$ in $q$ elementa množice Gaussovih celih števil, ki je definirana kot $\mathbb{Z}\left[{i}\right] = \{a+bi; a,b \in \Z \}.$ Zapišimo $p = p'+ip''$ in $q = q'+iq'',$ kjer so $p', p'', q', q'' \in \Z.$ Definirajmo ulomek 
+Tokrat naj bosta števili $p$ in $q$ elementa množice Gaussovih celih števil, ki je definirana kot $\mathbb{Z}\left[{i}\right] = \{a+bi; a,b \in \Z \}.$ Zapišimo $p = p'+ip''$ in $q = q'+iq'',$ kjer so $p', p'', q', q'' \in \Z.$ Definirajmo ulomek 
 \[ \frac{p}{q} = \frac{p'+ip''}{q'+iq''} = \frac{(p'+ip'')(q'-iq'')}{(q'+iq'')(q'-iq'')} = \frac{p'q'+p''q''}{q'^2+q''^2} + i \frac{p''q'-p'q''}{q'^2+q''^2}, \]
-ki pripada kompleksnim številom, in ga okrajšajmo. Geometrijsko predstavlja točko v Gaussovi $xy$-ravnini z realno in imaginarno koordinato. Gaussovo ravnino postavimo v prostor, določen z osjo $z$, pravokotno na Gaussovo ravnino, in opazujmo podprostor, ki pripada pozitivnim vrednostim na $z$-osi. Analogno Fordovm krogom v ravnini pridemo do naslednjega pojma. 
+ki pripada kompleksnim številom, in ga okrajšajmo. Geometrijsko predstavlja točko v Gaussovi $xy$-ravnini z realno in imaginarno koordinato. Gaussovo ravnino postavimo v prostor, določen z osjo $z$, pravokotno na Gaussovo ravnino, in opazujmo podprostor, ki pripada pozitivnim vrednostim na $z$-osi. Analogno Fordovim krogom v ravnini pridemo do naslednjega pojma. 
 
 \begin{definicija}
 \emph{Fordova krogla} S($\frac{p}{q}$), kjer je $\frac{p}{q}$ okrajšan ulomek v množici kompleksnih števil, je krogla v zgornjem polprostoru, definiranem kot zgoraj, ki se $xy$-ravnine dotika v točki, določeni s $\frac{p}{q}$, njen polmer pa meri $\frac{1}{2|q|^2}.$
@@ -566,7 +569,7 @@ Sledi, da je $|m-n|=1,$ torej je $m-n \in \{1, -1, i, -i \}.$ Ugotovili smo, da 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mobiusove transformacije na Fordovih krogih
 \subsection{M\"{o}biusove transformacije na Fordovih krogih}
 
-Do sedaj smo Fordove kroge obravnavali s pomočjo geometrijskih sredstev. V tem poglavju bomo preko algebre prišli do znanih rezultatov o Fordovih krogih.
+Do sedaj smo Fordove kroge obravnavali s pomočjo geometrijskih sredstev. V tem poglavju si bomo z algebro pomagali do nekaterih že znanih rezultatov o Fordovih krogih.
 Geometrijske objekte si bomo predstavljali v kompleksni ravnini, torej bo točka s koordinatama $(x,y)$ opisana s kompleksnim številom $z=x+iy$.
 
 % Mobiusova transformacija
@@ -585,7 +588,7 @@ Simbol $ \mathbb{CP}^{1}$ označuje \emph{Riemannovo sfero}, to je kompaktifikac
 Dodatno, v našem primeru bo dovolj obravnavati le $a,b,c,d \in \mathbb{Z}$.
 \end{opomba}
 
-M\"{o}biusova transformacija je meromorfna in bijektivna preslikava, identična preslikava $id(z)=z$ je M\"{o}biusova transformacija, prav tako je kompozitum M\"{o}biusovih transformacij spet M\"{o}biusova transformacija. Množica takih preslikav tako tvori grupo za kompozitum. 
+M\"{o}biusova transformacija je meromorfna in bijektivna preslikava z inverzom, ki je spet take oblike, identična preslikava $id(z)=z$ je M\"{o}biusova transformacija, prav tako je kompozitum M\"{o}biusovih transformacij M\"{o}biusova transformacija. Množica takih preslikav tako tvori grupo za kompozitum. 
 Preslikavo $f$ lahko zapišemo v matrični obliki
 \[
 \mathbf{A}\ =
