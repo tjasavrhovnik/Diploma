@@ -368,15 +368,15 @@ Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, za
 %
 \begin{align*}
 |AB|^2 
-  &= \left (\frac{c}{d} - \frac{a}{b} \right )^2 + \left (\frac{1}{2d^2} - \frac{1}{2b^2} \right )^2 \\ 
-  &= \left (\frac{bc-ad}{bd} \right )^2 + \frac{1}{4b^4} - \frac{1}{2b^2d^2} + \frac{1}{4d^4} \\
-  &= \frac{(bc-ad)^2}{b^2d^2} + \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2 - \frac{1}{b^2d^2} \\
-  &= \frac{(bc-ad)^2-1}{b^2d^2} + (|AD|^2 + |EB|^2).
+  &= \left ( \frac{1}{2b^2} - \frac{1}{2d^2} \right )^2  + \left (\frac{c}{d} - \frac{a}{b} \right )^2 \\ 
+  &= \frac{1}{4b^4} - \frac{1}{2b^2d^2} + \frac{1}{4d^4} + \left (\frac{bc-ad}{bd} \right )^2 \\
+  &= \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2 - \frac{1}{b^2d^2} + \frac{(bc-ad)^2}{b^2d^2} \\
+  &= (|AD| + |EB|)^2 + \frac{(bc-ad)^2-1}{b^2d^2}.
 \end{align*}
 
-Če je $|bc-ad|>1$, je $|AB|^2 > |AD|^2 + |EB|^2$ in Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta disjunktna.
+Če je $|bc-ad|>1$, je $|AB|^2 > (|AD| + |EB|)^2$, zato $|AB| > |AD| + |EB|$ in Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta disjunktna.
 
-Če je $|bc-ad|=1$, je $|AB|^2 = |AD|^2 + |EB|^2$ in Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta tangentna.
+Če je $|bc-ad|=1$, je $|AB|^2 = (|AD| + |EB|)^2$, zato $|AB| = |AD| + |EB|$ in Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta tangentna.
 
 Če je $|bc-ad|<1$, je $|bc-ad|=0,$ saj smo v množici celih števil. Sledi $\frac{a}{b} = \frac{c}{d},$ kar vodi v protislovje s predpostavko trditve.
 \end{dokaz}
