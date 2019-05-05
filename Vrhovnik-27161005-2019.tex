@@ -551,11 +551,11 @@ Poljubno majhen zaprt pravokotnik v $xy$-ravnini vsebuje neskončno mnogo dotika
 V dokazu trditve \ref{trd:FordDisjTang} smo konstruirali pravokotni trikotnik, določen z dvema Fordovima krogoma. Naj točki $\frac{p}{q}$ in $\frac{P}{Q}$ določata Fordovi krogli ter konstruirajmo pravokotni trikotnik $ABC$ kot prej. Iz zveze
 \begin{align*}
 |AB|^2 
-  &= \left |\frac{P}{Q} - \frac{p}{q} \right|^2 + \left |\frac{1}{2|Q|^2} - \frac{1}{2|q|^2} \right|^2 = \frac{|Pq-pQ|^2-1}{|Q|^2|q|^2} + |AD|^2 + |EB|^2
+  &= \left |\frac{P}{Q} - \frac{p}{q} \right|^2 + \left |\frac{1}{2|Q|^2} - \frac{1}{2|q|^2} \right|^2 = \frac{|Pq-pQ|^2-1}{|Q|^2|q|^2} + (|AD| + |EB|)^2
 \end{align*}
 sledi:
-če je $|Pq-pQ|>1,$ je $|AB|^2>|AD|^2+|EB|^2$ in krogli sta disjunktni;
-sicer je $|Pq-pQ|=1,$ zato je $|AB|^2=|AD|^2+|EB|^2$ in krogli sta tangentni.
+če je $|Pq-pQ|>1,$ je $|AB|>|AD|+|EB|$ in krogli sta disjunktni;
+sicer je $|Pq-pQ|=1,$ zato je $|AB|=|AD|+|EB|$ in krogli sta tangentni.
 
 Naj bosta S($\frac{p}{q}$) in S($\frac{P}{Q}$) tangentni Fordovi krogli. Kot prej tangentne Fordove krogle na kroglo S($\frac{p}{q}$) konstruiramo s pomočjo formule
 \[ \frac{P_n}{Q_n} = \frac{P+np}{Q+nq}, \]
@@ -590,7 +590,8 @@ Simbol $ \mathbb{CP}^{1}$ označuje \emph{Riemannovo sfero}, to je kompaktifikac
 
 \begin{opomba}
 Števila $a,b,c,d$ lahko pomnožimo s poljubnim neničelnim kompleksnim številom, zato lahko predpostavimo, da je $ad-bc=1$.
-Dodatno, v našem primeru bo dovolj obravnavati le $a,b,c,d \in \mathbb{Z}$.
+
+V našem primeru bo dovolj obravnavati le $a,b,c,d \in \mathbb{Z}$.
 \end{opomba}
 
 M\"{o}biusova transformacija je meromorfna in bijektivna preslikava z inverzom, ki je spet take oblike, identična preslikava $id(z)=z$ je M\"{o}biusova transformacija, prav tako je kompozitum M\"{o}biusovih transformacij M\"{o}biusova transformacija. Množica takih preslikav tako tvori grupo za kompozitum. 
