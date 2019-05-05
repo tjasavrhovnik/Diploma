@@ -368,7 +368,7 @@ Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, za
 %
 \begin{align*}
 |AB|^2 
-  &= \left ( \frac{1}{2b^2} - \frac{1}{2d^2} \right )^2  + \left (\frac{c}{d} - \frac{a}{b} \right )^2 \\ 
+  &= \left ( \left| \frac{1}{2b^2} - \frac{1}{2d^2} \right | \right )^2  + \left (\frac{c}{d} - \frac{a}{b} \right )^2 \\ 
   &= \frac{1}{4b^4} - \frac{1}{2b^2d^2} + \frac{1}{4d^4} + \left (\frac{bc-ad}{bd} \right )^2 \\
   &= \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2 - \frac{1}{b^2d^2} + \frac{(bc-ad)^2}{b^2d^2} \\
   &= (|AD| + |EB|)^2 + \frac{(bc-ad)^2-1}{b^2d^2}.
@@ -398,10 +398,10 @@ Ponovno vpeljimo točke na Fordovih krogih kot v dokazu trditve~\ref{trd:FordDis
 
 Denimo, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) tangentna. Potem za pravokotni trikotnik, ki ga določata, velja Pitagorov izrek 
 \[ |AC|^2 + |BC|^2 = |AB|^2 \] oziroma
-\[ \left (\frac{c}{d} - \frac{a}{b} \right )^2 + \left (\frac{1}{2b^2} - \frac{1}{2d^2} \right )^2 = \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2. \]
+\[ \left ( \left | \frac{1}{2b^2} - \frac{1}{2d^2} \right | \right )^2 + \left (\frac{c}{d} - \frac{a}{b} \right )^2 = \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2. \]
 Ko odpravimo oklepaje, opazimo, da se nekateri členi odštejejo. Nato odpravimo ulomke in dobljeno enakost poenostavimo.
-\[  \frac{c^2}{d^2} - \frac{2ac}{bd} + \frac{a^2}{b^2} + \frac{1}{4b^4} - \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} = \frac{1}{4b^4} + \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4}, \]
-\[ b^{2}c^{2} - 2abcd + a^{2}d^{2} - 1 = 0, \]
+\[ \frac{1}{4b^4} - \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} + \frac{c^2}{d^2} - \frac{2ac}{bd} + \frac{a^2}{b^2} = \frac{1}{4b^4} + \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4}, \]
+\[ b^{2}c^{2} - 2abcd + a^{2}d^{2} = 1, \]
 \[  (bc-ad)^2 = 1, \]
 \[ |bc-ad|=1. \]
 Trditev je s tem dokazana.
