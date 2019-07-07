@@ -292,6 +292,7 @@ Izračunajmo vrednosti M\"obiusove funkcije za nekaj naravnih števil.
 \end{primer}
 
 \begin{definicija}
+\label{def:RiemZeta}
 \emph{Riemannova funkcija zeta} je za
  $s\in\mathbb{C}\backslash\{1\}$
 definirana kot
@@ -759,6 +760,7 @@ V 1.~polovici 18.~stoletja je Euler definiral realno funkcijo zeta s predpisom
 Za $n=1$ je enaka harmonični vrsti, ki divergira; za $n>1$ pa dobimo konvergentno vrsto. Funkcija zeta je povezana s praštevili preko naslednje formule, ki jo je Euler objavil leta 1737 v knjigi \emph{Variae observationes circa series infinitas}.
 
 \begin{izrek}[Eulerjeva produktna formula]
+\label{izr:EulProdukt}
 Naj bo $n\in\mathbb{N}$ in $p\in\mathbb{P}$. Tedaj velja
 \[ \sum_{n}\frac{1}{n^s} = \prod_{p}\frac{1}{1-p^{-s}}. \]
 \end{izrek}
@@ -778,6 +780,25 @@ od koder lahko izrazimo
 	\[ \zeta(s) = \frac{1}{1-\frac{1}{2^s}} \frac{1}{1-\frac{1}{3^s}} \frac{1}{1-\frac{1}{5^s}} \frac{1}{1-\frac{1}{7^s}} \frac{1}{1-\frac{1}{11^s}} \ldots = 		\prod_{p}\frac{1}{1-p^{-s}}, \]
 kar smo želeli pokazati.
 \end{dokaz}
+
+V 19.~stoletju so začeli računati s kompleksnimi števili, tako je Riemann leta 1859 razširil Eulerjevo definicijo funkcije zeta. Riemannova funkcija zeta množico  $\mathbb{C}\backslash\{1\}$ preslika na množico  $\mathbb{C}$ in je definirana v Definiciji~\ref{def:RiemZeta}.
+
+\begin{opomba}
+V Izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada $s$. Euler je formulo namreč formuliral za celoštevilske $s$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, $Re(s)>1$.
+\end{opomba}
+
+Zanimajo nas ničle Riemannove zeta funkcije. Na polravnini $Re(s)>1$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni da Riemannova zeta funkcija nima ničel za $Re(s)>1$.
+
+Kako je z ničlami na polravnini $Re(s)<0$?
+Pomagali si bomo z Bernoullijevimi števili. Naj bo $|z|<2\pi$. Bernoullijeva števila $B_{k}$ definiramo preko funkcije
+\[ G(z) = \frac{z}{e^z-1} = \sum_{k=0}^{\infty} B_{k} \frac{z^k}{k!}. \]
+Z razvojem v Taylorjevo vrsto dobimo
+\[ G(z) = \left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \ldots \right)^{-1} = 1 - \frac{z}{2} + \frac{z^2}{12} - \frac{z^4}{720} + \ldots, \]
+od koder preberemo prvih nekaj Bernoullijevih števil: $B_{0} = 1$, $B_{1} = -\frac{1}{2}$,  $B_{2} = \frac{1}{6}$,  $B_{3} = 0$, $B_{4} = -\frac{1}{30}$.
+Za vse lihe $n$, kjer je $n \geq 3$, velja $B_{n}=0$. 
+Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo funkcijo zeta. Naj bo $n\in\{0, 1, 2, \dots\}$. Velja
+\[ \zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}. \]
+Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6,\dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih trivialne ničle Riemannove zeta funkcije.
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
