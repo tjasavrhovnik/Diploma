@@ -740,6 +740,45 @@ Fordov krog C($\frac{1}{1}$) vsebuje točko $(1,0)$ na realni osi oziroma komple
 Kaj pa Fordov krog C($\frac{1}{0}$)? Ta je poseben predstavnik obravnavane množice, saj je njegov polmer neskončen in ga edinega predstavimo s premico v kompleksni ravnini. Ker se ne dotika realne osi, zgornja strategija ne deluje. Raje vzemimo poljubno točko na premici, Fordovemu krogu C($\frac{1}{0}$), ki jo zapišemo kot $x+i$, kjer je $x \in \mathbb{R}$. Ta se preslika v točko $f(x+i) = \frac{ax+ai+c}{bx+bi+d}$, ki leži na krožnici z enačbo $ | z - (\frac{a}{b} + i \frac{1}{2b^2}) | = \frac{1}{2b^2}$, ta pa ustreza Fordovemu krogu C($\frac{a}{b}$).  
 \end{primer}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{Riemannova hipoteza}
+
+Riemannova hipoteza, znana tudi kot 8.~Hilberov problem, je eno najbolj slavnih, še vedno nerešenih matematičnih vprašanj. Ime je dobila po nemškem matematiku Bernhardu Riemannu, ki jo je formuliral med preučavenjem lastnosti velikih praštevil.
+
+Praštevila so poznali že v Stari Grčiji, od koder prihaja tudi naslednji izrek.
+\begin{izrek}[Evklid]
+Praštevil je neskončno mnogo.
+\end{izrek}
+
+Dokazov tega fundamentalnega izreka je veliko, velja pa omeniti Evklidovo idejo dokazovanja s protislovjem, ki jo pogosto uporabljamo še danes.
+
+V 1.~polovici 18.~stoletja je Euler definiral realno funkcijo zeta s predpisom
+\[ \zeta \colon \mathbb{R} \rightarrow \mathbb{R},\]
+\[ \zeta(n) = \sum_{r=1}^{\infty}\frac{1}{r^n}. \]
+Za $n=1$ je enaka harmonični vrsti, ki divergira; za $n>1$ pa dobimo konvergentno vrsto. Funkcija zeta je povezana s praštevili preko naslednje formule, ki jo je Euler objavil leta 1737 v knjigi \emph{Variae observationes circa series infinitas}.
+
+\begin{izrek}[Eulerjeva produktna formula]
+Naj bo $n\in\mathbb{N}$ in $p\in\mathbb{P}$. Tedaj velja
+\[ \sum_{n}\frac{1}{n^s} = \prod_{p}\frac{1}{1-p^{-s}}. \]
+\end{izrek}
+
+\begin{dokaz}
+Zapišimo predpis za funkcijo zeta. V naslednjem koraku funkcijo zeta pomnožimo z $\frac{1}{2^s}$ ter dobljeno enakost odštejemo od prve enakosti. S tem odpadejo vsi členi s faktorjem $2$. Ta dva koraka ponavljamo: enakost na trenutnem koraku pomnožimo z drugim sumandom na desni strani enakosti, nato pa predzadnji vrstici odštejemo zadnjo vrstico.
+\begin{align*}
+	\zeta(s) &= 1 + \frac{1}{2^s} + \frac{1}{3^s} + \frac{1}{4^s} + \frac{1}{5^s} + \ldots, \nonumber \\
+	\frac{1}{2^s} \zeta(s) &= \frac{1}{2^s} + \frac{1}{4^s} + \frac{1}{6^s} + \frac{1}{8^s} + \frac{1}{10^s} + \ldots, \nonumber \\
+	\left(1-\frac{1}{2^s}\right) \zeta(s) &= 1 + \frac{1}{3^s} + \frac{1}{5^s} + \frac{1}{7^s} + \frac{1}{9^s} + \ldots, \nonumber \\
+	\frac{1}{3^s} \left(1-\frac{1}{2^s}\right) \zeta(s) &= \frac{1}{3^s} + \frac{1}{9^s} + \frac{1}{15^s} + \frac{1}{21^s} + \frac{1}{27^s} \ldots, \nonumber \\
+	\left(1-\frac{1}{3^s}\right)\left (1-\frac{1}{2^s}\right) \zeta(s) &= 1 + \frac{1}{5^s} + \frac{1}{7^s} + \frac{1}{11^s} + \frac{1}{13^s} + \ldots \nonumber \\
+\end{align*}
+Opazimo, da smo vselej množili z ulomki oblike $\frac{1}{p^s},$ kjer $p$ pripada množici praštevil. Dobimo enakost
+	\[ \ldots \left(1-\frac{1}{13^s}\right) \left(1-\frac{1}{11^s}\right) \left(1-\frac{1}{7^s}\right) \left(1-\frac{1}{5^s}\right) \left(1-\frac{1}{3^s}\right) 		\left(1-\frac{1}{2^s}\right) \zeta(s) = 1, \]
+od koder lahko izrazimo
+	\[ \zeta(s) = \frac{1}{1-\frac{1}{2^s}} \frac{1}{1-\frac{1}{3^s}} \frac{1}{1-\frac{1}{5^s}} \frac{1}{1-\frac{1}{7^s}} \frac{1}{1-\frac{1}{11^s}} \ldots = 		\prod_{p}\frac{1}{1-p^{-s}}, \]
+kar smo želeli pokazati.
+\end{dokaz}
+
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
