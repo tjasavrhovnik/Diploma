@@ -263,6 +263,7 @@ Pišemo $f \in O(g)$ oziroma $f = O(g)$.
 \end{definicija}
 
 \begin{definicija}
+\label{def:MobFun}
 Preslikava \( \mu\colon \mathbb{N} \to \mathbb{N} \), definirana kot
 \[
 \mu(n) = \left\{
@@ -741,12 +742,16 @@ Fordov krog C($\frac{1}{1}$) vsebuje točko $(1,0)$ na realni osi oziroma komple
 Kaj pa Fordov krog C($\frac{1}{0}$)? Ta je poseben predstavnik obravnavane množice, saj je njegov polmer neskončen in ga edinega predstavimo s premico v kompleksni ravnini. Ker se ne dotika realne osi, zgornja strategija ne deluje. Raje vzemimo poljubno točko na premici, Fordovemu krogu C($\frac{1}{0}$), ki jo zapišemo kot $x+i$, kjer je $x \in \mathbb{R}$. Ta se preslika v točko $f(x+i) = \frac{ax+ai+c}{bx+bi+d}$, ki leži na krožnici z enačbo $ | z - (\frac{a}{b} + i \frac{1}{2b^2}) | = \frac{1}{2b^2}$, ta pa ustreza Fordovemu krogu C($\frac{a}{b}$).  
 \end{primer}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \section{Riemannova hipoteza}
 
 Riemannova hipoteza, znana tudi kot 8.~Hilberov problem, je eno najbolj slavnih, še vedno nerešenih matematičnih vprašanj. Ime je dobila po nemškem matematiku Bernhardu Riemannu, ki jo je formuliral med preučavenjem lastnosti velikih praštevil.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Praštevila in Riemannova zeta funkcija
+\subsection{Praštevila in Riemannova zeta funkcija}
 
+% praštevila
 Praštevila so poznali že v Stari Grčiji, od koder prihaja tudi naslednji izrek.
 \begin{izrek}[Evklid]
 Praštevil je neskončno mnogo.
@@ -754,15 +759,20 @@ Praštevil je neskončno mnogo.
 
 Dokazov tega fundamentalnega izreka je veliko, velja pa omeniti Evklidovo idejo dokazovanja s protislovjem, ki jo pogosto uporabljamo še danes.
 
+% zeta funkcija
 V 1.~polovici 18.~stoletja je Euler definiral realno funkcijo zeta s predpisom
-\[ \zeta \colon \mathbb{R} \rightarrow \mathbb{R},\]
-\[ \zeta(n) = \sum_{r=1}^{\infty}\frac{1}{r^n}. \]
+\begin{align}
+\zeta \colon \mathbb{R} \rightarrow \mathbb{R}, \nonumber \\
+\zeta(n) = \sum_{r=1}^{\infty}\frac{1}{r^n}.
+\end{align}
 Za $n=1$ je enaka harmonični vrsti, ki divergira; za $n>1$ pa dobimo konvergentno vrsto. Funkcija zeta je povezana s praštevili preko naslednje formule, ki jo je Euler objavil leta 1737 v knjigi \emph{Variae observationes circa series infinitas}.
 
 \begin{izrek}[Eulerjeva produktna formula]
 \label{izr:EulProdukt}
 Naj bo $n\in\mathbb{N}$ in $p\in\mathbb{P}$. Tedaj velja
-\[ \sum_{n}\frac{1}{n^s} = \prod_{p}\frac{1}{1-p^{-s}}. \]
+\begin{equation}
+\sum_{n}\frac{1}{n^s} = \prod_{p}\frac{1}{1-p^{-s}}.
+\end{equation}
 \end{izrek}
 
 \begin{dokaz}
@@ -781,6 +791,7 @@ od koder lahko izrazimo
 kar smo želeli pokazati.
 \end{dokaz}
 
+% Riemannova zeta funkcija
 V 19.~stoletju so začeli računati s kompleksnimi števili, tako je Riemann leta 1859 razširil Eulerjevo definicijo funkcije zeta. Riemannova funkcija zeta množico  $\mathbb{C}\backslash\{1\}$ preslika na množico  $\mathbb{C}$ in je definirana v Definiciji~\ref{def:RiemZeta}.
 
 \begin{opomba}
@@ -790,15 +801,77 @@ V Izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada $s$. Euler
 Zanimajo nas ničle Riemannove zeta funkcije. Na polravnini $Re(s)>1$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni da Riemannova zeta funkcija nima ničel za $Re(s)>1$.
 
 Kako je z ničlami na polravnini $Re(s)<0$?
-Pomagali si bomo z Bernoullijevimi števili. Naj bo $|z|<2\pi$. Bernoullijeva števila $B_{k}$ definiramo preko funkcije
-\[ G(z) = \frac{z}{e^z-1} = \sum_{k=0}^{\infty} B_{k} \frac{z^k}{k!}. \]
+Pomagali si bomo z Bernoullijevimi števili. Naj bo $|z|<2\pi$. \emph{Bernoullijeva števila} $B_{k}$ definiramo preko funkcije
+\begin{equation}
+G(z) = \frac{z}{e^z-1} = \sum_{k=0}^{\infty} B_{k} \frac{z^k}{k!}.
+\end{equation}
 Z razvojem v Taylorjevo vrsto dobimo
 \[ G(z) = \left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \ldots \right)^{-1} = 1 - \frac{z}{2} + \frac{z^2}{12} - \frac{z^4}{720} + \ldots, \]
 od koder preberemo prvih nekaj Bernoullijevih števil: $B_{0} = 1$, $B_{1} = -\frac{1}{2}$,  $B_{2} = \frac{1}{6}$,  $B_{3} = 0$, $B_{4} = -\frac{1}{30}$.
 Za vse lihe $n$, kjer je $n \geq 3$, velja $B_{n}=0$. 
-Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo funkcijo zeta. Naj bo $n\in\{0, 1, 2, \dots\}$. Velja
-\[ \zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}. \]
-Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6,\dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih trivialne ničle Riemannove zeta funkcije.
+Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo zeta funkcijo. Naj bo $n\in\{0, 1, 2, \dots\}$. Velja
+\begin{equation}
+	\zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}.
+\end{equation}
+Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6,\dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $0<Re(s)<1$. 
+
+\begin{izrek}{Riemannova hipoteza}
+Vse netrivialne ničle Riemannove funkcije zeta ležijo na premici $s=\frac{1}{2}+it$.
+\end{izrek}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riemannova hipoteza
+\subsection{Riemannova hipoteza}
+
+Obstaja več ekvivalentnih formulacij Riemannove hipoteze. Dokazali bomo eno izmed njih, ki vključuje Fareyevo zaporedje. Pred tem se spomnimo M\"obiusove funkcije, definirane v Definiciji~\ref{def:MobFun}.
+
+\begin{definicija}
+Za $n\in\mathbb{N}$ je \emph{Mertensova funkcija} definirana kot
+\[ M(n)=\sum_{k\leq n}\mu(k).\]
+\end{definicija}
+
+\begin{primer}
+Izračunajmo nekaj vrednosti Mertensove funkcije.
+
+\( M(2) = \mu(1) + \mu(2) = 1 - 1 = 0 \)
+
+\( M(3) = \mu(1) + \mu(2) + \mu(3) = 1 - 1 - 1 = -1 \)
+
+\( M(6) = \mu(1) + \mu(2) + \mu(3) + \mu(4) + \mu(5) + \mu(6) = 1 - 1 - 1 + 0 - 1 + 1 = -1 \)
+\end{primer}
+
+\begin{trditev}
+Za vsak $\epsilon>0$ velja
+\[ M(n) = o(n^{1/2+\epsilon}) \iff \textrm{Riemannova hipoteza}. \]
+\end{trditev}
+
+\begin{definicija}
+Naj bosta $L(n)$ dolžina Fareyevega zaporedja $F_{n}$ in $r_{v}$ njegov v-ti element. Definiramo razliko
+\[ \delta_{v}= r_{v}-v/L(n). \]
+\end{definicija}
+
+\begin{primer}
+Vzemimo Fareyevo zaporedje reda $4$ in poglejmo nekaj razlik. 
+
+\(F_4 = \left \{\frac{0}{1}, \frac{1}{4}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{1}{1} \right \}, \)
+
+\( L(4) = 7, \)
+
+\( \delta_{1}= \frac{0}{1} - \frac{1}{7} = -\frac{1}{7}, \)
+
+\( \delta_{2}= \frac{1}{4} - \frac{2}{7} = -\frac{1}{28}, \)
+
+\( \delta_{7}= \frac{1}{1} - \frac{7}{7} = 0. \)
+\end{primer}
+
+\begin{trditev}[Franel -- Landau, 1924]
+Za vsak $\epsilon>0$ velja
+\[ \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) \iff \textrm{Riemannova hipoteza}. \]
+\end{trditev}
+
+\begin{izrek}
+Za vsak $\varepsilon > 0$ 
+\[ \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) \iff M(n) = o(n^{1/2+\varepsilon}). \]
+\end{izrek}
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -813,6 +886,8 @@ Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6,\do
 \begin{thebibliography}{99}
 
 \bibitem{fareyproject} J.~Ainsworth, M.~Dawson, J.~Pianta in J.~Warwick, \emph{The Farey sequence}, diplomsko delo, School of Mathematics, University of Edinburgh, 2012; dostopno tudi na \url{https://www.maths.ed.ac.uk/~v1ranick/fareyproject.pdf}.
+
+\bibitem{zetafunction} H.~M.~Edwards, \emph{Riemann's zeta function}, Academic Press, Inc., New York, 1974.
 
 \bibitem{ford} L.~R.~Ford, \emph{Fractions}, v: The American Mathematical Monthly (ur.\ E.~J.~Moulton) \textbf{45}, Mathematical Association of America, 1938, str.\ 586--601.
 
