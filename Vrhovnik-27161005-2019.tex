@@ -873,6 +873,32 @@ Za vsak $\varepsilon > 0$
 \[ \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) \iff M(n) = o(n^{1/2+\varepsilon}). \]
 \end{izrek}
 
+Dokaz implikacije v desno.
+Naj bo $\varepsilon > 0$.
+Definirajmo funkcijo $f \colon [0,1] \rightarrow \mathbb{R}$. Velja enakost
+\begin{equation}
+	\sum_{v=1}^{L(n)} f(r_v) = \sum_{k=1}^{\infty} \sum_{j=1}^{k} f \left(\frac{j}{k} \right) M \left(\frac{n}{k} \right).
+\end{equation}
+Izberimo $f(u) = e^{2\pi iu}$. Če funkcijo vstavimo v enakost~(14), dobimo
+\begin{equation}
+	\sum_{v=1}^{L(n)} e^{2\pi i r_{v}} = \sum_{k=1}^{\infty} \sum_{j=1}^{k} e^{2\pi i \frac{j}{k}} M \left(\frac{n}{k} \right).
+\end{equation}
+Vemo, da je $\sum_{j=1}^{k} e^{2\pi i \frac{j}{k}} = 0$ za $k \geq 2$, za $k=1$ pa se vsota poenostavi v $e^{2\pi i} = 1$.
+Enakost~(15) zato prepišemo v 
+\[ M(n) = \sum_{v=1}^{L(n)} e^{2\pi i r_{v}} = \sum_{v=1}^{L(n)} e^{2\pi i \left(\frac{v}{L(n)} + \delta_{v} \right)} 
+	   = \sum_{v=1}^{L(n)} e^{ \frac{2\pi i v}{L(n)} } \left(e^{2\pi i \delta_{v}} - 1 \right) + \sum_{v=1}^{L(n)} e^{ \frac{2\pi iv}{L(n)} }. \]
+Ker je $L(n) > 1$, je zadnji sumand enak $0$. Sedaj ocenimo absolutno vrednost zgornjega izraza:
+\begin{align*} 
+|M(n)| &\leq \sum_{v=1}^{L(n)} \left|e^{ \frac{2\pi i v}{L(n)} } \right| \left|e^{2\pi i \delta_{v}} - 1 \right| 
+	= \sum_{v=1}^{L(n)} \left|e^{2\pi i \delta_{v}} - 1 \right|
+	= \sum_{v=1}^{L(n)} \left|e^{\pi i \delta_{v} } \right| \left|e^{\pi i \delta_{v}} - e^{-\pi i \delta_{v}}\right| \\
+	&= 2 \sum_{v=1}^{L(n)} |\sin(\pi \delta_{v})| \leq 2 \sum_{v=1}^{L(n)} |\delta_{v}| \pi = 2 \pi \sum_{v=1}^{L(n)} |\delta_{v}| \\
+	&\leq 2 \pi K(\varepsilon) n^{1/2 + \varepsilon} = K'(\varepsilon) n^{1/2 + \varepsilon}.
+\end{align*}
+V zadnji neenakosti smo uporabili predpostavko $ \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) $, kar je ekvivalentno 
+$ \sum_{v=1}^{L(n)}|\delta_{v}| \leq K(\varepsilon) n^{1/2+\varepsilon}$ za neko konstano $K$, ki je odvisna od $\varepsilon$.
+Od tod sledi, da je $M(n) = o(n^{1/2 + \varepsilon})$.
+
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
