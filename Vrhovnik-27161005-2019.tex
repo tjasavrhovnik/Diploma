@@ -186,9 +186,10 @@ Zveza torej velja.
 % lastnosti 
 %
 Kako dobimo člen Fareyevega zaporedja reda $(n+1)$?
-Označimo iskani okrajšan ulomek s $\frac{k}{n+1}$. Seveda sta $k, n \in\mathbb{N}, k < n+1$ tuji si števili. Zato obstajata enolično določeni naravni števili $a < b$, da velja $a(n+1)-bk=1.$ S preoblikovanjem zadnje enakosti dobimo zvezo $a(n+1-b)-b(k-a)=1,$ kar pomeni, da sta si tudi naravni števili $k-a$ in $n+1-b$ tuji. Brez škode za splošnost naj bo $k-a<n+1-b.$ Zato lahko tvorimo okrajšan ulomek $\frac{k-a}{n+1-b}$, ki pripada nekemu Fareyevemu zaporedju. Prav tako je okrajšan ulomek $\frac{a}{b}$ element nekega Fareyevega zaporedja. Sedaj prepišimo ulomek $\frac{k}{n+1}$ v $\frac{a+(k-a)}{b+(n+1-b)},$ kar pa je medianta ulomkov $\frac{a}{b}$ in $\frac{k-a}{n+1-b}.$ Dokazali smo naslednjo lemo.
+Označimo iskani okrajšan ulomek s $\frac{k}{n+1}$. Seveda sta $k, n \in\mathbb{N}, k < n+1$ tuji si števili. Zato obstajata enolično določeni naravni števili $a < b$, da velja $a(n+1)-bk=1.$ S preoblikovanjem zadnje enakosti dobimo zvezo $a(n+1-b)-b(k-a)=1,$ kar pomeni, da sta si tudi naravni števili $k-a$ in $n+1-b$ tuji. Brez škode za splošnost naj bo $k-a<n+1-b.$ Zato lahko tvorimo okrajšan ulomek $\frac{k-a}{n+1-b}$, ki pripada nekemu Fareyevemu zaporedju. Prav tako je okrajšan ulomek $\frac{a}{b}$ element nekega Fareyevega zaporedja. Sedaj prepišimo ulomek $\frac{k}{n+1}$ v $\frac{a+(k-a)}{b+(n+1-b)},$ kar pa je medianta ulomkov $\frac{a}{b}$ in $\frac{k-a}{n+1-b}.$ Dokazali smo naslednjo lema.
 
 \begin{lema}
+\label{lema:EltVišReda}
 Dano naj bo Fareyevo zaporedje. Elemente zaporedja višjega reda dobimo z računanjem mediant elementov danega zaporedja.
 \end{lema}
 
@@ -201,7 +202,7 @@ $(\Rightarrow)$ Dokaz bo potekal z indukcijo na $n$.
 Za $n=1$ je $F_n = \{\frac{0}{1}, \frac{1}{1}\}$, $bc - ad = 1\cdot1 - 0\cdot1 = 1$, zato osnovni korak velja.
 Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Vemo, da nove člene zaporedja dobimo z računanjem mediant. Če je $b+d > n+1,$ potem $\frac{a+c}{b+d} \notin F_{n+1}$ in je \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) ter po indukcijski predpostavki $bc - ad = 1$. 
 Če je $b+d < n+1,$ je $\frac{a+c}{b+d}$ že nek člen v zaporedju $F_n$ in uporabimo indukcijsko predpostavko. 
-Če je $b+d = n+1$, je \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
+Preostane še možnost $b+d = n+1$. Po Lema~\ref{lema:EltVišReda} je edina možnost za člen med elementoma $\frac{a}{b}$ in $\frac{c}{d}$ njuna medianta $\frac{a+c}{b+d}$, ki pa je tudi edini nov člen v opazovanem delu zaporedja. To je zato oblike \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
 
 $(\Leftarrow)$ Obratno, naj bodo $\frac{a}{b}$, $\frac{p}{q}$ in $\frac{c}{d}$ členi poljubnega Fareyevega zaporedja, za katere velja $\frac{a}{b} <\frac{p}{q} < \frac{c}{d}$ in $bp - aq = qc - pd = 1$. S preureditvijo te enakosti dobimo
 \[ bp + pd = aq + qc, \]
