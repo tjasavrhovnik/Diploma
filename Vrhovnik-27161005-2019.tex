@@ -123,9 +123,9 @@ kar smo želeli dokazati.
 Obstajajo $3003$ racionalna števila $\frac{p}{q}$, za katera velja $0<\frac{p}{q}<1$ ter je $q \leq 100$.
 \end{trditev}
 
-Namesto formalnega dokaza trditve bomo predstavili Flitconovo rešitev. Naredimo tabelo s tremi stolpci in 99 vrsticami. V prvi stolpec vsake vrstice napišemo po eno izmed naravnih števil od $2$ do $100$. V drugi stolpec posamezne vrstice zapišemo naravno število iz prvega stolpca kot produkt prafaktorjev, v tretji stolpec pa vrednost $\varphi(n)$. Pomagamo si s trditvama~\ref{trd:MultipEuler} in \ref{trd:EulerPrastProd}. Vsota vrednosti v tretjem stolpcu nam da število iskanih ulomkov. Res, vsak $\varphi(n)$ nam pove število okrajšanih ulomkov med $0$ in $1$ z imenovalcem $n$, vsota vrednosti Eulerjeve funkcije $\varphi(n)$ za vsa števila $n$ med $2$ in $100$ pa število vseh okrajšanih ulomkov med $0$ in $1$ z imenovalci med $2$ in $100$. \footnote{Čeprav Flitcon ne omenja Eulerjeve funkcije $\varphi$, je uporabil njene lastnosti v svoji matematično manj formalni metodi.}
+Namesto formalnega dokaza trditve bomo predstavili Flitconovo rešitev. Naredimo tabelo s tremi stolpci in $99$ vrsticami. V prvi stolpec vsake vrstice napišemo po eno izmed naravnih števil od $2$ do $100$. V drugi stolpec posamezne vrstice zapišemo naravno število iz prvega stolpca kot produkt prafaktorjev, v tretji stolpec pa vrednost $\varphi(n)$. Pomagamo si s Trditvama~\ref{trd:MultipEuler} in \ref{trd:EulerPrastProd}. Vsota vrednosti v tretjem stolpcu nam da število iskanih ulomkov. Res, vsak $\varphi(n)$ nam pove število okrajšanih ulomkov med $0$ in $1$ z imenovalcem $n$, vsota vrednosti Eulerjeve funkcije $\varphi(n)$ za vsa števila $n$ med $2$ in $100$ pa število vseh okrajšanih ulomkov med $0$ in $1$ z imenovalci med $2$ in $100$. \footnote{Čeprav Flitcon ne omenja Eulerjeve funkcije $\varphi$, je uporabil njene lastnosti v svoji matematično manj formalni metodi.}
 
-Neodvisno od Flitconove rešitve je francoski matematik Charles Haros leta 1802 sestavil enak seznam ulomkov, vendar na precej bolj zanesljiv način. Haros se dela ni lotil z željo po reševanju aritmetične naloge, pač pa je pisal tabele za pretvarjanje med ulomki in decimalnim zapisom ter obratno. V Franciji so namreč v času revolucije konec 18. stoletja uvajali nov metrični sistem, ki je med drugim zahteval uporabo decimalnega zapisa. Tabele so bile objavljene v časniku \emph{Journal de l'Ecole Polytechnique}, primerom ter algoritmom za pretvarjanje pa so bile dodane skice dokazov in nekatere lastnosti zaporedja ulomkov, ki so kasneje postali znani pod imenom Fareyevo zaporedje. 
+Neodvisno od Flitconove rešitve je francoski matematik Charles Haros leta 1802 sestavil enak seznam ulomkov, vendar na precej bolj zanesljiv način. Haros se dela ni lotil z željo po reševanju aritmetične naloge, pač pa je pisal tabele za pretvarjanje med ulomki in decimalnim zapisom ter obratno. V Franciji so namreč v času revolucije konec 18.~stoletja uvajali nov metrični sistem, ki je med drugim zahteval uporabo decimalnega zapisa. Tabele so bile objavljene v časniku \emph{Journal de l'Ecole Polytechnique}, primerom ter algoritmom za pretvarjanje pa so bile dodane skice dokazov in nekatere lastnosti zaporedja ulomkov, ki so kasneje postali znani pod imenom Fareyevo zaporedje. 
 
 Posebej zanimiva je zgodba o pivovarju in ljubiteljskemu matematiku Henryju Goodwynu. Čeprav ni imel formalne izobrazbe, se je navduševal nad znanostjo in tehniko, sestavljal različne tabele in računal, kako izboljšati svoje poslovanje. Po upokojitvi se je vse bolj posvečal matematiki -- tako je med letoma 1816 in 1823 objavil več člankov s tabelami okrajšanih ulomkov. Njegovo delo sta opazila znameniti francoski matematik Augustin Louis Cauchy in John Farey, geolog, po komer se obravnavano zaporedje okrajšanih ulomkov imenuje. Vemo, da je Cauchy prispeval nekaj dokazov lastnosti Fareyevega zaporedja, v nasprotju pa ostaja neznano, ali sta Goodwyn in Farey zaporedje in nekatere njegove lastnosti odkrila neodvisno od Harosa, bodisi sta vedela za njegove ugotovitve. Farey je najverjetneje na podlagi Goodwynovih tabel maja 1816 v pismu časopisu \emph{The Philosophical Magazine and Journal} z naslovom \emph{On a curious Property of vulgar Fractions} predstavil medianto, najpomembnejšo lastnost zaporedja. Čeprav zaporedje morda neupravičeno nosi ime Johna Fareya, pa ne smemo spregledati njegovega prispevka k raziskovanju matematike v glasbi, vzorcev, astronomije in seveda geologije.
 
@@ -156,7 +156,7 @@ Poglejmo si prvih nekaj Fareyevih zapredij.
 \end{primer}
 
 \begin{opomba}
-Če pogoj $0 \leq p \leq q \leq n$ v definiciji~\ref{def:Farey} omilimo v pogoj $0 \leq p,q \leq n$, okrajšane ulomke z intervala $[0,1]$ razširimo na interval $[0, \infty)$. V primeru, ko za $p$ in $q$ dovoljujemo tudi negativna cela števila, dobimo okrajšane ulomke na celotni realni osi.
+Če pogoj $0 \leq p \leq q \leq n$ v Definiciji~\ref{def:Farey} omilimo v pogoj $0 \leq p,q \leq n$, okrajšane ulomke z intervala $[0,1]$ razširimo na interval $[0, \infty)$. V primeru, ko za $p$ in $q$ dovoljujemo tudi negativna cela števila, dobimo okrajšane ulomke na celotni realni osi.
 \end{opomba}
 
 V zgornjih primerih opazimo, da za vsaka sosednja člena Fareyevega zaporedja velja naslednje. Če števec prvega ulomka množimo z imenovalcem drugega in nato vlogi ulomkov zamenjamo, je razlika obeh produktov po absolutni vrednosti enaka $1$. To se bo izkazalo za pomembno opazko, zato vpeljemo pojem, ki sledi.
@@ -237,7 +237,7 @@ Naj bo $\varphi$ Eulerjeva funkcija. Dolžina Fareyevega zaporedja reda n je
 
 \begin{opomba}
 \label{op:AsimptotDolzina}
-Z upoštevanjem vrednosti $|F_{1}| = 2$ iz trditve~\ref{trd:DolzinaZap} sledi \[  |F_{n}| = \sum_{i=1}^n \varphi(i) + 1. \]
+Z upoštevanjem vrednosti $|F_{1}| = 2$ iz Trditve~\ref{trd:DolzinaZap} sledi \[  |F_{n}| = \sum_{i=1}^n \varphi(i) + 1. \]
 \end{opomba}
 
 \begin{trditev}
@@ -247,7 +247,7 @@ Asimptotično se dolžina Fareyevega zaporedja obnaša kot
 \end{trditev}
 
 \begin{opomba}
-Simbol $\sim$ v trditvi~\ref{trd:AsimptotDolzina} označuje asimptotično ekvivalentno obnašanje dveh funkcij.
+Simbol $\sim$ v Trditvi~\ref{trd:AsimptotDolzina} označuje asimptotično ekvivalentno obnašanje dveh funkcij.
 Po definiciji za funkciji $f(x)$ in $g(x)$ velja $f(x) \sim g(x)$ natanko tedaj, ko je $ \lim_{x \to \infty} \frac{f(x)}{g(x)} = 1$.
 \end{opomba}
 
@@ -303,7 +303,7 @@ definirana kot
 
 % dokaz asimptotskega obnašanja
 %
-Sedaj lahko dokažemo trditev~\ref{trd:AsimptotDolzina}.
+Sedaj lahko dokažemo Trditev~\ref{trd:AsimptotDolzina}.
 
 \begin{dokaz}
 Asimptotično obnašanje bomo izračunali s pomočjo ocene vrednosti vsote \( \sum_{i=1}^n \varphi(i) \).
@@ -334,7 +334,7 @@ n^2 \sum_{d=n+1}^{\infty} \left (- \frac{1}{d} + \frac{1}{d-1} \right ) = n^2 \f
 V enakosti (3) smo za izračun funkcije $\zeta(2)$ uporabili znano vrednost
 \[ \zeta(2) = \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.\]
 
-Po opombi~\ref{op:AsimptotDolzina} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
+Po Opombi~\ref{op:AsimptotDolzina} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
  %
 \end{dokaz}
 
@@ -723,9 +723,9 @@ ohranja tangentnost Fordovih krogov.
 \end{trditev}
 
 \begin{dokaz}
-Kot v definiciji \ref{def:MobTransformacija} zapišimo M\"{o}biusovo transformacijo v obliki $f(z) = \frac{az+c}{bz+d}$, kjer so $a,b,c,d \in \mathbb{Z}$ in velja $ad-bc=1$. 
+Kot v Definiciji~\ref{def:MobTransformacija} zapišimo M\"{o}biusovo transformacijo v obliki $f(z) = \frac{az+c}{bz+d}$, kjer so $a,b,c,d \in \mathbb{Z}$ in velja $ad-bc=1$. 
 Vzemimo Fordova kroga C($\frac{e}{f}$) in C($\frac{g}{h}$) in poglejmo, kam se preslikata. 
-Ker velja izrek \ref{izr:MobDelovanje} in je Fordov krog enolično določen s točko, v kateri se dotika realne osi v kompleksni ravnini, je dovolj poznati sliko te točke.
+Ker velja Izrek~\ref{izr:MobDelovanje} in je Fordov krog enolično določen s točko, v kateri se dotika realne osi v kompleksni ravnini, je dovolj poznati sliko te točke.
 Izračunajmo
 \[ f \left(\frac{e}{f} \right) = \frac{a \frac{e}{f} + c}{b \frac{e}{f} + d} = \frac{ae + cf}{be + df}, \]
 od koder sledi, da se Fordov krog C($\frac{e}{f}$) preslika v Fordov krog C($\frac{ae+cf}{be+df}$).
@@ -735,7 +735,7 @@ in C($\frac{g}{h}$) se preslika v C($\frac{ag+ch}{bg+dh}$).
 Označimo \( e' = ae+cf, f' = be+df, g' = ag+ch \) in $h' = bg+dh$. Računajmo
 \[ e'h'-f'g' = (ae+cf)(bg+dh) - (be+df)(ag+ch) = (ad - bc)(eh - fg), \]
 \[ |e'h'-f'g'| = |ad-bc| |eh-fg| = |eh-fg|. \]
-Iz zadnje enakosti in trditve \ref{trd:FordTangentnost} sledi, da sta Fordova kroga tangentna natanko tedaj, ko sta tangentni njuni sliki, kar smo želeli pokazati.
+Iz zadnje enakosti in Trditve~\ref{trd:FordTangentnost} sledi, da sta Fordova kroga tangentna natanko tedaj, ko sta tangentni njuni sliki, kar smo želeli pokazati.
 \end{dokaz}
 
 % primeri slik Fordovih krogov
