@@ -355,31 +355,38 @@ Zaradi simetrije je Fordove kroge dovolj obravnavati na intervalu $[0,1]$, obene
 Iz definicije zaradi pogoja o tujosti števil $p$ in $q$ neposredno sledi, da je množica Fordovih krogov v bijekciji s Fareyevim zapredjem.
 \end{opomba}
 
+% konstrukcija pravokotnega trikotnika
+Oglejmo si konstrukcijo pravokotnega trikotnika, določenega s parom Fordovih krogov, ki bo ključna pri dokazovanju trditev v tem poglavju. Izberimo okrajšana ulomka $\frac{a}{b}$ in $\frac{c}{d}$, za katera velja $\frac{a}{b} < \frac{c}{d}$, ter jima priredimo ustrezna Fordova kroga. Naj bosta $A$ središče Fordovega kroga C($\frac{a}{b}$) in $B$ središče Fordovega kroga C($\frac{c}{d}$). Če je $b<d$, kar pomeni, da je polmer kroga C($\frac{a}{b}$) večji od polmera C($\frac{c}{d}$), točko $C$ določimo kot presečišče navpične premice skozi točko $A$ z vodoravno premico skozi točko $B$. Sicer je $b>d$, točka $C$ pa presečišče navpične premice skozi točko $B$ z vodoravno premico skozi točko $A$. Povežimo središči obeh krogov. Točki $D$ in $E$ naj bosta presečišči daljice $AB$ s Fordovima krogoma C($\frac{a}{b}$) in C($\frac{c}{d}$).
+
+Vemo, da se kroga dotikata abscisne osi zaporedoma v točkah $\frac{a}{b}$ in $\frac{c}{d}$, njuna polmera pa merita $\frac{1}{2b^2}$ in $\frac{1}{2d^2}$. Od tod lahko izračunamo razdalje $|AB|$, $|AC|$ in $|BC|$.
+Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, zato velja Pitagorov izrek
+\[ |AB|^2 = |AC|^2 + |BC|^2. \]
+
+\begin{opomba}
+V konstrukciji smo brez škode za splošnost predpostavili zvezo $\frac{a}{b} < \frac{c}{d}$. Če v splošnem primeru ta ne velja, zamenjamo vlogi ulomkov in postopamo na enak način kot v zgoraj opisanem primeru.
+\end{opomba}
+%
+
 \begin{trditev}
 \label{trd:FordDisjTang}
 Fordova kroga, ki pripadata različnima okrajšanima ulomkoma, sta bodisi tangentna bodisi disjunktna.
 \end{trditev}
 
 \begin{dokaz}
-Naj za Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) velja $\frac{a}{b} < \frac{c}{d}$.
-Naj bodo A središče kroga C($\frac{a}{b}$), B središče kroga C($\frac{c}{d}$) in C presečišče navpične premice skozi točko B z vodoravno premico skozi točko A. Naj bosta še D in E presečišči daljice AB s Fordovima krogoma C($\frac{a}{b}$) in C($\frac{c}{d}$).
-
-Vemo, da se kroga dotikata abscisne osi zaporedoma v točkah $\frac{a}{b}$ in $\frac{c}{d}$, njuna polmera pa merita $\frac{1}{2b^2}$ in $\frac{1}{2d^2}$. Od tod lahko izračunamo razdalje $|AB|$, $|AC|$ in $|BC|$.
-Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, zato velja Pitagorov izrek
-\[ |AB|^2 = |AC|^2 + |BC|^2. \]
+Konstruirajmo pravokotni trikotnik, kot je opisano zgoraj in zapišimo Pitagorov izrek \[ |AB|^2 = |AC|^2 + |BC|^2. \]
 Če dolžine izrazimo z $a, b, c$ in $d$, dobimo enakost
 %
 \begin{align*}
 |AB|^2 
-  &= \left ( \left| \frac{1}{2b^2} - \frac{1}{2d^2} \right | \right )^2  + \left (\frac{c}{d} - \frac{a}{b} \right )^2 \\ 
+  &= \left ( \left| \frac{1}{2b^2} - \frac{1}{2d^2} \right| \right)^2  + \left ( \left| \frac{c}{d} - \frac{a}{b} \right| \right )^2 \\ 
   &= \frac{1}{4b^4} - \frac{1}{2b^2d^2} + \frac{1}{4d^4} + \left (\frac{bc-ad}{bd} \right )^2 \\
   &= \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2 - \frac{1}{b^2d^2} + \frac{(bc-ad)^2}{b^2d^2} \\
   &= (|AD| + |EB|)^2 + \frac{(bc-ad)^2-1}{b^2d^2}.
 \end{align*}
 
-Če je $|bc-ad|>1$, je $|AB|^2 > (|AD| + |EB|)^2$, zato $|AB| > |AD| + |EB|$ in Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta disjunktna.
+Če je $|bc-ad|>1$, je $|AB|^2 > (|AD| + |EB|)^2$, zato je $|AB| > |AD| + |EB|$ in Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta disjunktna.
 
-Če je $|bc-ad|=1$, je $|AB|^2 = (|AD| + |EB|)^2$, zato $|AB| = |AD| + |EB|$ in Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta tangentna.
+Če je $|bc-ad|=1$, je $|AB|^2 = (|AD| + |EB|)^2$, zato je $|AB| = |AD| + |EB|$ in Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta tangentna.
 
 Če je $|bc-ad|<1$, je $|bc-ad|=0,$ saj smo v množici celih števil. Sledi $\frac{a}{b} = \frac{c}{d},$ kar vodi v protislovje s predpostavko trditve.
 \end{dokaz}
@@ -397,11 +404,11 @@ Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta tangentna natanko tedaj, 
 
 \begin{dokaz}
 %
-Ponovno vpeljimo točke na Fordovih krogih kot v dokazu trditve~\ref{trd:FordDisjTang}. Implikacijo v levo smo že izpeljali, zato si oglejmo še implikacijo v desno.
+Ponovno konstruirajmo pravokotni trikotnik kot v prejšnjem razdelku. Implikacijo v levo smo že izpeljali, zato si oglejmo še implikacijo v desno.
 
 Denimo, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) tangentna. Potem za pravokotni trikotnik, ki ga določata, velja Pitagorov izrek 
 \[ |AC|^2 + |BC|^2 = |AB|^2 \] oziroma
-\[ \left ( \left | \frac{1}{2b^2} - \frac{1}{2d^2} \right | \right )^2 + \left (\frac{c}{d} - \frac{a}{b} \right )^2 = \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2. \]
+\[ \left ( \left | \frac{1}{2b^2} - \frac{1}{2d^2} \right | \right )^2 + \left ( \left| \frac{c}{d} - \frac{a}{b} \right| \right )^2 = \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2. \]
 Ko odpravimo oklepaje, opazimo, da se nekateri členi odštejejo. Nato odpravimo ulomke in dobljeno enakost poenostavimo.
 \[ \frac{1}{4b^4} - \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} + \frac{c^2}{d^2} - \frac{2ac}{bd} + \frac{a^2}{b^2} = \frac{1}{4b^4} + \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4}, \]
 \[ b^{2}c^{2} - 2abcd + a^{2}d^{2} = 1, \]
@@ -419,7 +426,7 @@ Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) Fordova soseda. Tedaj obstaja eno
 \end{trditev}
 
 \begin{dokaz}
-Po definiciji Fordovih krogov vemo, da sta $\frac{a}{b}$ in $\frac{c}{d}$ okrajšana ulomka in zaradi tangentnosti Fareyeva soseda v nekem Fareyevem zaporedju (razširjenem na celotno realno os). Po lemi~\ref{lema:MediantaOkrUlom} je njuna medianta $\frac{a+c}{b+d}$ tudi okrajšan ulomek, torej obstaja natanko en Fordov krog C($\frac{a+c}{b+d}$). 
+Po definiciji Fordovih krogov vemo, da sta $\frac{a}{b}$ in $\frac{c}{d}$ okrajšana ulomka in zaradi tangentnosti Fareyeva soseda v nekem Fareyevem zaporedju (razširjenem na celotno realno os). Po Lema~\ref{lema:MediantaOkrUlom} je njuna medianta $\frac{a+c}{b+d}$ tudi okrajšan ulomek, torej obstaja natanko en Fordov krog C($\frac{a+c}{b+d}$). 
 
 Dokažimo še, da je C($\frac{a+c}{b+d}$) tangenten na izbrana kroga. Ker sta C($\frac{a}{b}$) in C($\frac{c}{d}$) Fordova soseda, velja zveza 
 \( |bc-ad|=1. \)
@@ -467,7 +474,7 @@ Ugotovili smo, da Fordovi krogi oblike C($\frac{P_n}{Q_n}$) geometrijsko tvorijo
 
 % Pitagorejske trojice
 %
-V dokazu trditve~\ref{trd:FordDisjTang} smo konstruirali pravokotni trikotnik, določen s središčema tangentnih Fordovih krogov in presečiščem premic skozi središči. Spomnimo se znane definicije iz teorije števil, ki izhaja iz evklidske geometrije. 
+V prejšnjem razdelku smo konstruirali pravokotni trikotnik, določen s središčema tangentnih Fordovih krogov in presečiščem premic skozi središči. Spomnimo se znane definicije iz teorije števil, ki izhaja iz evklidske geometrije. 
 
 \begin{definicija}
 Trojica naravnih števil $(a,b,c)$, za katero velja $a^2+b^2=c^2$, se imenuje \emph{pitagorejska trojica}\footnote{Pojem pitagorejska trojica nosi ime slavnega starogrškega matematika Pitagore (okoli 570~pr.~n.~št. -- 495~pr.~n.~št.), ki ga poznamo predvsem po Pitagorovem izreku.}.
@@ -540,7 +547,7 @@ Nadaljujemo lahko s splošnejšimi Fordovimi krogi, ki so definirani na povsem e
 
 Tokrat naj bosta števili $p$ in $q$ elementa množice Gaussovih celih števil, ki je definirana kot $\mathbb{Z}\left[{i}\right] = \{a+bi; a,b \in \Z \}.$ Zapišimo $p = p'+ip''$ in $q = q'+iq'',$ kjer so $p', p'', q', q'' \in \Z.$ Definirajmo ulomek 
 \[ \frac{p}{q} = \frac{p'+ip''}{q'+iq''} = \frac{(p'+ip'')(q'-iq'')}{(q'+iq'')(q'-iq'')} = \frac{p'q'+p''q''}{q'^2+q''^2} + i \frac{p''q'-p'q''}{q'^2+q''^2}, \]
-ki pripada kompleksnim številom, in ga okrajšajmo. Geometrijsko predstavlja točko v Gaussovi $xy$-ravnini z realno in imaginarno koordinato. Gaussovo ravnino postavimo v prostor, določen z osjo $z$, pravokotno na Gaussovo ravnino, in opazujmo podprostor, ki pripada pozitivnim vrednostim na $z$-osi. Analogno Fordovim krogom v ravnini pridemo do naslednjega pojma. 
+ki pripada kompleksnim številom, in ga okrajšajmo. Geometrijsko predstavlja točko v Gaussovi $xy$-ravnini z realno in imaginarno komponento. Gaussovo ravnino postavimo v prostor, določen z osjo $z$, pravokotno na Gaussovo ravnino, in opazujmo podprostor, ki pripada pozitivnim vrednostim na $z$-osi. Analogno Fordovim krogom v ravnini pridemo do naslednjega pojma. 
 
 \begin{definicija}
 \emph{Fordova krogla} S($\frac{p}{q}$), kjer je $\frac{p}{q}$ okrajšan ulomek v množici kompleksnih števil, je krogla v zgornjem polprostoru, definiranem kot zgoraj, ki se $xy$-ravnine dotika v točki, določeni s $\frac{p}{q}$, njen polmer pa meri $\frac{1}{2|q|^2}.$
@@ -551,7 +558,7 @@ Na analogen način trditvam, ki opisujejo lastnosti Fordovih krogov, lahko izpel
 
 Poljubno majhen zaprt pravokotnik v $xy$-ravnini vsebuje neskončno mnogo dotikališč Fordovih krogel.
 
-V dokazu trditve \ref{trd:FordDisjTang} smo konstruirali pravokotni trikotnik, določen z dvema Fordovima krogoma. Naj točki $\frac{p}{q}$ in $\frac{P}{Q}$ določata Fordovi krogli ter konstruirajmo pravokotni trikotnik $ABC$ kot prej. Iz zveze
+Spomnimo se konstrukcije pravokotnega trikotnika, določenega z dvema Fordovima krogoma. Naj točki $\frac{p}{q}$ in $\frac{P}{Q}$ določata Fordovi krogli ter konstruirajmo pravokotni trikotnik $ABC$ kot prej. Iz zveze
 \begin{align*}
 |AB|^2 
   &= \left |\frac{P}{Q} - \frac{p}{q} \right|^2 + \left |\frac{1}{2|Q|^2} - \frac{1}{2|q|^2} \right|^2 = \frac{|Pq-pQ|^2-1}{|Q|^2|q|^2} + (|AD| + |EB|)^2
@@ -564,7 +571,7 @@ Naj bosta S($\frac{p}{q}$) in S($\frac{P}{Q}$) tangentni Fordovi krogli. Kot pre
 \[ \frac{P_n}{Q_n} = \frac{P+np}{Q+nq}, \]
 le da tokrat $n$ pripada množici Gaussovih celih števil. 
 Nadalje nas zanima, koliko Fordovih krogel je tangentnih na kroglo S($\frac{P_n}{Q_n}$).
-Uporabimo pogoj za tangentnost, izpeljan zgoraj. Računamo
+Uporabimo pogoj za tangentnost, ki smo ga izpeljali. Računajmo
 \begin{align*} 
 |P_{n}Q_{m} - P_{m}Q_{n}| 
   &= |(P+np)(Q+mq) - (P+mp)(Q+nq)| \\
@@ -572,7 +579,7 @@ Uporabimo pogoj za tangentnost, izpeljan zgoraj. Računamo
   &= |Pq-pQ| |m-n| = 1.
 \end{align*}
 %
-Sledi, da je $|m-n|=1,$ torej je $m-n \in \{1, -1, i, -i \}.$ Ugotovili smo, da je vsaka Fordova krogla, ki je tangentna na dano Fordovo kroglo, tangentna še na štiri druge Fordove krogle. Velja, da so te edine tangentne krogle.
+Sledi, da je $|m-n|=1,$ torej je razlika $m-n \in \{1, -1, i, -i \}.$ Ugotovili smo, da je vsaka Fordova krogla, ki je tangentna na dano Fordovo kroglo, tangentna še na štiri druge Fordove krogle. Velja, da so te edine tangentne krogle.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mobiusove transformacije na Fordovih krogih
 \subsection{M\"{o}biusove transformacije na Fordovih krogih}
