@@ -193,7 +193,7 @@ Označimo iskani okrajšan ulomek s $\frac{k}{n+1}$. Seveda sta $k, n \in\mathbb
 Dano naj bo Fareyevo zaporedje. Elemente zaporedja višjega reda dobimo z računanjem mediant elementov danega zaporedja.
 \end{lema}
 
-\begin{trditev}
+\begin{trditev}[Lastnost Fareyevih sosedov]
 Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). Ulomka $\frac{a}{b}$ in $\frac{c}{d}$ sta Fareyeva soseda v nekem Fareyevem zaporeju natanko tedaj, ko velja \(bc - ad = 1\).
 \end{trditev}
 
@@ -221,6 +221,10 @@ Naj za $\frac{a}{b} < \frac{c}{d}$ velja $bc - ad = 1$. Dokazati želimo, da je 
 \[ 1 = bc - ad = ba + bc - ab - ad = b(a + c) - a(b + d), \]
 kar pomeni, da $b+d$ in $a+c$ nimata skupnega faktorja. Ulomek $\frac{a+c}{b+d}$ je torej okrajšan.
 \end{dokaz}
+
+\begin{opomba}
+Medianta $\frac{a+c}{b+d}$ je enolično določena z ulomkoma $\frac{a}{b}$ in $\frac{c}{d}$. To imenujemo \emph{lastnost mediante}.
+\end{opomba}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % dolžina zaporedja
@@ -397,7 +401,7 @@ Konstruirajmo pravokotni trikotnik, kot je opisano zgoraj in zapišimo Pitagorov
 %
 Za tangentne Fordove kroge veljata naslednji lastnosti, ki lastnosti Fareyevih sosedov preneseta v jezik geometrije.
 
-\begin{trditev}
+\begin{trditev}[Lastnost Fordovih sosedov]
 \label{trd:FordTangentnost}
 Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta tangentna natanko tedaj, ko velja \( |bc-ad|=1. \)
 \end{trditev}
@@ -421,8 +425,8 @@ Trditev je s tem dokazana.
 Tangentna Fordova kroga imenujemo \emph{Fordova soseda}.
 \end{definicija}
 
-\begin{trditev}
-Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) Fordova soseda. Tedaj obstaja enolično določen Fordov krog C($\frac{a+c}{b+d}$) in je tangenten na izbrana kroga.
+\begin{trditev}[Lastnost mediante za Fordove kroge]
+Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) Fordova soseda. Tedaj obstaja enolično določen Fordov krog C($\frac{a+c}{b+d}$) in je tangenten na izbrana kroga. Imenujemo ga \emph{medianta Fordovih krogov}.
 \end{trditev}
 
 \begin{dokaz}
@@ -706,21 +710,10 @@ polmer pa meri
 Dokazali smo, da preslikavi, ki generirata grupo M\"{o}biusovih transformacij, Fordov krog preslikata v Fordov krog z intervala $[n,n+1]$ za $n \in \mathbb{Z}$. Da dobimo Fordov krog z intervala $[0,1]$, moramo prvotno preslikavo komponirati z $n$ translacijami v levo (za $-1$). Ker identiteta slika Fordov krog vase in je kompozitum M\"{o}biusovih transformacij dobro definiran, grupa ${SL}_{2}(\mathbb{Z})$ res deluje na množico Fordovih krogov.
 \end{dokaz}
 
-% tangentnost in Mobiusova transformacija
-\begin{trditev}
-M\"{o}biusova transformacija s predpisom
-\[
-\mathbf{A}\ =
-\left[
-\begin{array}{cc}
-a & c \\
-b & d \\
-\end{array}
-\right]
-\in {SL}_{2}(\mathbb{Z})
-\]
-ohranja tangentnost Fordovih krogov.
-\end{trditev}
+% lastnost mediante in Mobiusova transformacija
+\begin{lema}
+Dana naj bosta Fordova kroga C($\frac{e}{f}$) in C($\frac{g}{h}$). M\"{o}biusova transformacija, ki deluje na množico Fordovih krogov, ohranja $|eh-fg|$.
+\end{lema}
 
 \begin{dokaz}
 Kot v Definiciji~\ref{def:MobTransformacija} zapišimo M\"{o}biusovo transformacijo v obliki $f(z) = \frac{az+c}{bz+d}$, kjer so $a,b,c,d \in \mathbb{Z}$ in velja $ad-bc=1$. 
@@ -734,21 +727,28 @@ Podobno,
 in C($\frac{g}{h}$) se preslika v C($\frac{ag+ch}{bg+dh}$).
 Označimo \( e' = ae+cf, f' = be+df, g' = ag+ch \) in $h' = bg+dh$. Računajmo
 \[ e'h'-f'g' = (ae+cf)(bg+dh) - (be+df)(ag+ch) = (ad - bc)(eh - fg), \]
+od koder dobimo želeno enakost
 \[ |e'h'-f'g'| = |ad-bc| |eh-fg| = |eh-fg|. \]
-Iz zadnje enakosti in Trditve~\ref{trd:FordTangentnost} sledi, da sta Fordova kroga tangentna natanko tedaj, ko sta tangentni njuni sliki, kar smo želeli pokazati.
 \end{dokaz}
 
-% primeri slik Fordovih krogov
-\begin{primer}
-V naslednjih primerih si bomo ogledali, kam M\"{o}biusova transformacija preslika nekatere Fordove kroge.
-Kot smo videli v zgornjem dokazu, je dovolj poznati sliko točke v dotikališču Fordovega kroga in realne osi. 
+Iz zgornjega neposredno sledi naslednja ugotovitev.
 
-Fordov krog C($\frac{0}{1}$) se realne osi dotika v točki $(0,0)$, kar je v jeziku kompleksnih števil enako $0$, njegov polmer pa meri $\frac{1}{2}$. Ker je $f(0) = \frac{a \cdot 0 + c}{b \cdot 0 + d} = \frac{c}{d}$, se C($\frac{0}{1}$) preslika v Fordov krog C($\frac{c}{d}$).
+\begin{posledica}
+\label{Posl:MobOhr1}
+Dana naj bosta Fordova kroga C($\frac{e}{f}$) in C($\frac{g}{h}$). M\"{o}biusova transformacija, ki deluje na množico Fordovih krogov, ohranja $|eh-fg|=1$.
+\end{posledica}
 
-Fordov krog C($\frac{1}{1}$) vsebuje točko $(1,0)$ na realni osi oziroma kompleksno število $1$. Vrednost $f(1) = \frac{a \cdot 1 + c}{b \cdot 1 + d} = \frac{a+c}{b+d}$, zato je slika Fordov krog C($\frac{a+c}{b+d}$).
+Sedaj bomo s pomočjo orodij, ki smo jih obravnavali v tem razdelku, ponovno dokazali že znano \emph{lastnost mediante za Fordove kroge}.
 
-Kaj pa Fordov krog C($\frac{1}{0}$)? Ta je poseben predstavnik obravnavane množice, saj je njegov polmer neskončen in ga edinega predstavimo s premico v kompleksni ravnini. Ker se ne dotika realne osi, zgornja strategija ne deluje. Raje vzemimo poljubno točko na premici, Fordovemu krogu C($\frac{1}{0}$), ki jo zapišemo kot $x+i$, kjer je $x \in \mathbb{R}$. Ta se preslika v točko $f(x+i) = \frac{ax+ai+c}{bx+bi+d}$, ki leži na krožnici z enačbo $ | z - (\frac{a}{b} + i \frac{1}{2b^2}) | = \frac{1}{2b^2}$, ta pa ustreza Fordovemu krogu C($\frac{a}{b}$).  
-\end{primer}
+\begin{dokaz}[Dokaz lastnosti mediante za Fordove kroge z M\"{o}biusovimi transformacijami]
+Kroga C($\frac{r}{s}$) in C($\frac{p}{q}$) naj bosta Fordova soseda. Trdimo, da je kandidat C($\frac{r+p}{s+q}$) medianta izbranih Fordovih krogov.
+
+Vzemimo točke v presečiščih teh treh krogov. Vemo, da za točke $\alpha$, $\beta$, $\gamma$ obstaja M\"{o}biusova transformacija, ki jih preslika v poljubne točke $\lambda$, $\mu$, $\nu$. Torej obstaja M\"{o}biusova transformacija $M_{1}$, ki izbrane točke v presečiščih preslika v točke $i$, $\frac{1}{2}+\frac{1}{2}i$, $1+i$. Ker M\"{o}biusova transformacija slika Fordove kroge v Fordove kroge, mi pa poznamo sliki dveh točk na vsakem izmed krogov C($\frac{r}{s}$), C($\frac{p}{q}$) in C($\frac{r+p}{s+q}$), poznamo slike vseh treh Fordovih krogov. Te pa so točno C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$).
+
+Sedaj bomo konstruirali zaporedje M\"{o}biusovih transformacij (ki je prav tako M\"{o}biusova transformacija). Začnimo s Fordovima sosedoma C($\frac{r}{s}$) in C($\frac{p}{q}$). Preslikava $M_{1}$ ju preslika v Fordova kroga C($\frac{1}{0}$) in C($\frac{0}{1}$) z medianto, Fordovim krogom, C($\frac{1}{1}$). Kot v prvem delu dokaza izberimo tri točke v presečiščih in jih preslikajmo. Obstaja M\"{o}biusova transformacija $M_{2}$, ki Fordove kroge C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$) zaporedoma preslika v Fordove kroge C($\frac{a}{b}$) in C($\frac{c}{d}$) in C($\frac{a+c}{b+d}$). Nadaljujemo s transformacijo $M_{3}$, ki slednje preslika po vrsti v Fordove kroge C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$), in končajmo s transformacijo $M_{4}$, ki le-te preslika v Fordove kroge C($\frac{r}{s}$), C($\frac{p}{q}$) in C($\frac{r+p}{s+q}$).
+
+Vse zgornje preslikave so M\"{o}biusove transformacije, ki ohranjajo medianto Fordovih krogov (saj velja Posledica~\ref{Posl:MobOhr1} ter je C($\frac{1}{1}$) medianta C($\frac{1}{0}$) in C($\frac{0}{1}$)), zato tudi kompozitum $M_{4} \circ M_{3} \circ M_{2} \circ M_{1}$ ohranja medianto. Sledi, da je naš kandidat C($\frac{r+p}{s+q}$) res medianta. Z drugimi besedami, za poljubna Fordova soseda obstaja enolično določen Fordov krog, ki je tangenten na oba.
+\end{dokaz}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
