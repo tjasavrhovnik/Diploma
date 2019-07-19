@@ -1012,6 +1012,7 @@ Izrazimo še
 %
 Sedaj lahko izračunamo integral 
 \begin{align}
+\label{Eq:I1}
 I &\stackrel{(1)}{=} \sum_{v=1}^{L(n)} \int_{r_{v-1}}^{r_{v}} \left( L(n)u-v-\frac{1}{2}+1 \right)^2 du \nonumber \\
   &= \sum_{v=1}^{L(n)} \frac{(L(n)u-v+\frac{1}{2})^3}{3L(n)} \bigg \arrowvert_{r_{v-1}}^{r_{v}} \nonumber \\
   &= \frac{1}{3L(n)} \sum_{v=1}^{L(n)} \left( \left(L(n) \delta_{v} + \frac{1}{2} \right)^3 - \left(L(n) \delta_{v-1} - \frac{1}{2} \right)^3 \right) \nonumber \\
@@ -1075,8 +1076,33 @@ Enakost~(7) sledi iz računa
 %
 Izračunano vrednost integrala $I_{ab}$ vstavimo v enakost \ref{Eq:I_{ab}} in dobimo
 \begin{equation}
+\label{Eq:I2}
 I = \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} M \left(\frac{n}{a} \right) M \left(\frac{n}{b} \right) \frac{c^2}{12ab}.
 \end{equation}
+
+% Ocena in uporaba predpostavke
+Naj bo $\epsilon>0$. Predpostavljamo, da je $M(n) = o(x^{1/2+\epsilon})$, kar pomeni, da obstaja taka konstanta $C$, odvisna od $\epsilon$, da za poljuben $n$ velja $M(n) < C(\epsilon) n^{1/2+\epsilon}$. Če to uporabimo v enačbi~\ref{Eq:I2}, dobimo
+\begin{align}
+I &< \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} C(\epsilon)^2 \left( \frac{n}{a} \right)^{1/2+\epsilon} \left( \frac{n}{b} \right)^{1/2+\epsilon} \frac{c^2}{12ab} \nonumber \\
+  &= n^{1+2\epsilon} \frac{C(\epsilon)^2}{12} \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} \frac{c^2}{a^{3/2+\epsilon} b^{3/2+\epsilon}} \nonumber \\
+  &= n^{1+2\epsilon} \frac{C(\epsilon)^2}{12} \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} \frac{c^2}{\alpha^{3/2+\epsilon} \beta^{3/2+\epsilon} c^{3+2\epsilon}} \nonumber \\
+  &\stackrel{(8)}{<} n^{1+2\epsilon} K_{1}(\epsilon) \sum_{\alpha=1}^{\infty} \sum_{\beta=1}^{\infty} \sum_{c=1}^{\infty} \frac{1}{\alpha^{3/2} \beta^{3/2} c^{1+2\epsilon}} \nonumber \\
+  &= K_{2}(\epsilon) n^{1+2\epsilon}.
+\end{align}
+V neenakosti~(8) smo vsoto po tujih si številih $\alpha$ in $\beta$ zamenjali z vsoto po vseh vrednostih $\alpha$ in $\beta$.
+
+Enakost~\ref{Eq:I1} implicira
+\[ I = L(n) \sum_{v=1}^{L(n)} \delta_{v}^2 + \frac{1}{12} < K_{2}(\epsilon) n^{1+2\epsilon}, \]
+od koder sledi
+\[ \sum_{v=1}^{L(n)} \delta_{v}^2 < K_{3}(\epsilon) n^{1+2\epsilon}. \]
+Cauchy-Schwarzova neenakost nam da končno oceno
+\begin{align*}
+\sum_{v=1}^{L(n)} |\delta_{v}| &= \left| \sum_{v=1}^{L(n)} (\pm1)\delta_{v} \right|
+	\leq \sqrt{\sum_{v=1}^{L(n)} (\pm1)^2}  \sqrt{\sum_{v=1}^{L(n)} \delta_{v}^2} 
+	= L(n)^{1/2} \sqrt{\sum_{v=1}^{L(n)} \delta_{v}^2}
+	< K(\epsilon) n^{1+2\epsilon},
+\end{align*}
+kar smo želeli pokazati.
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
