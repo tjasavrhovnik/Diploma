@@ -727,8 +727,9 @@ Podobno,
 in C($\frac{g}{h}$) se preslika v C($\frac{ag+ch}{bg+dh}$).
 Označimo \( e' = ae+cf, f' = be+df, g' = ag+ch \) in $h' = bg+dh$. Računajmo
 \[ e'h'-f'g' = (ae+cf)(bg+dh) - (be+df)(ag+ch) = (ad - bc)(eh - fg), \]
-od koder dobimo želeno enakost
-\[ |e'h'-f'g'| = |ad-bc| |eh-fg| = |eh-fg|. \]
+katerega absolutna vrednost je enaka
+\[ |e'h'-f'g'| = |ad-bc| |eh-fg| = |eh-fg|, \]
+s čimer smo dokazali želeno enakost.
 \end{dokaz}
 
 Iz zgornjega neposredno sledi naslednja ugotovitev.
@@ -803,10 +804,10 @@ kar smo želeli pokazati.
 V 19.~stoletju so začeli računati s kompleksnimi števili, tako je Riemann leta 1859 razširil Eulerjevo definicijo funkcije zeta. Riemannova funkcija zeta množico  $\mathbb{C}\backslash\{1\}$ preslika na množico  $\mathbb{C}$ in je definirana v Definiciji~\ref{def:RiemZeta}.
 
 \begin{opomba}
-V Izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada $s$. Euler je formulo namreč formuliral za celoštevilske $s$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, $Re(s)>1$.
+V Izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada spremenljivka $s$. Euler je formulo namreč formuliral za celoštevilske $s$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, za katere velja $Re(s)>1$.
 \end{opomba}
 
-Zanimajo nas ničle Riemannove zeta funkcije. Na polravnini $Re(s)>1$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni da Riemannova zeta funkcija nima ničel za $Re(s)>1$.
+Zanimajo nas ničle Riemannove funkcije zeta. Na polravnini $Re(s)>1$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni, da Riemannova funkcija zeta nima ničel za $Re(s)>1$.
 
 Kako je z ničlami na polravnini $Re(s)<0$?
 Pomagali si bomo z Bernoullijevimi števili. Naj bo $|z|<2\pi$. \emph{Bernoullijeva\footnote{Jacob~Bernoulli, 27.~12.~1654 -- 16.~8.~1705, rojen v družini znamenitih švicarskih matematikov. Med drugim mu pripisujemo odkritje konstante $e$.} števila} $B_{k}$ definiramo preko funkcije
@@ -817,11 +818,11 @@ Z razvojem v Taylorjevo vrsto dobimo
 \[ G(z) = \left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \ldots \right)^{-1} = 1 - \frac{z}{2} + \frac{z^2}{12} - \frac{z^4}{720} + \ldots, \]
 od koder preberemo prvih nekaj Bernoullijevih števil: $B_{0} = 1$, $B_{1} = -\frac{1}{2}$,  $B_{2} = \frac{1}{6}$,  $B_{3} = 0$, $B_{4} = -\frac{1}{30}$.
 Za vse lihe $n$, kjer je $n \geq 3$, velja $B_{n}=0$. 
-Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo zeta funkcijo. Naj bo $n\in\{0, 1, 2, \dots\}$. Velja
+Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo funkcijo zeta. Naj bo $n\in\{0, 1, 2, \dots\}$. Velja
 \begin{equation}
 	\zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}.
 \end{equation}
-Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6,\dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $0<Re(s)<1$, o ničlah na njem pa govori naslednji izrek. 
+Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6,\dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove funkcije zeta. Ostal je še pas $0<Re(s)<1$, o ničlah na njem pa govori naslednji izrek. 
 
 \begin{izrek}[Riemannova hipoteza]
 Vse netrivialne ničle Riemannove funkcije zeta ležijo na premici $s=\frac{1}{2}+it$.
@@ -833,7 +834,7 @@ Vse netrivialne ničle Riemannove funkcije zeta ležijo na premici $s=\frac{1}{2
 Obstaja več ekvivalentnih formulacij Riemannove hipoteze. Dokazali bomo eno izmed njih, ki vključuje Fareyevo zaporedje. Pred tem se spomnimo M\"obiusove funkcije, definirane v Definiciji~\ref{def:MobFun}.
 
 \begin{definicija}
-Za $n\in\mathbb{N}$ je \emph{Mertensova\footnote{Franz~Mertens, 20.~3.~1840 -- 5.~3.~1927, poljski matematik.} funkcija} definirana kot
+Za $n\in\mathbb{N}$ je \emph{Mertensova\footnote{Franz~Mertens, 20.~3.~1840 -- 5.~3.~1927, poljski matematik.} funkcija} definirana s predpisom
 \[ M(n)=\sum_{k\leq n}\mu(k).\]
 \end{definicija}
 
@@ -884,13 +885,20 @@ Dokaz zgornje trditve izpustimo. Pač pa bomo v nadaljevanju dokazali povezavo m
 Naj bo $\varepsilon > 0$. \( \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) \) velja tedaj in le tedaj, ko velja \( M(n) = o(n^{1/2+\varepsilon}). \)
 \end{izrek}
 
-Dokaz implikacije v desno.
-Naj bo $\varepsilon > 0$.
-Definirajmo funkcijo $f \colon [0,1] \rightarrow \mathbb{R}$. Velja enakost
+Naslednja lema bo ključ do dokaza zgornjega izreka.
+
+\begin{lema}
+\label{Lema:RiemFar}
+Realna funkcija $f$ naj bo definirana na intervalu $[0,1]$. Naj bodo $r_{v}$ elementi Fareyevega zaporedja reda $n$, $r_{0}=0$ in $r_{L(n)}=1$\footnote{Zgolj zaradi preglednejšega zapisa bomo za potrebe dokaza Fareyevo zaporedje opazovali od neničelnega člena dalje. Tako bo element $r_{v}$ zdaj predstavljal element $r_{v+1}$ v običajni notaciji, vrednost $L(n)$ pa se bo zmanjšala za $1$.}. Tedaj velja enakost
 \begin{equation}
 	\sum_{v=1}^{L(n)} f(r_v) = \sum_{k=1}^{\infty} \sum_{j=1}^{k} f \left(\frac{j}{k} \right) M \left(\frac{n}{k} \right).
 \end{equation}
-Izberimo $f(u) = e^{2\pi iu}$. Če funkcijo vstavimo v enakost~(14), dobimo
+\end{lema}
+
+% Dokaz implikacije v desno
+\subsubsection{Dokaz implikacije v desno.}
+%
+Naj bo $\varepsilon > 0$. Naj bo $u \in [0,1]$ in definirajmo funkcijo $f(u) = e^{2\pi iu}$. Uporabimo lema~\ref{Lema:RiemFar} in funkcijo vstavimo v enakost~(14); dobimo
 \begin{equation}
 	\sum_{v=1}^{L(n)} e^{2\pi i r_{v}} = \sum_{k=1}^{\infty} \sum_{j=1}^{k} e^{2\pi i \frac{j}{k}} M \left(\frac{n}{k} \right).
 \end{equation}
@@ -909,6 +917,55 @@ Ker je $L(n) > 1$, je zadnji sumand enak $0$. Sedaj ocenimo absolutno vrednost z
 V zadnji neenakosti smo uporabili predpostavko $ \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) $, kar je ekvivalentno 
 $ \sum_{v=1}^{L(n)}|\delta_{v}| \leq K(\varepsilon) n^{1/2+\varepsilon}$ za neko konstano $K$, ki je odvisna od $\varepsilon$.
 Od tod sledi, da je $M(n) = o(n^{1/2 + \varepsilon})$.
+
+% Pomožne definicije
+\subsubsection{Pomožne definicije}
+Preden se lotimo dokazovanja obratne implikacije, potrebujemo nekaj novih pojmov. Navedli bomo le najpomembnejše rezultate, ki jih bomo v dokazu potrebovali. Izpeljave niso pretežke, vendar jih bomo tokrat izpustili, saj bi precej povečale obseg dela. Povzeti so po \cite[poglavje 6.2]{zetafunction}.
+
+\begin{definicija}
+Naj bo $n \in \mathbb{N} \cup \{0\}.$ \emph{$n$-ti Bernoullijev polinom} $B_{n}$ je polinom stopnje $n$, ki ustreza zvezi
+\begin{equation}
+\int_{x}^{x+1} B_{n}(t) dt = x^{n}.
+\end{equation}
+\end{definicija}
+
+\begin{primer}
+Zapišimo nekaj Bernoullijevih polinomov najnižjih stopenj.
+
+\( B_{0} = 1, \)
+
+\( B_{1} = x - \frac{1}{2}, \)
+
+\( B_{2} = x^2 - x - \frac{1}{6}, \)
+
+\( B_{3} = x^3 - \frac{3}{2} x^2 + \frac{1}{2} x. \)
+\end{primer}
+
+\begin{definicija}
+Naj bo $B_{n}$ $n$-ti Bernoullijev polinom. Pripadajoča funkcija $ \bar{B_{n}} $ je definirana kot $ \bar{B_{n}} = B_{n}(x - \lfloor x \rfloor). $
+\end{definicija}
+
+\begin{opomba}
+Iz definicije sledi, da je $ \bar{B_{n}} $ periodična funkcija.
+\end{opomba}
+
+\begin{primer}
+Funkcijo $ \bar{B_{1}} = x - \lfloor x \rfloor - \frac{1}{2} $ bomo potrebovali v dokazu.
+\end{primer}
+
+\begin{trditev}
+Naj bo $k \in \mathbb{N}$. Tedaj je
+\begin{equation}
+B_{n}(kx) = k^{n-1} \left ( B_{n}(x) + B_{n} \left( x + \frac{1}{k} \right) + \dots + B_{n} \left( x + \frac{k-1}{k} \right) \right).
+\end{equation}
+\end{trditev}
+
+\begin{dokaz}
+Dokaz za $k=2$ se nahaja v \cite[poglavje 6.2, str.~102 -- 103]{zetafunction}. Za splošen $k$ je dokaz analogen.
+\end{dokaz}
+
+% Dokaz implikacije v levo
+\subsubsection{Dokaz implikacije v levo.}
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
