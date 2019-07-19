@@ -896,7 +896,7 @@ Realna funkcija $f$ naj bo definirana na intervalu $[0,1]$. Naj bodo $r_{v}$ ele
 \end{lema}
 
 % Dokaz implikacije v desno
-\subsubsection{Dokaz implikacije v desno.}
+\subsubsection{Dokaz implikacije v desno}
 %
 Naj bo $\varepsilon > 0$. Naj bo $u \in [0,1]$ in definirajmo funkcijo $f(u) = e^{2\pi iu}$. Uporabimo lema~\ref{Lema:RiemFar} in funkcijo vstavimo v enakost~(14); dobimo
 \begin{equation}
@@ -932,17 +932,17 @@ Naj bo $n \in \mathbb{N} \cup \{0\}.$ \emph{$n$-ti Bernoullijev polinom} $B_{n}$
 \begin{primer}
 Zapišimo nekaj Bernoullijevih polinomov najnižjih stopenj.
 
-\( B_{0} = 1, \)
+\( B_{0}(x) = 1, \)
 
-\( B_{1} = x - \frac{1}{2}, \)
+\( B_{1}(x) = x - \frac{1}{2}, \)
 
-\( B_{2} = x^2 - x - \frac{1}{6}, \)
+\( B_{2}(x) = x^2 - x - \frac{1}{6}, \)
 
-\( B_{3} = x^3 - \frac{3}{2} x^2 + \frac{1}{2} x. \)
+\( B_{3}(x) = x^3 - \frac{3}{2} x^2 + \frac{1}{2} x. \)
 \end{primer}
 
 \begin{definicija}
-Naj bo $B_{n}$ $n$-ti Bernoullijev polinom. Pripadajoča funkcija $ \bar{B_{n}} $ je definirana kot $ \bar{B_{n}} = B_{n}(x - \lfloor x \rfloor). $
+Naj bo $B_{n}$ $n$-ti Bernoullijev polinom. Pripadajoča funkcija $ \bar{B_{n}} $ je definirana kot $ \bar{B_{n}}(x) = B_{n}(x - \lfloor x \rfloor). $
 \end{definicija}
 
 \begin{opomba}
@@ -950,13 +950,14 @@ Iz definicije sledi, da je $ \bar{B_{n}} $ periodična funkcija.
 \end{opomba}
 
 \begin{primer}
-Funkcijo $ \bar{B_{1}} = x - \lfloor x \rfloor - \frac{1}{2} $ bomo potrebovali v dokazu.
+Funkcijo $ \bar{B_{1}}(x) = x - \lfloor x \rfloor - \frac{1}{2} $ bomo potrebovali v dokazu.
 \end{primer}
 
 \begin{trditev}
 Naj bo $k \in \mathbb{N}$. Tedaj je
 \begin{equation}
-B_{n}(kx) = k^{n-1} \left ( B_{n}(x) + B_{n} \left( x + \frac{1}{k} \right) + \dots + B_{n} \left( x + \frac{k-1}{k} \right) \right).
+\label{Eq:B_{n}(ku)}
+B_{n}(ku) = k^{n-1} \left ( B_{n}(u) + B_{n} \left( u + \frac{1}{k} \right) + \dots + B_{n} \left( u + \frac{k-1}{k} \right) \right).
 \end{equation}
 \end{trditev}
 
@@ -965,7 +966,20 @@ Dokaz za $k=2$ se nahaja v \cite[poglavje 6.2, str.~102 -- 103]{zetafunction}. Z
 \end{dokaz}
 
 % Dokaz implikacije v levo
-\subsubsection{Dokaz implikacije v levo.}
+\subsubsection{Dokaz implikacije v levo}
+Spomnimo se funkcije $ \bar{B_{1}}(x) = x - \lfloor x \rfloor - \frac{1}{2} $ in enačbe~\ref{Eq:B_{n}(ku)}. Izberimo $n=1$. Funkcija $\bar{B_{1}}$ je periodična s periodo $1$, zato je za $x=ku$ dovolj obravnavati vrednosti $0 \leq u \leq \frac{1}{k}$. Za te vrednosti pa se $\bar{B_{1}}$ ujema s funkcijo $B_{1}$. Enačba~\ref{Eq:B_{n}(ku)} zato dobi obliko
+\begin{align}
+\label{Eq:bar{B_{1}}(ku)}
+\bar{B_{1}}(ku) &= \bar{B_{1}}(u) + \bar{B_{1}} \left( u + \frac{1}{k} \right) + \dots + \bar{B_{1}} \left( u + \frac{k-1}{k} \right) \nonumber \\
+			&= \bar{B_{1}} \left( u + \frac{1}{k} \right) + \bar{B_{1}} \left( u + \frac{2}{k} \right) + \dots + \bar{B_{1}} \left( u + 1 \right).
+\end{align}
+
+Ključni korak dokaza je, da v enakost iz leme~\ref{Lema:RiemFar} vstavimo funkcijo $ \bar{B_{1}}(x)$, pri čemer uporabimo zvezo~\ref{Eq:bar{B_{1}}(ku)}. Označimo
+\begin{align}
+G(u) &= \sum_{v=1}^{L(n)} \bar{B_{1}}(u+r_v) = \sum_{k=1}^{\infty} \sum_{j=1}^{k} \bar{B_{1}} \left(u + \frac{j}{k} \right) M \left(\frac{n}{k} \right)
+	= \sum_{k=1}^{\infty} \bar{B_{1}}(ku) M \left(\frac{n}{k} \right)
+\end{align}
+in dobimo dva izraza za funkcijo $G$.
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
