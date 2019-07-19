@@ -328,14 +328,14 @@ Sedaj računajmo vsoto
   & \stackrel{(2)}{=} \frac{n^2}{2 \zeta(2)} + O(n) + O(n \ln{n}) \stackrel{(3)}{=} \frac{3n^2}{\pi^2} + O(n \ln{n}).
 \end{align*}
 
-V enakosti (1) smo zadnji sumand ocenili navzgor s pomočjo Taylorjevega razvoja funkcije $\ln$ kot
+V enakosti~(1) smo zadnji sumand ocenili navzgor s pomočjo Taylorjevega razvoja funkcije $\ln$ kot
 \[ \ln{(1+x)} = \sum_{n=1}^{\infty} (-1)^{n+1} \frac{x^n}{n}.\]
 
-V enakosti (2) smo uporabili naslednjo oceno:
+V enakosti~(2) smo uporabili naslednjo oceno:
 \[ n^2 \sum_{d=n+1}^{\infty} \frac{1}{d^2} \leq n^2 \sum_{d=n+1}^{\infty} \frac{1}{d(d-1)} = 
 n^2 \sum_{d=n+1}^{\infty} \left (- \frac{1}{d} + \frac{1}{d-1} \right ) = n^2 \frac{1}{n} = n.\]
 
-V enakosti (3) smo za izračun funkcije $\zeta(2)$ uporabili znano vrednost
+V enakosti~(3) smo za izračun funkcije $\zeta(2)$ uporabili znano vrednost
 \[ \zeta(2) = \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.\]
 
 Po Opombi~\ref{op:AsimptotDolzina} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
@@ -1004,6 +1004,25 @@ Zaradi simetrije členov Fareyevega zaporedja velja še $\sum_{v=1}^{L(n)-1} \ba
 \[ \lim_{u \to 0} G(u) = \lim_{u \to 0} \bar{B_{1}}(u+1) = -\frac{1}{2}. \]
 Funkcija $G$ se na intervalu $[r_{v-1},r_{v}]$ izraža s predpisom
 \[ G(u) = L(n)u - v - \frac{1}{2}. \]
+%
+Izrazimo še 
+\[ L(n)r_{v} = L(n) \left( r_{v}-\frac{v}{L(n)}+\frac{v}{L(n)} \right) = L(n) \delta_{v} + v, \]
+\[ L(n)r_{v}-v+\frac{1}{2} = L(n) \delta_{v} + \frac{1}{2} \textrm{ , } L(n)r_{v-1}-v+\frac{1}{2} = L(n) \delta_{v-1} - \frac{1}{2}. \]
+%
+Sedaj lahko izračunamo integral 
+\begin{align}
+I &\stackrel{(1)}{=} \sum_{v=1}^{L(n)} \int_{r_{v-1}}^{r_{v}} \left( L(n)u-v-\frac{1}{2}+1 \right)^2 du \nonumber \\
+  &= \sum_{v=1}^{L(n)} \frac{(L(n)u-v+\frac{1}{2})^3}{3L(n)} \bigg \arrowvert_{r_{v-1}}^{r_{v}} \nonumber \\
+  &= \frac{1}{3L(n)} \sum_{v=1}^{L(n)} \left( \left(L(n) \delta_{v} + \frac{1}{2} \right)^3 - \left(L(n) \delta_{v-1} - \frac{1}{2} \right)^3 \right) \nonumber \\
+  &\stackrel{(2)}{=} \frac{1}{3L(n)} \sum_{v=1}^{L(n)} \left( \left(L(n) \delta_{v} + \frac{1}{2} \right)^3 - \left(L(n) \delta_{v} - \frac{1}{2} \right)^3 \right) \nonumber \\
+  &= \frac{1}{3L(n)} \sum_{v=1}^{L(n)} \left(3 \left(L(n) \delta_{v} \right)^2 + \frac{1}{4} \right) \nonumber \\
+  &= L(n) \sum_{v=1}^{L(n)} \delta_{v}^2 + \frac{1}{12L(n)} L(n) \nonumber \\
+  &= L(n) \sum_{v=1}^{L(n)} \delta_{v}^2 + \frac{1}{12}.
+\end{align}
+Zaradi privzetka, da je $r_{0}=0$ in $r_{L(n)}=1$, enakost~(1) res drži.
+V enakosti~(2) smo upoštevali, da je $\delta_{L(n)}=0$ in $L(n) \delta_{0}-\frac{1}{2} = L(n) \delta_{L(n)}-\frac{1}{2}.$
+
+\underline{2.~primer:}
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
