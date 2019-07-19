@@ -974,12 +974,36 @@ Spomnimo se funkcije $ \bar{B_{1}}(x) = x - \lfloor x \rfloor - \frac{1}{2} $ in
 			&= \bar{B_{1}} \left( u + \frac{1}{k} \right) + \bar{B_{1}} \left( u + \frac{2}{k} \right) + \dots + \bar{B_{1}} \left( u + 1 \right).
 \end{align}
 
-Ključni korak dokaza je, da v enakost iz leme~\ref{Lema:RiemFar} vstavimo funkcijo $ \bar{B_{1}}(x)$, pri čemer uporabimo zvezo~\ref{Eq:bar{B_{1}}(ku)}. Označimo
+Ključni korak dokaza je, da v enakost iz leme~\ref{Lema:RiemFar} vstavimo funkcijo $ \bar{B_{1}}$, pri čemer uporabimo zvezo~\ref{Eq:bar{B_{1}}(ku)}. Označimo
 \begin{align}
 G(u) &= \sum_{v=1}^{L(n)} \bar{B_{1}}(u+r_v) = \sum_{k=1}^{\infty} \sum_{j=1}^{k} \bar{B_{1}} \left(u + \frac{j}{k} \right) M \left(\frac{n}{k} \right)
 	= \sum_{k=1}^{\infty} \bar{B_{1}}(ku) M \left(\frac{n}{k} \right)
 \end{align}
-in dobimo dva izraza za funkcijo $G$.
+in dobimo dva izraza za funkcijo $G$. Izračunali bomo integral 
+\begin{equation}
+I = \int_{0}^1 G(u)^2 du.
+\end{equation}
+
+\underline{1.~primer:} $G(u) = \sum_{v=1}^{L(n)} \bar{B_{1}}(u+r_v)$
+Oglejmo si, kakšna je funkcija $G$. Razpišimo zgornjo zvezo:
+\begin{align}
+G(u) &= \sum_{v=1}^{L(n)} \bar{B_{1}}(u+r_v) = \sum_{v=1}^{L(n)} \left(u+r_v - \lfloor u+r_v \rfloor - \frac{1}{2} \right) \nonumber \\
+       &= L(n)u + \sum_{v=1}^{L(n)}r_v - \sum_{v=1}^{L(n)} \lfloor u+r_v \rfloor - \frac{L(n)}{2},
+\end{align}
+in opazujmo člen s spodnjim celim delom. Ker so členi Fareyevega zaporedja razen $r_{L(n)}=1$ simetrično razporejeni okrog vrednosti $\frac{1}{2}$, lahko zapišemo $\sum_{v=1}^{L(n)} \lfloor u+r_v \rfloor = \sum_{v=1}^{L(n)} \lfloor u+1-r_v \rfloor$. Za $u\in[0,1]$ zavzame $\lfloor u+1-r_v \rfloor$ le celi števili $0$ in $1$, slednje je le v primeru, ko je $u=r_{v}$. Zato je 
+\[
+\sum_{v=1}^{L(n)} \lfloor u+1-r_v \rfloor = \left\{
+\begin{array}{rl}
+	1 & \textrm{če}\ u = r_{v}\\
+	0 & \textrm{sicer}
+\end{array},
+\right.
+\]
+kar pomeni, da ima funkcija $G$, evaluirana v elementih Fareyevega zaporedja, skok za $-1$. Med Fareyevima sosedoma, torej na intervalu $[r_{v-1},r_{v}]$, je $G$ linearna funkcija spremenljivke $u$ s koeficientom $L(n)$.
+Zaradi simetrije členov Fareyevega zaporedja velja še $\sum_{v=1}^{L(n)-1} \bar{B_{1}}(r_v) = 0$. Od tod izračunamo desno limito funkcije $G$ v točki $0$,
+\[ \lim_{u \to 0} G(u) = \lim_{u \to 0} \bar{B_{1}}(u+1) = -\frac{1}{2}. \]
+Funkcija $G$ se na intervalu $[r_{v-1},r_{v}]$ izraža s predpisom
+\[ G(u) = L(n)u - v - \frac{1}{2}. \]
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
