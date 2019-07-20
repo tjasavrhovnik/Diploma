@@ -619,7 +619,7 @@ Sledi, da je $|m-n|=1,$ torej je razlika $m-n \in \{1, -1, i, -i \}.$ Ugotovili 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mobiusove transformacije na Fordovih krogih
 \subsection{M\"{o}biusove transformacije na Fordovih krogih}
 
-Do sedaj smo Fordove kroge obravnavali s pomočjo geometrijskih sredstev. V tem poglavju si bomo z algebro pomagali do nekaterih že znanih rezultatov o Fordovih krogih.
+Do sedaj smo Fordove kroge obravnavali s pomočjo geometrijskih sredstev. V tem razdelku si bomo z algebro pomagali do nekaterih že znanih rezultatov o Fordovih krogih.
 Geometrijske objekte si bomo predstavljali v kompleksni ravnini, torej bo točka s koordinatama $(x,y)$ opisana s kompleksnim številom $z=x+iy$.
 
 % Mobiusova transformacija
@@ -653,7 +653,7 @@ b & d \\
 kjer so $a,b,c,d \in \mathbb{Z}$. Ker velja $ad-bc=1$, je matrika $A \in {SL}_{2}(\mathbb{Z})$. Zato bomo M\"{o}biusove transformacije predstavljali s splošno linearno grupo ${SL}_{2}(\mathbb{Z})$.
 
 % Delovanje grupe na množico
-Ključen pri izpeljavi rezultatov o Fordovih krogih je pojem, ki ga v algebri pogosto uporabljamo.
+Pri izpeljavi rezultatov o Fordovih krogih je ključen pojem, ki ga v algebri pogosto uporabljamo.
 
 \begin{definicija}
 \emph{Delovanje grupe} $G$ na množico $M$ je taka preslikava \( \circ \colon G \times M \rightarrow M \), za katero velja:
@@ -722,23 +722,30 @@ Kaj pa preslikava $z \mapsto -\frac{1}{z}$? Najprej si oglejmo splošen primer. 
 z\bar{z} - \alpha \bar{z} - \bar{\alpha} z + \alpha \bar{\alpha} - r^2 &= 0
 \end{align}
 in označimo $R = \alpha \bar{\alpha} - r^2$. Polmer lahko izrazimo kot $r = \sqrt{|\alpha|^2-R}$.
+%
 Preslikajmo original s preslikavo $z \mapsto -\frac{1}{z}$. Enačba slike se glasi
 \begin{align}
+\label{Eq:MobSlika}
 \left(-\frac{1}{z}\right)\left(-\frac{1}{\bar{z}}\right) + \alpha \frac{1}{\bar{z}} + \bar{\alpha} \frac{1}{z} + R &= 0, \nonumber \\
 1 + \alpha z + \bar{\alpha} \bar{z} + Rz \bar{z} &= 0, \nonumber \\
 z \bar{z} + \frac{\bar{\alpha}}{R} \bar{z} + \frac{\alpha}{R} z + \frac{1}{R} &= 0.
 \end{align}
+%
 Sedaj vzemimo Fordov krog C($\frac{p}{q}$). Njegov polmer meri $\frac{1}{2q^2}$, središče pa je v točki $\frac{p}{q} +i \frac{1}{2q^2}$.
 Izračunajmo
 \[ R = \alpha \bar{\alpha} - r^2 = \left(\frac{p}{q} + i\frac{1}{2q^2} \right) \left(\frac{p}{q} - i\frac{1}{2q^2} \right) - \frac{1}{4q^4} 
 = \frac{p^2}{q^2} + \frac{1}{4q^4} - \frac{1}{4q^4} = \frac{p^2}{q^2} \]
-in preverimo, da je slika izbranega Fordovega kroga tudi Fordov krog. Res, središče slike je po enačbi (9) v točki
-\[ -\frac{\bar{\alpha}}{R} = - \frac{\frac{p}{q} - i \frac{1}{2q^2}}{\frac{p^2}{q^2}} = - \frac{q}{p} + i \frac{1}{2p^2}, \]
+in preverimo, da je slika izbranega Fordovega kroga tudi Fordov krog. Res, središče slike je po enačbi~\ref{Eq:MobSlika} v točki
+\begin{align}
+-\frac{\bar{\alpha}}{R} = - \frac{\frac{p}{q} - i \frac{1}{2q^2}}{\frac{p^2}{q^2}} = - \frac{q}{p} + i \frac{1}{2p^2},
+\end{align}
 polmer pa meri
-\[ \sqrt{ \left| - \frac{\bar{\alpha}}{R} \right|^2 - \frac{1}{R} } = \sqrt{ \frac{\bar{\alpha}}{R} \frac{\alpha}{R} - \frac{1}{R} } 
-= \frac{1}{R} \sqrt{|\alpha|^2 - R} =  \frac{1}{R} \frac{1}{2q^2} = \frac{q^2}{2p^2 q^2} = \frac{1}{2p^2}. \]
-
-Dokazali smo, da preslikavi, ki generirata grupo M\"{o}biusovih transformacij, Fordov krog preslikata v Fordov krog z intervala $[n,n+1]$ za $n \in \mathbb{Z}$. Da dobimo Fordov krog z intervala $[0,1]$, moramo prvotno preslikavo komponirati z $n$ translacijami v levo (za $-1$). Ker identiteta slika Fordov krog vase in je kompozitum M\"{o}biusovih transformacij dobro definiran, grupa ${SL}_{2}(\mathbb{Z})$ res deluje na množico Fordovih krogov.
+\begin{align}
+\sqrt{ \left| - \frac{\bar{\alpha}}{R} \right|^2 - \frac{1}{R} } = \sqrt{ \frac{\bar{\alpha}}{R} \frac{\alpha}{R} - \frac{1}{R} } 
+= \frac{1}{R} \sqrt{|\alpha|^2 - R} =  \frac{1}{R} \frac{1}{2q^2} = \frac{q^2}{2p^2 q^2} = \frac{1}{2p^2}.
+\end{align}
+%
+Dokazali smo, da preslikavi, ki generirata grupo M\"{o}biusovih transformacij, Fordov krog preslikata v Fordov krog z intervala $[n,n+1]$, kjer je $n \in \mathbb{Z}$. Da dobimo Fordov krog z intervala $[0,1]$, moramo prvotno preslikavo komponirati z $n$ translacijami v levo (za $-1$). Ker identiteta slika Fordov krog vase in je kompozitum M\"{o}biusovih transformacij dobro definiran, grupa ${SL}_{2}(\mathbb{Z})$ res deluje na množico Fordovih krogov.
 \end{dokaz}
 
 % lastnost mediante in Mobiusova transformacija
@@ -747,9 +754,9 @@ Dana naj bosta Fordova kroga C($\frac{e}{f}$) in C($\frac{g}{h}$). M\"{o}biusova
 \end{lema}
 
 \begin{dokaz}
-Kot v Definiciji~\ref{def:MobTransformacija} zapišimo M\"{o}biusovo transformacijo v obliki $f(z) = \frac{az+c}{bz+d}$, kjer so $a,b,c,d \in \mathbb{Z}$ in velja $ad-bc=1$. 
+Kot v definiciji~\ref{def:MobTransformacija} zapišimo M\"{o}biusovo transformacijo v obliki $f(z) = \frac{az+c}{bz+d}$, kjer so $a,b,c,d \in \mathbb{Z}$ in velja $ad-bc=1$. 
 Vzemimo Fordova kroga C($\frac{e}{f}$) in C($\frac{g}{h}$) in poglejmo, kam se preslikata. 
-Ker velja Izrek~\ref{izr:MobDelovanje} in je Fordov krog enolično določen s točko, v kateri se dotika realne osi v kompleksni ravnini, je dovolj poznati sliko te točke.
+Ker velja izrek~\ref{izr:MobDelovanje} in je Fordov krog enolično določen s točko, v kateri se dotika realne osi v kompleksni ravnini, je dovolj poznati sliko te točke.
 Izračunajmo
 \[ f \left(\frac{e}{f} \right) = \frac{a \frac{e}{f} + c}{b \frac{e}{f} + d} = \frac{ae + cf}{be + df}, \]
 od koder sledi, da se Fordov krog C($\frac{e}{f}$) preslika v Fordov krog C($\frac{ae+cf}{be+df}$).
@@ -779,7 +786,7 @@ Vzemimo točke v presečiščih teh treh krogov. Vemo, da za točke $\alpha$, $\
 
 Sedaj bomo konstruirali zaporedje M\"{o}biusovih transformacij (ki je prav tako M\"{o}biusova transformacija). Začnimo s Fordovima sosedoma C($\frac{r}{s}$) in C($\frac{p}{q}$). Preslikava $M_{1}$ ju preslika v Fordova kroga C($\frac{1}{0}$) in C($\frac{0}{1}$) z medianto, Fordovim krogom, C($\frac{1}{1}$). Kot v prvem delu dokaza izberimo tri točke v presečiščih in jih preslikajmo. Obstaja M\"{o}biusova transformacija $M_{2}$, ki Fordove kroge C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$) zaporedoma preslika v Fordove kroge C($\frac{a}{b}$) in C($\frac{c}{d}$) in C($\frac{a+c}{b+d}$). Nadaljujemo s transformacijo $M_{3}$, ki slednje preslika po vrsti v Fordove kroge C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$), in končajmo s transformacijo $M_{4}$, ki le-te preslika v Fordove kroge C($\frac{r}{s}$), C($\frac{p}{q}$) in C($\frac{r+p}{s+q}$).
 
-Vse zgornje preslikave so M\"{o}biusove transformacije, ki ohranjajo medianto Fordovih krogov (saj velja Posledica~\ref{Posl:MobOhr1} ter je C($\frac{1}{1}$) medianta C($\frac{1}{0}$) in C($\frac{0}{1}$)), zato tudi kompozitum $M_{4} \circ M_{3} \circ M_{2} \circ M_{1}$ ohranja medianto. Sledi, da je naš kandidat C($\frac{r+p}{s+q}$) res medianta. Z drugimi besedami, za poljubna Fordova soseda obstaja enolično določen Fordov krog, ki je tangenten na oba.
+Vse zgornje preslikave so M\"{o}biusove transformacije, ki ohranjajo medianto Fordovih krogov (saj velja posledica~\ref{Posl:MobOhr1} ter je C($\frac{1}{1}$) medianta C($\frac{1}{0}$) in C($\frac{0}{1}$)), zato tudi kompozitum $M_{4} \circ M_{3} \circ M_{2} \circ M_{1}$ ohranja medianto. Sledi, da je naš kandidat C($\frac{r+p}{s+q}$) res medianta. Z drugimi besedami, za poljubna Fordova soseda obstaja enolično določen Fordov krog, ki je tangenten na oba.
 \end{dokaz}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -832,51 +839,55 @@ kar smo želeli pokazati.
 \end{dokaz}
 
 % Riemannova zeta funkcija
-V 19.~stoletju so začeli računati s kompleksnimi števili, tako je Riemann leta 1859 razširil Eulerjevo definicijo funkcije zeta. Riemannova funkcija zeta množico  $\mathbb{C}\backslash\{1\}$ preslika na množico  $\mathbb{C}$ in je definirana v Definiciji~\ref{def:RiemZeta}.
+V 19.~stoletju so začeli računati s kompleksnimi števili, tako je Riemann leta 1859 razširil Eulerjevo definicijo funkcije zeta. Riemannova zeta funkcija množico  $\mathbb{C}\backslash\{1\}$ preslika na množico  $\mathbb{C}$ in je definirana v definiciji~\ref{def:RiemZeta}.
 
 \begin{opomba}
-V Izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada spremenljivka $s$. Euler je formulo namreč formuliral za celoštevilske $s$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, za katere velja $Re(s)>1$.
+V izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada spremenljivka $s$. Euler je formulo namreč formuliral za celoštevilske $s$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, za katere velja $Re(s)>1$.
 \end{opomba}
 
-Zanimajo nas ničle Riemannove funkcije zeta. Na polravnini $Re(s)>1$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni, da Riemannova funkcija zeta nima ničel za $Re(s)>1$.
+Zanimajo nas ničle Riemannove zeta funkcije. Na polravnini $Re(s)>1$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni, da Riemannova zeta funkcija nima ničel za $Re(s)>1$.
 
 Kako je z ničlami na polravnini $Re(s)<0$?
-Pomagali si bomo z Bernoullijevimi števili. Naj bo $|z|<2\pi$. \emph{Bernoullijeva\footnote{Jacob~Bernoulli, 27.~12.~1654 -- 16.~8.~1705, rojen v družini znamenitih švicarskih matematikov. Med drugim mu pripisujemo odkritje konstante $e$.} števila} $B_{k}$ definiramo preko funkcije
+Pomagali si bomo z Bernoullijevimi števili. Naj bo $|z|<2\pi$. \emph{Bernoullijeva\footnote{Jacob~Bernoulli, 27.\ 12.\ 1654 -- 16.\ 8.\ 1705, rojen v družini znamenitih švicarskih matematikov. Med drugim mu pripisujemo odkritje konstante $e$.} števila} $B_{k}$ definiramo preko funkcije
 \begin{equation}
 G(z) = \frac{z}{e^z-1} = \sum_{k=0}^{\infty} B_{k} \frac{z^k}{k!}.
 \end{equation}
 Z razvojem v Taylorjevo vrsto dobimo
-\[ G(z) = \left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \ldots \right)^{-1} = 1 - \frac{z}{2} + \frac{z^2}{12} - \frac{z^4}{720} + \ldots, \]
+\begin{align}
+G(z) = \left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \ldots \right)^{-1} = 1 - \frac{z}{2} + \frac{z^2}{12} - \frac{z^4}{720} + \ldots,
+\end{align}
 od koder preberemo prvih nekaj Bernoullijevih števil: $B_{0} = 1$, $B_{1} = -\frac{1}{2}$,  $B_{2} = \frac{1}{6}$,  $B_{3} = 0$, $B_{4} = -\frac{1}{30}$.
 Za vse lihe $n$, kjer je $n \geq 3$, velja $B_{n}=0$. 
-Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo funkcijo zeta. Naj bo $n\in\{0, 1, 2, \dots\}$. Velja
+Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo zeta funkcijo. Naj bo $n\in\{0, 1, 2, \dots\}$. Velja
 \begin{equation}
 	\zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}.
 \end{equation}
-Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6,\dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove funkcije zeta. Ostal je še pas $0<Re(s)<1$, o ničlah na njem pa govori naslednji izrek. 
+Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6,\dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $0<Re(s)<1$, o ničlah na njem pa govori naslednji izrek. 
 
 \begin{izrek}[Riemannova hipoteza]
-Vse netrivialne ničle Riemannove funkcije zeta ležijo na premici $s=\frac{1}{2}+it$.
+Vse netrivialne ničle Riemannove zeta funkcije ležijo na premici $s=\frac{1}{2}+it$.
 \end{izrek}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riemannova hipoteza
 \subsection{Riemannova hipoteza}
 
-Obstaja več ekvivalentnih formulacij Riemannove hipoteze. Dokazali bomo eno izmed njih, ki vključuje Fareyevo zaporedje. Pred tem se spomnimo M\"obiusove funkcije, definirane v Definiciji~\ref{def:MobFun}.
+Obstaja več ekvivalentnih formulacij Riemannove hipoteze. Dokazali bomo eno izmed njih, ki vključuje Fareyevo zaporedje. Pred tem se spomnimo M\"obiusove funkcije, ki smo jo definirali v definiciji~\ref{def:MobFun}.
 
 \begin{definicija}
-Za $n\in\mathbb{N}$ je \emph{Mertensova\footnote{Franz~Mertens, 20.~3.~1840 -- 5.~3.~1927, poljski matematik.} funkcija} definirana s predpisom
-\[ M(n)=\sum_{k\leq n}\mu(k).\]
+Za $n\in\mathbb{N}$ je \emph{Mertensova\footnote{Franz Mertens, 20.\ 3.\ 1840 -- 5.\ 3.\ 1927, poljski matematik.} funkcija} definirana s predpisom
+\begin{equation}
+M(n)=\sum_{k\leq n}\mu(k).
+\end{equation}
 \end{definicija}
 
 \begin{primer}
 Izračunajmo nekaj vrednosti Mertensove funkcije.
 
-\( M(2) = \mu(1) + \mu(2) = 1 - 1 = 0 \)
+\( M(2) = \mu(1) + \mu(2) = 1 - 1 = 0, \)
 
-\( M(3) = \mu(1) + \mu(2) + \mu(3) = 1 - 1 - 1 = -1 \)
+\( M(3) = \mu(1) + \mu(2) + \mu(3) = 1 - 1 - 1 = -1, \)
 
-\( M(6) = \mu(1) + \mu(2) + \mu(3) + \mu(4) + \mu(5) + \mu(6) = 1 - 1 - 1 + 0 - 1 + 1 = -1 \)
+\( M(6) = \mu(1) + \mu(2) + \mu(3) + \mu(4) + \mu(5) + \mu(6) = 1 - 1 - 1 + 0 - 1 + 1 = -1. \)
 \end{primer}
 
 Naslednjo trditev, ki jo bomo navedli brez dokaza, je leta 1912 dokazal Litllewood. Njeno bistvo je, da Riemannovo hipotezo lahko prevedemo na ekvivalentno trditev, ki opisuje rast Mertensove funkcije. 
@@ -889,7 +900,9 @@ Pred drugo ekvivalenco Riemannove hipoteze potrebujemo definicijo, ki sledi.
 
 \begin{definicija}
 Naj bosta $L(n)$ dolžina Fareyevega zaporedja $F_{n}$ in $r_{v}$ njegov v-ti element. Definiramo razliko
-\[ \delta_{v}= r_{v}-v/L(n). \]
+\begin{equation}
+\delta_{v}= r_{v}-v/L(n).
+\end{equation}
 \end{definicija}
 
 \begin{primer}
@@ -922,6 +935,7 @@ Naslednja lema bo ključ do dokaza zgornjega izreka.
 \label{Lema:RiemFar}
 Realna funkcija $f$ naj bo definirana na intervalu $[0,1]$. Naj bodo $r_{v}$ elementi Fareyevega zaporedja reda $n$, $r_{0}=0$ in $r_{L(n)}=1$\footnote{Zgolj zaradi preglednejšega zapisa bomo za potrebe dokaza Fareyevo zaporedje opazovali od neničelnega člena dalje. Tako bo element $r_{v}$ zdaj predstavljal element $r_{v+1}$ v običajni notaciji, vrednost $L(n)$ pa se bo zmanjšala za $1$.}. Tedaj velja enakost
 \begin{equation}
+\label{Eq:RiemFar1}
 	\sum_{v=1}^{L(n)} f(r_v) = \sum_{k=1}^{\infty} \sum_{j=1}^{k} f \left(\frac{j}{k} \right) M \left(\frac{n}{k} \right).
 \end{equation}
 \end{lema}
@@ -929,12 +943,13 @@ Realna funkcija $f$ naj bo definirana na intervalu $[0,1]$. Naj bodo $r_{v}$ ele
 % Dokaz implikacije v desno
 \subsubsection{Dokaz implikacije v desno}
 %
-Naj bo $\varepsilon > 0$. Naj bo $u \in [0,1]$ in definirajmo funkcijo $f(u) = e^{2\pi iu}$. Uporabimo lema~\ref{Lema:RiemFar} in funkcijo vstavimo v enakost~(14); dobimo
+Naj bo $\varepsilon > 0$. Naj bo $u \in [0,1]$ in definirajmo funkcijo $f(u) = e^{2\pi iu}$. Uporabimo lema~\ref{Lema:RiemFar} in funkcijo vstavimo v enakost~\ref{Eq:RiemFar1}; dobimo
 \begin{equation}
+\label{Eq:RiemFar2}
 	\sum_{v=1}^{L(n)} e^{2\pi i r_{v}} = \sum_{k=1}^{\infty} \sum_{j=1}^{k} e^{2\pi i \frac{j}{k}} M \left(\frac{n}{k} \right).
 \end{equation}
 Vemo, da je $\sum_{j=1}^{k} e^{2\pi i \frac{j}{k}} = 0$ za $k \geq 2$, za $k=1$ pa se vsota poenostavi v $e^{2\pi i} = 1$.
-Enakost~(15) zato prepišemo v 
+Enakost~\ref{Eq:RiemFar2} zato prepišemo v 
 \[ M(n) = \sum_{v=1}^{L(n)} e^{2\pi i r_{v}} = \sum_{v=1}^{L(n)} e^{2\pi i \left(\frac{v}{L(n)} + \delta_{v} \right)} 
 	   = \sum_{v=1}^{L(n)} e^{ \frac{2\pi i v}{L(n)} } \left(e^{2\pi i \delta_{v}} - 1 \right) + \sum_{v=1}^{L(n)} e^{ \frac{2\pi iv}{L(n)} }. \]
 Ker je $L(n) > 1$, je zadnji sumand enak $0$. Sedaj ocenimo absolutno vrednost zgornjega izraza:
@@ -977,7 +992,7 @@ Naj bo $B_{n}$ $n$-ti Bernoullijev polinom. Pripadajoča funkcija $ \bar{B_{n}} 
 \end{definicija}
 
 \begin{opomba}
-Iz definicije sledi, da je $ \bar{B_{n}} $ periodična funkcija.
+Iz definicije sledi, da je $ \bar{B_{n}} $ periodična funkcija s periodo $1$.
 \end{opomba}
 
 \begin{primer}
@@ -1156,8 +1171,6 @@ kar smo želeli pokazati.
 \bibitem{motifofmath} S.~B.~Guthery, \emph{A motif of mathematics}, Docent Press, Boston, 2011; dostopno tudi na \url{https://www.maths.ed.ac.uk/~v1ranick/papers/farey.pdf}.
 
 \bibitem{hardy} G.~H.~Hardy in E.~M.~Wright, \emph{An introduction to the theory of numbers}, 4th ed., Oxford University Press, Oxford, 1960.
-
-\bibitem{TNBook} A.~Hatcher, \emph{Topology of numbers}, verzija junij 2018, [ogled 31.~10.~2018], dostopno na \url{https://pi.math.cornell.edu/~hatcher/TN/TNpage.html}.
 
 \end{thebibliography}
 
