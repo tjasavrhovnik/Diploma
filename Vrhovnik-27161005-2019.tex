@@ -352,7 +352,8 @@ Po opombi~\ref{op:AsimptotDolzina} iz izraza~\ref{Eq:DolZap} sledi, da je \(|F_n
 %
 \section{Fordovi krogi}
 
-V tem poglavju bomo definirali Fordove kroge, ki Fareyevo zaporedje prenesejo v jezik geometrije. Večino časa bomo lastnosti dokazovali z uporabo elementarnih geometrijskih sredstev in v analognih trditvah tistim iz prejšnjega poglavja prepoznali geometrijski pomen.
+V tem poglavju bomo definirali Fordove kroge, ki so tesno povezani s Fareyevim zaporedjem. Večino lastnosti bomo dokazali z uporabo elementarnih geometrijskih sredstev in v analognih trditvah tistim iz prejšnjega poglavja prepoznali geometrijski pomen. Na kratko si bomo ogledali Fordove krogle -- Fordove kroge v treh dimenzijah. V zadnjem razdelku bomo z algebraičnim znanjem na drugačen način dokazali eno od lastnosti Fordovih krogov.
+Ideje poglavja so povzete po \cite[poglavje 4]{fareyproject} in\cite{ford}.
 
 \begin{definicija}
 Naj bosta $p$ in $q$ tuji si števili v množici celih števil.
@@ -372,7 +373,10 @@ Oglejmo si konstrukcijo pravokotnega trikotnika, določenega s parom Fordovih kr
 
 Vemo, da se kroga dotikata abscisne osi zaporedoma v točkah $\frac{a}{b}$ in $\frac{c}{d}$, njuna polmera pa merita $\frac{1}{2b^2}$ in $\frac{1}{2d^2}$. Od tod lahko izračunamo razdalje $|AB|$, $|AC|$ in $|BC|$.
 Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, zato velja Pitagorov izrek
-\[ |AB|^2 = |AC|^2 + |BC|^2. \]
+\begin{equation}
+\label{Eq:Pitagora}
+|AB|^2 = |AC|^2 + |BC|^2. 
+\end{equation}
 
 \begin{opomba}
 V konstrukciji smo brez škode za splošnost predpostavili zvezo $\frac{a}{b} < \frac{c}{d}$. Če v splošnem primeru ta ne velja, zamenjamo vlogi ulomkov in postopamo na enak način kot v zgoraj opisanem primeru.
@@ -385,16 +389,16 @@ Fordova kroga, ki pripadata različnima okrajšanima ulomkoma, sta bodisi tangen
 \end{trditev}
 
 \begin{dokaz}
-Konstruirajmo pravokotni trikotnik, kot je opisano zgoraj in zapišimo Pitagorov izrek \[ |AB|^2 = |AC|^2 + |BC|^2. \]
+Konstruirajmo pravokotni trikotnik, kot je opisano zgoraj in zapišimo Pitagorov izrek iz enačbe~\ref{Eq:Pitagora}.
 Če dolžine izrazimo z $a, b, c$ in $d$, dobimo enakost
 %
-\begin{align*}
+\begin{align}
 |AB|^2 
-  &= \left ( \left| \frac{1}{2b^2} - \frac{1}{2d^2} \right| \right)^2  + \left ( \left| \frac{c}{d} - \frac{a}{b} \right| \right )^2 \\ 
-  &= \frac{1}{4b^4} - \frac{1}{2b^2d^2} + \frac{1}{4d^4} + \left (\frac{bc-ad}{bd} \right )^2 \\
-  &= \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2 - \frac{1}{b^2d^2} + \frac{(bc-ad)^2}{b^2d^2} \\
+  &= \left ( \left| \frac{1}{2b^2} - \frac{1}{2d^2} \right| \right)^2  + \left ( \left| \frac{c}{d} - \frac{a}{b} \right| \right )^2 \nonumber \\ 
+  &= \frac{1}{4b^4} - \frac{1}{2b^2d^2} + \frac{1}{4d^4} + \left (\frac{bc-ad}{bd} \right )^2 \nonumber \\
+  &= \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2 - \frac{1}{b^2d^2} + \frac{(bc-ad)^2}{b^2d^2} \nonumber \\
   &= (|AD| + |EB|)^2 + \frac{(bc-ad)^2-1}{b^2d^2}.
-\end{align*}
+\end{align}
 
 Če je $|bc-ad|>1$, je $|AB|^2 > (|AD| + |EB|)^2$, zato je $|AB| > |AD| + |EB|$ in Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta disjunktna.
 
@@ -438,7 +442,7 @@ Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) Fordova soseda. Tedaj obstaja eno
 \end{trditev}
 
 \begin{dokaz}
-Po definiciji Fordovih krogov vemo, da sta $\frac{a}{b}$ in $\frac{c}{d}$ okrajšana ulomka in zaradi tangentnosti Fareyeva soseda v nekem Fareyevem zaporedju (razširjenem na celotno realno os). Po Lema~\ref{lema:MediantaOkrUlom} je njuna medianta $\frac{a+c}{b+d}$ tudi okrajšan ulomek, torej obstaja natanko en Fordov krog C($\frac{a+c}{b+d}$). 
+Po definiciji Fordovih krogov vemo, da sta $\frac{a}{b}$ in $\frac{c}{d}$ okrajšana ulomka in zaradi tangentnosti Fareyeva soseda v nekem Fareyevem zaporedju (razširjenem na celotno realno os). Po lema~\ref{lema:MediantaOkrUlom} je njuna medianta $\frac{a+c}{b+d}$ tudi okrajšan ulomek, torej obstaja natanko en Fordov krog C($\frac{a+c}{b+d}$). 
 
 Dokažimo še, da je C($\frac{a+c}{b+d}$) tangenten na izbrana kroga. Ker sta C($\frac{a}{b}$) in C($\frac{c}{d}$) Fordova soseda, velja zveza 
 \( |bc-ad|=1. \)
@@ -451,7 +455,7 @@ pomeni, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{a+c}{b+d}$) tangentna.
 \end{dokaz}
 
 % konstrukcija Fordovih sosedov
-Naslednji izrek pove, kako konstruiramo množico vseh Fordovih sosedov danega Fordovega kroga.
+Naslednji izrek pove, kako konstruiramo množico vseh Fordovih sosedov danega Fordovega kroga. Izrek in dokaz sledita \cite[trditev 3]{ford}.
 
 \begin{izrek}
 Naj bosta kroga C($\frac{p}{q}$) in C($\frac{P}{Q}$) Fordova soseda. Vse Fordove sosede Fordovega kroga C($\frac{p}{q}$) lahko zapišemo v obliki C($\frac{P_n}{Q_n}$), kjer je $\frac{P_n}{Q_n} = \frac{P+np}{Q+nq}$ in $n$ preteče vsa cela števila.
@@ -465,20 +469,22 @@ Zadnja enakost velja po predpostavki, da sta C($\frac{p}{q}$) in C($\frac{P}{Q}$
 
 Sedaj preverimo, če obstajajo še Fordovi sosedi, ki niso zgornje oblike. Opazovali bomo zaporedje Fordovih krogov $\mathcal{M} = \{ \mathrm{C}(\frac{P_n}{Q_n}); n\in\Z \}.$
 Iz računa
-\begin{align*}
+\begin{align}
 |Q_{n}P_{n+1} - P_{n}Q_{n+1}| 
-  &= |(Q+nq)(P+(n+1)p) - (P+np)(Q+(n+1)q)| \\ 
-  &= |QP + (n+1)Qp + nPq + n(n+1)pq \\
-  &   - PQ - (n+1)Pq - npQ - n(n+1)pq| \\
-  &= |Qp - pQ| \\
+  &= |(Q+nq)(P+(n+1)p) - (P+np)(Q+(n+1)q)| \nonumber \\ 
+  &= |QP + (n+1)Qp + nPq + n(n+1)pq \nonumber \\
+  &   - PQ - (n+1)Pq - npQ - n(n+1)pq| \nonumber \\
+  &= |Qp - pQ| \nonumber \\
   &= 1
-\end{align*}
+\end{align}
 sledi, da sta zaporedna elementa zaporedja $\mathcal{M}$ Fordova soseda. Ulomek $\frac{P_n}{Q_n}$, ki predstavlja Fordov krog C($\frac{P_n}{Q_n}$), lahko zapišemo kot
-\begin{align*}
+\begin{align}
 \frac{P_n}{Q_n}
-  &= \frac{P+np}{Q+nq} = \frac{Pq+npq}{q(Q+nq)} = \frac{Pq+npq+pQ-pQ}{q(Q+nq)} = \frac{p(Q+nq) + (Pq-pQ)}{q(Q+nq)} \\
-  &= \frac{p}{q} + \frac{Pq-pQ}{q(Q+nq)} = \frac{p}{q} \pm \frac{1}{q(Q+nq)} = \frac{p}{q} \pm \frac{1}{q^2 \left (n+\frac{Q}{q} \right)}.
-\end{align*}
+  &= \frac{P+np}{Q+nq} = \frac{Pq+npq}{q(Q+nq)} = \frac{Pq+npq+pQ-pQ}{q(Q+nq)} \nonumber \\
+  &= \frac{p(Q+nq) + (Pq-pQ)}{q(Q+nq)} = \frac{p}{q} + \frac{Pq-pQ}{q(Q+nq)} \nonumber \\
+  &= \frac{p}{q} \pm \frac{1}{q(Q+nq)} = \frac{p}{q} \pm \frac{1}{q^2 \left (n+\frac{Q}{q} \right)}.
+\end{align}
+%
 V limiti, ko gre $n$ preko vseh meja, gre $\frac{P_n}{Q_n}$ proti $\frac{p}{q}.$
 Ugotovili smo, da Fordovi krogi oblike C($\frac{P_n}{Q_n}$) geometrijsko tvorijo obroč okroli Fordovega kroga C($\frac{p}{q}$). Z njim so namreč vsi tangentni, prav tako pa so tangentni tudi na svojega predhodnika in naslednika v zaporedju $\mathcal{M}$. Njihova dotikališča z abscisno osjo konvergirajo proti točki $\frac{p}{q},$ ki je dotikališče danega Fordovega kroga C($\frac{p}{q}$), zaradi medsebojne tangentnosti pa so njihovi polmeri vse manjši. Zato ne obstaja Fordov krog, tangenten na C($\frac{p}{q}$), ki ni zgornje oblike in ne seka katerega izmed krogov iz zaporedja $\mathcal{M}$.
 %
@@ -503,41 +509,53 @@ Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) ter C($\frac{a'}{b'}$) in C($\fra
 
 Pa denimo, da sta si trikotnika $ABC$ in $A'B'C'$ podobna. Tedaj obstaja tako naravno število $\lambda\ne{1}$, da za dolžine stranic obeh pravokotnih trikotnikov veljajo naslednje zveze:
 %
-\begin{align}
-\frac{1}{2b^2}-\frac{1}{2d^2} &= \lambda \left (\frac{1}{2b'^2}-\frac{1}{2d'^2} \right ), \\
-\frac{1}{2b^2}+\frac{1}{2d^2} &= \lambda \left (\frac{1}{2b'^2}+\frac{1}{2d'^2} \right ), \\
-\frac{c}{d}-\frac{a}{b} &= \lambda \left (\frac{c'}{d'}-\frac{a'}{b'} \right ).
-\end{align}
-
-Če seštejemo prvi dve enačbi, dobimo
+\begin{equation}
+\label{Eq:Pit1}
+\frac{1}{2b^2}-\frac{1}{2d^2} = \lambda \left (\frac{1}{2b'^2}-\frac{1}{2d'^2} \right ),
+\end{equation}
+%
+\begin{equation}
+\label{Eq:Pit2}
+\frac{1}{2b^2}+\frac{1}{2d^2} = \lambda \left (\frac{1}{2b'^2}+\frac{1}{2d'^2} \right ),
+\end{equation}
+%
+\begin{equation}
+\label{Eq:Pit3}
+\frac{c}{d}-\frac{a}{b} = \lambda \left (\frac{c'}{d'}-\frac{a'}{b'} \right ).
+\end{equation}
+%
+Če seštejemo enačbi~\ref{Eq:Pit1} in \ref{Eq:Pit2}, dobimo
 %
 \begin{align}
+\label{Eq:Pit4}
 \frac{1}{b^2} &= \lambda \frac{1}{b'^2}, \nonumber \\
 b'^2 &= \lambda b^2, \nonumber \\
 b' &= \sqrt\lambda b.
 \end{align}
-
-Enačbo (3) lahko poenostavimo, saj gre za para Fordovih sosedov. Velja
+%
+Enačbo~\ref{Eq:Pit3} lahko poenostavimo, saj gre za para Fordovih sosedov. Velja
 \begin{equation}
+\label{Eq:Pit5}
 \frac{1}{bd} = \frac{bc-ad}{bd} = \frac{c}{d}-\frac{a}{b} = \lambda \left (\frac{c'}{d'}-\frac{a'}{b'} \right ) = \lambda \frac{b'c'-a'd'}{b'd'} = \lambda \frac{1}{b'd'}.
 \end{equation}
-
-Iz (4) in (5) sledi 
+%
+Iz enakosti~\ref{Eq:Pit4} in~\ref{Eq:Pit5} sledi 
 %
 \begin{align}
+\label{Eq:Pit6}
 \frac{1}{bd} &=\lambda \frac{1}{\sqrt\lambda bd'}, \nonumber \\
 \frac{1}{d} &= \frac{\sqrt\lambda}{d'}, \nonumber \\
 d' &= \sqrt\lambda d.
 \end{align}
-
-Nazadnje še v pogoj za tangentnost Fordovih krogov C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) vstavimo zvezi (4) in (6):
+%
+Nazadnje še v pogoj za tangentnost Fordovih krogov C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) vstavimo zvezi~\ref{Eq:Pit4} in~\ref{Eq:Pit6}, kar nam da
 %
 \begin{align}
 b'c'-a'd' &= 1, \nonumber \\
 \sqrt\lambda bc' - a' \sqrt\lambda d &= 1, \nonumber \\
 \sqrt\lambda (bc'-a'd) &= 1.
 \end{align}
-
+%
 To pa je možno le tedaj, ko je $\lambda=1.$ Prispeli smo do protislovja, kar pomeni, da si trikotnika nista podobna.
 %
 Zakaj so pitagorejske trojice primitivne?
@@ -551,14 +569,17 @@ Zakaj so pitagorejske trojice primitivne?
 \subsection{Posplošeni Fordovi krogi}
 
 V prejšnjem razdelku smo se ukvarjali s Fordovimi krogi, ki so bili enolično določeni z racionalnim številom. Natančneje, za dan okrajšan ulomek $\frac{p}{q}$ smo konstruirali Fordov krog na zgornji polravnini evklidske ravnine, ki se abscisne osi dotika v točki $\frac{p}{q}$, njegov polmer pa meri $\frac{1}{2q^2}.$
-Nadaljujemo lahko s splošnejšimi Fordovimi krogi, ki so definirani na povsem enak način, le da imajo polmer enak $\frac{1}{2hq^2},$ pri čemer je $h$ poljubno realno število. Imenujemo jih tudi Speiserjevi\footnote{Andreas Speiser, 10.~6.~1885 -- 12.~10.~1970, švicarski matematik, ki se je ukvarjal s teorijo števil in teorijo grup.} krogi. Če izberemo $h=1,$ dobimo običajne Fordove kroge.
+Nadaljujemo lahko s splošnejšimi Fordovimi krogi, ki so definirani na povsem enak način, le da imajo polmer enak $\frac{1}{2hq^2},$ pri čemer je $h$ poljubno realno število. Imenujemo jih tudi Speiserjevi\footnote{Andreas Speiser, 10.\ 6.\ 1885 -- 12.\ 10.\ 1970, švicarski matematik, ki se je ukvarjal s teorijo števil in teorijo grup.} krogi. Če izberemo $h=1,$ dobimo običajne Fordove kroge.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fordove krogle
 \subsection{Fordove krogle}
 
-Tokrat naj bosta števili $p$ in $q$ elementa množice Gaussovih celih števil, ki je definirana kot $\mathbb{Z}\left[{i}\right] = \{a+bi; a,b \in \Z \}.$ Zapišimo $p = p'+ip''$ in $q = q'+iq'',$ kjer so $p', p'', q', q'' \in \Z.$ Definirajmo ulomek 
-\[ \frac{p}{q} = \frac{p'+ip''}{q'+iq''} = \frac{(p'+ip'')(q'-iq'')}{(q'+iq'')(q'-iq'')} = \frac{p'q'+p''q''}{q'^2+q''^2} + i \frac{p''q'-p'q''}{q'^2+q''^2}, \]
+V tem razdelku bomo sledili \cite[poglavje 8]{ford}.
+Tokrat naj bosta števili $p$ in $q$ elementa množice Gaussovih celih števil, ki je definirana kot $\mathbb{Z}\left[{i}\right] = \{a+bi; a,b \in \Z \}.$ Zapišimo $p = p'+ip''$ in $q = q'+iq'',$ kjer so $p', p'', q', q'' \in \Z.$ Definirajmo ulomek
+\begin{align} 
+\frac{p}{q} = \frac{p'+ip''}{q'+iq''} = \frac{(p'+ip'')(q'-iq'')}{(q'+iq'')(q'-iq'')} = \frac{p'q'+p''q''}{q'^2+q''^2} + i \frac{p''q'-p'q''}{q'^2+q''^2},
+\end{align}
 ki pripada kompleksnim številom, in ga okrajšajmo. Geometrijsko predstavlja točko v Gaussovi $xy$-ravnini z realno in imaginarno komponento. Gaussovo ravnino postavimo v prostor, določen z osjo $z$, pravokotno na Gaussovo ravnino, in opazujmo podprostor, ki pripada pozitivnim vrednostim na $z$-osi. Analogno Fordovim krogom v ravnini pridemo do naslednjega pojma. 
 
 \begin{definicija}
@@ -580,16 +601,18 @@ sledi:
 sicer je $|Pq-pQ|=1,$ zato je $|AB|=|AD|+|EB|$ in krogli sta tangentni.
 
 Naj bosta S($\frac{p}{q}$) in S($\frac{P}{Q}$) tangentni Fordovi krogli. Kot prej tangentne Fordove krogle na kroglo S($\frac{p}{q}$) konstruiramo s pomočjo formule
-\[ \frac{P_n}{Q_n} = \frac{P+np}{Q+nq}, \]
+\begin{equation}
+\frac{P_n}{Q_n} = \frac{P+np}{Q+nq},
+\end{equation}
 le da tokrat $n$ pripada množici Gaussovih celih števil. 
 Nadalje nas zanima, koliko Fordovih krogel je tangentnih na kroglo S($\frac{P_n}{Q_n}$).
 Uporabimo pogoj za tangentnost, ki smo ga izpeljali. Računajmo
-\begin{align*} 
+\begin{align} 
 |P_{n}Q_{m} - P_{m}Q_{n}| 
-  &= |(P+np)(Q+mq) - (P+mp)(Q+nq)| \\
-  &= |PQ+mPq+npQ+mnpq-PQ-nqP-mpQ-mnpq| \\
+  &= |(P+np)(Q+mq) - (P+mp)(Q+nq)| \nonumber \\
+  &= |PQ+mPq+npQ+mnpq-PQ-nqP-mpQ-mnpq| \nonumber \\
   &= |Pq-pQ| |m-n| = 1.
-\end{align*}
+\end{align}
 %
 Sledi, da je $|m-n|=1,$ torej je razlika $m-n \in \{1, -1, i, -i \}.$ Ugotovili smo, da je vsaka Fordova krogla, ki je tangentna na dano Fordovo kroglo, tangentna še na štiri druge Fordove krogle. Velja, da so te edine tangentne krogle.
 
@@ -1135,8 +1158,6 @@ kar smo želeli pokazati.
 \bibitem{hardy} G.~H.~Hardy in E.~M.~Wright, \emph{An introduction to the theory of numbers}, 4th ed., Oxford University Press, Oxford, 1960.
 
 \bibitem{TNBook} A.~Hatcher, \emph{Topology of numbers}, verzija junij 2018, [ogled 31.~10.~2018], dostopno na \url{https://pi.math.cornell.edu/~hatcher/TN/TNpage.html}.
-
-\bibitem{strnad} M.~Strnad, \emph{Pitagorov izrek pred Pitagorom}, Presek \textbf{17} (1989) 8--11; dostopno tudi na \url{http://www.presek.si/17/966-Strnad.pdf}.
 
 \end{thebibliography}
 
