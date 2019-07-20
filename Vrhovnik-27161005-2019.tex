@@ -838,6 +838,8 @@ od koder lahko izrazimo
 kar smo želeli pokazati.
 \end{dokaz}
 
+V dokazu smo sledili~\cite{riemannHyp}.
+
 % Riemannova zeta funkcija
 V 19.~stoletju so začeli računati s kompleksnimi števili, tako je Riemann leta 1859 razširil Eulerjevo definicijo funkcije zeta. Riemannova zeta funkcija množico  $\mathbb{C}\backslash\{1\}$ preslika na množico  $\mathbb{C}$ in je definirana v definiciji~\ref{def:RiemZeta}.
 
@@ -852,12 +854,27 @@ Pomagali si bomo z Bernoullijevimi števili. Naj bo $|z|<2\pi$. \emph{Bernoullij
 \begin{equation}
 G(z) = \frac{z}{e^z-1} = \sum_{k=0}^{\infty} B_{k} \frac{z^k}{k!}.
 \end{equation}
-Z razvojem v Taylorjevo vrsto dobimo
-\begin{align}
-G(z) = \left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \ldots \right)^{-1} = 1 - \frac{z}{2} + \frac{z^2}{12} - \frac{z^4}{720} + \ldots,
-\end{align}
-od koder preberemo prvih nekaj Bernoullijevih števil: $B_{0} = 1$, $B_{1} = -\frac{1}{2}$,  $B_{2} = \frac{1}{6}$,  $B_{3} = 0$, $B_{4} = -\frac{1}{30}$.
-Za vse lihe $n$, kjer je $n \geq 3$, velja $B_{n}=0$. 
+%
+Najprej za občutek izračunajmo prvih nekaj Bernoullijevih števil. Funkcijo $G$ lahko razvijemo v Taylorjevo vrsto okoli ničle in dobimo
+\begin{align*}
+G(z) = \left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \ldots \right)^{-1}.
+\end{align*}
+%
+Iščemo polinom\footnote{Polinom ni najbolj korektno poimenovanje, saj nima končne stopnje.} $p(z) = a_{0}+a_{1}z+a_{2}z^2+a_{3}z^3+\dots$, za katerega bo veljalo
+\begin{align*}
+\left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \ldots \right) p(z) = 1.
+\end{align*}
+%
+Z rekurzivnim računanjem koeficientov pri potencah $z$ dobimo koeficiente polinoma: $a_{0}=1$, $a_{1}=-\frac{1}{2}$, $a_{2}=\frac{1}{12}$, $a_{3}=0$, $a_{4}=-\frac{1}{720}$ itd. Od tod preberemo prvih nekaj Bernoullijevih števil: $B_{0} = 1$, $B_{1} = -\frac{1}{2}$,  $B_{2} = \frac{1}{6}$,  $B_{3} = 0$, $B_{4} = -\frac{1}{30}$.
+
+\begin{lema}
+Naj bo $k \in \mathbb{N}$. Za Bernoullijeva števila velja $B_{2k+1}=0$.
+\end{lema}
+
+\begin{dokaz}
+
+\end{dokaz}
+
 Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo zeta funkcijo. Naj bo $n\in\{0, 1, 2, \dots\}$. Velja
 \begin{equation}
 	\zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}.
@@ -1171,6 +1188,8 @@ kar smo želeli pokazati.
 \bibitem{motifofmath} S.~B.~Guthery, \emph{A motif of mathematics}, Docent Press, Boston, 2011; dostopno tudi na \url{https://www.maths.ed.ac.uk/~v1ranick/papers/farey.pdf}.
 
 \bibitem{hardy} G.~H.~Hardy in E.~M.~Wright, \emph{An introduction to the theory of numbers}, 4th ed., Oxford University Press, Oxford, 1960.
+
+\bibitem{riemannHyp} J.~Veisdal, \emph{The Riemann hypothesis, explained}, verzija 21.~8.~2016, [ogled 20.~7.~2019], dostopno na \url{https://medium.com/cantors-paradise/the-riemann-hypothesis-explained-fa01c1f75d3f}.
 
 \end{thebibliography}
 
