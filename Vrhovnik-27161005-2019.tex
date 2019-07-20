@@ -850,8 +850,9 @@ V izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada spremenlji
 Zanimajo nas ničle Riemannove zeta funkcije. Na polravnini $Re(s)>1$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni, da Riemannova zeta funkcija nima ničel za $Re(s)>1$.
 
 Kako je z ničlami na polravnini $Re(s)<0$?
-Pomagali si bomo z Bernoullijevimi števili. Naj bo $|z|<2\pi$. \emph{Bernoullijeva\footnote{Jacob~Bernoulli, 27.\ 12.\ 1654 -- 16.\ 8.\ 1705, rojen v družini znamenitih švicarskih matematikov. Med drugim mu pripisujemo odkritje konstante $e$.} števila} $B_{k}$ definiramo preko funkcije
+Pomagali si bomo z Bernoullijevimi števili \cite[poglavje 3]{bernoulli}. Naj bo $|z|<2\pi$. \emph{Bernoullijeva\footnote{Jacob~Bernoulli, 27.\ 12.\ 1654 -- 16.\ 8.\ 1705, rojen v družini znamenitih švicarskih matematikov. Med drugim mu pripisujemo odkritje konstante $e$.} števila} $B_{k}$ definiramo preko funkcije
 \begin{equation}
+\label{Eq:Bernoulli}
 G(z) = \frac{z}{e^z-1} = \sum_{k=0}^{\infty} B_{k} \frac{z^k}{k!}.
 \end{equation}
 %
@@ -872,10 +873,16 @@ Naj bo $k \in \mathbb{N}$. Za Bernoullijeva števila velja $B_{2k+1}=0$.
 \end{lema}
 
 \begin{dokaz}
-
+Spomnimo se funkcije $G$, podane z zvezo~\ref{Eq:Bernoulli}. Trdimo, da je soda. Oglejmo si novo funkcijo
+\begin{align}
+G(z) + \frac{z}{2} = \frac{z}{2} \left( \frac{2}{e^{z}-1}+1 \right) = \frac{z}{2} \frac{e^{z}+1}{e^{z}-1} 
+	= \frac{z}{2} \frac{e^{z/2}+e^{-z/2}}{e^{z/2}-e^{-z/2}} = \frac{z}{2} \coth{\frac{z}{2}}.
+\end{align}
+%
+Zapisali smo jo kot produkt dveh lihih funkcij, kar je soda funkcija. Upoštevamo, da je $B_{1}=-\frac{1}{2}$. Oboje skupaj nam pove, da so koeficienti funkcije $G$ pri lihih potencah stopnje vsaj $3$ enaki $0$, s tem pa vsa števila $B_{2k+1}$ za $k \geq 1$.
 \end{dokaz}
 
-Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo zeta funkcijo. Naj bo $n\in\{0, 1, 2, \dots\}$. Velja
+Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo zeta funkcijo, ki je podrobno obravnavana v \cite[poglavje 1.5]{zetafunction}. Naj bo $n\in\{0, 1, 2, \dots\}$. Velja
 \begin{equation}
 	\zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}.
 \end{equation}
@@ -1189,7 +1196,9 @@ kar smo želeli pokazati.
 
 \bibitem{hardy} G.~H.~Hardy in E.~M.~Wright, \emph{An introduction to the theory of numbers}, 4th ed., Oxford University Press, Oxford, 1960.
 
-\bibitem{riemannHyp} J.~Veisdal, \emph{The Riemann hypothesis, explained}, verzija 21.~8.~2016, [ogled 20.~7.~2019], dostopno na \url{https://medium.com/cantors-paradise/the-riemann-hypothesis-explained-fa01c1f75d3f}.
+\bibitem{bernoulli} P.~Sebah in X.~Gourdon, \emph{Introduction on Bernoulli's numbers}, verzija 12.~6.~2002, [ogled 20.~7.~2019], dostopno na \url{http://math.ucr.edu/~res/math153/s12/bernoulli-numbers.pdf}.
+
+\bibitem{riemannHyp} J.~Veisdal, \emph{The Riemann hypothesis, explained}, verzija 21.~8.~2016, [ogled 30.~4.~2019], dostopno na \url{https://medium.com/cantors-paradise/the-riemann-hypothesis-explained-fa01c1f75d3f}.
 
 \end{thebibliography}
 
