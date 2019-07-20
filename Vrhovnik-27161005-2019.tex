@@ -62,7 +62,7 @@
 
 Zgodovina Fareyevega zaporedja sega v London 18.~stoletja. Med letoma 1704 in 1841 je izhajal letni zbornik \emph{The Ladies Diary: or, the Woman's Almanack}, ki je povezoval ljubitelje matematičnih ugank. Bralce so namreč nagovarjali k pošiljanju in reševanju aritmetičnih problemov, ki so bili v zborniku objavljeni. Leta~1747 se je pojavilo naslednje vprašanje: Najti je potrebno število ulomkov različnih vrednosti, manjših od $1$, katerih imenovalec ni večji od $100$. Odziv je bil precejšen, saj so se z iskanjem rešitve ukvarjali tako javnost kot pomembni matematiki tiste dobe. To je vodilo v razvoj Fareyevega zaporedja, ki ima nekaj presenetljivih lastnosti in uporabo na različnih področjih matematike.
 
-Delo diplomskega seminarja je sestavljeno iz treh večjih enot. V prvi bomo predstavili zgodovinski pregled, definicijo in lastnosti Fareyevega zaporedja. V drugem razdelku se bomo posvetili geometrijski interpretaciji zaporedja -- Fordovim krogom -- in opazili, da imajo lastnosti zaporedja tudi geometrijski pomen. Navedli bomo nekaj posplošitev Fordovih krogov ter si ogledali njihovo predstavitev z uporabo algebre in kompleksne analize. V zadnjem delu bomo obravnavali znamenit matematični problem, Riemannovo hipotezo. Opisali bomo povezavo Riemannove hipoteze s Fareyevim zaporedjem in dokazali njeno ekvivalenčno trditev. 
+Delo diplomskega seminarja je sestavljeno iz treh večjih enot. V prvi bomo predstavili zgodovinski pregled, definicijo, lastnosti in ocenili dolžino Fareyevega zaporedja. V drugem razdelku se bomo posvetili geometrijski interpretaciji zaporedja -- Fordovim krogom -- in opazili, da imajo lastnosti zaporedja tudi geometrijski pomen. Navedli bomo nekaj posplošitev Fordovih krogov ter si ogledali njihovo predstavitev z uporabo algebre in kompleksne analize. V zadnjem delu bomo obravnavali znamenit matematični problem, Riemannovo hipotezo. Opisali bomo povezavo Riemannove hipoteze s Fareyevim zaporedjem in dokazali njeno ekvivalenčno trditev. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -125,16 +125,18 @@ kar smo želeli dokazati.
 Obstajajo $3003$ racionalna števila $\frac{p}{q}$, za katera velja $0<\frac{p}{q}<1$ ter je $q \leq 100$.
 \end{trditev}
 
-Namesto formalnega dokaza trditve bomo predstavili Flitconovo rešitev. Naredimo tabelo s tremi stolpci in $99$ vrsticami. V prvi stolpec vsake vrstice napišemo po eno izmed naravnih števil od $2$ do $100$. V drugi stolpec posamezne vrstice zapišemo naravno število iz prvega stolpca kot produkt prafaktorjev, v tretji stolpec pa vrednost $\varphi(n)$. Pomagamo si s Trditvama~\ref{trd:MultipEuler} in \ref{trd:EulerPrastProd}. Vsota vrednosti v tretjem stolpcu nam da število iskanih ulomkov. Res, vsak $\varphi(n)$ nam pove število okrajšanih ulomkov med $0$ in $1$ z imenovalcem $n$, vsota vrednosti Eulerjeve funkcije $\varphi(n)$ za vsa števila $n$ med $2$ in $100$ pa število vseh okrajšanih ulomkov med $0$ in $1$ z imenovalci med $2$ in $100$. \footnote{Čeprav Flitcon ne omenja Eulerjeve funkcije $\varphi$, je uporabil njene lastnosti v svoji matematično manj formalni metodi.}
+Namesto formalnega dokaza trditve bomo predstavili Flitconovo rešitev. Sledili bomo \cite[poglavje 1.2]{fareyproject}. Naredimo tabelo s tremi stolpci in $99$ vrsticami. V prvi stolpec vsake vrstice napišemo po eno izmed naravnih števil od $2$ do $100$. V drugi stolpec posamezne vrstice zapišemo naravno število iz prvega stolpca kot produkt prafaktorjev, v tretji stolpec pa vrednost $\varphi(n)$. Pomagamo si s trditvama~\ref{trd:MultipEuler} in \ref{trd:EulerPrastProd}. Vsota vrednosti v tretjem stolpcu nam da število iskanih ulomkov. Res, vsak $\varphi(n)$ nam pove število okrajšanih ulomkov med $0$ in $1$ z imenovalcem $n$, vsota vrednosti Eulerjeve funkcije $\varphi(n)$ za vsa števila $n$ med $2$ in $100$ pa število vseh okrajšanih ulomkov med $0$ in $1$ z imenovalci med $2$ in $100$.\footnote{Čeprav Flitcon ne omenja Eulerjeve funkcije $\varphi$, je uporabil njene lastnosti v svoji matematično manj formalni metodi.}
 
 Neodvisno od Flitconove rešitve je francoski matematik Charles Haros leta 1802 sestavil enak seznam ulomkov, vendar na precej bolj zanesljiv način. Haros se dela ni lotil z željo po reševanju aritmetične naloge, pač pa je pisal tabele za pretvarjanje med ulomki in decimalnim zapisom ter obratno. V Franciji so namreč v času revolucije konec 18.~stoletja uvajali nov metrični sistem, ki je med drugim zahteval uporabo decimalnega zapisa. Tabele so bile objavljene v časniku \emph{Journal de l'Ecole Polytechnique}, primerom ter algoritmom za pretvarjanje pa so bile dodane skice dokazov in nekatere lastnosti zaporedja ulomkov, ki so kasneje postali znani pod imenom Fareyevo zaporedje. 
 
-Posebej zanimiva je zgodba o pivovarju in ljubiteljskemu matematiku Henryju Goodwynu. Čeprav ni imel formalne izobrazbe, se je navduševal nad znanostjo in tehniko, sestavljal različne tabele in računal, kako izboljšati svoje poslovanje. Po upokojitvi se je vse bolj posvečal matematiki -- tako je med letoma 1816 in 1823 objavil več člankov s tabelami okrajšanih ulomkov. Njegovo delo sta opazila znameniti francoski matematik Augustin Louis Cauchy in John Farey, geolog, po komer se obravnavano zaporedje okrajšanih ulomkov imenuje. Vemo, da je Cauchy prispeval nekaj dokazov lastnosti Fareyevega zaporedja, v nasprotju pa ostaja neznano, ali sta Goodwyn in Farey zaporedje in nekatere njegove lastnosti odkrila neodvisno od Harosa, bodisi sta vedela za njegove ugotovitve. Farey je najverjetneje na podlagi Goodwynovih tabel maja 1816 v pismu časopisu \emph{The Philosophical Magazine and Journal} z naslovom \emph{On a curious Property of vulgar Fractions} predstavil medianto, najpomembnejšo lastnost zaporedja. Čeprav zaporedje morda neupravičeno nosi ime Johna Fareya, pa ne smemo spregledati njegovega prispevka k raziskovanju matematike v glasbi, vzorcev, astronomije in seveda geologije.
+Posebej zanimiva je zgodba o pivovarju in ljubiteljskemu matematiku Henryju Goodwynu. Čeprav ni imel formalne izobrazbe, se je navduševal nad znanostjo in tehniko, sestavljal različne tabele in računal, kako izboljšati svoje poslovanje. Po upokojitvi se je vse bolj posvečal matematiki -- tako je med letoma 1816 in 1823 objavil več člankov s tabelami okrajšanih ulomkov. Njegovo delo sta opazila znameniti francoski matematik Augustin Louis Cauchy in John Farey, geolog, po komer se obravnavano zaporedje okrajšanih ulomkov imenuje. Vemo, da je Cauchy prispeval nekaj dokazov lastnosti Fareyevega zaporedja, v nasprotju pa ostaja neznano, ali sta Goodwyn in Farey zaporedje in nekatere njegove lastnosti odkrila neodvisno od Harosa, bodisi sta vedela za njegove ugotovitve. Farey je najverjetneje na podlagi Goodwynovih tabel maja 1816 v pismu časopisu \emph{The Philosophical Magazine and Journal} z naslovom \emph{On a curious Property of vulgar Fractions} predstavil medianto, najpomembnejšo lastnost zaporedja. Čeprav zaporedje morda neupravičeno nosi ime Johna Fareya, pa ne smemo spregledati njegovega prispevka k raziskovanju matematike v glasbi, vzorcev, astronomije in seveda geologije. Zgodovina je povzeta po \cite[poglavje 2]{motifofmath}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fareyevo zaporedje
 %
 \subsection{O Fareyevem zaporedju}
+
+Motivacijo za razvoj Fareyevega zaporedja smo si ogledali v prejšnjem razdelku. Sedaj bomo zaporedje korektno definirali in izpeljali njegove lastnosti.
 
 \begin{definicija}
 \label{def:Farey}
@@ -146,19 +148,19 @@ Ekvivalentno, $F_n$ vsebuje vse okrajšane ulomke med $0$ in $1$ z imenovalci, k
 \begin{primer}
 Poglejmo si prvih nekaj Fareyevih zapredij.
 
-\(F_1 = \left \{\frac{0}{1}, \frac{1}{1} \right \} \)
+\(F_1 = \left \{\frac{0}{1}, \frac{1}{1} \right \}, \)
 
-\(F_2 = \left \{\frac{0}{1}, \frac{1}{2}, \frac{1}{1} \right \} \)
+\(F_2 = \left \{\frac{0}{1}, \frac{1}{2}, \frac{1}{1} \right \}, \)
 
-\(F_3 = \left \{\frac{0}{1}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{1}{1} \right \} \)
+\(F_3 = \left \{\frac{0}{1}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{1}{1} \right \}, \)
 
-\(F_4 = \left \{\frac{0}{1}, \frac{1}{4}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{1}{1} \right \} \)
+\(F_4 = \left \{\frac{0}{1}, \frac{1}{4}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{1}{1} \right \}, \)
 
-\(F_5 = \left \{\frac{0}{1}, \frac{1}{5}, \frac{1}{4}, \frac{1}{3}, \frac{2}{5}, \frac{1}{2}, \frac{3}{5}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{1}{1}\right \} \)
+\(F_5 = \left \{\frac{0}{1}, \frac{1}{5}, \frac{1}{4}, \frac{1}{3}, \frac{2}{5}, \frac{1}{2}, \frac{3}{5}, \frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{1}{1}\right \}. \)
 \end{primer}
 
 \begin{opomba}
-Če pogoj $0 \leq p \leq q \leq n$ v Definiciji~\ref{def:Farey} omilimo v pogoj $0 \leq p,q \leq n$, okrajšane ulomke z intervala $[0,1]$ razširimo na interval $[0, \infty)$. V primeru, ko za $p$ in $q$ dovoljujemo tudi negativna cela števila, dobimo okrajšane ulomke na celotni realni osi.
+Če pogoj $0 \leq p \leq q \leq n$ v definiciji~\ref{def:Farey} omilimo v pogoj $0 \leq p,q \leq n$, okrajšane ulomke z intervala $[0,1]$ razširimo na interval $[0, \infty)$. V primeru, ko za $p$ in $q$ dovoljujemo tudi negativna cela števila, dobimo okrajšane ulomke na celotni realni osi.
 \end{opomba}
 
 V zgornjih primerih opazimo, da za vsaka sosednja člena Fareyevega zaporedja velja naslednje. Če števec prvega ulomka množimo z imenovalcem drugega in nato vlogi ulomkov zamenjamo, je razlika obeh produktov po absolutni vrednosti enaka $1$. To se bo izkazalo za pomembno opazko, zato vpeljemo pojem, ki sledi.
@@ -204,7 +206,7 @@ $(\Rightarrow)$ Dokaz bo potekal z indukcijo na $n$.
 Za $n=1$ je $F_n = \{\frac{0}{1}, \frac{1}{1}\}$, $bc - ad = 1\cdot1 - 0\cdot1 = 1$, zato osnovni korak velja.
 Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Vemo, da nove člene zaporedja dobimo z računanjem mediant. Če je $b+d > n+1,$ potem $\frac{a+c}{b+d} \notin F_{n+1}$ in je \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) ter po indukcijski predpostavki $bc - ad = 1$. 
 Če je $b+d < n+1,$ je $\frac{a+c}{b+d}$ že nek člen v zaporedju $F_n$ in uporabimo indukcijsko predpostavko. 
-Preostane še možnost $b+d = n+1$. Po Lema~\ref{lema:EltVišReda} je edina možnost za člen med elementoma $\frac{a}{b}$ in $\frac{c}{d}$ njuna medianta $\frac{a+c}{b+d}$, ki pa je tudi edini nov člen v opazovanem delu zaporedja. To je zato oblike \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
+Preostane še možnost $b+d = n+1$. Po lema~\ref{lema:EltVišReda} je edina možnost za člen med elementoma $\frac{a}{b}$ in $\frac{c}{d}$ njuna medianta $\frac{a+c}{b+d}$, ki pa je tudi edini nov člen v opazovanem delu zaporedja. To je zato oblike \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
 
 $(\Leftarrow)$ Obratno, naj bodo $\frac{a}{b}$, $\frac{p}{q}$ in $\frac{c}{d}$ členi poljubnega Fareyevega zaporedja, za katere velja $\frac{a}{b} <\frac{p}{q} < \frac{c}{d}$ in $bp - aq = qc - pd = 1$. S preureditvijo te enakosti dobimo
 \[ bp + pd = aq + qc, \]
@@ -243,7 +245,7 @@ Naj bo $\varphi$ Eulerjeva funkcija. Dolžina Fareyevega zaporedja reda n je
 
 \begin{opomba}
 \label{op:AsimptotDolzina}
-Z upoštevanjem vrednosti $|F_{1}| = 2$ iz Trditve~\ref{trd:DolzinaZap} sledi \[  |F_{n}| = \sum_{i=1}^n \varphi(i) + 1. \]
+Z upoštevanjem vrednosti $|F_{1}| = 2$ iz trditve~\ref{trd:DolzinaZap} sledi \[  |F_{n}| = \sum_{i=1}^n \varphi(i) + 1. \]
 \end{opomba}
 
 \begin{trditev}
@@ -253,7 +255,7 @@ Asimptotično se dolžina Fareyevega zaporedja obnaša kot
 \end{trditev}
 
 \begin{opomba}
-Simbol $\sim$ v Trditvi~\ref{trd:AsimptotDolzina} označuje asimptotično ekvivalentno obnašanje dveh funkcij.
+Simbol $\sim$ v trditvi~\ref{trd:AsimptotDolzina} označuje asimptotično ekvivalentno obnašanje dveh funkcij.
 Po definiciji za funkciji $f(x)$ in $g(x)$ velja $f(x) \sim g(x)$ natanko tedaj, ko je $ \lim_{x \to \infty} \frac{f(x)}{g(x)} = 1$.
 \end{opomba}
 
@@ -280,28 +282,28 @@ Preslikava \( \mu\colon \mathbb{N} \to \mathbb{N} \), definirana kot
 \end{array}
 \right.
 \]
-se imenuje \emph{M\"obiusova\footnote{August Ferdinand M\"obius, 17.~11.~1790 -- 26.~9.~1868, nemški matematik in astronom.} funkcija}.
+se imenuje \emph{M\"obiusova\footnote{August Ferdinand M\"obius, 17.\ 11.\ 1790 -- 26.\ 9.\ 1868, nemški matematik in astronom.} funkcija}.
 \end{definicija}
 
 \begin{primer}
 Izračunajmo vrednosti M\"obiusove funkcije za nekaj naravnih števil.
 
-\( \mu(1)=1 \)
+\( \mu(1)=1, \)
 
-\( \mu(2)=(-1)^{1}=-1=\mu(3) \)
+\( \mu(2)=(-1)^{1}=-1=\mu(3), \)
 
-\( \mu(4)=\mu(2^{2})=0 \)
+\( \mu(4)=\mu(2^{2})=0, \)
 
-\( \mu(6)=\mu(2\cdot3)=(-1)^{2}=1 \)
+\( \mu(6)=\mu(2\cdot3)=(-1)^{2}=1, \)
 
-\( \mu(8)=\mu(2\cdot2^{2})=0 \)
+\( \mu(8)=\mu(2\cdot2^{2})=0, \)
 
-\( \mu(18)=\mu(2\cdot3^{2})=0 \)
+\( \mu(18)=\mu(2\cdot3^{2})=0. \)
 \end{primer}
 
 \begin{definicija}
 \label{def:RiemZeta}
-\emph{Riemannova funkcija zeta} je za
+\emph{Riemannova zeta funkcija} je za
  $s\in\mathbb{C}\backslash\{1\}$
 definirana kot
 \[ \zeta(s) = \sum_{n=1}^{\infty}\frac{1}{n^s}. \]
@@ -309,38 +311,40 @@ definirana kot
 
 % dokaz asimptotskega obnašanja
 %
-Sedaj lahko dokažemo Trditev~\ref{trd:AsimptotDolzina}.
+Sedaj lahko dokažemo trditev~\ref{trd:AsimptotDolzina}. Dokaz sledi \cite[poglavje 18.5, str.~268]{hardy}.
 
 \begin{dokaz}
 Asimptotično obnašanje bomo izračunali s pomočjo ocene vrednosti vsote \( \sum_{i=1}^n \varphi(i) \).
-Spomnimo se, da je \[ \varphi(n) = n \prod_{p|n} \left (1 - \frac{1}{p} \right ) = n - \sum \frac{n}{p} + \sum \frac{n}{pp'} - \cdots , \]
+Spomnimo se, da je 
+\[ \varphi(n) = n \prod_{p|n} \left (1 - \frac{1}{p} \right ) = n - \sum \frac{n}{p} + \sum \frac{n}{pp'} - \cdots , \]
 kjer so $p$, $p'$ praštevilski delitelji števila $n$.  Z upoštevanjem M\"obiusove funkcije je zadnja vsota enaka
 \[ \varphi(n) = n \sum_{d|n} \frac{\mu(d)}{d} .\]
 Sedaj računajmo vsoto 
 %
-\begin{align*}
+\begin{align}
+\label{Eq:DolZap}
 \sum_{i=1}^n \varphi(i)
   &= \sum_{i=1}^n i \sum_{d|i} \frac{\mu(d)}{d} = \sum_{dd'\leq n}d' \mu(d) = 
-    \sum_{d=1}^n \mu(d) \sum_{d'=1}^{\left \lfloor \frac{n}{d} \right \rfloor} d' \\
+    \sum_{d=1}^n \mu(d) \sum_{d'=1}^{\left \lfloor \frac{n}{d} \right \rfloor} d' \nonumber \\
   &= \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\left \lfloor \frac{n}{d} \right \rfloor ^2 + \left \lfloor \frac{n}{d} \right \rfloor \right) =
-    \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\frac{n^2}{d^2} + O \left (\frac{n}{d} \right) \right) \\
-  &= \frac{1}{2}n^2 \sum_{d=1}^{n} \frac{\mu(d)}{d^2} + O \left (n \sum_{d=1}^{n} \frac{1}{d} \right ) \\
-  &\stackrel{(1)}{=} \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} - \frac{1}{2}n^2 \sum_{d=n+1}^{\infty} \frac{\mu(d)}{d^2} + O(n \ln{n}) \\
-  &= \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} + O \left (n^2\sum_{d=n+1}^{\infty} \frac{1}{d^2} \right ) + O(n \ln{n}) \\
+    \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\frac{n^2}{d^2} + O \left (\frac{n}{d} \right) \right) \nonumber \\
+  &= \frac{1}{2}n^2 \sum_{d=1}^{n} \frac{\mu(d)}{d^2} + O \left (n \sum_{d=1}^{n} \frac{1}{d} \right ) \nonumber \\
+  &\stackrel{(1)}{=} \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} - \frac{1}{2}n^2 \sum_{d=n+1}^{\infty} \frac{\mu(d)}{d^2} + O(n \ln{n}) \nonumber \\
+  &= \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} + O \left (n^2\sum_{d=n+1}^{\infty} \frac{1}{d^2} \right ) + O(n \ln{n}) \nonumber \\
   & \stackrel{(2)}{=} \frac{n^2}{2 \zeta(2)} + O(n) + O(n \ln{n}) \stackrel{(3)}{=} \frac{3n^2}{\pi^2} + O(n \ln{n}).
-\end{align*}
-
+\end{align}
+%
 V enakosti~(1) smo zadnji sumand ocenili navzgor s pomočjo Taylorjevega razvoja funkcije $\ln$ kot
 \[ \ln{(1+x)} = \sum_{n=1}^{\infty} (-1)^{n+1} \frac{x^n}{n}.\]
-
+%
 V enakosti~(2) smo uporabili naslednjo oceno:
 \[ n^2 \sum_{d=n+1}^{\infty} \frac{1}{d^2} \leq n^2 \sum_{d=n+1}^{\infty} \frac{1}{d(d-1)} = 
 n^2 \sum_{d=n+1}^{\infty} \left (- \frac{1}{d} + \frac{1}{d-1} \right ) = n^2 \frac{1}{n} = n.\]
-
+%
 V enakosti~(3) smo za izračun funkcije $\zeta(2)$ uporabili znano vrednost
 \[ \zeta(2) = \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.\]
-
-Po Opombi~\ref{op:AsimptotDolzina} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
+%
+Po opombi~\ref{op:AsimptotDolzina} iz izraza~\ref{Eq:DolZap} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
  %
 \end{dokaz}
 
@@ -348,9 +352,11 @@ Po Opombi~\ref{op:AsimptotDolzina} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O
 %
 \section{Fordovi krogi}
 
+V tem poglavju bomo definirali Fordove kroge, ki Fareyevo zaporedje prenesejo v jezik geometrije. Večino časa bomo lastnosti dokazovali z uporabo elementarnih geometrijskih sredstev in v analognih trditvah tistim iz prejšnjega poglavja prepoznali geometrijski pomen.
+
 \begin{definicija}
 Naj bosta $p$ in $q$ tuji si števili v množici celih števil.
-\emph{Fordov\footnote{Lester~Randolph~Ford~Sr., 25.~10.~1886 -- 11.~11.~1967, ameriški matematik.} krog} C($\frac{p}{q}$) je krog v zgornji polravnini, ki se abscisne osi dotika v točki $\frac{p}{q}$, njegov polmer pa meri $\frac{1}{2q^2}$. 
+\emph{Fordov\footnote{Lester Randolph Ford~Sr., 25.\ 10.\ 1886 -- 11.\ 11.\ 1967, ameriški matematik.} krog} C($\frac{p}{q}$) je krog v zgornji polravnini, ki se abscisne osi dotika v točki $\frac{p}{q}$, njegov polmer pa meri $\frac{1}{2q^2}$. 
 \end{definicija}
 
 Ker so Fordovi krogi definirani za vsak okrajšan ulomek, lahko poljubnemu racionalnemu številu enolično priredimo Fordov krog. Iz analize vemo, da je množica racionalnih števil gosta podmnožica množice realnih števil, abscisna os pa je geometrijska predstavitev le-te. Zato poljubno majhen interval na abscisni osi vsebuje neskončno mnogo dotikališč Fordovih krogov.
