@@ -793,7 +793,8 @@ Vse zgornje preslikave so M\"{o}biusove transformacije, ki ohranjajo medianto Fo
 %
 \section{Riemannova hipoteza}
 
-Riemannova hipoteza, znana tudi kot 8.~Hilberov problem, je eno najbolj slavnih, še vedno nerešenih matematičnih vprašanj. Ime je dobila po nemškem matematiku Bernhardu Riemannu (17.\ 9.\ 1826 -- 20.\ 7.\ 1866), ki jo je formuliral med preučavenjem lastnosti velikih praštevil. Domnevo je leta 1859 zapisal v članku \emph{\"Uber die Anzahl der Primzahlen unter einer gegebenen Gr\"osse}. Na le osmih straneh je postavil temelje teorije, s katero se matematiki ukvarjajo vse od takrat in ima pomembne aplikacije na raznovrstnih področjih. 
+Riemannova hipoteza, znana tudi kot 8.~Hilberov problem\footnote{Nemški matematik David Hilbert je l.~1900 objavil seznam 23 nerešenih matematičnih problemov, za katere je menil, da bodo pomembno vplivali na razvoj matematike 20.~stoletja.}, je eno najbolj slavnih, še vedno nerešenih matematičnih vprašanj. Ime je dobila po nemškem matematiku Bernhardu Riemannu (17.\ 9.\ 1826 -- 20.\ 7.\ 1866), ki jo je formuliral med preučavenjem lastnosti velikih praštevil. Domnevo je leta 1859 zapisal v članku \emph{\"Uber die Anzahl der Primzahlen unter einer gegebenen Gr\"osse}. Na le osmih straneh je postavil temelje teorije, s katero se matematiki ukvarjajo vse od takrat in ima pomembne aplikacije na raznovrstnih področjih. 
+
 Riemann je izhajal iz Eulerjeve trditve, da vsota obratnih vrednosti praštevil divergira. Od tod je sklepal, da so praštevila gostejša podmnožica množice celih števil kot kvadrati celih števil (vedel je, da vrsta $\sum_{n=1}^{\infty} \frac{1}{n^2}$ konvergira).
 Vendar Euler in Riemann nista bila edina, ki so ju zanimala praštevila. Gauss je v 90-ih letih 18.~stoletja na podlagi tabelaričnih izračunov domneval, da gostost praštevil lahko približno ocenimo s funkcijo $1/ \log(x)$. Nekaj let za njim je Legendre na isto vprašanje odgovoril z oceno $1/ (a\log(x)+b)$, konstanti $a$ in $b$ pa empirično določil. 
 Funkcijo, ki šteje praštevila, manjša od danega števila, označimo s $\pi$. \emph{Izrek o praštevilih} trdi, da je
@@ -801,7 +802,7 @@ Funkcijo, ki šteje praštevila, manjša od danega števila, označimo s $\pi$. 
 \pi(x) \sim \frac{x}{\log(x)}.
 \end{equation}
 %
-Relativno napako med $Li(x)=\int_{2}^x \frac{dt}{\log(t)}$ in $\pi(x)$ je v sredini 19.~stoletja izračunal Chebyshev, šele nekaj desetletij kasneje pa so Hadamard, von Mangoldt in de~la~Vall\'ee Poussin dokazali izrek o praštevilih in nekaj sorodnih trditev.
+Relativno napako med $\int_{2}^x \frac{dt}{\log(t)}$ in $\pi(x)$ je v sredini 19.~stoletja izračunal Chebyshev, šele nekaj desetletij kasneje pa so Hadamard, von Mangoldt in de~la~Vall\'ee Poussin dokazali izrek o praštevilih in nekaj sorodnih trditev. Zgodovina je povzeta po \cite[poglavje 1.1]{zetafunction}.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Praštevila in Riemannova zeta funkcija
 \subsection{Praštevila in Riemannova zeta funkcija}
@@ -922,7 +923,7 @@ Izračunajmo nekaj vrednosti Mertensove funkcije.
 \( M(6) = \mu(1) + \mu(2) + \mu(3) + \mu(4) + \mu(5) + \mu(6) = 1 - 1 - 1 + 0 - 1 + 1 = -1. \)
 \end{primer}
 
-Naslednjo trditev, ki jo bomo navedli brez dokaza, je leta 1912 dokazal Litllewood. Njeno bistvo je, da Riemannovo hipotezo lahko prevedemo na ekvivalentno trditev, ki opisuje rast Mertensove funkcije. 
+Naslednjo trditev, ki jo bomo navedli brez dokaza, je leta 1912 dokazal Litllewood\footnote{John Edensor Littlewood, 9.\ 6.\ 1885 -- 6.\ 9.\ 1977, angleški matematik.}. Njeno bistvo je, da Riemannovo hipotezo lahko prevedemo na ekvivalentno trditev, ki opisuje rast Mertensove funkcije. 
 
 \begin{trditev}
 Za vsak $\epsilon>0$ velja \( M(n) = o(n^{1/2+\epsilon}) \) natanko tedaj, ko velja Riemannova hipoteza.
