@@ -953,11 +953,27 @@ Dokaz zgornje trditve izpustimo. Pač pa bomo v nadaljevanju dokazali povezavo m
 Naj bo $\varepsilon > 0$. \( \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) \) velja tedaj in le tedaj, ko velja \( M(n) = o(n^{1/2+\varepsilon}). \)
 \end{izrek}
 
-Naslednja lema bo ključ do dokaza zgornjega izreka.
+Naslednja lema bo ključ do dokaza zgornjega izreka. Še prej pa se spomnimo Eulerjeve produktne formule.
+
+\begin{trditev}[M\"obiusova inverzija]
+\emph{M\"obiusova inverzija} je inverzna Fourierova transformacija Eulerjeve produktne formule \( \zeta(s) \prod_{p} (1-p^{-s}) = 1. \) 
+Izraža se s formulo
+\begin{equation}
+g(x) = \sum_{n=1}^{\infty} f(nx) \Longleftrightarrow f(x) = \sum_{n=1}^{\infty} \mu(n) g(nx),
+\end{equation}
+kar je ekvivalentno
+\begin{equation}
+\label{Eq:MobInv}
+g(x) = \sum_{n=1}^{\infty} f \left(\frac{x}{n} \right) \Longleftrightarrow f(x) = \sum_{n=1}^{\infty} \mu(n) g \left(\frac{x}{n} \right).
+\end{equation}
+%
+\end{trditev}
+
+Trditev navajamo brez izpeljave -- ta se nahaja v \cite[poglavje 10.9]{zetafunction}. M\"obiusovo inverzijo bomo namreč potrebovali le v enem koraku dokaza napovedane leme, kjer bomo uporabili ekvivalenco~\ref{Eq:MobInv}.
 
 \begin{lema}
 \label{Lema:RiemFar}
-Realna funkcija $f$ naj bo definirana na intervalu $[0,1]$. Naj bodo $r_{v}$ elementi Fareyevega zaporedja reda $n$, $r_{0}=0$ in $r_{L(n)}=1$\footnote{Zgolj zaradi preglednejšega zapisa bomo za potrebe dokaza Fareyevo zaporedje $F_{n}$ opazovali od neničelnega člena dalje. Tako bo element $r_{v}$ zdaj predstavljal element $r_{v+1}$ v običajni notaciji, vrednost $L(n)$ pa se bo zmanjšala za $1$.}. Tedaj velja enakost
+Realna funkcija $f$ naj bo definirana na intervalu $[0,1]$. Naj bodo $r_{v}$ elementi Fareyevega zaporedja reda $n$, $r_{0}=0$ in $r_{L(n)}=1$\footnote{Zgolj zaradi preglednejšega zapisa bomo za potrebe dokaza Fareyevo zaporedje $F_{n}$ opazovali od neničelnega člena dalje. Tako bo element $r_{v}$ zdaj predstavljal element $r_{v+1}$ v običajni notaciji, vrednost $L(n)$ pa se bo zmanjšala za $1$.}. Tedaj velja enakost\footnote{Vsota na desni strani je končna, saj je za $k>n$ vrednost $M(\frac{n}{k})=0$.}
 \begin{equation}
 \label{Eq:RiemFar1}
 	\sum_{v=1}^{L(n)} f(r_v) = \sum_{k=1}^{\infty} \sum_{j=1}^{k} f \left(\frac{j}{k} \right) M \left(\frac{n}{k} \right).
@@ -986,7 +1002,7 @@ D(n) = \sum_{x=1}^{\infty} M \left( \frac{n}{x} \right).
 \end{align*}
 Naj bosta $p$ in $q$ tuji števili in $0 < p \leq q$, z drugimi besedami, ulomek $\frac{p}{q}$ ustreza nekemu elementu $r_{v}$ Fareyevega zaporedja $F_{n}$.
 Primerjali bomo koeficiente pri $f(\frac{p}{q})$ na levi in desni strani enakosti~\ref{Eq:RiemFar1}.
-Ker je $ f(\frac{p}{q}) = f(\frac{2p}{2q}) = f(\frac{3p}{3q}) = \dots $, je koeficient na desni strani enakosti~\ref{Eq:RiemFar1} enak 
+Ker je $ f(\frac{p}{q}) = f(\frac{2p}{2q}) = f(\frac{3p}{3q}) = \dots $, je koeficient na desni strani enak 
 %
 \begin{align*}
 M \left(\frac{n}{q} \right) + M \left(\frac{n}{2q} \right) + M \left(\frac{n}{3q} \right) + \dots &= \sum_{l=1}^{\infty} M \left(\frac{n}{ql} \right) \\
