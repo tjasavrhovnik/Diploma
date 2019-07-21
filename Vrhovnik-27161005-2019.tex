@@ -957,12 +957,50 @@ Naslednja lema bo ključ do dokaza zgornjega izreka.
 
 \begin{lema}
 \label{Lema:RiemFar}
-Realna funkcija $f$ naj bo definirana na intervalu $[0,1]$. Naj bodo $r_{v}$ elementi Fareyevega zaporedja reda $n$, $r_{0}=0$ in $r_{L(n)}=1$\footnote{Zgolj zaradi preglednejšega zapisa bomo za potrebe dokaza Fareyevo zaporedje opazovali od neničelnega člena dalje. Tako bo element $r_{v}$ zdaj predstavljal element $r_{v+1}$ v običajni notaciji, vrednost $L(n)$ pa se bo zmanjšala za $1$.}. Tedaj velja enakost
+Realna funkcija $f$ naj bo definirana na intervalu $[0,1]$. Naj bodo $r_{v}$ elementi Fareyevega zaporedja reda $n$, $r_{0}=0$ in $r_{L(n)}=1$\footnote{Zgolj zaradi preglednejšega zapisa bomo za potrebe dokaza Fareyevo zaporedje $F_{n}$ opazovali od neničelnega člena dalje. Tako bo element $r_{v}$ zdaj predstavljal element $r_{v+1}$ v običajni notaciji, vrednost $L(n)$ pa se bo zmanjšala za $1$.}. Tedaj velja enakost
 \begin{equation}
 \label{Eq:RiemFar1}
 	\sum_{v=1}^{L(n)} f(r_v) = \sum_{k=1}^{\infty} \sum_{j=1}^{k} f \left(\frac{j}{k} \right) M \left(\frac{n}{k} \right).
 \end{equation}
 \end{lema}
+
+\begin{dokaz}
+Funkcijo $D: \mathbb{R} \to \{0,1\}$ definirajmo s predpisom
+\begin{align}
+\label{Eq:D(n)}
+D(n) = \left\{
+\begin{array}{rl}
+	1 & \textrm{če}\ n \geq 1 \\
+	0 & \textrm{če}\ n < 1
+\end{array}.
+\right.
+\end{align}
+Spomnimo se definicije Mertensove funkcije in upoštevajmo predpis~\ref{Eq:D(n)}. Dobimo
+\begin{align*}
+M(n) = \sum_{x \leq n} \mu(x) = \sum_{x=1}^{\infty} \mu(x) D \left( \frac{n}{x} \right),
+\end{align*}
+M\"obiusova inverzija pa nam da ekvivalenco
+\begin{align*}
+M(n) = \sum_{x=1}^{\infty} \mu(x) D \left( \frac{n}{x} \right) \Longleftrightarrow
+D(n) = \sum_{x=1}^{\infty} M \left( \frac{n}{x} \right).
+\end{align*}
+Naj bosta $p$ in $q$ tuji števili in $0 < p \leq q$, z drugimi besedami, ulomek $\frac{p}{q}$ ustreza nekemu elementu $r_{v}$ Fareyevega zaporedja $F_{n}$.
+Primerjali bomo koeficiente pri $f(\frac{p}{q})$ na levi in desni strani enakosti~\ref{Eq:RiemFar1}.
+Ker je $ f(\frac{p}{q}) = f(\frac{2p}{2q}) = f(\frac{3p}{3q}) = \dots $, je koeficient na desni strani enakosti~\ref{Eq:RiemFar1} enak 
+%
+\begin{align*}
+M \left(\frac{n}{q} \right) + M \left(\frac{n}{2q} \right) + M \left(\frac{n}{3q} \right) + \dots &= \sum_{l=1}^{\infty} M \left(\frac{n}{ql} \right) \\
+&= D \left(\frac{n}{q} \right) = \left\{
+\begin{array}{rl}
+	1 & \textrm{če}\ n \geq q \\
+	0 & \textrm{če}\ n < q
+\end{array}.
+\right.
+\end{align*}
+%
+To pa je ravno koeficient pri $f(r_{v})$ na levi strani. Lema zato res drži.
+%
+\end{dokaz}
 
 % Dokaz implikacije v desno
 \subsubsection{Dokaz implikacije v desno}
