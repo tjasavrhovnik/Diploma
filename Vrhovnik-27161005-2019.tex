@@ -263,12 +263,10 @@ Po definiciji za funkciji $f(x)$ in $g(x)$ velja $f(x) \sim g(x)$ natanko tedaj,
 %
 Preden dokažemo zgornjo trditev, definirajmo naslednjo oznako in dve funkciji, ki jih bomo v dokazu potrebovali.
 
-\begin{definicija}
-\emph{Notacija veliki O} predstavlja množico funkcij, ki so po absolutni vrednosti do multiplikativne konstante manjše od dane funkcije.
+\begin{definicija}[Notacija mali o]
+Funkcija $f$ pripada razredu $o(g)$, če absolutna vrednost funkcije $f$ raste počasneje od funkcije $g$, ko gre $x$ proti $\infty$.
 
-Natančneje, funkcija $f$ pripada razredu $O(g)$, če obstajata taki konstanti $M$ in $x_{0}$, da za vsak $x > x_{0}$ velja $|f(x)| \leq M \cdot |g(x)|$.
-
-Pišemo $f \in O(g)$ oziroma $f = O(g)$.
+Natančneje, $f(x) = o \left(g(x) \right)$, ko $x \to \infty$, če za vsak $\epsilon>0$ obstaja vrednost $x_{0}$, da za vsak $x \geq x_{0}$ velja $|f(x)| \leq \epsilon \cdot g(x)$.
 \end{definicija}
 
 \begin{definicija}
@@ -327,11 +325,11 @@ Sedaj računajmo vsoto
   &= \sum_{i=1}^n i \sum_{d|i} \frac{\mu(d)}{d} = \sum_{dd'\leq n}d' \mu(d) = 
     \sum_{d=1}^n \mu(d) \sum_{d'=1}^{\left \lfloor \frac{n}{d} \right \rfloor} d' \nonumber \\
   &= \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\left \lfloor \frac{n}{d} \right \rfloor ^2 + \left \lfloor \frac{n}{d} \right \rfloor \right) =
-    \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\frac{n^2}{d^2} + O \left (\frac{n}{d} \right) \right) \nonumber \\
-  &= \frac{1}{2}n^2 \sum_{d=1}^{n} \frac{\mu(d)}{d^2} + O \left (n \sum_{d=1}^{n} \frac{1}{d} \right ) \nonumber \\
-  &\stackrel{(1)}{=} \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} - \frac{1}{2}n^2 \sum_{d=n+1}^{\infty} \frac{\mu(d)}{d^2} + O(n \ln{n}) \nonumber \\
-  &= \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} + O \left (n^2\sum_{d=n+1}^{\infty} \frac{1}{d^2} \right ) + O(n \ln{n}) \nonumber \\
-  & \stackrel{(2)}{=} \frac{n^2}{2 \zeta(2)} + O(n) + O(n \ln{n}) \stackrel{(3)}{=} \frac{3n^2}{\pi^2} + O(n \ln{n}).
+    \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\frac{n^2}{d^2} + o \left (\frac{n}{d} \right) \right) \nonumber \\
+  &= \frac{1}{2}n^2 \sum_{d=1}^{n} \frac{\mu(d)}{d^2} + o \left (n \sum_{d=1}^{n} \frac{1}{d} \right ) \nonumber \\
+  &\stackrel{(1)}{=} \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} - \frac{1}{2}n^2 \sum_{d=n+1}^{\infty} \frac{\mu(d)}{d^2} + o(n \ln{n}) \nonumber \\
+  &= \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} + o \left (n^2\sum_{d=n+1}^{\infty} \frac{1}{d^2} \right ) + o(n \ln{n}) \nonumber \\
+  & \stackrel{(2)}{=} \frac{n^2}{2 \zeta(2)} + o(n) + o(n \ln{n}) \stackrel{(3)}{=} \frac{3n^2}{\pi^2} + o(n \ln{n}).
 \end{align}
 %
 V enakosti~(1) smo zadnji sumand ocenili navzgor s pomočjo Taylorjevega razvoja funkcije $\ln$ kot
@@ -344,7 +342,7 @@ n^2 \sum_{d=n+1}^{\infty} \left (- \frac{1}{d} + \frac{1}{d-1} \right ) = n^2 \f
 V enakosti~(3) smo za izračun funkcije $\zeta(2)$ uporabili znano vrednost
 \[ \zeta(2) = \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.\]
 %
-Po opombi~\ref{op:AsimptotDolzina} iz izraza~\eqref{Eq:DolZap} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
+Po opombi~\ref{op:AsimptotDolzina} iz izraza~\eqref{Eq:DolZap} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + o(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
  %
 \end{dokaz}
 
@@ -802,13 +800,13 @@ Vse zgornje preslikave so M\"{o}biusove transformacije, ki ohranjajo medianto Fo
 Riemannova hipoteza, znana tudi kot 8.~Hilberov problem\footnote{Nemški matematik David Hilbert je l.~1900 objavil seznam 23 nerešenih matematičnih problemov, za katere je menil, da bodo pomembno vplivali na razvoj matematike 20.~stoletja.}, je eno najbolj slavnih, še vedno nerešenih matematičnih vprašanj. Ime je dobila po nemškem matematiku Bernhardu Riemannu (17.\ 9.\ 1826 -- 20.\ 7.\ 1866), ki jo je formuliral med preučavenjem lastnosti velikih praštevil. Domnevo je leta 1859 zapisal v članku \emph{\"Uber die Anzahl der Primzahlen unter einer gegebenen Gr\"osse}. Na le osmih straneh je postavil temelje teorije, s katero se matematiki ukvarjajo vse od takrat in ima pomembne aplikacije na raznovrstnih področjih. 
 
 Riemann je izhajal iz Eulerjeve trditve, da vsota obratnih vrednosti praštevil divergira. Od tod je sklepal, da so praštevila gostejša podmnožica množice celih števil kot kvadrati celih števil (vedel je, da vrsta $\sum_{n=1}^{\infty} \frac{1}{n^2}$ konvergira).
-Vendar Euler in Riemann nista bila edina, ki so ju zanimala praštevila. Gauss je v 90-ih letih 18.~stoletja na podlagi tabelaričnih izračunov domneval, da gostost praštevil lahko približno ocenimo s funkcijo $1/ \log(x)$. Nekaj let za njim je Legendre na isto vprašanje odgovoril z oceno $1/ (a\log(x)+b)$, konstanti $a$ in $b$ pa empirično določil. 
+Vendar Euler in Riemann nista bila edina, ki so ju zanimala praštevila. Gauss je v 90-ih letih 18.~stoletja na podlagi tabelaričnih izračunov domneval, da gostost praštevil lahko približno ocenimo s funkcijo $1/ \log{x}$. Nekaj let za njim je Legendre na isto vprašanje odgovoril z oceno $1/ (a\log{x}+b)$, konstanti $a$ in $b$ pa empirično določil. 
 Funkcijo, ki šteje praštevila, manjša od danega števila, označimo s $\pi$. \emph{Izrek o praštevilih} trdi, da je
 \begin{equation}
-\pi(x) \sim \frac{x}{\log(x)}.
+\pi(x) \sim \frac{x}{\log{x}}.
 \end{equation}
 %
-Relativno napako med $\int_{2}^x \frac{dt}{\log(t)}$ in $\pi(x)$ je v sredini 19.~stoletja izračunal Chebyshev, šele nekaj desetletij kasneje pa so Hadamard, von Mangoldt in de~la~Vall\'ee Poussin dokazali izrek o praštevilih in nekaj sorodnih trditev. Zgodovina je povzeta po \cite[poglavje 1.1]{zetafunction}.
+Relativno napako med $\int_{2}^x \frac{dt}{\log{t}}$ in $\pi(x)$ je v sredini 19.~stoletja izračunal Chebyshev, šele nekaj desetletij kasneje pa so Hadamard, von Mangoldt in de~la~Vall\'ee Poussin dokazali izrek o praštevilih in nekaj sorodnih trditev. Zgodovina je povzeta po \cite[poglavje 1.1]{zetafunction}.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Praštevila in Riemannova zeta funkcija
 \subsection{Praštevila in Riemannova zeta funkcija}
@@ -840,16 +838,16 @@ Naj bo $n\in\mathbb{N}$ in $p\in\mathbb{P}$. Tedaj velja
 \begin{dokaz}
 Zapišimo predpis za funkcijo zeta. V naslednjem koraku funkcijo zeta pomnožimo z $\frac{1}{2^s}$ ter dobljeno enakost odštejemo od prve enakosti. S tem odpadejo vsi členi s faktorjem $2$. Ta dva koraka ponavljamo: enakost na trenutnem koraku pomnožimo z drugim sumandom na desni strani enakosti, nato pa predzadnji vrstici odštejemo zadnjo vrstico.
 \begin{align*}
-	\zeta(s) &= 1 + \frac{1}{2^s} + \frac{1}{3^s} + \frac{1}{4^s} + \frac{1}{5^s} + \ldots, \nonumber \\
-	\frac{1}{2^s} \zeta(s) &= \frac{1}{2^s} + \frac{1}{4^s} + \frac{1}{6^s} + \frac{1}{8^s} + \frac{1}{10^s} + \ldots, \nonumber \\
-	\left(1-\frac{1}{2^s}\right) \zeta(s) &= 1 + \frac{1}{3^s} + \frac{1}{5^s} + \frac{1}{7^s} + \frac{1}{9^s} + \ldots, \nonumber \\
-	\frac{1}{3^s} \left(1-\frac{1}{2^s}\right) \zeta(s) &= \frac{1}{3^s} + \frac{1}{9^s} + \frac{1}{15^s} + \frac{1}{21^s} + \frac{1}{27^s} \ldots, \nonumber \\
-	\left(1-\frac{1}{3^s}\right)\left (1-\frac{1}{2^s}\right) \zeta(s) &= 1 + \frac{1}{5^s} + \frac{1}{7^s} + \frac{1}{11^s} + \frac{1}{13^s} + \ldots \nonumber \\
+	\zeta(s) &= 1 + \frac{1}{2^s} + \frac{1}{3^s} + \frac{1}{4^s} + \frac{1}{5^s} + \cdots, \nonumber \\
+	\frac{1}{2^s} \zeta(s) &= \frac{1}{2^s} + \frac{1}{4^s} + \frac{1}{6^s} + \frac{1}{8^s} + \frac{1}{10^s} + \cdots, \nonumber \\
+	\left(1-\frac{1}{2^s}\right) \zeta(s) &= 1 + \frac{1}{3^s} + \frac{1}{5^s} + \frac{1}{7^s} + \frac{1}{9^s} + \cdots, \nonumber \\
+	\frac{1}{3^s} \left(1-\frac{1}{2^s}\right) \zeta(s) &= \frac{1}{3^s} + \frac{1}{9^s} + \frac{1}{15^s} + \frac{1}{21^s} + \frac{1}{27^s} + \cdots, \nonumber \\
+	\left(1-\frac{1}{3^s}\right)\left (1-\frac{1}{2^s}\right) \zeta(s) &= 1 + \frac{1}{5^s} + \frac{1}{7^s} + \frac{1}{11^s} + \frac{1}{13^s} + \cdots \nonumber \\
 \end{align*}
 Opazimo, da smo vselej množili z ulomki oblike $\frac{1}{p^s},$ kjer $p$ pripada množici praštevil. Dobimo enakost
-	\[ \ldots \left(1-\frac{1}{13^s}\right) \left(1-\frac{1}{11^s}\right) \left(1-\frac{1}{7^s}\right) \left(1-\frac{1}{5^s}\right) \left(1-\frac{1}{3^s}\right) 		\left(1-\frac{1}{2^s}\right) \zeta(s) = 1, \]
+	\[ \cdots \left(1-\frac{1}{13^s}\right) \left(1-\frac{1}{11^s}\right) \left(1-\frac{1}{7^s}\right) \left(1-\frac{1}{5^s}\right) \left(1-\frac{1}{3^s}\right) 		\left(1-\frac{1}{2^s}\right) \zeta(s) = 1, \]
 od koder lahko izrazimo
-	\[ \zeta(s) = \frac{1}{1-\frac{1}{2^s}} \frac{1}{1-\frac{1}{3^s}} \frac{1}{1-\frac{1}{5^s}} \frac{1}{1-\frac{1}{7^s}} \frac{1}{1-\frac{1}{11^s}} \ldots = 		\prod_{p}\frac{1}{1-p^{-s}}, \]
+	\[ \zeta(s) = \frac{1}{1-\frac{1}{2^s}} \frac{1}{1-\frac{1}{3^s}} \frac{1}{1-\frac{1}{5^s}} \frac{1}{1-\frac{1}{7^s}} \frac{1}{1-\frac{1}{11^s}} \cdots = 		\prod_{p}\frac{1}{1-p^{-s}}, \]
 kar smo želeli pokazati.
 \end{dokaz}
 
@@ -873,12 +871,12 @@ G(z) = \frac{z}{e^z-1} = \sum_{k=0}^{\infty} B_{k} \frac{z^k}{k!}.
 %
 Najprej za občutek izračunajmo prvih nekaj Bernoullijevih števil. Funkcijo $G$ lahko razvijemo v Taylorjevo vrsto okoli ničle in dobimo
 \begin{align*}
-G(z) = \left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \ldots \right)^{-1}.
+G(z) = \left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \cdots \right)^{-1}.
 \end{align*}
 %
-Iščemo polinom\footnote{Polinom ni najbolj korektno poimenovanje, saj nima končne stopnje.} $p(z) = a_{0}+a_{1}z+a_{2}z^2+a_{3}z^3+\dots$, za katerega bo veljalo
+Iščemo polinom\footnote{Polinom ni najbolj korektno poimenovanje, saj nima končne stopnje.} $p(z) = a_{0}+a_{1}z+a_{2}z^2+a_{3}z^3+\cdots$, za katerega bo veljalo
 \begin{align*}
-\left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \ldots \right) p(z) = 1.
+\left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \cdots \right) p(z) = 1.
 \end{align*}
 %
 Z rekurzivnim računanjem koeficientov pri potencah $z$ dobimo koeficiente polinoma: $a_{0}=1$, $a_{1}=-\frac{1}{2}$, $a_{2}=\frac{1}{12}$, $a_{3}=0$, $a_{4}=-\frac{1}{720}$ itd. Od tod preberemo prvih nekaj Bernoullijevih števil: $B_{0} = 1$, $B_{1} = -\frac{1}{2}$,  $B_{2} = \frac{1}{6}$,  $B_{3} = 0$, $B_{4} = -\frac{1}{30}$.
@@ -897,11 +895,11 @@ G(z) + \frac{z}{2} = \frac{z}{2} \left( \frac{2}{e^{z}-1}+1 \right) = \frac{z}{2
 Zapisali smo jo kot produkt dveh lihih funkcij, kar je soda funkcija. Upoštevamo, da je $B_{1}=-\frac{1}{2}$. Oboje skupaj nam pove, da so koeficienti funkcije $G$ pri lihih potencah stopnje vsaj $3$ enaki $0$, s tem pa vsa števila $B_{2k+1}$ za $k \geq 1$.
 \end{dokaz}
 
-Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo zeta funkcijo, ki je podrobno obravnavana v \cite[poglavje 1.5]{zetafunction}. Naj bo $n\in\{0, 1, 2, \dots\}$. Velja
+Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo zeta funkcijo, ki je podrobno obravnavana v \cite[poglavje 1.5]{zetafunction}. Naj bo $n\in\{0, 1, 2 \dots\}$. Velja
 \begin{equation}
 	\zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}.
 \end{equation}
-Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6,\dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $0<Re(s)<1$, o ničlah na njem pa govori naslednji izrek. 
+Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6 \dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $0<Re(s)<1$, o ničlah na njem pa govori naslednji izrek. 
 
 \begin{izrek}[Riemannova hipoteza]
 Vse netrivialne ničle Riemannove zeta funkcije ležijo na premici $s=\frac{1}{2}+it$.
@@ -1018,10 +1016,10 @@ D(n) = \sum_{x=1}^{\infty} M \left( \frac{n}{x} \right).
 \end{align*}
 Naj bosta $p$ in $q$ tuji števili in $0 < p \leq q$, z drugimi besedami, ulomek $\frac{p}{q}$ ustreza nekemu elementu $r_{v}$ Fareyevega zaporedja $F_{n}$.
 Primerjali bomo koeficiente pri $f(\frac{p}{q})$ na levi in desni strani enakosti~\eqref{Eq:RiemFar1}.
-Ker je $ f(\frac{p}{q}) = f(\frac{2p}{2q}) = f(\frac{3p}{3q}) = \dots $, je koeficient na desni strani enak 
+Ker je $ f(\frac{p}{q}) = f(\frac{2p}{2q}) = f(\frac{3p}{3q}) = \cdots $, je koeficient na desni strani enak 
 %
 \begin{align*}
-M \left(\frac{n}{q} \right) + M \left(\frac{n}{2q} \right) + M \left(\frac{n}{3q} \right) + \dots &= \sum_{l=1}^{\infty} M \left(\frac{n}{ql} \right) \\
+M \left(\frac{n}{q} \right) + M \left(\frac{n}{2q} \right) + M \left(\frac{n}{3q} \right) + \cdots &= \sum_{l=1}^{\infty} M \left(\frac{n}{ql} \right) \\
 &= D \left(\frac{n}{q} \right) = \left\{
 \begin{array}{rl}
 	1 & \textrm{če}\ n \geq q \\
@@ -1051,7 +1049,7 @@ Ker je $L(n) > 1$, je zadnji sumand enak $0$. Sedaj ocenimo absolutno vrednost z
 |M(n)| &\leq \sum_{v=1}^{L(n)} \left|e^{ \frac{2\pi i v}{L(n)} } \right| \left|e^{2\pi i \delta_{v}} - 1 \right| 
 	= \sum_{v=1}^{L(n)} \left|e^{2\pi i \delta_{v}} - 1 \right|
 	= \sum_{v=1}^{L(n)} \left|e^{\pi i \delta_{v} } \right| \left|e^{\pi i \delta_{v}} - e^{-\pi i \delta_{v}}\right| \\
-	&= 2 \sum_{v=1}^{L(n)} |\sin(\pi \delta_{v})| \leq 2 \sum_{v=1}^{L(n)} |\delta_{v}| \pi = 2 \pi \sum_{v=1}^{L(n)} |\delta_{v}| \\
+	&= 2 \sum_{v=1}^{L(n)} |\sin{(\pi \delta_{v})}| \leq 2 \sum_{v=1}^{L(n)} |\delta_{v}| \pi = 2 \pi \sum_{v=1}^{L(n)} |\delta_{v}| \\
 	&\leq 2 \pi K(\varepsilon) n^{1/2 + \varepsilon} = K'(\varepsilon) n^{1/2 + \varepsilon}.
 \end{align*}
 V zadnji neenakosti smo uporabili predpostavko $ \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) $, kar je ekvivalentno 
@@ -1097,7 +1095,7 @@ Funkcijo $ \bar{B_{1}}(x) = x - \lfloor x \rfloor - \frac{1}{2} $ bomo potrebova
 Naj bo $k \in \mathbb{N}$. Tedaj je
 \begin{equation}
 \label{Eq:B_{n}(ku)}
-B_{n}(ku) = k^{n-1} \left ( B_{n}(u) + B_{n} \left( u + \frac{1}{k} \right) + \dots + B_{n} \left( u + \frac{k-1}{k} \right) \right).
+B_{n}(ku) = k^{n-1} \left ( B_{n}(u) + B_{n} \left( u + \frac{1}{k} \right) + \cdots + B_{n} \left( u + \frac{k-1}{k} \right) \right).
 \end{equation}
 \end{trditev}
 
@@ -1110,8 +1108,8 @@ Dokaz za $k=2$ se nahaja v \cite[poglavje 6.2, str.~102 -- 103]{zetafunction}. Z
 Spomnimo se funkcije $ \bar{B_{1}}(x) = x - \lfloor x \rfloor - \frac{1}{2} $ in enačbe~\eqref{Eq:B_{n}(ku)}. Izberimo $n=1$. Funkcija $\bar{B_{1}}$ je periodična s periodo $1$, zato je za $x=ku$ dovolj obravnavati vrednosti $0 \leq u \leq \frac{1}{k}$. Za te vrednosti pa se $\bar{B_{1}}$ ujema s funkcijo $B_{1}$. Enačba~\eqref{Eq:B_{n}(ku)} zato dobi obliko
 \begin{align}
 \label{Eq:bar{B_{1}}(ku)}
-\bar{B_{1}}(ku) &= \bar{B_{1}}(u) + \bar{B_{1}} \left( u + \frac{1}{k} \right) + \dots + \bar{B_{1}} \left( u + \frac{k-1}{k} \right) \nonumber \\
-			&= \bar{B_{1}} \left( u + \frac{1}{k} \right) + \bar{B_{1}} \left( u + \frac{2}{k} \right) + \dots + \bar{B_{1}} \left( u + 1 \right).
+\bar{B_{1}}(ku) &= \bar{B_{1}}(u) + \bar{B_{1}} \left( u + \frac{1}{k} \right) + \cdots + \bar{B_{1}} \left( u + \frac{k-1}{k} \right) \nonumber \\
+			&= \bar{B_{1}} \left( u + \frac{1}{k} \right) + \bar{B_{1}} \left( u + \frac{2}{k} \right) + \cdots + \bar{B_{1}} \left( u + 1 \right).
 \end{align}
 
 Ključni korak dokaza je, da v enakost iz leme~\ref{Lema:RiemFar} vstavimo funkcijo $ \bar{B_{1}}$, pri čemer uporabimo zvezo~\eqref{Eq:bar{B_{1}}(ku)}. Označimo
@@ -1197,7 +1195,7 @@ I_{ab} &= \int_{0}^1 \bar{B_{1}}(au) \bar{B_{1}}(bu) du
 	= \frac{1}{a} I_{1b} 
 	= \frac{1}{12ab} 
 \end{align}
-V enakosti~(5) smo uporabili dejstvo, da vrednosti $\frac{bk}{a}$ za $k \in \{0,1, \dots, a-1 \}$ pretečejo vse vrednosti iz množice $\{0, \frac{1}{a}, \dots, \frac{a-1}{a}\}$.
+V enakosti~(5) smo uporabili dejstvo, da vrednosti $\frac{bk}{a}$ za $k \in \{0,1 \ldots a-1 \}$ pretečejo vse vrednosti iz množice $\{0, \frac{1}{a} \ldots \frac{a-1}{a}\}$.
 
 Naj bo sedaj $c$ največji skupni delitelj $a$ in $b$. Zapišimo $a = c \alpha$ in $b = c \beta$ (seveda sta $\alpha$ in $\beta$ tuji si števili).
 \begin{align}
@@ -1247,12 +1245,15 @@ kar smo želeli pokazati.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \section*{Slovar strokovnih izrazov}
 
-\geslo{}{}
-\geslo{}{}
+\geslo{mediant}{medianta}
+\geslo{neighbour}{sosed}
+\geslo{little o notation}{notacija mali O}
+\geslo{}{delovanje grupe}
+\geslo{Bernoulli number}{Bernoullijevo število}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % seznam uporabljene literature
 \begin{thebibliography}{99}
 
