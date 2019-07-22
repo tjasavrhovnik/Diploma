@@ -344,7 +344,7 @@ n^2 \sum_{d=n+1}^{\infty} \left (- \frac{1}{d} + \frac{1}{d-1} \right ) = n^2 \f
 V enakosti~(3) smo za izračun funkcije $\zeta(2)$ uporabili znano vrednost
 \[ \zeta(2) = \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.\]
 %
-Po opombi~\ref{op:AsimptotDolzina} iz izraza~\ref{Eq:DolZap} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
+Po opombi~\ref{op:AsimptotDolzina} iz izraza~\eqref{Eq:DolZap} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
  %
 \end{dokaz}
 
@@ -359,6 +359,12 @@ Ideje poglavja so povzete po \cite[poglavje 4]{fareyproject} in\cite{ford}.
 Naj bosta $p$ in $q$ tuji si števili v množici celih števil.
 \emph{Fordov\footnote{Lester Randolph Ford~Sr., 25.\ 10.\ 1886 -- 11.\ 11.\ 1967, ameriški matematik.} krog} C($\frac{p}{q}$) je krog v zgornji polravnini, ki se abscisne osi dotika v točki $\frac{p}{q}$, njegov polmer pa meri $\frac{1}{2q^2}$. 
 \end{definicija}
+
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics{fordovi_krogi.pdf}
+%\end{center}
+%\end{figure}
 
 Ker so Fordovi krogi definirani za vsak okrajšan ulomek, lahko poljubnemu racionalnemu številu enolično priredimo Fordov krog. Iz analize vemo, da je množica racionalnih števil gosta podmnožica množice realnih števil, abscisna os pa je geometrijska predstavitev le-te. Zato poljubno majhen interval na abscisni osi vsebuje neskončno mnogo dotikališč Fordovih krogov.
 
@@ -389,7 +395,7 @@ Fordova kroga, ki pripadata različnima okrajšanima ulomkoma, sta bodisi tangen
 \end{trditev}
 
 \begin{dokaz}
-Konstruirajmo pravokotni trikotnik, kot je opisano zgoraj in zapišimo Pitagorov izrek iz enačbe~\ref{Eq:Pitagora}.
+Konstruirajmo pravokotni trikotnik, kot je opisano zgoraj in zapišimo Pitagorov izrek iz enačbe~\eqref{Eq:Pitagora}.
 Če dolžine izrazimo z $a, b, c$ in $d$, dobimo enakost
 %
 \begin{align}
@@ -524,7 +530,7 @@ Pa denimo, da sta si trikotnika $ABC$ in $A'B'C'$ podobna. Tedaj obstaja tako na
 \frac{c}{d}-\frac{a}{b} = \lambda \left (\frac{c'}{d'}-\frac{a'}{b'} \right ).
 \end{equation}
 %
-Če seštejemo enačbi~\ref{Eq:Pit1} in \ref{Eq:Pit2}, dobimo
+Če seštejemo enačbi~\eqref{Eq:Pit1} in \eqref{Eq:Pit2}, dobimo
 %
 \begin{align}
 \label{Eq:Pit4}
@@ -533,13 +539,13 @@ b'^2 &= \lambda b^2, \nonumber \\
 b' &= \sqrt\lambda b.
 \end{align}
 %
-Enačbo~\ref{Eq:Pit3} lahko poenostavimo, saj gre za para Fordovih sosedov. Velja
+Enačbo~\eqref{Eq:Pit3} lahko poenostavimo, saj gre za para Fordovih sosedov. Velja
 \begin{equation}
 \label{Eq:Pit5}
 \frac{1}{bd} = \frac{bc-ad}{bd} = \frac{c}{d}-\frac{a}{b} = \lambda \left (\frac{c'}{d'}-\frac{a'}{b'} \right ) = \lambda \frac{b'c'-a'd'}{b'd'} = \lambda \frac{1}{b'd'}.
 \end{equation}
 %
-Iz enakosti~\ref{Eq:Pit4} in~\ref{Eq:Pit5} sledi 
+Iz enakosti~\eqref{Eq:Pit4} in~\eqref{Eq:Pit5} sledi 
 %
 \begin{align}
 \label{Eq:Pit6}
@@ -548,7 +554,7 @@ Iz enakosti~\ref{Eq:Pit4} in~\ref{Eq:Pit5} sledi
 d' &= \sqrt\lambda d.
 \end{align}
 %
-Nazadnje še v pogoj za tangentnost Fordovih krogov C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) vstavimo zvezi~\ref{Eq:Pit4} in~\ref{Eq:Pit6}, kar nam da
+Nazadnje še v pogoj za tangentnost Fordovih krogov C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) vstavimo zvezi~\eqref{Eq:Pit4} in~\eqref{Eq:Pit6}, kar nam da
 %
 \begin{align}
 b'c'-a'd' &= 1, \nonumber \\
@@ -735,7 +741,7 @@ Sedaj vzemimo Fordov krog C($\frac{p}{q}$). Njegov polmer meri $\frac{1}{2q^2}$,
 Izračunajmo
 \[ R = \alpha \bar{\alpha} - r^2 = \left(\frac{p}{q} + i\frac{1}{2q^2} \right) \left(\frac{p}{q} - i\frac{1}{2q^2} \right) - \frac{1}{4q^4} 
 = \frac{p^2}{q^2} + \frac{1}{4q^4} - \frac{1}{4q^4} = \frac{p^2}{q^2} \]
-in preverimo, da je slika izbranega Fordovega kroga tudi Fordov krog. Res, središče slike je po enačbi~\ref{Eq:MobSlika} v točki
+in preverimo, da je slika izbranega Fordovega kroga tudi Fordov krog. Res, središče slike je po enačbi~\eqref{Eq:MobSlika} v točki
 \begin{align}
 -\frac{\bar{\alpha}}{R} = - \frac{\frac{p}{q} - i \frac{1}{2q^2}}{\frac{p^2}{q^2}} = - \frac{q}{p} + i \frac{1}{2p^2},
 \end{align}
@@ -882,7 +888,7 @@ Naj bo $k \in \mathbb{N}$. Za Bernoullijeva števila velja $B_{2k+1}=0$.
 \end{lema}
 
 \begin{dokaz}
-Spomnimo se funkcije $G$, podane z zvezo~\ref{Eq:Bernoulli}. Trdimo, da je soda. Oglejmo si novo funkcijo
+Spomnimo se funkcije $G$, podane z zvezo~\eqref{Eq:Bernoulli}. Trdimo, da je soda. Oglejmo si novo funkcijo
 \begin{align}
 G(z) + \frac{z}{2} = \frac{z}{2} \left( \frac{2}{e^{z}-1}+1 \right) = \frac{z}{2} \frac{e^{z}+1}{e^{z}-1} 
 	= \frac{z}{2} \frac{e^{z/2}+e^{-z/2}}{e^{z/2}-e^{-z/2}} = \frac{z}{2} \coth{\frac{z}{2}}.
@@ -979,7 +985,7 @@ g(x) = \sum_{n=1}^{\infty} f \left(\frac{x}{n} \right) \Longleftrightarrow f(x) 
 %
 \end{trditev}
 
-Trditev navajamo brez izpeljave -- ta se nahaja v \cite[poglavje 10.9]{zetafunction}. M\"obiusovo inverzijo bomo namreč potrebovali le v enem koraku dokaza napovedane leme, kjer bomo uporabili ekvivalenco~\ref{Eq:MobInv}.
+Trditev navajamo brez izpeljave -- ta se nahaja v \cite[poglavje 10.9]{zetafunction}. M\"obiusovo inverzijo bomo namreč potrebovali le v enem koraku dokaza napovedane leme, kjer bomo uporabili ekvivalenco~\eqref{Eq:MobInv}.
 
 \begin{lema}
 \label{Lema:RiemFar}
@@ -1001,7 +1007,7 @@ D(n) = \left\{
 \end{array}.
 \right.
 \end{align}
-Spomnimo se definicije Mertensove funkcije in upoštevajmo predpis~\ref{Eq:D(n)}. Dobimo
+Spomnimo se definicije Mertensove funkcije in upoštevajmo predpis~\eqref{Eq:D(n)}. Dobimo
 \begin{align*}
 M(n) = \sum_{x \leq n} \mu(x) = \sum_{x=1}^{\infty} \mu(x) D \left( \frac{n}{x} \right),
 \end{align*}
@@ -1011,7 +1017,7 @@ M(n) = \sum_{x=1}^{\infty} \mu(x) D \left( \frac{n}{x} \right) \Longleftrightarr
 D(n) = \sum_{x=1}^{\infty} M \left( \frac{n}{x} \right).
 \end{align*}
 Naj bosta $p$ in $q$ tuji števili in $0 < p \leq q$, z drugimi besedami, ulomek $\frac{p}{q}$ ustreza nekemu elementu $r_{v}$ Fareyevega zaporedja $F_{n}$.
-Primerjali bomo koeficiente pri $f(\frac{p}{q})$ na levi in desni strani enakosti~\ref{Eq:RiemFar1}.
+Primerjali bomo koeficiente pri $f(\frac{p}{q})$ na levi in desni strani enakosti~\eqref{Eq:RiemFar1}.
 Ker je $ f(\frac{p}{q}) = f(\frac{2p}{2q}) = f(\frac{3p}{3q}) = \dots $, je koeficient na desni strani enak 
 %
 \begin{align*}
@@ -1031,13 +1037,13 @@ To pa je ravno koeficient pri $f(r_{v})$ na levi strani. Lema zato res drži.
 % Dokaz implikacije v desno
 \subsubsection{Dokaz implikacije v desno}
 %
-Naj bo $\varepsilon > 0$. Naj bo $u \in [0,1]$ in definirajmo funkcijo $f(u) = e^{2\pi iu}$. Uporabimo lema~\ref{Lema:RiemFar} in funkcijo vstavimo v enakost~\ref{Eq:RiemFar1}; dobimo
+Naj bo $\varepsilon > 0$. Naj bo $u \in [0,1]$ in definirajmo funkcijo $f(u) = e^{2\pi iu}$. Uporabimo lema~\ref{Lema:RiemFar} in funkcijo vstavimo v enakost~\eqref{Eq:RiemFar1}; dobimo
 \begin{equation}
 \label{Eq:RiemFar2}
 	\sum_{v=1}^{L(n)} e^{2\pi i r_{v}} = \sum_{k=1}^{\infty} \sum_{j=1}^{k} e^{2\pi i \frac{j}{k}} M \left(\frac{n}{k} \right).
 \end{equation}
 Vemo, da je $\sum_{j=1}^{k} e^{2\pi i \frac{j}{k}} = 0$ za $k \geq 2$, za $k=1$ pa se vsota poenostavi v $e^{2\pi i} = 1$.
-Enakost~\ref{Eq:RiemFar2} zato prepišemo v 
+Enakost~\eqref{Eq:RiemFar2} zato prepišemo v 
 \[ M(n) = \sum_{v=1}^{L(n)} e^{2\pi i r_{v}} = \sum_{v=1}^{L(n)} e^{2\pi i \left(\frac{v}{L(n)} + \delta_{v} \right)} 
 	   = \sum_{v=1}^{L(n)} e^{ \frac{2\pi i v}{L(n)} } \left(e^{2\pi i \delta_{v}} - 1 \right) + \sum_{v=1}^{L(n)} e^{ \frac{2\pi iv}{L(n)} }. \]
 Ker je $L(n) > 1$, je zadnji sumand enak $0$. Sedaj ocenimo absolutno vrednost zgornjega izraza:
@@ -1101,14 +1107,14 @@ Dokaz za $k=2$ se nahaja v \cite[poglavje 6.2, str.~102 -- 103]{zetafunction}. Z
 
 % Dokaz implikacije v levo
 \subsubsection{Dokaz implikacije v levo}
-Spomnimo se funkcije $ \bar{B_{1}}(x) = x - \lfloor x \rfloor - \frac{1}{2} $ in enačbe~\ref{Eq:B_{n}(ku)}. Izberimo $n=1$. Funkcija $\bar{B_{1}}$ je periodična s periodo $1$, zato je za $x=ku$ dovolj obravnavati vrednosti $0 \leq u \leq \frac{1}{k}$. Za te vrednosti pa se $\bar{B_{1}}$ ujema s funkcijo $B_{1}$. Enačba~\ref{Eq:B_{n}(ku)} zato dobi obliko
+Spomnimo se funkcije $ \bar{B_{1}}(x) = x - \lfloor x \rfloor - \frac{1}{2} $ in enačbe~\eqref{Eq:B_{n}(ku)}. Izberimo $n=1$. Funkcija $\bar{B_{1}}$ je periodična s periodo $1$, zato je za $x=ku$ dovolj obravnavati vrednosti $0 \leq u \leq \frac{1}{k}$. Za te vrednosti pa se $\bar{B_{1}}$ ujema s funkcijo $B_{1}$. Enačba~\eqref{Eq:B_{n}(ku)} zato dobi obliko
 \begin{align}
 \label{Eq:bar{B_{1}}(ku)}
 \bar{B_{1}}(ku) &= \bar{B_{1}}(u) + \bar{B_{1}} \left( u + \frac{1}{k} \right) + \dots + \bar{B_{1}} \left( u + \frac{k-1}{k} \right) \nonumber \\
 			&= \bar{B_{1}} \left( u + \frac{1}{k} \right) + \bar{B_{1}} \left( u + \frac{2}{k} \right) + \dots + \bar{B_{1}} \left( u + 1 \right).
 \end{align}
 
-Ključni korak dokaza je, da v enakost iz leme~\ref{Lema:RiemFar} vstavimo funkcijo $ \bar{B_{1}}$, pri čemer uporabimo zvezo~\ref{Eq:bar{B_{1}}(ku)}. Označimo
+Ključni korak dokaza je, da v enakost iz leme~\ref{Lema:RiemFar} vstavimo funkcijo $ \bar{B_{1}}$, pri čemer uporabimo zvezo~\eqref{Eq:bar{B_{1}}(ku)}. Označimo
 \begin{align}
 G(u) &= \sum_{v=1}^{L(n)} \bar{B_{1}}(u+r_v) = \sum_{k=1}^{\infty} \sum_{j=1}^{k} \bar{B_{1}} \left(u + \frac{j}{k} \right) M \left(\frac{n}{k} \right)
 	= \sum_{k=1}^{\infty} \bar{B_{1}}(ku) M \left(\frac{n}{k} \right)
@@ -1180,7 +1186,7 @@ I_{a1} &= \int_{0}^1 \bar{B_{1}}(au) \bar{B_{1}}(u) du
 	&= \frac{1}{3a} \left( t-\frac{1}{2} \right)^3 \bigg \arrowvert_{0}^{1}
 	= \frac{1}{12a}.
 \end{align}
-V enakostih~(1) in (2) smo zaporedoma uvedli novi spremenljivki $v=au$ in $v=k+t$. V enakosti~(3) smo upoštevali periodičnost funkcije $\bar{B_{1}}$ in zvezo \ref{Eq:bar{B_{1}}(ku)}. V enakosti~(4) smo upoštevali, da na intervalu $[0,1]$ velja $\bar{B_{1}}(t) = t-\frac{1}{2}$.
+V enakostih~(1) in (2) smo zaporedoma uvedli novi spremenljivki $v=au$ in $v=k+t$. V enakosti~(3) smo upoštevali periodičnost funkcije $\bar{B_{1}}$ in zvezo \eqref{Eq:bar{B_{1}}(ku)}. V enakosti~(4) smo upoštevali, da na intervalu $[0,1]$ velja $\bar{B_{1}}(t) = t-\frac{1}{2}$.
 
 Oglejmo si primer, ko sta $a$ in $b$ tuji si števili.
 \begin{align}
@@ -1208,14 +1214,14 @@ Enakost~(7) sledi iz računa
  	&= \int_{0}^{1} \bar{B_{1}}(\alpha s) \bar{B_{1}}(\beta s) ds = I_{\alpha \beta}.
 \end{align*}
 %
-Izračunano vrednost integrala $I_{ab}$ vstavimo v enakost \ref{Eq:I_{ab}} in dobimo
+Izračunano vrednost integrala $I_{ab}$ vstavimo v enakost \eqref{Eq:I_{ab}} in dobimo
 \begin{equation}
 \label{Eq:I2}
 I = \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} M \left(\frac{n}{a} \right) M \left(\frac{n}{b} \right) \frac{c^2}{12ab}.
 \end{equation}
 
 % Ocena in uporaba predpostavke
-Naj bo $\epsilon>0$. Predpostavljamo, da je $M(n) = o(x^{1/2+\epsilon})$, kar pomeni, da obstaja taka konstanta $C$, odvisna od $\epsilon$, da za poljuben $n$ velja $M(n) < C(\epsilon) n^{1/2+\epsilon}$. Če to uporabimo v enačbi~\ref{Eq:I2}, dobimo
+Naj bo $\epsilon>0$. Predpostavljamo, da je $M(n) = o(x^{1/2+\epsilon})$, kar pomeni, da obstaja taka konstanta $C$, odvisna od $\epsilon$, da za poljuben $n$ velja $M(n) < C(\epsilon) n^{1/2+\epsilon}$. Če to uporabimo v enačbi~\eqref{Eq:I2}, dobimo
 \begin{align}
 I &< \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} C(\epsilon)^2 \left( \frac{n}{a} \right)^{1/2+\epsilon} \left( \frac{n}{b} \right)^{1/2+\epsilon} \frac{c^2}{12ab} \nonumber \\
   &= n^{1+2\epsilon} \frac{C(\epsilon)^2}{12} \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} \frac{c^2}{a^{3/2+\epsilon} b^{3/2+\epsilon}} \nonumber \\
@@ -1225,7 +1231,7 @@ I &< \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} C(\epsilon)^2 \left( \frac{n}{a} \r
 \end{align}
 V neenakosti~(8) smo vsoto po tujih si številih $\alpha$ in $\beta$ zamenjali z vsoto po vseh vrednostih $\alpha$ in $\beta$.
 
-Enakost~\ref{Eq:I1} implicira
+Enakost~\eqref{Eq:I1} implicira
 \[ I = L(n) \sum_{v=1}^{L(n)} \delta_{v}^2 + \frac{1}{12} < K_{2}(\epsilon) n^{1+2\epsilon}, \]
 od koder sledi
 \[ \sum_{v=1}^{L(n)} \delta_{v}^2 < K_{3}(\epsilon) n^{1+2\epsilon}. \]
