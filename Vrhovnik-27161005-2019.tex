@@ -32,9 +32,9 @@
 
 % navedite vsaj eno klasifikacijsko oznako --
 % dostopne so na www.ams.org/mathscinet/msc/msc2010.html
-\klasifikacija{}
-\kljucnebesede{} % navedite nekaj ključnih pojmov, ki nastopajo v delu
-\keywords{} % angleški prevod ključnih besed
+\klasifikacija{11B57, 11M26, 51N20}
+\kljucnebesede{Fareyevo zaporedje, Fordov krog, zeta funkcija, Riemannova hipoteza} % navedite nekaj ključnih pojmov, ki nastopajo v delu
+\keywords{Farey sequence, Ford circle, zeta function, Riemann hypothesis} % angleški prevod ključnih besed
 
 \zapisiMetaPodatke  % poskrbi za metapodatke in veljaven PDF/A-1b standard
 
@@ -847,7 +847,7 @@ Zapišimo predpis za funkcijo zeta. V naslednjem koraku funkcijo zeta pomnožimo
 Opazimo, da smo vselej množili z ulomki oblike $\frac{1}{p^s},$ kjer $p$ pripada množici praštevil. Dobimo enakost
 	\[ \cdots \left(1-\frac{1}{13^s}\right) \left(1-\frac{1}{11^s}\right) \left(1-\frac{1}{7^s}\right) \left(1-\frac{1}{5^s}\right) \left(1-\frac{1}{3^s}\right) 		\left(1-\frac{1}{2^s}\right) \zeta(s) = 1, \]
 od koder lahko izrazimo
-	\[ \zeta(s) = \frac{1}{1-\frac{1}{2^s}} \frac{1}{1-\frac{1}{3^s}} \frac{1}{1-\frac{1}{5^s}} \frac{1}{1-\frac{1}{7^s}} \frac{1}{1-\frac{1}{11^s}} \cdots = 		\prod_{p}\frac{1}{1-p^{-s}}, \]
+	\[ \zeta(s) = \frac{1}{ \left(1-\frac{1}{2^s}\right) \left(1-\frac{1}{3^s}\right) \left(1-\frac{1}{5^s}\right) \left(1-\frac{1}{7^s}\right) \left(1-\frac{1}{11^s}\right)} \cdots = \prod_{p}\frac{1}{1-p^{-s}}, \]
 kar smo želeli pokazati.
 \end{dokaz}
 
@@ -908,7 +908,7 @@ Vse netrivialne ničle Riemannove zeta funkcije ležijo na premici $s=\frac{1}{2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riemannova hipoteza
 \subsection{Riemannova hipoteza}
 
-Obstaja več ekvivalentnih formulacij Riemannove hipoteze. Dokazali bomo eno izmed njih, ki vključuje Fareyevo zaporedje. Pred tem se spomnimo M\"obiusove funkcije, ki smo jo definirali v definiciji~\ref{def:MobFun}.
+Obstaja več ekvivalentnih formulacij Riemannove hipoteze. Dokazali bomo eno izmed njih, ki vključuje Fareyevo zaporedje. Pred tem se spomnimo M\"obiusove funkcije, ki smo jo srečali v definiciji~\ref{def:MobFun}. Z njo je povezana naslednja funkcija.
 
 \begin{definicija}
 Za $n\in\mathbb{N}$ je \emph{Mertensova\footnote{Franz Mertens, 20.\ 3.\ 1840 -- 5.\ 3.\ 1927, poljski matematik.} funkcija} definirana s predpisom
@@ -927,7 +927,9 @@ Izračunajmo nekaj vrednosti Mertensove funkcije.
 \( M(6) = \mu(1) + \mu(2) + \mu(3) + \mu(4) + \mu(5) + \mu(6) = 1 - 1 - 1 + 0 - 1 + 1 = -1. \)
 \end{primer}
 
-Naslednjo trditev, ki jo bomo navedli brez dokaza, je leta 1912 dokazal Litllewood\footnote{John Edensor Littlewood, 9.\ 6.\ 1885 -- 6.\ 9.\ 1977, angleški matematik.}. Njeno bistvo je, da Riemannovo hipotezo lahko prevedemo na ekvivalentno trditev, ki opisuje rast Mertensove funkcije. 
+Mertensova funkcija raste počasi, saj se njena vrednost v vsakem naslednjem naravnem številu spremeni kvečjemu za $\pm 1$. Ne obstaja naravno število $n$, za katerega bi veljalo $|M(n)| > n$.
+
+Naslednjo trditev, ki jo bomo navedli brez dokaza, je leta 1912 dokazal Litllewood\footnote{John Edensor Littlewood, 9.\ 6.\ 1885 -- 6.\ 9.\ 1977, angleški matematik.}. Njeno bistvo je, da Riemannovo hipotezo lahko prevedemo na ekvivalentno trditev, ki opisuje rast Mertensove funkcije. Več o njej si bralec lahko prebere v \cite[poglavje 12.1]{zetafunction}.
 
 \begin{trditev}
 Za vsak $\epsilon>0$ velja \( M(n) = o(n^{1/2+\epsilon}) \) natanko tedaj, ko velja Riemannova hipoteza.
