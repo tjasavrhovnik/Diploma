@@ -880,6 +880,7 @@ Iščemo polinom\footnote{Polinom ni najbolj korektno poimenovanje, saj nima kon
 \end{align*}
 %
 Z rekurzivnim računanjem koeficientov pri potencah $z$ dobimo koeficiente polinoma: $a_{0}=1$, $a_{1}=-\frac{1}{2}$, $a_{2}=\frac{1}{12}$, $a_{3}=0$, $a_{4}=-\frac{1}{720}$ itd. Od tod preberemo prvih nekaj Bernoullijevih števil: $B_{0} = 1$, $B_{1} = -\frac{1}{2}$,  $B_{2} = \frac{1}{6}$,  $B_{3} = 0$, $B_{4} = -\frac{1}{30}$.
+Več o njih nam pove naslednja lema.
 
 \begin{lema}
 Naj bo $k \in \mathbb{N}$. Za Bernoullijeva števila velja $B_{2k+1}=0$.
@@ -895,7 +896,8 @@ G(z) + \frac{z}{2} = \frac{z}{2} \left( \frac{2}{e^{z}-1}+1 \right) = \frac{z}{2
 Zapisali smo jo kot produkt dveh lihih funkcij, kar je soda funkcija. Upoštevamo, da je $B_{1}=-\frac{1}{2}$. Oboje skupaj nam pove, da so koeficienti funkcije $G$ pri lihih potencah stopnje vsaj $3$ enaki $0$, s tem pa vsa števila $B_{2k+1}$ za $k \geq 1$.
 \end{dokaz}
 
-Za nas je pomembna naslednja povezava Bernoullijevih števil z Riemannovo zeta funkcijo, ki je podrobno obravnavana v \cite[poglavje 1.5]{zetafunction}. Naj bo $n\in\{0, 1, 2 \dots\}$. Velja
+Tudi za Bernoullijeva števila $B_{2k}$ obstaja formula, ki pa ni preprosta.
+Za nas so pomembna tista z lihimi indeksi, saj so povezana z Riemannovo zeta funkcijo, ki je podrobno obravnavana v \cite[poglavje 1.5]{zetafunction}. Naj bo $n\in\{0, 1, 2 \dots\}$. Potem velja
 \begin{equation}
 	\zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}.
 \end{equation}
@@ -927,9 +929,19 @@ Izračunajmo nekaj vrednosti Mertensove funkcije.
 \( M(6) = \mu(1) + \mu(2) + \mu(3) + \mu(4) + \mu(5) + \mu(6) = 1 - 1 - 1 + 0 - 1 + 1 = -1. \)
 \end{primer}
 
-Mertensova funkcija raste počasi, saj se njena vrednost v vsakem naslednjem naravnem številu spremeni kvečjemu za $\pm 1$. Ne obstaja naravno število $n$, za katerega bi veljalo $|M(n)| > n$.
+Opazimo, da Mertensova funkcija raste počasi, saj se njena vrednost v vsakem naslednjem naravnem številu spremeni kvečjemu za $\pm 1$. Za vsako naravno število $n$ velja $|M(n)| \leq n$.
 
-Naslednjo trditev, ki jo bomo navedli brez dokaza, je leta 1912 dokazal Litllewood\footnote{John Edensor Littlewood, 9.\ 6.\ 1885 -- 6.\ 9.\ 1977, angleški matematik.}. Njeno bistvo je, da Riemannovo hipotezo lahko prevedemo na ekvivalentno trditev, ki opisuje rast Mertensove funkcije. Več o njej si bralec lahko prebere v \cite[poglavje 12.1]{zetafunction}.
+Naslednjo trditev, ki jo bomo navedli brez dokaza, je leta 1912 dokazal Litllewood\footnote{John Edensor Littlewood, 9.\ 6.\ 1885 -- 6.\ 9.\ 1977, angleški matematik.}. Njeno bistvo je, da Riemannovo hipotezo lahko prevedemo na ekvivalentno trditev, ki opisuje rast Mertensove funkcije. 
+Več podrobnosti o njej si bralec lahko prebere v \cite[poglavje 12.1]{zetafunction}.
+%
+Oglejmo si le idejo za formulacijo trditve. Če faktorje v Eulerjevi produktni formuli pomnožimo, dobimo na polravnini $\{Re(s)>1\}$ izražavo $ \frac{1}{\zeta(s)} = \sum_{n=1}^{\infty} \frac{\mu(n)}{n^s} $. 
+Po nekaj korakih pridemo do zveze $ \frac{1}{\zeta(s)} = s \int_{0}^{\infty} M(x) x^{-s-1}dx $. 
+Ker je $ |M(x)| \leq x $, je $ \lim_{x \to \infty} x^{-s}M(x) = 0$ na polravnini $\{Re(s)>1\}$ in integral $ \int_{0}^{\infty} M(x) x^{-s-1}dx $ na tej polravnini konvergira.
+Če obstaja tako pozitivno število $a$, da funkcija $M(x)$ raste počasneje od funkcije $x^{a}$, potem zgornji integral konvergira na polravnini $\{Re(a-s)<0\} = \{Re(s)>a\}$.
+To pomeni, da je funkcija $ \frac{1}{\zeta(s)} $ na tej polravnini analitična. 
+Vendar obstajajo ničle funkcije $\zeta(s)$ na premici $s = \frac{1}{2}+it $, torej ima na tej premici funkcija $\frac{1}{\zeta(s)}$ singularnosti.
+Od tod sledi, da za poljuben $0<a<\frac{1}{2}$ ne velja $M(x) = o(x^{a})$.
+Velja celo več.
 
 \begin{trditev}
 Za vsak $\epsilon>0$ velja \( M(n) = o(n^{1/2+\epsilon}) \) natanko tedaj, ko velja Riemannova hipoteza.
