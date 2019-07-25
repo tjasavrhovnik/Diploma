@@ -620,7 +620,8 @@ Uporabimo pogoj za tangentnost, ki smo ga izpeljali. Računajmo
 %
 Sledi, da je $|m-n|=1,$ torej je razlika $m-n \in \{1, -1, i, -i \}.$ Ugotovili smo, da je vsaka Fordova krogla, ki je tangentna na dano Fordovo kroglo, tangentna še na štiri druge Fordove krogle. Velja, da so te edine tangentne krogle.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mobiusove transformacije na Fordovih krogih
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Mobiusove transformacije na Fordovih krogih
 \subsection{M\"{o}biusove transformacije na Fordovih krogih}
 
 Do sedaj smo Fordove kroge obravnavali s pomočjo geometrijskih sredstev. V tem razdelku si bomo z algebro pomagali do nekaterih že znanih rezultatov o Fordovih krogih.
@@ -806,7 +807,8 @@ Funkcijo, ki šteje praštevila, manjša od danega števila, označimo s $\pi$. 
 \pi(x) \sim \frac{x}{\log{x}}.
 \end{equation}
 %
-Relativno napako med $\int_{2}^x \frac{dt}{\log{t}}$ in $\pi(x)$ je v sredini 19.~stoletja izračunal Chebyshev, šele nekaj desetletij kasneje pa so Hadamard, von Mangoldt in de~la~Vall\'ee Poussin dokazali izrek o praštevilih in nekaj sorodnih trditev. Zgodovina je povzeta po \cite[poglavje 1.1]{zetafunction}.
+Relativno napako med $\int_{2}^x \frac{dt}{\log{t}}$ in $\pi(x)$ je v sredini 19.~stoletja izračunal Chebyshev, šele nekaj desetletij kasneje pa so Hadamard, von Mangoldt in de~la~Vall\'ee Poussin dokazali izrek o praštevilih in nekaj sorodnih trditev. Zdi se, da nas vse vodijo k Riemannovi domnevi, ob kateri je avtor zapisal, da se mu zdi precej verjetno, da je pravilna, vendar dokaza zanjo ne pozna. Sledila je vrsta neuspešnih dokazov v prid hipotezi, ki vključujejo različna področja matematike, v želji po rešitvi problema pa je nastalo tudi več ekvivalentnih formualcij hipoteze. Čeprav večina matematikov Riemannu pritrjuje, obstajajo študije, ki razlagajo argumente proti njeni pravilnosti.
+Zgodovina je povzeta po \cite[poglavje 1.1]{zetafunction}.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Praštevila in Riemannova zeta funkcija
 \subsection{Praštevila in Riemannova zeta funkcija}
@@ -907,8 +909,9 @@ Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6 \do
 Vse netrivialne ničle Riemannove zeta funkcije ležijo na premici $s=\frac{1}{2}+it$.
 \end{izrek}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Riemannova hipoteza
-\subsection{Riemannova hipoteza}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Ekvivalentne trditve
+\subsection{Ekvivalentne trditve}
 
 Obstaja več ekvivalentnih formulacij Riemannove hipoteze. Dokazali bomo eno izmed njih, ki vključuje Fareyevo zaporedje. Pred tem se spomnimo M\"obiusove funkcije, ki smo jo srečali v definiciji~\ref{def:MobFun}. Z njo je povezana naslednja funkcija.
 
@@ -981,7 +984,10 @@ Dokaz zgornje trditve izpustimo. Pač pa bomo v nadaljevanju dokazali povezavo m
 Naj bo $\varepsilon > 0$. \( \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) \) velja tedaj in le tedaj, ko velja \( M(n) = o(n^{1/2+\varepsilon}). \)
 \end{izrek}
 
-Naslednja lema bo ključ do dokaza zgornjega izreka. Še prej pa se spomnimo Eulerjeve produktne formule.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fareyevo zaporedje in RH
+\subsection{Fareyevo zaporedje in Riemannova hipoteza}
+
+V tem razdelku bomo dokazali glavni izrek~\ref{Izr:RH}, ki Riemannovo hipotezo poveže s Fareyevim zaporedjem. Najprej bomo dokazali lemo, ki bo ključ do dokaza izreka. Še prej pa se spomnimo Eulerjeve produktne formule ter Fourierovih transformacij.
 
 \begin{trditev}[M\"obiusova inverzija]
 \emph{M\"obiusova inverzija} je inverzna Fourierova transformacija Eulerjeve produktne formule \( \zeta(s) \prod_{p} (1-p^{-s}) = 1. \) 
@@ -1071,8 +1077,8 @@ V zadnji neenakosti smo uporabili predpostavko $ \sum_{v=1}^{L(n)}|\delta_{v}| =
 $ \sum_{v=1}^{L(n)}|\delta_{v}| \leq K(\varepsilon) n^{1/2+\varepsilon}$ za neko konstano $K$, ki je odvisna od $\varepsilon$.
 Od tod sledi, da je $M(n) = o(n^{1/2 + \varepsilon})$, kar smo želeli pokazati.
 
-% Pomožne definicije
-\subsubsection{Pomožne definicije}
+% Bernoullijevi polinomi
+\subsubsection{Bernoullijevi polinomi}
 Preden se lotimo dokazovanja obratne implikacije, potrebujemo nekaj novih pojmov. Navedli bomo le najpomembnejše rezultate, ki jih bomo v dokazu potrebovali. Izpeljave niso pretežke, vendar jih bomo tokrat izpustili, saj bi precej povečale obseg dela. Povzeti so po \cite[poglavje 6.2]{zetafunction}.
 
 \begin{definicija}
@@ -1265,13 +1271,15 @@ kar dokazuje obratno implikacijo.
 \section*{Slovar strokovnih izrazov}
 
 \geslo{Bernoulli}{\textbf{$\sim$ number} Bernoullijevo število; \textbf{$\sim$ polynomial} Bernoullijev polinom}
+\geslo{Euler product formula}{Eulerjeva produktna formula -- povezuje Riemannovo zeta funkcijo s praštevili}
+\geslo{Farey neighbour}{Fareyev sosed -- Fareyeva soseda sta sosednja elementa Fareyevega zaporedja}
+\geslo{Ford neighbour}{Fordov sosed -- Fordova soseda sta tangentna Fordova kroga}
 \geslo{group action}{delovanje grupe -- delovanje grupe G na množico M je homomorfizem iz grupe G v grupo permutacij množice M}
 \geslo{little-o notation}{notacija mali o -- $f(x) = o(g(x))$, če absolutna vrednost funkcije $f$ raste počasneje od funkcije $g$, ko $x \to \infty$}
-\geslo{mediant}{medianta -- lastnost mediante}
+\geslo{mediant}{medianta; \textbf{$\sim$ property} lastnost mediante -- lastnost mediante velja za Fareyevo zaporedje in Fordove kroge}
 \geslo{Mertens function}{Mertensova funkcija}
 \geslo{M\"obius function}{M\"obiusova funkcija}
-\geslo{neighbour}{sosed -- Fareyeva soseda sta sosednja elementa Fareyevega zaporedja}
-\geslo{Riemann zeta function}{Riemannova zeta funkcija}
+\geslo{Riemann zeta function}{Riemannova zeta funkcija -- Riemannova hipoteza govori o ničlah te funkcije}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % seznam uporabljene literature

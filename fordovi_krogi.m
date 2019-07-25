@@ -1,3 +1,7 @@
+% Program narise Fordove kroge:
+% ulomku p/q ustreza krog z dotikaliscem v p/q
+% in polmerom 1/(2q^2)
+
 t = linspace(0,2*pi,100);
 
 % C(0/1)
