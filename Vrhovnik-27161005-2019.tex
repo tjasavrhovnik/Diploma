@@ -61,9 +61,9 @@
 %
 \section{Uvod}
 
-Zgodovina Fareyevega zaporedja sega v London 18.~stoletja. Med letoma 1704 in 1841 je izhajal letni zbornik \emph{The Ladies Diary: or, the Woman's Almanack}, ki je povezoval ljubitelje matematičnih ugank. Bralce so namreč nagovarjali k pošiljanju in reševanju aritmetičnih problemov, ki so bili v zborniku objavljeni. Leta~1747 se je pojavilo naslednje vprašanje: Najti je potrebno število ulomkov različnih vrednosti, manjših od $1$, katerih imenovalec ni večji od $100$. Odziv je bil precejšen, saj so se z iskanjem rešitve ukvarjali tako javnost kot pomembni matematiki tiste dobe. To je vodilo v razvoj Fareyevega zaporedja, ki ima nekaj presenetljivih lastnosti in uporabo na različnih področjih matematike.
+Zgodovina Fareyevega zaporedja sega v London 18.~stoletja. Med letoma 1704 in 1841 je izhajal letni zbornik \emph{The Ladies Diary: or, the Woman's Almanack}, ki je povezoval ljubitelje matematičnih ugank. Bralce so namreč nagovarjali k pošiljanju in reševanju aritmetičnih problemov, ki so bili v zborniku objavljeni. Leta~1747 se je pojavilo naslednje vprašanje: Najti je potrebno število ulomkov različnih vrednosti, večjih od $0$ in manjših od $1$, katerih imenovalec je manjši od $100$. Odziv je bil precejšen, saj so se z iskanjem rešitve ukvarjali tako javnost kot pomembni matematiki tiste dobe. To je vodilo v razvoj Fareyevega zaporedja, ki ima nekaj presenetljivih lastnosti in uporabo na različnih področjih matematike.
 
-Delo diplomskega seminarja je sestavljeno iz treh večjih enot. V prvi bomo predstavili zgodovinski pregled, definicijo, lastnosti in ocenili dolžino Fareyevega zaporedja. V drugem razdelku se bomo posvetili njeni geometrijski interpretaciji -- Fordovim krogom -- in opazili, da imata dve najpomembnejši lastnosti Fareyevega zaporedja tudi geometrijski pomen. Konstruirali bomo vse Fordove sosede danega Fordovega kroga. Navedli bomo možno posplošitev Fordovih krogov in definirali Fordove sfere. Ogledali si bomo predstavitev Fordovih krogov z uporabo algebre in kompleksne analize -- dokazali bomo, da grupa M\"obiusovih transformacij deluje na množico Fordovih krogov, od koder bo sledila že znana lastnost mediante. V zadnjem delu bomo obravnavali znamenit matematični problem, Riemannovo hipotezo. Predstavili bomo njeno motivacijo in navedli dve ekvivalenčni formulaciji domneve. Dokazali bomo povezavo Riemannove hipoteze s Fareyevim zaporedjem, pred tem pa se bomo seznanili s pojmi kot so Eulerjev produkt, Riemannova zeta funkcija, Bernoullijeva števila in polinomi, ter M\"obiusova in Mertensova funkcija.
+Delo diplomskega seminarja je sestavljeno iz treh večjih enot. V prvi bomo predstavili zgodovinski pregled, definicijo, lastnosti in ocenili dolžino Fareyevega zaporedja. V drugem razdelku se bomo posvetili njeni geometrijski interpretaciji -- Fordovim krogom -- in opazili, da imata dve najpomembnejši lastnosti Fareyevega zaporedja tudi geometrijski pomen. Konstruirali bomo vse Fordove sosede danega Fordovega kroga. Navedli bomo možno posplošitev Fordovih krogov in definirali Fordove krogle. Ogledali si bomo predstavitev Fordovih krogov z uporabo algebre in kompleksne analize -- dokazali bomo, da grupa M\"obiusovih transformacij deluje na množico Fordovih krogov, od koder bo sledila že znana lastnost mediante. V zadnjem delu bomo obravnavali znamenit matematični problem, Riemannovo hipotezo. Predstavili bomo njeno motivacijo in navedli dve ekvivalentni formulaciji te domneve. Dokazali bomo povezavo Riemannove hipoteze s Fareyevim zaporedjem, pred tem pa se bomo seznanili s pojmi kot so Eulerjev produkt, Riemannova zeta funkcija, Bernoullijeva števila in polinomi, ter M\"obiusova in Mertensova funkcija.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -73,7 +73,7 @@ Delo diplomskega seminarja je sestavljeno iz treh večjih enot. V prvi bomo pred
 %
 \subsection{Zgodovina Fareyevega zaporedja}
 
-Vrnimo se k v uvodu omenjeni nalogi o številu ulomkov različnih vrednosti, manjših od $1$, z imenovalci kvečjemu $100$. Prvi odgovor na članek je bila tabela ulomkov z imenovalci manjšimi od $10$, nato pa še dve tabeli z rezultatoma $3055$ in $4851$. Leta 1751 je R.~Flitcon objavil pravilni odgovor $3003$, kateremu je dodal tudi opis postopka. Preden ga razložimo, si oglejmo Eulerjevo funkcijo in njene lastnosti, ki nas bo pripeljala do rešitve. 
+Vrnimo se k v uvodu omenjeni nalogi o številu ulomkov različnih vrednosti, manjših od $1$, z imenovalci kvečjemu $100$. Prvi odgovor na članek je bila tabela ulomkov z imenovalci manjšimi od $10$, nato pa še dve tabeli z rezultatoma $3055$ in $4851$. Leta 1751 je R.~Flitcon objavil pravilni odgovor $3003$, kateremu je dodal tudi opis postopka. Preden ga razložimo, si oglejmo Eulerjevo funkcijo in njene lastnosti, ki nas bodo pripeljale do rešitve. 
 %
 % Eulerjeva funkcija
 
@@ -104,8 +104,8 @@ Vrednost Eulerjeve funkcije je enaka
 \end{trditev}
 
 \begin{dokaz}
-Zapišimo $n$ kot produkt prafaktorjev, \(n=\prod_{i=1}^m p_i^{r_i}\), kjer so $r_i \in \mathbb{N}$ in $p_i$ praštevila.
-Funkcija $\varphi(p^{r})$ prešteje vsa števila, manjša od $p^r$, ki so tuja $p^r$. To so natanko tista, ki niso deljiva s praštevilom $p$. Večkratnikov $p$ med števili $1, 2, \ldots, p^r-1$ je toliko kot večkratnikov $p$ med števili $1, 2, \ldots, p^r$, teh pa je \( \frac{p^r}{p} = p^{r-1}. \)
+Zapišimo $n$ kot produkt prafaktorjev, \(n=\prod_{i=1}^m p_i^{r_i}\), kjer so $r_i \in \mathbb{N}$ in $p_i$ različna praštevila.
+Vrednost $\varphi(p^{r})$ dobimo tako, da preštejemo vsa števila, manjša od $p^r$, ki so tuja $p^r$. To so natanko tista, ki niso deljiva s praštevilom $p$. Večkratnikov $p$ med števili $1, 2, \ldots, p^r-1$ je za ena manj kot večkratnikov $p$ med števili $1, 2, \ldots, p^r$, teh pa je \( \frac{p^r}{p} = p^{r-1}. \)
 Torej je 
 \[ \varphi(p^r) = (p^r - 1) - (p^{r-1} - 1) = p^r - p^{r-1} = p^r \left (1 - \frac{1}{p} \right). \] 
 Z upoštevanjem multiplikativnosti funkcije $\varphi$ dobimo
@@ -123,10 +123,10 @@ kar smo želeli dokazati.
 % Flitconova rešitev
 
 \begin{trditev}
-Obstajajo $3003$ racionalna števila $\frac{p}{q}$, za katera velja $0<\frac{p}{q}<1$ ter je $q \leq 100$.
+Obstajajo $3003$ racionalna števila $\frac{p}{q}$, za katera velja $0<\frac{p}{q}<1$ ter je $q < 100$.
 \end{trditev}
 
-Namesto formalnega dokaza trditve bomo predstavili Flitconovo rešitev. Sledili bomo \cite[poglavje 1.2]{fareyproject}. Naredimo tabelo s tremi stolpci in $99$ vrsticami. V prvi stolpec vsake vrstice napišemo po eno izmed naravnih števil od $2$ do $100$. V drugi stolpec posamezne vrstice zapišemo naravno število iz prvega stolpca kot produkt prafaktorjev, v tretji stolpec pa vrednost $\varphi(n)$. Pomagamo si s trditvama~\ref{trd:MultipEuler} in \ref{trd:EulerPrastProd}. Vsota vrednosti v tretjem stolpcu nam da število iskanih ulomkov. Res, vsak $\varphi(n)$ nam pove število okrajšanih ulomkov med $0$ in $1$ z imenovalcem $n$, vsota vrednosti Eulerjeve funkcije $\varphi(n)$ za vsa števila $n$ med $2$ in $100$ pa število vseh okrajšanih ulomkov med $0$ in $1$ z imenovalci med $2$ in $100$.\footnote{Čeprav Flitcon ne omenja Eulerjeve funkcije $\varphi$, je uporabil njene lastnosti v svoji matematično manj formalni metodi.}
+Namesto formalnega dokaza trditve bomo predstavili Flitconovo rešitev. Sledili bomo \cite[poglavje 1.2]{fareyproject}. Naredimo tabelo s tremi stolpci in $98$ vrsticami. V prvi stolpec vsake vrstice napišemo po eno izmed naravnih števil od $2$ do $99$. V drugi stolpec posamezne vrstice zapišemo naravno število iz prvega stolpca kot produkt prafaktorjev, v tretji stolpec pa vrednost $\varphi(n)$. Pomagamo si s trditvama~\ref{trd:MultipEuler} in \ref{trd:EulerPrastProd}. Vsota vrednosti v tretjem stolpcu nam da število iskanih ulomkov. Res, vsak $\varphi(n)$ nam pove število okrajšanih ulomkov med $0$ in $1$ z imenovalcem $n$, vsota vrednosti Eulerjeve funkcije $\varphi(n)$ za vsa števila $n$ med $2$ in $99$ pa število vseh okrajšanih ulomkov med $0$ in $1$ z imenovalci med $2$ in $99$.\footnote{Čeprav Flitcon ne omenja Eulerjeve funkcije $\varphi$, je uporabil njene lastnosti v svoji matematično manj formalni metodi.}
 
 Neodvisno od Flitconove rešitve je francoski matematik Charles Haros leta 1802 sestavil enak seznam ulomkov, vendar na precej bolj zanesljiv način. Haros se dela ni lotil z željo po reševanju aritmetične naloge, pač pa je pisal tabele za pretvarjanje med ulomki in decimalnim zapisom ter obratno. V Franciji so namreč v času revolucije konec 18.~stoletja uvajali nov metrični sistem, ki je med drugim zahteval uporabo decimalnega zapisa. Tabele so bile objavljene v časniku \emph{Journal de l'Ecole Polytechnique}, primerom ter algoritmom za pretvarjanje pa so bile dodane skice dokazov in nekatere lastnosti zaporedja ulomkov, ki so kasneje postali znani pod imenom Fareyevo zaporedje. 
 
