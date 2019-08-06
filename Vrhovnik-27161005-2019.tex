@@ -81,6 +81,24 @@ Vrnimo se k v uvodu omenjeni nalogi o številu ulomkov različnih vrednosti, man
 Preslikava \( \varphi \colon \mathbb{N} \rightarrow \mathbb{N}\), ki za vsako naravno število $n$ prešteje števila, manjša od $n$, ki so $n$ tuja, se imenuje \emph{Eulerjeva funkcija} $\varphi$.
 \end{definicija}
 
+\begin{primer}
+Izračunajmo nekaj vrednosti Eulerjeve funkcije.
+
+\( \varphi(1) = 1, \)
+
+\( \varphi(2) = 1, \)
+
+\( \varphi(3) = 2, \)
+
+\( \varphi(4) = 2, \)
+
+\( \varphi(8) = 4, \)
+
+\( \varphi(9) = 6. \)
+
+Opazimo, da za praštevilo $p$ velja $\varphi(p) = p-1.$
+\end{primer}
+
 \begin{trditev}
 \label{trd:MultipEuler}
 Če sta $k$ in $l$ tuji si števili, velja $\varphi (kl) = \varphi (k) \varphi (l)$, torej je Eulerjeva funkcija multiplikativna.
@@ -243,12 +261,14 @@ Medianta $\frac{a+c}{b+d}$ je enolično določena z ulomkoma $\frac{a}{b}$ in $\
 %
 \subsection{Dolžina Fareyevega zaporedja}
 
-Flitconova metoda za izračun števila okrajšanih ulomkov nas pripelje do naslednje rekurzivne formule dolžine Fareyevega zaporedja.
+Flitconova metoda za izračun števila okrajšanih ulomkov z imenovalci, manjšimi od danega števila, nas pripelje do naslednje rekurzivne formule, ki podaja dolžino Fareyevega zaporedja.
 
 \begin{trditev}
 \label{trd:DolzinaZap}
-Naj bo $\varphi$ Eulerjeva funkcija. Dolžina Fareyevega zaporedja reda n je
-\[  |F_{n}| = |F_{n-1}| + \varphi(n). \]
+Naj bo $\varphi$ Eulerjeva funkcija. Dolžina Fareyevega zaporedja reda n je enaka
+\begin{equation}
+|F_{n}| = |F_{n-1}| + \varphi(n).
+\end{equation}
 \end{trditev}
 
 \begin{opomba}
@@ -259,7 +279,9 @@ Z upoštevanjem vrednosti $|F_{1}| = 2$ iz trditve~\ref{trd:DolzinaZap} sledi \[
 \begin{trditev}
 \label{trd:AsimptotDolzina}
 Asimptotično se dolžina Fareyevega zaporedja obnaša kot
-\[  |F_{n}|\sim\frac{3n^2}{\pi^2}. \]
+\begin{equation}
+|F_{n}|\sim\frac{3n^2}{\pi^2}.
+\end{equation}
 \end{trditev}
 
 \begin{opomba}
@@ -269,26 +291,27 @@ Po definiciji za funkciji $f(x)$ in $g(x)$ velja $f(x) \sim g(x)$ natanko tedaj,
 
 % definicije pred dokazom
 %
-Preden dokažemo zgornjo trditev, definirajmo naslednjo oznako in dve funkciji, ki jih bomo v dokazu potrebovali.
+Preden se lotimo dokazovanja zgornje trditve, definirajmo naslednjo oznako in dve funkciji, ki jih bomo v dokazu potrebovali.
 
-\begin{definicija}[Notacija mali o]
-Funkcija $f$ pripada razredu $o(g)$, če absolutna vrednost funkcije $f$ raste počasneje od funkcije $g$, ko gre $x$ proti $\infty$.
+% notacija veliki O
+\begin{definicija}[Notacija veliki O]
+Funkcija $f$ pripada razredu $O(g)$, če absolutna vrednost funkcije $f$ ne raste hitreje od funkcije $g$, pomnožene s konstanto, ko gre $x$ proti $\infty$.
 
-Natančneje, $f(x) = o \left(g(x) \right)$, ko $x \to \infty$, če za vsak $\epsilon>0$ obstaja vrednost $x_{0}$, da za vsak $x \geq x_{0}$ velja $|f(x)| \leq \epsilon \cdot g(x)$.
+Natančneje, $f(x) = O \left(g(x) \right)$, ko $x \to \infty$, če obstajata konstanta $K$ in vrednost $x_{0}$, da za vsak $x \geq x_{0}$ velja $|f(x)| < K \cdot g(x)$.
 \end{definicija}
 
 \begin{definicija}
 \label{def:MobFun}
-Preslikava \( \mu\colon \mathbb{N} \to \mathbb{N} \), definirana kot
-\[
+Preslikava \( \mu\colon \mathbb{N} \to \mathbb{N} \), definirana s predpisom
+\begin{equation}
 \mu(n) = \left\{
 \begin{array}{rl}
 0 & ;\ \mbox{$n$ je deljiv s kvadratom praštevila}\\
 (-1)^p & ;\  \mbox{$n$ je produkt $p$ različnih praštevil,}
 \end{array}
 \right.
-\]
-se imenuje \emph{M\"obiusova\footnote{August Ferdinand M\"obius, 17.\ 11.\ 1790 -- 26.\ 9.\ 1868, nemški matematik in astronom.} funkcija}.
+\end{equation}
+se imenuje \emph{M\"obiusova\footnote{August Ferdinand M\"obius, 17.\ 11.\ 1790 -- 26.\ 9.\ 1868, nemški matematik in astronom. Po njem se med drugim imenujejo M\"obiusov trak, M\"obiusova transformacija in M\"obisuova funkcija.} funkcija}.
 \end{definicija}
 
 \begin{primer}
@@ -311,8 +334,10 @@ Izračunajmo vrednosti M\"obiusove funkcije za nekaj naravnih števil.
 \label{def:RiemZeta}
 \emph{Riemannova zeta funkcija} je za
  $s\in\mathbb{C}\backslash\{1\}$
-definirana kot
-\[ \zeta(s) = \sum_{n=1}^{\infty}\frac{1}{n^s}. \]
+definirana s predpisom
+\begin{equation}
+\zeta(s) = \sum_{n=1}^{\infty}\frac{1}{n^s}.
+\end{equation}
 \end{definicija}
 
 % dokaz asimptotskega obnašanja
@@ -320,10 +345,10 @@ definirana kot
 Sedaj lahko dokažemo trditev~\ref{trd:AsimptotDolzina}. Dokaz sledi \cite[poglavje 18.5, str.~268]{hardy}.
 
 \begin{dokaz}
-Asimptotično obnašanje bomo izračunali s pomočjo ocene vrednosti vsote \( \sum_{i=1}^n \varphi(i) \).
+Asimptotično obnašanje dolžine Fareyevega zaporedja reda $n$ bomo izpeljali s pomočjo ocene vrednosti vsote \( \sum_{i=1}^n \varphi(i) \).
 Spomnimo se, da je 
-\[ \varphi(n) = n \prod_{p|n} \left (1 - \frac{1}{p} \right ) = n - \sum \frac{n}{p} + \sum \frac{n}{pp'} - \cdots , \]
-kjer so $p$, $p'$ praštevilski delitelji števila $n$.  Z upoštevanjem M\"obiusove funkcije je zadnja vsota enaka
+\[ \varphi(n) = n \prod_{p|n} \left (1 - \frac{1}{p} \right ) = n - \sum_{p|n} \frac{n}{p} + \sum_{p,p'|n} \frac{n}{pp'} - \cdots , \]
+kjer so $p$, $p'$ praštevilski delitelji števila $n$.  Z upoštevanjem M\"obiusove funkcije je zgornji izraz enak
 \[ \varphi(n) = n \sum_{d|n} \frac{\mu(d)}{d} .\]
 Sedaj računajmo vsoto 
 %
@@ -333,11 +358,11 @@ Sedaj računajmo vsoto
   &= \sum_{i=1}^n i \sum_{d|i} \frac{\mu(d)}{d} = \sum_{dd'\leq n}d' \mu(d) = 
     \sum_{d=1}^n \mu(d) \sum_{d'=1}^{\left \lfloor \frac{n}{d} \right \rfloor} d' \nonumber \\
   &= \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\left \lfloor \frac{n}{d} \right \rfloor ^2 + \left \lfloor \frac{n}{d} \right \rfloor \right) =
-    \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\frac{n^2}{d^2} + o \left (\frac{n}{d} \right) \right) \nonumber \\
-  &= \frac{1}{2}n^2 \sum_{d=1}^{n} \frac{\mu(d)}{d^2} + o \left (n \sum_{d=1}^{n} \frac{1}{d} \right ) \nonumber \\
-  &\stackrel{(1)}{=} \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} - \frac{1}{2}n^2 \sum_{d=n+1}^{\infty} \frac{\mu(d)}{d^2} + o(n \ln{n}) \nonumber \\
-  &= \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} + o \left (n^2\sum_{d=n+1}^{\infty} \frac{1}{d^2} \right ) + o(n \ln{n}) \nonumber \\
-  & \stackrel{(2)}{=} \frac{n^2}{2 \zeta(2)} + o(n) + o(n \ln{n}) \stackrel{(3)}{=} \frac{3n^2}{\pi^2} + o(n \ln{n}).
+    \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\frac{n^2}{d^2} + O \left (\frac{n}{d} \right) \right) \nonumber \\
+  &= \frac{1}{2}n^2 \sum_{d=1}^{n} \frac{\mu(d)}{d^2} + O \left (n \sum_{d=1}^{n} \frac{1}{d} \right ) \nonumber \\
+  &\stackrel{(1)}{=} \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} - \frac{1}{2}n^2 \sum_{d=n+1}^{\infty} \frac{\mu(d)}{d^2} + O(n \ln{n}) \nonumber \\
+  &= \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} + O \left (n^2\sum_{d=n+1}^{\infty} \frac{1}{d^2} \right ) + O(n \ln{n}) \nonumber \\
+  & \stackrel{(2)}{=} \frac{n^2}{2 \zeta(2)} + O(n) + O(n \ln{n}) \stackrel{(3)}{=} \frac{3n^2}{\pi^2} + O(n \ln{n}).
 \end{align}
 %
 V enakosti~(1) smo zadnji sumand ocenili navzgor s pomočjo Taylorjevega razvoja funkcije $\ln$ kot
@@ -350,7 +375,7 @@ n^2 \sum_{d=n+1}^{\infty} \left (- \frac{1}{d} + \frac{1}{d-1} \right ) = n^2 \f
 V enakosti~(3) smo za izračun funkcije $\zeta(2)$ uporabili znano vrednost
 \[ \zeta(2) = \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.\]
 %
-Po opombi~\ref{op:AsimptotDolzina} iz izraza~\eqref{Eq:DolZap} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + o(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
+Po opombi~\ref{op:AsimptotDolzina} iz izraza~\eqref{Eq:DolZap} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
  %
 \end{dokaz}
 
@@ -973,6 +998,13 @@ To pomeni, da je funkcija $ \frac{1}{\zeta(s)} $ na tej polravnini analitična.
 Vendar obstajajo ničle funkcije $\zeta(s)$ na premici $s = \frac{1}{2}+it $, torej ima na tej premici funkcija $\frac{1}{\zeta(s)}$ singularnosti.
 Od tod sledi, da za poljuben $0<a<\frac{1}{2}$ ne velja $M(x) = o(x^{a})$.
 Velja celo več.
+
+% notacija mali o
+\begin{definicija}[Notacija mali o]
+Funkcija $f$ pripada razredu $o(g)$, če absolutna vrednost funkcije $f$ raste počasneje od funkcije $g$, ko gre $x$ proti $\infty$.
+
+Natančneje, $f(x) = o \left(g(x) \right)$, ko $x \to \infty$, če za vsak $\epsilon>0$ obstaja vrednost $x_{0}$, da za vsak $x \geq x_{0}$ velja $|f(x)| < \epsilon \cdot g(x)$.
+\end{definicija}
 
 \begin{trditev}
 Za vsak $\epsilon>0$ velja \( M(n) = o(n^{1/2+\epsilon}) \) natanko tedaj, ko velja Riemannova hipoteza.
