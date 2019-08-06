@@ -28,7 +28,7 @@
 \povzetek{V delu je predstavljeno Fareyevo zaporedje, njegova motivacija in lastnosti. Navedena je rekurzivna formula za izračun dolžine zaporedja $n$-tega reda in njeno asimptotično obnašanje. Izkaže se, da je Fareyevo zaporedje v bijekciji z množico Fordovih krogov. Razložen je geometrijski pomen lastnosti mediante in Fareyevih sosedov ter opisana konstrukcija vseh Fordovih sosedov danega Fordovega kroga. Definirane so Fordove krogle. S pomočjo delovanja grupe M\"obiusovih transformacij na množico Fordovih krogov je dokazana lastnost mediante. Predstavljena je Riemannova hipoteza in dve njeni ekvivalentni formulaciji. Dokazan je izrek, ki Fareyevo zaporedje preko Mertensove funkcije poveže z Riemannovo hipotezo.}
 
 %  Prevod slovenskega povzetka v angleščino.
-\abstract{The work presents the Farey sequence, its motivation and properties. A recursive formula for caculating the length of the sequence of order $n$ and its asymptotic behaviour are stated. The Farey sequence is in bijection with the set of Ford circles, therefore a geometric meaning of the mediant and the neighbours property is explained as well as the construction of all Ford neighbours to a given Ford circle. Moreover, Ford spheres are defined. Using the fact that the group of M\"obius transformations acts on the set of Ford circles, the mediant property for Ford circles is proved. Additionally, the Riemann hypothesis and two of its equivalent statements are presented. A theorem, connecting the Farey sequence, the Mertens function and the Riemann hypothesis is proved.}
+\abstract{The work presents the Farey sequence, its motivation and properties. A recursive formula for caculating the length of the sequence of order $n$ and its asymptotic behaviour are stated. The Farey sequence is in bijection with the set of Ford circles, therefore a geometric meaning of the mediant and the neighbours property is explained as well as the construction of all Ford neighbours to a given Ford circle. Moreover, Ford spheres are defined. Using the fact that the group of M\"obius transformations acts on the set of Ford circles, the mediant property for Ford circles is proved. Additionally, the Riemann hypothesis and two of its equivalent statements are presented. A theorem, connecting the Farey sequence, the Mertens function and the Riemann hypothesis, is proved.}
 
 % navedite vsaj eno klasifikacijsko oznako --
 % dostopne so na www.ams.org/mathscinet/msc/msc2010.html
@@ -90,8 +90,10 @@ Preslikava \( \varphi \colon \mathbb{N} \rightarrow \mathbb{N}\), ki za vsako na
 V dokazu multiplikativnosti si bomo pomagali z lastnostmi grup. 
 Naj $\mathbb{Z}_{k}^\ast $ označuje grupo vseh obrnljivih elementov grupe $\mathbb{Z}_{k}$. Vemo, da so obrnljivi elementi grupe $\mathbb{Z}_{k}$ tista števila iz množice \( \{0, 1, \ldots, k-1 \}, \) ki so tuja $k$, zato je $|\mathbb{Z}_{k}^\ast| = \varphi(k).$  
 Dobimo zvezi
-\[ |\mathbb{Z}_{kl}^\ast| = \varphi(kl), \]
-\[ |\mathbb{Z}_{k}^\ast| |\mathbb{Z}_{l}^\ast| = \varphi(k) \varphi(l).\]
+\begin{align*}
+|\mathbb{Z}_{kl}^\ast| &= \varphi(kl), \\
+|\mathbb{Z}_{k}^\ast| |\mathbb{Z}_{l}^\ast| &= \varphi(k) \varphi(l).
+\end{align*}
 Znano je, da je preslikava \( \psi \colon \mathbb{Z}_{kl}^\ast \rightarrow \mathbb{Z}_{k}^\ast \times \mathbb{Z}_{l}^\ast \) za tuji naravni števili $k$ in $l$ izomorfizem grup. Ker je moč kartezičnega produkta dveh množic enaka produktu njunih moči, sledi 
 \[ \varphi(kl) = |\mathbb{Z}_{kl}^\ast| = |\mathbb{Z}_{k}^\ast| |\mathbb{Z}_{l}^\ast| = \varphi(k) \varphi(l), \]
 s čimer je multiplikativnost dokazana.
@@ -100,7 +102,10 @@ s čimer je multiplikativnost dokazana.
 \begin{trditev}
 \label{trd:EulerPrastProd}
 Vrednost Eulerjeve funkcije je enaka
-\[ \varphi(n) = n \prod_{p|n} \left (1 - \frac{1}{p} \right ), \] kjer so $p$ prafaktorji števila $n$.
+\begin{equation}
+\varphi(n) = n \prod_{p|n} \left (1 - \frac{1}{p} \right ),
+\end{equation}
+kjer so $p$ prafaktorji števila $n$.
 \end{trditev}
 
 \begin{dokaz}
@@ -147,7 +152,7 @@ Ekvivalentno, $F_n$ vsebuje vse okrajšane ulomke med $0$ in $1$ z imenovalci, k
 \end{definicija}
 
 \begin{primer}
-Poglejmo si prvih nekaj Fareyevih zapredij.
+Poglejmo si Fareyeva zaporedja najnižjih redov.
 
 \(F_1 = \left \{\frac{0}{1}, \frac{1}{1} \right \}, \)
 
@@ -177,7 +182,7 @@ Naj bosta $\frac{a}{b}$ in $\frac{c}{d}$ sosednja člena nekega Fareyevega zapor
 \end{definicija}
 
 \begin{trditev}
-Za medianto okrajšanih ulomkov \(\frac{a}{b} < \frac{c}{d}\) velja  \(\frac{a}{b} < \frac{a+c}{b+d} < \frac{c}{d}\) .
+Za medianto okrajšanih ulomkov, kjer je \(\frac{a}{b} < \frac{c}{d}\), velja  \(\frac{a}{b} < \frac{a+c}{b+d} < \frac{c}{d}\) .
 \end{trditev}
 
 \begin{dokaz}
@@ -185,13 +190,13 @@ Poračunajmo razliki med členoma
 \[\frac{a+c}{b+d} - \frac{a}{b} = \frac{ab+bc-ab-ad}{b(b+d)} = \frac{bc-ad}{b(b+d)} > 0\] in
 \[\frac{c}{d} - \frac{a+c}{b+d} = \frac{bc+cd-ad-cd}{d(b+d)} = \frac{bc-ad}{d(b+d)} > 0.\]
 Obe neenakosti sledita iz dejstva, da je \(\frac{a}{b} < \frac{c}{d}\), kjer so \(a, b, c, d \in \mathbb{N} \), zato je \( ad < bc.\)
-Zveza torej velja. 
+Zveza, ki jo dokazujemo, res velja. 
 \end{dokaz}
 
 % lastnosti 
 %
 Kako dobimo člen Fareyevega zaporedja reda $(n+1)$?
-Označimo iskani okrajšan ulomek s $\frac{k}{n+1}$. Seveda sta $k, n \in\mathbb{N}, k < n+1$ tuji si števili. Zato obstajata enolično določeni naravni števili $a < b$, da velja $a(n+1)-bk=1.$ S preoblikovanjem zadnje enakosti dobimo zvezo $a(n+1-b)-b(k-a)=1,$ kar pomeni, da sta si tudi naravni števili $k-a$ in $n+1-b$ tuji. Brez škode za splošnost naj bo $k-a<n+1-b.$ Zato lahko tvorimo okrajšan ulomek $\frac{k-a}{n+1-b}$, ki pripada nekemu Fareyevemu zaporedju. Prav tako je okrajšan ulomek $\frac{a}{b}$ element nekega Fareyevega zaporedja. Sedaj prepišimo ulomek $\frac{k}{n+1}$ v $\frac{a+(k-a)}{b+(n+1-b)},$ kar pa je medianta ulomkov $\frac{a}{b}$ in $\frac{k-a}{n+1-b}.$ Dokazali smo naslednjo lema.
+Označimo iskani okrajšan ulomek s $\frac{k}{n+1}$. Seveda velja $k, n \in\mathbb{N}$ in $k < n+1$ sta tuji si števili. Zato obstajata enolično določeni naravni števili $a < b$, da velja $a(n+1)-bk=1.$ S preoblikovanjem zadnje enakosti dobimo zvezo $a(n+1-b)-b(k-a)=1,$ kar pomeni, da sta si tudi naravni števili $k-a$ in $n+1-b$ tuji. Brez škode za splošnost naj bo $k-a<n+1-b.$ Zato lahko tvorimo okrajšan ulomek $\frac{k-a}{n+1-b}$, ki pripada nekemu Fareyevemu zaporedju. Prav tako je okrajšan ulomek $\frac{a}{b}$ element nekega Fareyevega zaporedja. Sedaj prepišimo ulomek $\frac{k}{n+1}$ v $\frac{a+(k-a)}{b+(n+1-b)},$ kar pa je medianta ulomkov $\frac{a}{b}$ in $\frac{k-a}{n+1-b}.$ Dokazali smo naslednjo lema.
 
 \begin{lema}
 \label{lema:EltVišReda}
@@ -199,21 +204,23 @@ Dano naj bo Fareyevo zaporedje. Elemente zaporedja višjega reda dobimo z račun
 \end{lema}
 
 \begin{trditev}[Lastnost Fareyevih sosedov]
-Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). Ulomka $\frac{a}{b}$ in $\frac{c}{d}$ sta Fareyeva soseda v nekem Fareyevem zaporeju natanko tedaj, ko velja \(bc - ad = 1\).
+Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). Ulomka $\frac{a}{b}$ in $\frac{c}{d}$ sta Fareyeva soseda v nekem Fareyevem zaporedju natanko tedaj, ko velja \(bc - ad = 1\).
 \end{trditev}
 
 \begin{dokaz}
-$(\Rightarrow)$ Dokaz bo potekal z indukcijo na $n$.
-Za $n=1$ je $F_n = \{\frac{0}{1}, \frac{1}{1}\}$, $bc - ad = 1\cdot1 - 0\cdot1 = 1$, zato osnovni korak velja.
-Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Vemo, da nove člene zaporedja dobimo z računanjem mediant. Če je $b+d > n+1,$ potem $\frac{a+c}{b+d} \notin F_{n+1}$ in je \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) ter po indukcijski predpostavki $bc - ad = 1$. 
-Če je $b+d < n+1,$ je $\frac{a+c}{b+d}$ že nek člen v zaporedju $F_n$ in uporabimo indukcijsko predpostavko. 
+$(\Rightarrow)$ Dokaz bo potekal z indukcijo na red Fareyevega zaporedja, na $n$.
+Za $n=1$ je $F_1 = \{\frac{0}{1}, \frac{1}{1}\}$, $bc - ad = 1\cdot1 - 0\cdot1 = 1$, zato osnovni korak velja.
+Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Vemo, da nove člene zaporedja višjega reda dobimo z računanjem mediant. Če je $b+d > n+1,$ potem ulomek $\frac{a+c}{b+d} \notin F_{n+1}$ in je \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) ter po indukcijski predpostavki velja $bc - ad = 1$. 
+Če je $b+d < n+1,$ je $\frac{a+c}{b+d}$ že nek člen v zaporedju $F_n$, zato uporabimo indukcijsko predpostavko. 
 Preostane še možnost $b+d = n+1$. Po lema~\ref{lema:EltVišReda} je edina možnost za člen med elementoma $\frac{a}{b}$ in $\frac{c}{d}$ njuna medianta $\frac{a+c}{b+d}$, ki pa je tudi edini nov člen v opazovanem delu zaporedja. To je zato oblike \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
 
-$(\Leftarrow)$ Obratno, naj bodo $\frac{a}{b}$, $\frac{p}{q}$ in $\frac{c}{d}$ členi poljubnega Fareyevega zaporedja, za katere velja $\frac{a}{b} <\frac{p}{q} < \frac{c}{d}$ in $bp - aq = qc - pd = 1$. S preureditvijo te enakosti dobimo
-\[ bp + pd = aq + qc, \]
-\[ p(b + d) = q(a + c), \]
-\[ \frac{p}{q} = \frac{a+c}{b+d}. \]
-Vidimo, da je $\frac{p}{q}$ medianta ulomkov $\frac{a}{b}$ in $\frac{c}{d},$ od tod pa sledi, da sta $\frac{a}{b}$ in $\frac{p}{q}$ ter $\frac{p}{q}$ in $\frac{c}{d}$ Fareyeva soseda.
+$(\Leftarrow)$ Obratno, naj bodo okrajšani ulomki $\frac{a}{b}$, $\frac{p}{q}$ in $\frac{c}{d}$ členi poljubnega Fareyevega zaporedja, za katere velja $\frac{a}{b} <\frac{p}{q} < \frac{c}{d}$ in $bp - aq = qc - pd = 1$. S preureditvijo te enakosti dobimo
+\begin{align*}
+bp + pd &= aq + qc, \\
+p(b + d) &= q(a + c), \\
+\frac{p}{q} &= \frac{a+c}{b+d}.
+\end{align*}
+Vidimo, da je $\frac{p}{q}$ medianta ulomkov $\frac{a}{b}$ in $\frac{c}{d},$ od tod pa sledi, da sta $\frac{a}{b}$ in $\frac{p}{q}$ ter $\frac{p}{q}$ in $\frac{c}{d}$ para Fareyevih sosedov.
 \end{dokaz}
 
 \begin{lema}
@@ -222,9 +229,9 @@ Medianta je okrajšan ulomek.
 \end{lema}
 
 \begin{dokaz}
-Naj za $\frac{a}{b} < \frac{c}{d}$ velja $bc - ad = 1$. Dokazati želimo, da je $\frac{a+c}{b+d}$ okrajšan ulomek, z drugimi besedami, da sta si števili $a+c$ in $b+d$ tuji. Če preoblikujemo zgornjo enakost, dobimo 
+Naj za ulomka $\frac{a}{b} < \frac{c}{d}$ velja $bc - ad = 1$. Trdimo, da je njuna medianta $\frac{a+c}{b+d}$ okrajšan ulomek, z drugimi besedami, da sta si števili $a+c$ in $b+d$ tuji. Če preoblikujemo zgornjo enakost, dobimo 
 \[ 1 = bc - ad = ba + bc - ab - ad = b(a + c) - a(b + d), \]
-kar pomeni, da $b+d$ in $a+c$ nimata skupnega faktorja. Ulomek $\frac{a+c}{b+d}$ je torej okrajšan.
+kar pomeni, da števili $a+c$ in $b+d$ nimata skupnega faktorja. Ulomek $\frac{a+c}{b+d}$ je torej okrajšan.
 \end{dokaz}
 
 \begin{opomba}
