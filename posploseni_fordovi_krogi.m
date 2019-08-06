@@ -37,7 +37,7 @@ y_7 = 1/(32*h) + (1/(32*h))*sin(t);
 
 hold on
 axis equal
-axis([-1,2,0,2]);
+axis([-1,2,0,1.5]);
 grid on
 plot(x_1,y_1,'color', 'k') %k
 plot(x_2,y_2,'color', 'k')

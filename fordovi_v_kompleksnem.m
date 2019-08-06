@@ -19,7 +19,7 @@ y_3 = 1;
 
 hold on
 axis equal
-axis([-0.5,1.5,0,1]);
+axis([-0.5,1.5,0,1.2]);
 grid on
 plot(x_1,y_1,'color', 'k')
 plot(x_2,y_2,'color', 'k')
