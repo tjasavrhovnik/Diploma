@@ -383,7 +383,7 @@ Po opombi~\ref{op:AsimptotDolzina} iz izraza~\eqref{Eq:DolZap} sledi, da je \(|F
 %
 \section{Fordovi krogi}
 
-V tem poglavju bomo definirali Fordove kroge, ki so tesno povezani s Fareyevim zaporedjem. Večino lastnosti bomo dokazali z uporabo elementarnih geometrijskih sredstev in v analognih trditvah tistim iz prejšnjega poglavja prepoznali geometrijski pomen. Na kratko si bomo ogledali Fordove krogle -- Fordove kroge v treh dimenzijah. V zadnjem razdelku bomo z algebraičnim znanjem na drugačen način dokazali eno od lastnosti Fordovih krogov.
+V tem poglavju bomo obravnavali Fordove kroge, ki so tesno povezani s Fareyevim zaporedjem. Večino lastnosti bomo dokazali z uporabo elementarnih geometrijskih sredstev in v analognih trditvah tistim iz prejšnjega poglavja prepoznali geometrijski pomen. Na kratko si bomo ogledali posplošitve Fordovih krogov ter Fordove krogle -- Fordove kroge v treh dimenzijah. V zadnjem razdelku bomo Fordove kroge predstavili v kompleksni ravnini in z algebraičnim znanjem na drugačen način dokazali eno od lastnosti.
 Ideje poglavja so povzete po \cite[poglavje 4]{fareyproject} in\cite{ford}.
 
 \begin{definicija}
@@ -395,20 +395,20 @@ Naj bosta $p$ in $q$ tuji si števili v množici celih števil.
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.5]{fordovi_krogi.png}
-\caption{Fordovi krogi s polmeri $\protect{\frac{1}{2}}$, $\protect{\frac{1}{8}}$, $\protect{\frac{1}{18}}$ in $\protect{\frac{1}{32}}$.}
+\caption{Fordovi krogi na intervalu $[0,1]$ s polmeri $\protect{\frac{1}{2}}$, $\protect{\frac{1}{8}}$, $\protect{\frac{1}{18}}$ in $\protect{\frac{1}{32}}$.}
 \end{center}
 \end{figure}
 
 Ker so Fordovi krogi definirani za vsak okrajšan ulomek, lahko poljubnemu racionalnemu številu enolično priredimo Fordov krog. Iz analize vemo, da je množica racionalnih števil gosta podmnožica množice realnih števil, abscisna os pa je geometrijska predstavitev le-te. Zato poljubno majhen interval na abscisni osi vsebuje neskončno mnogo dotikališč Fordovih krogov.
 
-Zaradi simetrije je Fordove kroge dovolj obravnavati na intervalu $[0,1]$, obenem pa se zavedati, da jih lahko induktivno razširimo na celotno realno os.
+Zaradi simetrije je Fordove kroge dovolj obravnavati na intervalu $[0,1]$, obenem pa se zavedati, da jih lahko induktivno razširimo na celotno realno os. V nadaljevanju bomo s pojmom množica Fordovih krogov označevali množico Fordovih krogov z dotikališči na intervalu $[0,1]$.
 
 \begin{opomba}
 Iz definicije zaradi pogoja o tujosti števil $p$ in $q$ neposredno sledi, da je množica Fordovih krogov v bijekciji s Fareyevim zapredjem.
 \end{opomba}
 
 % konstrukcija pravokotnega trikotnika
-Oglejmo si konstrukcijo pravokotnega trikotnika, določenega s parom Fordovih krogov, ki bo ključna pri dokazovanju trditev v tem poglavju. Izberimo okrajšana ulomka $\frac{a}{b}$ in $\frac{c}{d}$, za katera velja $\frac{a}{b} < \frac{c}{d}$, ter jima priredimo ustrezna Fordova kroga. Naj bosta $A$ središče Fordovega kroga C($\frac{a}{b}$) in $B$ središče Fordovega kroga C($\frac{c}{d}$). Če je $b<d$, kar pomeni, da je polmer kroga C($\frac{a}{b}$) večji od polmera C($\frac{c}{d}$), točko $C$ določimo kot presečišče navpične premice skozi točko $A$ z vodoravno premico skozi točko $B$. Sicer je $b>d$, točka $C$ pa presečišče navpične premice skozi točko $B$ z vodoravno premico skozi točko $A$. Povežimo središči obeh krogov. Točki $D$ in $E$ naj bosta presečišči daljice $AB$ s Fordovima krogoma C($\frac{a}{b}$) in C($\frac{c}{d}$).
+Oglejmo si konstrukcijo pravokotnega trikotnika, določenega s parom Fordovih krogov, ki bo ključna pri dokazovanju trditev v tem poglavju. Izberimo okrajšana ulomka $\frac{a}{b}$ in $\frac{c}{d}$, za katera velja $\frac{a}{b} < \frac{c}{d}$, ter jima priredimo ustrezna Fordova kroga. Naj bosta $A$ središče Fordovega kroga C($\frac{a}{b}$) in $B$ središče Fordovega kroga C($\frac{c}{d}$). Če je $b<d$, kar pomeni, da je polmer kroga C($\frac{a}{b}$) večji od polmera kroga C($\frac{c}{d}$), točko $C$ določimo kot presečišče navpične premice skozi točko $A$ z vodoravno premico skozi točko $B$. Sicer je $b>d$, točka $C$ pa presečišče navpične premice skozi točko $B$ z vodoravno premico skozi točko $A$. Primer, ko velja $b=d$, nam da izrojen trikotnik, zato ga izpustimo. Povežimo središči obeh krogov. Točki $D$ in $E$ naj bosta presečišči daljice $AB$ s Fordovima krogoma C($\frac{a}{b}$) in C($\frac{c}{d}$).
 
 Vemo, da se kroga dotikata abscisne osi zaporedoma v točkah $\frac{a}{b}$ in $\frac{c}{d}$, njuna polmera pa merita $\frac{1}{2b^2}$ in $\frac{1}{2d^2}$. Od tod lahko izračunamo razdalje $|AB|$, $|AC|$ in $|BC|$.
 Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, zato velja Pitagorov izrek
@@ -427,7 +427,7 @@ Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, za
 \end{figure}
 
 \begin{opomba}
-V konstrukciji smo brez škode za splošnost predpostavili zvezo $\frac{a}{b} < \frac{c}{d}$. Če v splošnem primeru ta ne velja, zamenjamo vlogi ulomkov in postopamo na enak način kot v zgoraj opisanem primeru.
+Pri konstrukciji smo brez škode za splošnost predpostavili zvezo $\frac{a}{b} < \frac{c}{d}$. Če v splošnem primeru ta ne velja, zamenjamo vlogi ulomkov in postopamo na enak način kot v zgoraj opisanem primeru.
 \end{opomba}
 %
 
@@ -438,7 +438,7 @@ Fordova kroga, ki pripadata različnima okrajšanima ulomkoma, sta bodisi tangen
 
 \begin{dokaz}
 Konstruirajmo pravokotni trikotnik, kot je opisano zgoraj in zapišimo Pitagorov izrek iz enačbe~\eqref{Eq:Pitagora}.
-Če dolžine izrazimo z $a, b, c$ in $d$, dobimo enakost
+Dolžine stranic trikotnika izrazimo z $a, b, c$ in $d$, kar nam da enakost
 %
 \begin{align}
 |AB|^2 
@@ -452,7 +452,8 @@ Konstruirajmo pravokotni trikotnik, kot je opisano zgoraj in zapišimo Pitagorov
 
 Če je $|bc-ad|=1$, je $|AB|^2 = (|AD| + |EB|)^2$, zato je $|AB| = |AD| + |EB|$ in Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) sta tangentna.
 
-Če je $|bc-ad|<1$, je $|bc-ad|=0,$ saj smo v množici celih števil. Sledi $\frac{a}{b} = \frac{c}{d},$ kar vodi v protislovje s predpostavko trditve.
+Če je $|bc-ad|<1$, je $bc-ad = 0,$ saj smo v množici celih števil. Sledi $\frac{a}{b} = \frac{c}{d},$ kar vodi v protislovje s predpostavko trditve.
+Torej sta Fordova kroga res bodisi tangentna bodisi disjunktna.
 \end{dokaz}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
