@@ -552,7 +552,7 @@ Opazimo, da Fordovi krogi oblike C($\frac{P_n}{Q_n}$) geometrijsko tvorijo ``obr
 V prejšnjem razdelku smo konstruirali pravokotni trikotnik, določen s središčema tangentnih Fordovih krogov in presečiščem premic skozi središči. Spomnimo se znane definicije iz teorije števil, ki izhaja iz evklidske geometrije. 
 
 \begin{definicija}
-Trojica naravnih števil $(a,b,c)$, za katero velja $a^2+b^2=c^2$, se imenuje \emph{pitagorejska trojica}\footnote{Pojem pitagorejska trojica nosi ime slavnega starogrškega matematika Pitagore (okoli 570~pr.~n.~št. -- 495~pr.~n.~št.), ki ga poznamo predvsem po Pitagorovem izreku.}.
+Trojica naravnih števil $(a,b,c)$, za katero velja $a^2+b^2=c^2$, se imenuje \emph{pitagorejska trojica}\footnote{Pojem pitagorejska trojica nosi ime starogrškega matematika Pitagore (okoli 570~pr.~n.~št.--495~pr.~n.~št.), ki ga poznamo predvsem po Pitagorovem izreku.}.
 Pitagorejska trojica je \emph{primitivna}, če števila $a$, $b$, in $c$ nimajo skupnega faktorja.
 \end{definicija}
 
@@ -562,7 +562,7 @@ Pravokotna trikotnika, ki pripadata poljubnima paroma Fordovih sosedov, določat
 
 \begin{dokaz}
 %
-Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) ter C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) poljubna različna para Fordovih sosedov. Brez škode za splošnost naj velja $\frac{a}{b}<\frac{c}{d}$ in $\frac{a'}{b'}<\frac{c'}{d'}$. Naj prvemu paru Fordovih sosedov pripada pravokotni trikotnik $ABC$, drugemu paru pa pravokotni trikotnik $A'B'C'$. Dokazati želimo, da si trikotnika nista podobna.
+Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) ter C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) poljubna različna para Fordovih sosedov. Brez škode za splošnost naj velja $\frac{a}{b}<\frac{c}{d}$, $b<d$ in $\frac{a'}{b'}<\frac{c'}{d'}$, $b'<d'$. Naj prvemu paru Fordovih sosedov pripada pravokotni trikotnik $ABC$, drugemu paru pa pravokotni trikotnik $A'B'C'$. Trdimo, da si trikotnika nista podobna.
 
 Pa denimo, da sta si trikotnika $ABC$ in $A'B'C'$ podobna. Tedaj obstaja tako naravno število $\lambda\ne{1}$, da za dolžine stranic obeh pravokotnih trikotnikov veljajo naslednje zveze:
 %
@@ -593,10 +593,10 @@ b' &= \sqrt\lambda b.
 Enačbo~\eqref{Eq:Pit3} lahko poenostavimo, saj gre za para Fordovih sosedov. Velja
 \begin{equation}
 \label{Eq:Pit5}
-\frac{1}{bd} = \frac{bc-ad}{bd} = \frac{c}{d}-\frac{a}{b} = \lambda \left (\frac{c'}{d'}-\frac{a'}{b'} \right ) = \lambda \frac{b'c'-a'd'}{b'd'} = \lambda \frac{1}{b'd'}.
+\pm \frac{1}{bd} = \frac{bc-ad}{bd} = \frac{c}{d}-\frac{a}{b} = \lambda \left (\frac{c'}{d'}-\frac{a'}{b'} \right ) = \lambda \frac{b'c'-a'd'}{b'd'} = \pm \lambda \frac{1}{b'd'}.
 \end{equation}
 %
-Iz enakosti~\eqref{Eq:Pit4} in~\eqref{Eq:Pit5} sledi 
+Oba predznaka sta enaka. Iz enakosti~\eqref{Eq:Pit4} in~\eqref{Eq:Pit5} sledi 
 %
 \begin{align}
 \label{Eq:Pit6}
@@ -605,21 +605,25 @@ Iz enakosti~\eqref{Eq:Pit4} in~\eqref{Eq:Pit5} sledi
 d' &= \sqrt\lambda d.
 \end{align}
 %
-Nazadnje še v pogoj za tangentnost Fordovih krogov C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) vstavimo zvezi~\eqref{Eq:Pit4} in~\eqref{Eq:Pit6}, kar nam da
+Nazadnje še v pogoj za tangentnost krogov C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) vstavimo zvezi~\eqref{Eq:Pit4} in~\eqref{Eq:Pit6}, kar nam da
 %
 \begin{align}
-b'c'-a'd' &= 1, \nonumber \\
-\sqrt\lambda bc' - a' \sqrt\lambda d &= 1, \nonumber \\
-\sqrt\lambda (bc'-a'd) &= 1.
+|b'c'-a'd'| &= 1, \nonumber \\
+|\sqrt\lambda bc' - a' \sqrt\lambda d| &= 1, \nonumber \\
+\sqrt\lambda |bc'-a'd| &= 1.
 \end{align}
 %
 To pa je možno le tedaj, ko je $\lambda=1.$ Prispeli smo do protislovja, kar pomeni, da si trikotnika nista podobna.
 %
 Zakaj so pitagorejske trojice primitivne?
-Če so dolžine stranic posameznega pravokotnega trikotnika paroma tuja si cela števila, že določajo primitivno pitagorejsko trojico.
-Če imajo ta cela števila skupni celoštevilski faktor, jih z njim delimo (to geometrijsko pomeni, da konstruiramo podobni trikotnik), kar nam da primitivno pitagorejsko trojico.
+Če so dolžine stranic posameznega pravokotnega trikotnika paroma tuja naravna števila, že določajo primitivno pitagorejsko trojico.
+Če imajo ta naravna števila skupni celoštevilski faktor, jih z njim delimo (to geometrijsko pomeni, da konstruiramo podobni trikotnik), kar nam da primitivno pitagorejsko trojico.
 Če pa so dolžine stranic racionalna števila, jih pomnožimo z najmanjšim skupnim večkratnikom njihovih imenovalcev in dobimo enega izmed zgornjih primerov.
 \end{dokaz}
+
+\begin{opomba}
+Enoličnost pitagorejskih trojic je določena do simetrij Fordovih krogov natančno. Fordovi krogi so namreč tako kot Fareyevo zaporedje simetrični okoli vrednosti $\frac{1}{2}$.
+\end{opomba}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Posplositve
