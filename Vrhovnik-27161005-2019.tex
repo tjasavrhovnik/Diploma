@@ -230,7 +230,7 @@ $(\Rightarrow)$ Dokaz bo potekal z indukcijo na red Fareyevega zaporedja, na $n$
 Za $n=1$ je $F_1 = \{\frac{0}{1}, \frac{1}{1}\}$, $bc - ad = 1\cdot1 - 0\cdot1 = 1$, zato osnovni korak velja.
 Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Vemo, da nove člene zaporedja višjega reda dobimo z računanjem mediant. Če je $b+d > n+1,$ potem ulomek $\frac{a+c}{b+d} \notin F_{n+1}$ in je \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) ter po indukcijski predpostavki velja $bc - ad = 1$. 
 Če je $b+d < n+1,$ je $\frac{a+c}{b+d}$ že nek člen v zaporedju $F_n$, zato uporabimo indukcijsko predpostavko. 
-Preostane še možnost $b+d = n+1$. Po lema~\ref{lema:EltVišReda} je edina možnost za člen med elementoma $\frac{a}{b}$ in $\frac{c}{d}$ njuna medianta $\frac{a+c}{b+d}$, ki pa je tudi edini nov člen v opazovanem delu zaporedja. To je zato oblike \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
+Preostane še možnost $b+d = n+1$. Po lemi~\ref{lema:EltVišReda} je edina možnost za člen med elementoma $\frac{a}{b}$ in $\frac{c}{d}$ njuna medianta $\frac{a+c}{b+d}$, ki pa je tudi edini nov člen v opazovanem delu zaporedja. To je zato oblike \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
 
 $(\Leftarrow)$ Obratno, naj bodo okrajšani ulomki $\frac{a}{b}$, $\frac{p}{q}$ in $\frac{c}{d}$ členi poljubnega Fareyevega zaporedja, za katere velja $\frac{a}{b} <\frac{p}{q} < \frac{c}{d}$ in $bp - aq = qc - pd = 1$. S preureditvijo te enakosti dobimo
 \begin{align*}
@@ -460,7 +460,7 @@ Torej sta Fordova kroga res bodisi tangentna bodisi disjunktna.
 % Fordovi sosedi
 \subsection{Fordovi sosedi}
 %
-Za tangentne Fordove kroge veljata naslednji lastnosti, ki lastnosti Fareyevih sosedov preneseta v jezik geometrije.
+V poglavju o Fareyevem zaporedju smo dokazali lastnosti mediante in Fareyevih sosedov. Izkaže se, da imata ti dve lastnosti geometrijski pomen. Pokazali bomo namreč, da veljata tudi za tangentne Fordove kroge. V nadaljevanju bomo konstruirali vse tangentne Fordove kroge danega kroga in si ogledali še eno lastnost paroma tangentnih Fordovih krogov.
 
 \begin{trditev}[Lastnost Fordovih sosedov]
 \label{trd:FordTangentnost}
@@ -474,12 +474,12 @@ Ponovno konstruirajmo pravokotni trikotnik kot v prejšnjem razdelku. Implikacij
 Denimo, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) tangentna. Potem za pravokotni trikotnik, ki ga določata, velja Pitagorov izrek 
 \[ |AC|^2 + |BC|^2 = |AB|^2 \] oziroma
 \[ \left ( \left | \frac{1}{2b^2} - \frac{1}{2d^2} \right | \right )^2 + \left ( \left| \frac{c}{d} - \frac{a}{b} \right| \right )^2 = \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2. \]
-Ko odpravimo oklepaje, opazimo, da se nekateri členi odštejejo. Nato odpravimo ulomke in dobljeno enakost poenostavimo.
+Ko odpravimo oklepaje, opazimo, da se nekateri členi odštejejo. Nato odpravimo ulomke in novo enakost poenostavimo. Dobimo
 \[ \frac{1}{4b^4} - \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} + \frac{c^2}{d^2} - \frac{2ac}{bd} + \frac{a^2}{b^2} = \frac{1}{4b^4} + \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4}, \]
 \[ b^{2}c^{2} - 2abcd + a^{2}d^{2} = 1, \]
 \[  (bc-ad)^2 = 1, \]
 \[ |bc-ad|=1. \]
-Trditev je s tem dokazana.
+kar smo želeli pokazati.
 \end{dokaz}
 
 \begin{definicija}
@@ -491,9 +491,9 @@ Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) Fordova soseda. Tedaj obstaja eno
 \end{trditev}
 
 \begin{dokaz}
-Po definiciji Fordovih krogov vemo, da sta $\frac{a}{b}$ in $\frac{c}{d}$ okrajšana ulomka in zaradi tangentnosti Fareyeva soseda v nekem Fareyevem zaporedju (razširjenem na celotno realno os). Po lema~\ref{lema:MediantaOkrUlom} je njuna medianta $\frac{a+c}{b+d}$ tudi okrajšan ulomek, torej obstaja natanko en Fordov krog C($\frac{a+c}{b+d}$). 
+Po definiciji Fordovih krogov vemo, da sta $\frac{a}{b}$ in $\frac{c}{d}$ okrajšana ulomka in zaradi tangentnosti pripadajočih Fordovih krogov Fareyeva soseda v nekem Fareyevem zaporedju (razširjenem na celotno realno os). Po lemi~\ref{lema:MediantaOkrUlom} je njuna medianta $\frac{a+c}{b+d}$ tudi okrajšan ulomek, torej obstaja natanko en Fordov krog C($\frac{a+c}{b+d}$). 
 
-Dokažimo še, da je C($\frac{a+c}{b+d}$) tangenten na izbrana kroga. Ker sta C($\frac{a}{b}$) in C($\frac{c}{d}$) Fordova soseda, velja zveza 
+Dokažimo še, da je Fordov krog C($\frac{a+c}{b+d}$) tangenten na izbrana kroga. Ker sta C($\frac{a}{b}$) in C($\frac{c}{d}$) Fordova soseda, velja zveza 
 \( |bc-ad|=1. \)
 Če jo nekoliko preoblikujemo, dobimo
 \[ |bc-ad|=|bc-ad+cd-cd|=|(b+d)c-(a+c)d|=1, \]
@@ -504,7 +504,7 @@ pomeni, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{a+c}{b+d}$) tangentna.
 \end{dokaz}
 
 % konstrukcija Fordovih sosedov
-Naslednji izrek pove, kako konstruiramo množico vseh Fordovih sosedov danega Fordovega kroga. Izrek in dokaz sledita \cite[trditev 3]{ford}.
+Naslednji izrek pove, kako konstruiramo množico vseh Fordovih sosedov danega Fordovega kroga. Izrek in dokaz sledita \cite[Poglavje 2, Theorem 3, str.~588--589]{ford}.
 
 \begin{izrek}
 Naj bosta kroga C($\frac{p}{q}$) in C($\frac{P}{Q}$) Fordova soseda. Vse Fordove sosede Fordovega kroga C($\frac{p}{q}$) lahko zapišemo v obliki C($\frac{P_n}{Q_n}$), kjer je $\frac{P_n}{Q_n} = \frac{P+np}{Q+nq}$ in $n$ preteče vsa cela števila.
@@ -514,7 +514,7 @@ Naj bosta kroga C($\frac{p}{q}$) in C($\frac{P}{Q}$) Fordova soseda. Vse Fordove
 %
 Najprej dokažimo, da sta Fordova kroga C($\frac{p}{q}$) in C($\frac{P_n}{Q_n}$) res Fordova soseda. Računajmo
 \[ |qP_{n} - pQ_{n}| = |q(P+np) - p(Q+nq)| = |qP+qnp-pQ-pnq| = |qP-pQ| = 1. \]
-Zadnja enakost velja po predpostavki, da sta C($\frac{p}{q}$) in C($\frac{P}{Q}$) Fordova soseda.
+Zadnja enakost velja po predpostavki, saj sta C($\frac{p}{q}$) in C($\frac{P}{Q}$) Fordova soseda.
 
 Sedaj preverimo, če obstajajo še Fordovi sosedi, ki niso zgornje oblike. Opazovali bomo zaporedje Fordovih krogov $\mathcal{M} = \{ \mathrm{C}(\frac{P_n}{Q_n}); n\in\Z \}.$
 Iz računa
@@ -523,7 +523,7 @@ Iz računa
   &= |(Q+nq)(P+(n+1)p) - (P+np)(Q+(n+1)q)| \nonumber \\ 
   &= |QP + (n+1)Qp + nPq + n(n+1)pq \nonumber \\
   &   - PQ - (n+1)Pq - npQ - n(n+1)pq| \nonumber \\
-  &= |Qp - pQ| \nonumber \\
+  &= |Qp - Pq| \nonumber \\
   &= 1
 \end{align}
 sledi, da sta zaporedna elementa zaporedja $\mathcal{M}$ Fordova soseda. Ulomek $\frac{P_n}{Q_n}$, ki predstavlja Fordov krog C($\frac{P_n}{Q_n}$), lahko zapišemo kot
@@ -535,7 +535,15 @@ sledi, da sta zaporedna elementa zaporedja $\mathcal{M}$ Fordova soseda. Ulomek 
 \end{align}
 %
 V limiti, ko gre $n$ preko vseh meja, gre $\frac{P_n}{Q_n}$ proti $\frac{p}{q}.$
-Ugotovili smo, da Fordovi krogi oblike C($\frac{P_n}{Q_n}$) geometrijsko tvorijo obroč okroli Fordovega kroga C($\frac{p}{q}$). Z njim so namreč vsi tangentni, prav tako pa so tangentni tudi na svojega predhodnika in naslednika v zaporedju $\mathcal{M}$. Njihova dotikališča z abscisno osjo konvergirajo proti točki $\frac{p}{q},$ ki je dotikališče danega Fordovega kroga C($\frac{p}{q}$), zaradi medsebojne tangentnosti pa so njihovi polmeri vse manjši. Zato ne obstaja Fordov krog, tangenten na C($\frac{p}{q}$), ki ni zgornje oblike in ne seka katerega izmed krogov iz zaporedja $\mathcal{M}$.
+%
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.4]{ford_obroc.png}
+\caption{Fordov krog C($\frac{p}{q}$) in nanj tangentni Fordovi krogi iz množice $\mathcal{M}$. Vir slike je~\cite[Poglavje 2, Figure 2, str.~589]{ford}.}
+\end{center}
+\end{figure}
+%
+Opazimo, da Fordovi krogi oblike C($\frac{P_n}{Q_n}$) geometrijsko tvorijo ``obroč'' okoli Fordovega kroga C($\frac{p}{q}$). Z njim so namreč vsi tangentni, prav tako pa so tangentni tudi na svojega predhodnika in naslednika v zaporedju $\mathcal{M}$. Njihova dotikališča z abscisno osjo konvergirajo proti točki $\frac{p}{q},$ ki je dotikališče danega Fordovega kroga C($\frac{p}{q}$), zaradi medsebojne tangentnosti pa so njihovi polmeri vse manjši. Zato ne obstaja Fordov krog, tangenten na C($\frac{p}{q}$), ki ni zgornje oblike in ne seka katerega izmed krogov iz zaporedja $\mathcal{M}$.
 %
 \end{dokaz}
 
