@@ -504,7 +504,7 @@ pomeni, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{a+c}{b+d}$) tangentna.
 \end{dokaz}
 
 % konstrukcija Fordovih sosedov
-Naslednji izrek pove, kako konstruiramo množico vseh Fordovih sosedov danega Fordovega kroga. Izrek in dokaz sledita \cite[Poglavje 2, Theorem 3, str.~588--589]{ford}.
+Naslednji izrek pove, kako konstruiramo množico vseh Fordovih sosedov danega Fordovega kroga. Izrek in dokaz sledita \cite[poglavje 2, Theorem 3, str.~588--589]{ford}.
 
 \begin{izrek}
 Naj bosta kroga C($\frac{p}{q}$) in C($\frac{P}{Q}$) Fordova soseda. Vse Fordove sosede Fordovega kroga C($\frac{p}{q}$) lahko zapišemo v obliki C($\frac{P_n}{Q_n}$), kjer je $\frac{P_n}{Q_n} = \frac{P+np}{Q+nq}$ in $n$ preteče vsa cela števila.
@@ -539,7 +539,7 @@ V limiti, ko gre $n$ preko vseh meja, gre $\frac{P_n}{Q_n}$ proti $\frac{p}{q}.$
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.4]{ford_obroc.png}
-\caption{Fordov krog C($\frac{p}{q}$) in nanj tangentni Fordovi krogi iz množice $\mathcal{M}$. Vir slike je~\cite[Poglavje 2, Figure 2, str.~589]{ford}.}
+\caption{Fordov krog C($\frac{p}{q}$) in nanj tangentni Fordovi krogi iz množice $\mathcal{M}$. Vir slike je~\cite[poglavje 2, Figure 2, str.~589]{ford}.}
 \end{center}
 \end{figure}
 %
@@ -629,8 +629,8 @@ Enoličnost pitagorejskih trojic je določena do simetrij Fordovih krogov natan�
 % Posplositve
 \subsection{Posplošeni Fordovi krogi}
 
-V prejšnjem razdelku smo se ukvarjali s Fordovimi krogi, ki so bili enolično določeni z racionalnim številom. Natančneje, za dan okrajšan ulomek $\frac{p}{q}$ smo konstruirali Fordov krog na zgornji polravnini evklidske ravnine, ki se abscisne osi dotika v točki $\frac{p}{q}$, njegov polmer pa meri $\frac{1}{2q^2}.$
-Nadaljujemo lahko s splošnejšimi Fordovimi krogi, ki so definirani na povsem enak način, le da imajo polmer enak $\frac{1}{2hq^2},$ pri čemer je $h$ poljubno realno število. Imenujemo jih tudi Speiserjevi\footnote{Andreas Speiser, 10.\ 6.\ 1885 -- 12.\ 10.\ 1970, švicarski matematik, ki se je ukvarjal s teorijo števil in teorijo grup.} krogi. Če izberemo $h=1,$ dobimo običajne Fordove kroge.
+Do sedaj smo se ukvarjali s Fordovimi krogi, ki so enolično določeni z racionalnim številom. Natančneje, danemu okrajšanemu ulomku $\frac{p}{q}$ smo priredili Fordov krog na zgornji polravnini evklidske ravnine, ki se abscisne osi dotika v točki $\frac{p}{q}$, njegov polmer pa meri $\frac{1}{2q^2}.$
+Nadaljujemo lahko s splošnejšimi Fordovimi krogi, ki so definirani na povsem enak način, le da imajo polmer enak $\frac{1}{2hq^2},$ pri čemer je $h$ poljubno realno število. Imenujemo jih tudi Speiserjevi\footnote{Andreas Speiser, 10.\ 6.\ 1885--12.\ 10.\ 1970, švicarski matematik, ki se je ukvarjal s teorijo števil in teorijo grup.} krogi. Če izberemo $h=1,$ dobimo običajne Fordove kroge.
 
 % slika posplosenih Fordovih krogov
 \begin{figure}[h!]
@@ -658,8 +658,8 @@ ki pripada kompleksnim številom, in ga okrajšajmo. Geometrijsko predstavlja to
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.8]{fordove_krogle.png}
-\caption{Fordove krogle}
+\includegraphics[scale=0.8]{fordove_krogle1.png}
+\caption{Fordove krogle.}
 \end{center}
 \end{figure}
 
@@ -677,7 +677,7 @@ sledi:
 če je $|Pq-pQ|>1,$ je $|AB|>|AD|+|EB|$ in krogli sta disjunktni;
 sicer je $|Pq-pQ|=1,$ zato je $|AB|=|AD|+|EB|$ in krogli sta tangentni.
 
-Naj bosta S($\frac{p}{q}$) in S($\frac{P}{Q}$) tangentni Fordovi krogli. Kot prej tangentne Fordove krogle na kroglo S($\frac{p}{q}$) konstruiramo s pomočjo formule
+Naj bosta S($\frac{p}{q}$) in S($\frac{P}{Q}$) tangentni Fordovi krogli. Kot prej vse tangentne Fordove krogle na dano kroglo S($\frac{p}{q}$) pripadajo vrednostim
 \begin{equation}
 \frac{P_n}{Q_n} = \frac{P+np}{Q+nq},
 \end{equation}
@@ -687,11 +687,11 @@ Uporabimo pogoj za tangentnost, ki smo ga izpeljali. Računajmo
 \begin{align} 
 |P_{n}Q_{m} - P_{m}Q_{n}| 
   &= |(P+np)(Q+mq) - (P+mp)(Q+nq)| \nonumber \\
-  &= |PQ+mPq+npQ+mnpq-PQ-nqP-mpQ-mnpq| \nonumber \\
+  &= |PQ+mPq+npQ+mnpq-PQ-nPq-mpQ-mnpq| \nonumber \\
   &= |Pq-pQ| |m-n| = 1.
 \end{align}
 %
-Sledi, da je $|m-n|=1,$ torej je razlika $m-n \in \{1, -1, i, -i \}.$ Ugotovili smo, da je vsaka Fordova krogla, ki je tangentna na dano Fordovo kroglo, tangentna še na štiri druge Fordove krogle. Velja, da so te edine tangentne krogle.
+Sledi, da je $|m-n|=1,$ torej je razlika $m-n \in \{1, -1, i, -i \}.$ Ugotovili smo, da je vsaka Fordova krogla, ki je tangentna na dano Fordovo kroglo, tangentna še na štiri druge Fordove krogle, ki so tangentne na obe.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % Mobiusove transformacije na Fordovih krogih
