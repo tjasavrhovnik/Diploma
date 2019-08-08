@@ -697,7 +697,7 @@ Sledi, da je $|m-n|=1,$ torej je razlika $m-n \in \{1, -1, i, -i \}.$ Ugotovili 
 % Mobiusove transformacije na Fordovih krogih
 \subsection{M\"{o}biusove transformacije na Fordovih krogih}
 
-Do sedaj smo Fordove kroge obravnavali s pomočjo geometrijskih sredstev. V tem razdelku si bomo z algebro pomagali do nekaterih že znanih rezultatov o Fordovih krogih.
+Zaenkrat smo Fordove kroge obravnavali s pomočjo geometrijskih sredstev. V tem razdelku si bomo z algebro pomagali do nekaterih že znanih rezultatov o Fordovih krogih.
 Geometrijske objekte si bomo predstavljali v kompleksni ravnini, torej bo točka s koordinatama $(x,y)$ opisana s kompleksnim številom $z=x+iy$.
 
 % Mobiusova transformacija
@@ -712,12 +712,12 @@ Simbol $ \mathbb{CP}^{1}$ označuje \emph{Riemannovo sfero}, to je kompaktifikac
 \end{opomba}
 
 \begin{opomba}
-Števila $a,b,c,d$ lahko pomnožimo s poljubnim neničelnim kompleksnim številom, zato lahko predpostavimo, da je $ad-bc=1$.
+Števila $a,b,c,d$ lahko pomnožimo s poljubnim neničelnim kompleksnim številom, zato brez škode za splošnost predpostavimo, da je $ad-bc=1$.
 
 V našem primeru bo dovolj obravnavati le $a,b,c,d \in \mathbb{Z}$.
 \end{opomba}
 
-M\"{o}biusova transformacija je meromorfna in bijektivna preslikava z inverzom, ki je spet take oblike, identična preslikava $id(z)=z$ je M\"{o}biusova transformacija, prav tako je kompozitum M\"{o}biusovih transformacij M\"{o}biusova transformacija. Množica takih preslikav tako tvori grupo za kompozitum. 
+M\"{o}biusova transformacija je meromorfna in bijektivna preslikava z inverzom, ki je spet take oblike, identična preslikava $id(z)=z$ je M\"{o}biusova transformacija, prav tako je kompozitum M\"{o}biusovih transformacij M\"{o}biusova transformacija. Množica takih preslikav torej tvori grupo za kompozitum. 
 Preslikavo $f$ lahko zapišemo v matrični obliki
 \[
 \mathbf{A}\ =
@@ -728,7 +728,7 @@ b & d \\
 \end{array}
 \right],
 \]
-kjer so $a,b,c,d \in \mathbb{Z}$. Ker velja $ad-bc=1$, je matrika $A \in {SL}_{2}(\mathbb{Z})$. Zato bomo M\"{o}biusove transformacije predstavljali s splošno linearno grupo ${SL}_{2}(\mathbb{Z})$.
+kjer so $a,b,c,d \in \mathbb{Z}$. Ker velja $ad-bc=1$, je matrika $A \in {SL}_{2}(\mathbb{Z})$. Zato bomo M\"{o}biusove transformacije predstavljali kot elemente splošne linearne grupe ${SL}_{2}(\mathbb{Z})$.
 
 % Delovanje grupe na množico
 Pri izpeljavi rezultatov o Fordovih krogih je ključen pojem, ki ga v algebri pogosto uporabljamo.
@@ -744,7 +744,7 @@ Ekvivalentno, delovanje grupe $G$ na množico $M$ je homomorfizem iz grupe $G$ v
 \end{definicija}
 
 \begin{primer}
-Naj bo $G$ grupa permutacij $n$ elementov, torej $G = S_{n}$, $M$ pa naj bo množica $M = \{1,2, \ldots, n \}$.
+Naj bo $G$ grupa permutacij $n$ elementov, torej $G = S_{n}$, za množico $M$ pa izberimo $M = \{1,2, \ldots, n \}$.
 Delovanje grupe $G$ na množico $M$ je preslikava \( \circ \colon G \times M \rightarrow M \) s predpisom \( (\pi, \alpha) \mapsto \pi(\alpha) = \pi \circ \alpha \).
 \end{primer}
 
@@ -820,7 +820,7 @@ Sedaj vzemimo Fordov krog C($\frac{p}{q}$). Njegov polmer meri $\frac{1}{2q^2}$,
 Izračunajmo
 \[ R = \alpha \bar{\alpha} - r^2 = \left(\frac{p}{q} + i\frac{1}{2q^2} \right) \left(\frac{p}{q} - i\frac{1}{2q^2} \right) - \frac{1}{4q^4} 
 = \frac{p^2}{q^2} + \frac{1}{4q^4} - \frac{1}{4q^4} = \frac{p^2}{q^2} \]
-in preverimo, da je slika izbranega Fordovega kroga tudi Fordov krog. Res, središče slike je po enačbi~\eqref{Eq:MobSlika} v točki
+in preverimo, da je slika izbranega Fordovega kroga prav tako Fordov krog. Res, središče slike je po enačbi~\eqref{Eq:MobSlika} v točki
 \begin{align}
 -\frac{\bar{\alpha}}{R} = - \frac{\frac{p}{q} - i \frac{1}{2q^2}}{\frac{p^2}{q^2}} = - \frac{q}{p} + i \frac{1}{2p^2},
 \end{align}
@@ -830,7 +830,7 @@ polmer pa meri
 = \frac{1}{R} \sqrt{|\alpha|^2 - R} =  \frac{1}{R} \frac{1}{2q^2} = \frac{q^2}{2p^2 q^2} = \frac{1}{2p^2}.
 \end{align}
 %
-Dokazali smo, da preslikavi, ki generirata grupo M\"{o}biusovih transformacij, Fordov krog preslikata v Fordov krog z intervala $[n,n+1]$, kjer je $n \in \mathbb{Z}$. Da dobimo Fordov krog z intervala $[0,1]$, moramo prvotno preslikavo komponirati z $n$ translacijami v levo (za $-1$). Ker identiteta slika Fordov krog vase in je kompozitum M\"{o}biusovih transformacij dobro definiran, grupa ${SL}_{2}(\mathbb{Z})$ res deluje na množico Fordovih krogov.
+Dokazali smo, da preslikavi, ki generirata grupo M\"{o}biusovih transformacij, Fordov krog preslikata v Fordov krog z intervala $[n,n+1]$, kjer je $n \in \mathbb{Z}$. Da dobimo Fordov krog z intervala $[0,1]$, moramo prvotno preslikavo komponirati z $n$ translacijami (s korakom $1$ ali $-1$). Ker identiteta slika Fordov krog vase in je kompozitum M\"{o}biusovih transformacij dobro definiran, grupa ${SL}_{2}(\mathbb{Z})$ res deluje na množico Fordovih krogov.
 \end{dokaz}
 
 % lastnost mediante in Mobiusova transformacija
@@ -840,14 +840,14 @@ Dana naj bosta Fordova kroga C($\frac{e}{f}$) in C($\frac{g}{h}$). M\"{o}biusova
 
 \begin{dokaz}
 Kot v definiciji~\ref{def:MobTransformacija} zapišimo M\"{o}biusovo transformacijo v obliki $f(z) = \frac{az+c}{bz+d}$, kjer so $a,b,c,d \in \mathbb{Z}$ in velja $ad-bc=1$. 
-Vzemimo Fordova kroga C($\frac{e}{f}$) in C($\frac{g}{h}$) in poglejmo, kam se preslikata. 
+Vzemimo Fordova kroga C($\frac{e}{f}$) in C($\frac{g}{h}$), ter poglejmo, kam se preslikata. 
 Ker velja izrek~\ref{izr:MobDelovanje} in je Fordov krog enolično določen s točko, v kateri se dotika realne osi v kompleksni ravnini, je dovolj poznati sliko te točke.
 Izračunajmo
 \[ f \left(\frac{e}{f} \right) = \frac{a \frac{e}{f} + c}{b \frac{e}{f} + d} = \frac{ae + cf}{be + df}, \]
 od koder sledi, da se Fordov krog C($\frac{e}{f}$) preslika v Fordov krog C($\frac{ae+cf}{be+df}$).
 Podobno,
 \[ f \left(\frac{g}{h} \right) = \frac{a \frac{g}{h} + c}{b \frac{g}{h} + d} = \frac{ag + ch}{bg + dh}, \]
-in C($\frac{g}{h}$) se preslika v C($\frac{ag+ch}{bg+dh}$).
+zato se C($\frac{g}{h}$) preslika v C($\frac{ag+ch}{bg+dh}$).
 Označimo \( e' = ae+cf, f' = be+df, g' = ag+ch \) in $h' = bg+dh$. Računajmo
 \[ e'h'-f'g' = (ae+cf)(bg+dh) - (be+df)(ag+ch) = (ad - bc)(eh - fg), \]
 katerega absolutna vrednost je enaka
@@ -865,13 +865,13 @@ Dana naj bosta Fordova kroga C($\frac{e}{f}$) in C($\frac{g}{h}$). M\"{o}biusova
 Sedaj bomo s pomočjo orodij, ki smo jih obravnavali v tem razdelku, ponovno dokazali že znano \emph{lastnost mediante za Fordove kroge}.
 
 \begin{dokaz}[Dokaz lastnosti mediante za Fordove kroge z M\"{o}biusovimi transformacijami]
-Kroga C($\frac{r}{s}$) in C($\frac{p}{q}$) naj bosta Fordova soseda. Trdimo, da je kandidat C($\frac{r+p}{s+q}$) medianta izbranih Fordovih krogov.
+Kroga C($\frac{r}{s}$) in C($\frac{p}{q}$) naj bosta Fordova soseda. Trdimo, da je krog C($\frac{r+p}{s+q}$) medianta izbranih Fordovih krogov.
 
 Vzemimo točke v presečiščih teh treh krogov. Vemo, da za točke $\alpha$, $\beta$, $\gamma$ obstaja M\"{o}biusova transformacija, ki jih preslika v poljubne točke $\lambda$, $\mu$, $\nu$. Torej obstaja M\"{o}biusova transformacija $M_{1}$, ki izbrane točke v presečiščih preslika v točke $i$, $\frac{1}{2}+\frac{1}{2}i$, $1+i$. Ker M\"{o}biusova transformacija slika Fordove kroge v Fordove kroge, mi pa poznamo sliki dveh točk na vsakem izmed krogov C($\frac{r}{s}$), C($\frac{p}{q}$) in C($\frac{r+p}{s+q}$), poznamo slike vseh treh Fordovih krogov. Te pa so točno C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$).
 
 Sedaj bomo konstruirali zaporedje M\"{o}biusovih transformacij (ki je prav tako M\"{o}biusova transformacija). Začnimo s Fordovima sosedoma C($\frac{r}{s}$) in C($\frac{p}{q}$). Preslikava $M_{1}$ ju preslika v Fordova kroga C($\frac{1}{0}$) in C($\frac{0}{1}$) z medianto, Fordovim krogom, C($\frac{1}{1}$). Kot v prvem delu dokaza izberimo tri točke v presečiščih in jih preslikajmo. Obstaja M\"{o}biusova transformacija $M_{2}$, ki Fordove kroge C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$) zaporedoma preslika v Fordove kroge C($\frac{a}{b}$) in C($\frac{c}{d}$) in C($\frac{a+c}{b+d}$). Nadaljujemo s transformacijo $M_{3}$, ki slednje preslika po vrsti v Fordove kroge C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$), in končajmo s transformacijo $M_{4}$, ki le-te preslika v Fordove kroge C($\frac{r}{s}$), C($\frac{p}{q}$) in C($\frac{r+p}{s+q}$).
 
-Vse zgornje preslikave so M\"{o}biusove transformacije, ki ohranjajo medianto Fordovih krogov (saj velja posledica~\ref{Posl:MobOhr1} ter je C($\frac{1}{1}$) medianta C($\frac{1}{0}$) in C($\frac{0}{1}$)), zato tudi kompozitum $M_{4} \circ M_{3} \circ M_{2} \circ M_{1}$ ohranja medianto. Sledi, da je naš kandidat C($\frac{r+p}{s+q}$) res medianta. Z drugimi besedami, za poljubna Fordova soseda obstaja enolično določen Fordov krog, ki je tangenten na oba.
+Vse zgornje preslikave so M\"{o}biusove transformacije, ki ohranjajo medianto Fordovih krogov (saj velja posledica~\ref{Posl:MobOhr1} ter je C($\frac{1}{1}$) medianta C($\frac{1}{0}$) in C($\frac{0}{1}$)), zato tudi kompozitum $M_{4} \circ M_{3} \circ M_{2} \circ M_{1}$ ohranja medianto. Sledi, da je naš kandidat C($\frac{r+p}{s+q}$) res medianta Fordovih krogov C($\frac{r}{s}$) in C($\frac{p}{q}$). Z drugimi besedami, za poljubna Fordova soseda obstaja enolično določen Fordov krog, ki je tangenten na oba.
 \end{dokaz}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
