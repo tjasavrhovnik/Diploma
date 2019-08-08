@@ -939,13 +939,13 @@ V dokazu smo sledili Eulerju in~\cite{riemannHyp}.
 V 19.~stoletju so začeli računati s kompleksnimi števili, tako je Riemann leta 1859 razširil Eulerjevo definicijo zeta funkcije. Riemannova zeta funkcija množico  $\mathbb{C}\backslash\{1\}$ preslika na množico  $\mathbb{C}$, njen predpis pa podaja definicija~\ref{def:RiemZeta}.
 
 \begin{opomba}
-V izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada spremenljivka $s$. Euler je formulo namreč formuliral za celoštevilske $s$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, ki ustrezajo $Re(s)>1$.
+V izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada spremenljivka $s$. Euler je zvezo namreč formuliral za celoštevilske $s$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, ki ustrezajo $Re(s)>1$.
 \end{opomba}
 
-Zanimajo nas ničle Riemannove zeta funkcije. Na polravnini $Re(s)>1$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni, da Riemannova zeta funkcija nima ničel za $Re(s)>1$.
+Zanimajo nas ničle Riemannove zeta funkcije. Na polravnini $\{Re(s)>1\}$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni, da Riemannova zeta funkcija nima ničel za $Re(s)>1$.
 
-Kako je z ničlami na polravnini $Re(s)<0$?
-Pomagali si bomo z Bernoullijevimi števili \cite[poglavje 3]{bernoulli}. Naj bo $|z|<2\pi$. \emph{Bernoullijeva\footnote{Jacob~Bernoulli, 27.\ 12.\ 1654 -- 16.\ 8.\ 1705, rojen v družini znamenitih švicarskih matematikov. Med drugim mu pripisujemo odkritje konstante $e$.} števila} $B_{k}$ definiramo preko funkcije
+Kako je z ničlami na polravnini $\{Re(s)<0\}$?
+Pomagali si bomo z Bernoullijevimi števili \cite[poglavje 3]{bernoulli}. Naj bo $|z|<2\pi$. \emph{Bernoullijeva\footnote{Jacob~Bernoulli, 27.\ 12.\ 1654--16.\ 8.\ 1705, rojen v družini znamenitih švicarskih matematikov. Med drugim mu pripisujemo odkritje konstante $e$.} števila} $B_{k}$ definiramo preko funkcije
 \begin{equation}
 \label{Eq:Bernoulli}
 G(z) = \frac{z}{e^z-1} = \sum_{k=0}^{\infty} B_{k} \frac{z^k}{k!}.
@@ -978,12 +978,19 @@ G(z) + \frac{z}{2} = \frac{z}{2} \left( \frac{2}{e^{z}-1}+1 \right) = \frac{z}{2
 Zapisali smo jo kot produkt dveh lihih funkcij, kar je soda funkcija. Upoštevamo, da je $B_{1}=-\frac{1}{2}$. Oboje skupaj nam pove, da so koeficienti funkcije $G$ pri lihih potencah stopnje vsaj $3$ enaki $0$, s tem pa vsa števila $B_{2k+1}$ za $k \geq 1$.
 \end{dokaz}
 
-Tudi za Bernoullijeva števila $B_{2k}$ obstaja formula, ki pa ni preprosta.
-Za nas so pomembna tista z lihimi indeksi, saj so povezana z Riemannovo zeta funkcijo, ki je podrobno obravnavana v \cite[poglavje 1.5]{zetafunction}. Naj bo $n\in\{0, 1, 2 \dots\}$. Potem velja
+Tudi za Bernoullijeva števila oblike $B_{2k}$ obstaja formula, ki pa ni preprosta.
+Za nas so pomembna tista z lihimi indeksi, saj so povezana z Riemannovo zeta funkcijo, ki je podrobno obravnavana v \cite[poglavje 1.5]{zetafunction}. Mi bomo navedli le rezultat. Naj bo $n\in\{0, 1, 2 \dots\}$. Potem velja
 \begin{equation}
 	\zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}.
 \end{equation}
-Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6 \dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $0<Re(s)<1$, o ničlah na njem pa govori naslednji izrek. 
+Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6 \dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $\{0<Re(s)<1\}$, o ničlah na njem pa govori naslednji izrek. 
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.3]{zeta_funkcija.png}
+\caption{Netrivialne ničle Riemannove zeta funkcije ležijo na pasu $\{0<Re(s)<1\}$. Vir slike je~\cite{britannica}.}
+\end{center}
+\end{figure}
 
 \begin{izrek}[Riemannova hipoteza]
 Vse netrivialne ničle Riemannove zeta funkcije ležijo na premici $s=\frac{1}{2}+it$.
@@ -1382,9 +1389,11 @@ kar dokazuje obratno implikacijo.
 
 \bibitem{hardy} G.~H.~Hardy in E.~M.~Wright, \emph{An introduction to the theory of numbers}, 4th ed., Oxford University Press, Oxford, 1960.
 
-\bibitem{bernoulli} P.~Sebah in X.~Gourdon, \emph{Introduction on Bernoulli's numbers}, verzija 12.~6.~2002, [ogled 20.~7.~2019], dostopno na \url{http://math.ucr.edu/~res/math153/s12/bernoulli-numbers.pdf}.
+\bibitem{bernoulli} P.~Sebah in X.~Gourdon, \emph{Introduction on Bernoulli's numbers}, verzija 12.~6.~2002, [ogled 20.\ 7.\ 2019], dostopno na \url{http://math.ucr.edu/~res/math153/s12/bernoulli-numbers.pdf}.
 
-\bibitem{riemannHyp} J.~Veisdal, \emph{The Riemann hypothesis, explained}, verzija 21.~8.~2016, [ogled 30.~4.~2019], dostopno na \url{https://medium.com/cantors-paradise/the-riemann-hypothesis-explained-fa01c1f75d3f}.
+\bibitem{riemannHyp} J.~Veisdal, \emph{The Riemann hypothesis, explained}, verzija 21.~8.~2016, [ogled 30.\ 4.\ 2019], dostopno na \url{https://medium.com/cantors-paradise/the-riemann-hypothesis-explained-fa01c1f75d3f}.
+
+\bibitem{britannica} W.~L.~Hosch, \emph{Riemann hypothesis}, [ogled 8.\ 8.\ 2019], dostopno na \url{https://www.britannica.com/science/Riemann-hypothesis}.
 
 \end{thebibliography}
 
