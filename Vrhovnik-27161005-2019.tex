@@ -1181,7 +1181,7 @@ Od tod sledi, da je $M(n) = o(n^{1/2 + \varepsilon})$, kar smo želeli pokazati.
 
 % Bernoullijevi polinomi
 \subsubsection{Bernoullijevi polinomi}
-Preden se lotimo dokazovanja obratne implikacije, potrebujemo nekaj novih pojmov. Navedli bomo le najpomembnejše rezultate, ki jih bomo v dokazu potrebovali. Izpeljave niso pretežke, vendar jih bomo tokrat izpustili, saj bi precej povečale obseg dela. Povzeti so po \cite[poglavje 6.2]{zetafunction}.
+Preden se lotimo dokazovanja obratne implikacije, potrebujemo nekaj novih pojmov. Navedli bomo le najpomembnejše rezultate, ki jih bomo v dokazu potrebovali. Izpeljave niso pretežke, vendar jih bomo tokrat izpustili, saj bi precej povečale obseg dela. Rezultati so povzeti po \cite[poglavje 6.2]{zetafunction}.
 
 \begin{definicija}
 Naj bo $n \in \mathbb{N} \cup \{0\}.$ \emph{$n$-ti Bernoullijev polinom} $B_{n}$ je polinom stopnje $n$, ki ustreza zvezi
@@ -1192,7 +1192,7 @@ Naj bo $n \in \mathbb{N} \cup \{0\}.$ \emph{$n$-ti Bernoullijev polinom} $B_{n}$
 \end{definicija}
 
 \begin{primer}
-Zapišimo nekaj Bernoullijevih polinomov najnižjih stopenj. Izračunali smo jih tako, da smo zapisali polinom $B_{n}(t) = a_{0} + a_{1}t + \cdots + a_{n}t^{n}$ in rekurzivno računali koeficiente pri potencah $x$ v enakosti~\eqref{Eq:BernPol}.
+Zapišimo nekaj Bernoullijevih polinomov najnižjih stopenj. Izračunamo jih tako, da zapišemo polinom $B_{n}(t) = a_{0} + a_{1}t + \cdots + a_{n}t^{n}$ in rekurzivno računamo koeficiente pri potencah $x$ v enakosti~\eqref{Eq:BernPol}.
 
 \( B_{0}(x) = 1, \)
 
@@ -1224,7 +1224,7 @@ B_{n}(ku) = k^{n-1} \left ( B_{n}(u) + B_{n} \left( u + \frac{1}{k} \right) + \c
 \end{trditev}
 
 \begin{dokaz}
-Dokaz za $k=2$ se nahaja v \cite[poglavje 6.2, str.~102 -- 103]{zetafunction}. Za splošen $k$ je dokaz analogen.
+Dokaz za $k=2$ se nahaja v \cite[poglavje 6.2, str.~102--103]{zetafunction}. Za splošen $k$ je dokaz analogen.
 \end{dokaz}
 
 % Dokaz implikacije v levo
@@ -1239,21 +1239,21 @@ Spomnimo se funkcije $ \bar{B_{1}}(x) = x - \lfloor x \rfloor - \frac{1}{2} $ in
 Ključni korak dokaza je, da v enakost iz leme~\ref{Lema:RiemFar} vstavimo funkcijo $ \bar{B_{1}}$, pri čemer uporabimo zvezo~\eqref{Eq:bar{B_{1}}(ku)}. Označimo
 \begin{align}
 G(u) &= \sum_{v=1}^{L(n)} \bar{B_{1}}(u+r_v) = \sum_{k=1}^{\infty} \sum_{j=1}^{k} \bar{B_{1}} \left(u + \frac{j}{k} \right) M \left(\frac{n}{k} \right)
-	= \sum_{k=1}^{\infty} \bar{B_{1}}(ku) M \left(\frac{n}{k} \right)
+	= \sum_{k=1}^{\infty} \bar{B_{1}}(ku) M \left(\frac{n}{k} \right),
 \end{align}
-in dobimo dva izraza za funkcijo $G$. Izračunali bomo integral 
+kar nam da dva izraza za funkcijo $G$. Izračunali bomo integral 
 \begin{equation}
 I = \int_{0}^1 G(u)^2 du.
 \end{equation}
 
 % 1. primer
 \underline{1.~primer:} $G(u) = \sum_{v=1}^{L(n)} \bar{B_{1}}(u+r_v)$.
-Oglejmo si, kakšna je funkcija $G$. Razpišimo zgornjo zvezo:
+Oglejmo si, kakšna je funkcija $G$. Razpišimo zgornjo zvezo v
 \begin{align}
 G(u) &= \sum_{v=1}^{L(n)} \bar{B_{1}}(u+r_v) = \sum_{v=1}^{L(n)} \left(u+r_v - \lfloor u+r_v \rfloor - \frac{1}{2} \right) \nonumber \\
-       &= L(n)u + \sum_{v=1}^{L(n)}r_v - \sum_{v=1}^{L(n)} \lfloor u+r_v \rfloor - \frac{L(n)}{2},
+       &= L(n)u + \sum_{v=1}^{L(n)}r_v - \sum_{v=1}^{L(n)} \lfloor u+r_v \rfloor - \frac{L(n)}{2}
 \end{align}
-in opazujmo člen s spodnjim celim delom. Ker so členi Fareyevega zaporedja razen $r_{L(n)}=1$ simetrično razporejeni okrog vrednosti $\frac{1}{2}$, lahko zapišemo $\sum_{v=1}^{L(n)} \lfloor u+r_v \rfloor = \sum_{v=1}^{L(n)} \lfloor u+1-r_v \rfloor$. Za $u\in[0,1]$ zavzame $\lfloor u+1-r_v \rfloor$ le celi števili $0$ in $1$, slednje je le v primeru, ko je $u=r_{v}$. Zato je 
+in opazujmo člen s spodnjim celim delom. Ker so členi Fareyevega zaporedja razen $r_{L(n)}=1$ simetrično razporejeni okrog vrednosti $\frac{1}{2}$, lahko zapišemo $\sum_{v=1}^{L(n)} \lfloor u+r_v \rfloor = \sum_{v=1}^{L(n)} \lfloor u+1-r_v \rfloor$. Za $u\in[0,1]$ zavzame $\lfloor u+1-r_v \rfloor$ le celi števili $0$ in $1$; slednje je le v primeru, ko je $u=r_{v}$. Zato je 
 \[
 \sum_{v=1}^{L(n)} \lfloor u+1-r_v \rfloor = \left\{
 \begin{array}{rl}
@@ -1265,7 +1265,7 @@ in opazujmo člen s spodnjim celim delom. Ker so členi Fareyevega zaporedja raz
 kar pomeni, da ima funkcija $G$, evaluirana v elementih Fareyevega zaporedja, skok za $-1$. Med Fareyevima sosedoma, torej na intervalu $[r_{v-1},r_{v}]$, je $G$ linearna funkcija spremenljivke $u$ s koeficientom $L(n)$.
 Zaradi simetrije členov Fareyevega zaporedja velja še $\sum_{v=1}^{L(n)-1} \bar{B_{1}}(r_v) = 0$. Od tod izračunamo desno limito funkcije $G$ v točki $0$,
 \[ \lim_{u \to 0} G(u) = \lim_{u \to 0} \bar{B_{1}}(u+1) = -\frac{1}{2}. \]
-Funkcija $G$ se zato na intervalu $[r_{v-1},r_{v}]$ izraža s predpisom
+Funkcija $G$ se zato na intervalu $[r_{v},r_{v+1}]$ izraža s predpisom
 \[ G(u) = L(n)u - v - \frac{1}{2}. \]
 %
 Izrazimo še 
@@ -1310,24 +1310,24 @@ I_{a1} &= \int_{0}^1 \bar{B_{1}}(au) \bar{B_{1}}(u) du
 \end{align}
 V enakostih~(1) in (2) smo zaporedoma uvedli novi spremenljivki $v=au$ in $v=k+t$. V enakosti~(3) smo upoštevali periodičnost funkcije $\bar{B_{1}}$ in zvezo \eqref{Eq:bar{B_{1}}(ku)}. V enakosti~(4) smo uporabili dejstvo, da na intervalu $[0,1]$ velja $\bar{B_{1}}(t) = t-\frac{1}{2}$.
 
-Oglejmo si primer, ko sta $a$ in $b$ tuji si števili.
+Oglejmo si primer, ko sta $a$ in $b$ tuji si števili. Računamo
 \begin{align}
 I_{ab} &= \int_{0}^1 \bar{B_{1}}(au) \bar{B_{1}}(bu) du
 	= \frac{1}{a} \int_{0}^a \bar{B_{1}}(v) \bar{B_{1}} \left(\frac{bv}{a} \right) dv \nonumber \\
 	&= \frac{1}{a} \sum_{k=0}^{a-1} \int_{0}^1 \bar{B_{1}}(k+t) \bar{B_{1}} \left(\frac{bk}{a}+\frac{bt}{a} \right) dt \nonumber \\
 	&\stackrel{(5)}{=} \frac{1}{a} \int_{0}^1 \bar{B_{1}}(t) \bar{B_{1}} \left(a\frac{bt}{a} \right) dt
 	= \frac{1}{a} I_{1b} 
-	= \frac{1}{12ab} 
+	= \frac{1}{12ab}.
 \end{align}
-V enakosti~(5) smo upoštevili, da vrednosti $\frac{bk}{a}$ za $k \in \{0,1 \ldots a-1 \}$ pretečejo vse vrednosti iz množice $\{0, \frac{1}{a} \ldots \frac{a-1}{a}\}$.
+V enakosti~(5) smo upoštevali, da vrednosti $\frac{bk}{a}$ za $k \in \{0,1 \ldots {a-1} \}$ pretečejo vse vrednosti iz množice $\{0, \frac{1}{a} \ldots \frac{a-1}{a}\}$.
 
-Naj bo sedaj $c$ največji skupni delitelj $a$ in $b$. Zapišimo $a = c \alpha$ in $b = c \beta$ (seveda sta $\alpha$ in $\beta$ tuji si števili).
+Naj bo sedaj $c$ največji skupni delitelj števil $a$ in $b$. Zapišimo $a = c \alpha$ in $b = c \beta$ (seveda sta števili $\alpha$ in $\beta$ tuji). Velja
 \begin{align}
 I_{ab} &= \int_{0}^1 \bar{B_{1}}(c \alpha u) \bar{B_{1}}(c \beta u) du
 	\stackrel{(6)}{=} \frac{1}{c} \int_{0}^c \bar{B_{1}}(\alpha t) \bar{B_{1}}(\beta t) dt \nonumber \\
 	&\stackrel{(7)}{=} I_{\alpha \beta}
 	= \frac{1}{12 \alpha \beta}
-	= \frac{c^2}{12ab}
+	= \frac{c^2}{12ab}.
 \end{align}
 V enakosti~(6) smo uvedli novo spremenljivko $t=cu$.
 Enakost~(7) sledi iz računa
@@ -1344,26 +1344,26 @@ I = \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} M \left(\frac{n}{a} \right) M \left(
 kjer je $c$ največji skupni delitelj $a$ in $b$.
 
 % Ocena in uporaba predpostavke
-Naj bo $\epsilon>0$. Predpostavljamo, da je $M(n) = o(n^{1/2+\epsilon})$, kar pomeni, da obstaja taka konstanta $C$, odvisna od $\epsilon$, da za poljuben $n$ velja $M(n) < C(\epsilon) n^{1/2+\epsilon}$. Če to uporabimo v enačbi~\eqref{Eq:I2}, dobimo
+Naj bo $\varepsilon>0$. Predpostavljamo, da je $M(n) = o(n^{1/2+\varepsilon})$, kar pomeni, da obstaja taka konstanta $C$, odvisna od $\varepsilon$, da za poljubno velik $n$ velja $ |M(n)| < C(\varepsilon) n^{1/2+\varepsilon}$. Če to uporabimo v enačbi~\eqref{Eq:I2}, dobimo
 \begin{align}
-I &< \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} C(\epsilon)^2 \left( \frac{n}{a} \right)^{1/2+\epsilon} \left( \frac{n}{b} \right)^{1/2+\epsilon} \frac{c^2}{12ab} \nonumber \\
-  &= n^{1+2\epsilon} \frac{C(\epsilon)^2}{12} \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} \frac{c^2}{a^{3/2+\epsilon} b^{3/2+\epsilon}} \nonumber \\
-  &= n^{1+2\epsilon} \frac{C(\epsilon)^2}{12} \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} \frac{c^2}{\alpha^{3/2+\epsilon} \beta^{3/2+\epsilon} c^{3+2\epsilon}} \nonumber \\
-  &\stackrel{(8)}{<} n^{1+2\epsilon} K_{1}(\epsilon) \sum_{\alpha=1}^{\infty} \sum_{\beta=1}^{\infty} \sum_{c=1}^{\infty} \frac{1}{\alpha^{3/2} \beta^{3/2} c^{1+2\epsilon}} \nonumber \\
-  &= K_{2}(\epsilon) n^{1+2\epsilon}.
+|I| &< \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} C(\varepsilon)^2 \left( \frac{n}{a} \right)^{1/2+\varepsilon} \left( \frac{n}{b} \right)^{1/2+\varepsilon} \frac{c^2}{12ab} \nonumber \\
+  &= n^{1+2\varepsilon} \frac{C(\varepsilon)^2}{12} \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} \frac{c^2}{a^{3/2+\varepsilon} b^{3/2+\varepsilon}} \nonumber \\
+  &= n^{1+2\varepsilon} \frac{C(\varepsilon)^2}{12} \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} \frac{c^2}{\alpha^{3/2+\varepsilon} \beta^{3/2+\varepsilon} c^{3+2\varepsilon}} \nonumber \\
+  &\stackrel{(8)}{<} n^{1+2\varepsilon} K_{1}(\varepsilon) \sum_{\alpha=1}^{\infty} \sum_{\beta=1}^{\infty} \sum_{c=1}^{\infty} \frac{1}{\alpha^{3/2} \beta^{3/2} c^{1+2\varepsilon}} \nonumber \\
+  &= K_{2}(\varepsilon) n^{1+2\varepsilon}.
 \end{align}
-V neenakosti~(8) smo vsoto po tujih si številih $\alpha$ in $\beta$ zamenjali z vsoto po vseh vrednostih $\alpha$ in $\beta$.
+V neenakosti~(8) smo vsoto po tujih si številih $\alpha$ in $\beta$ zamenjali z vsoto po vseh naravnih številih $\alpha$ in $\beta$.
 
-Enakost~\eqref{Eq:I1} implicira
-\[ I = L(n) \sum_{v=1}^{L(n)} \delta_{v}^2 + \frac{1}{12} < K_{2}(\epsilon) n^{1+2\epsilon}, \]
+Sedaj se vrnimo k enakosti~\eqref{Eq:I1}, upoštevajmo, da je $|I| = I$, kar implicira
+\[ I = L(n) \sum_{v=1}^{L(n)} \delta_{v}^2 + \frac{1}{12} < K_{2}(\varepsilon) n^{1+2\varepsilon}, \]
 od koder sledi
-\[ \sum_{v=1}^{L(n)} \delta_{v}^2 < K_{3}(\epsilon) n^{1+2\epsilon}. \]
-Cauchy-Schwarzova neenakost nam da končno oceno
+\[ \sum_{v=1}^{L(n)} \delta_{v}^2 < K_{3}(\varepsilon) n^{1+2\varepsilon}. \]
+Cauchy -- Schwarzova neenakost nam da končno oceno
 \begin{align*}
 \sum_{v=1}^{L(n)} |\delta_{v}| &= \left| \sum_{v=1}^{L(n)} (\pm1)\delta_{v} \right|
 	\leq \sqrt{\sum_{v=1}^{L(n)} (\pm1)^2}  \sqrt{\sum_{v=1}^{L(n)} \delta_{v}^2} 
 	= L(n)^{1/2} \sqrt{\sum_{v=1}^{L(n)} \delta_{v}^2}
-	< K(\epsilon) n^{1+2\epsilon},
+	< K(\varepsilon) n^{1/2+\varepsilon},
 \end{align*}
 kar dokazuje obratno implikacijo.
 
