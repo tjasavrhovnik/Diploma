@@ -308,9 +308,9 @@ Preslikava \( \mu\colon \mathbb{N} \to \mathbb{N} \), definirana s predpisom
 \begin{equation}
 \mu(n) = \left\{
 \begin{array}{rl}
-0 & ;\ \mbox{$n$ je deljiv s kvadratom praštevila}\\
-(-1)^p & ;\  \mbox{$n$ je produkt $p$ različnih praštevil,}
-\end{array}
+0 & \textrm{če je}\ n\ \textrm{deljiv s kvadratom praštevila}\\
+(-1)^p & \textrm{če je}\ n\ \textrm{produkt}\ p\ \textrm{različnih praštevil}
+\end{array},
 \right.
 \end{equation}
 se imenuje \emph{M\"obiusova\footnote{August Ferdinand M\"obius, 17.\ 11.\ 1790--26.\ 9.\ 1868, nemški matematik in astronom. Po njem se med drugim imenujejo M\"obiusov trak, M\"obiusova transformacija in M\"obisuova funkcija.} funkcija}.
@@ -461,7 +461,7 @@ Torej sta Fordova kroga res bodisi tangentna bodisi disjunktna.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fordovi sosedi
 \subsection{Fordovi sosedi}
-%
+
 V poglavju o Fareyevem zaporedju smo dokazali lastnosti mediante in Fareyevih sosedov. Izkaže se, da imata ti dve lastnosti geometrijski pomen. Pokazali bomo namreč, da veljata tudi za tangentne Fordove kroge. V nadaljevanju bomo konstruirali vse tangentne Fordove kroge danega kroga in si ogledali še eno lastnost paroma tangentnih Fordovih krogov.
 
 \begin{trditev}[Lastnost Fordovih sosedov]
@@ -477,10 +477,12 @@ Denimo, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) tangentna. Pot
 \[ |AC|^2 + |BC|^2 = |AB|^2 \] oziroma
 \[ \left ( \left | \frac{1}{2b^2} - \frac{1}{2d^2} \right | \right )^2 + \left ( \left| \frac{c}{d} - \frac{a}{b} \right| \right )^2 = \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2. \]
 Ko odpravimo oklepaje, opazimo, da se nekateri členi odštejejo. Nato odpravimo ulomke in novo enakost poenostavimo. Dobimo
-\[ \frac{1}{4b^4} - \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} + \frac{c^2}{d^2} - \frac{2ac}{bd} + \frac{a^2}{b^2} = \frac{1}{4b^4} + \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4}, \]
-\[ b^{2}c^{2} - 2abcd + a^{2}d^{2} = 1, \]
-\[  (bc-ad)^2 = 1, \]
-\[ |bc-ad|=1. \]
+\begin{align*}
+frac{1}{4b^4} - \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} + \frac{c^2}{d^2} - \frac{2ac}{bd} + \frac{a^2}{b^2} &= \frac{1}{4b^4} + \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4}, \\
+b^{2}c^{2} - 2abcd + a^{2}d^{2} &= 1, \\
+(bc-ad)^2 &= 1, \\
+|bc-ad|&=1.
+\end{align*}
 kar smo želeli pokazati.
 \end{dokaz}
 
@@ -637,7 +639,7 @@ Nadaljujemo lahko s splošnejšimi Fordovimi krogi, ki so definirani na povsem e
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.55]{posploseni_fordovi_krogi.png}
-\caption{Posplošeni Fordovi krogi, kjer je $\protect{h=\sqrt{2}/2}$. Sosednji poslpošeni Fordovi krogi niso tangentni, pač pa se sekajo.}
+\caption{Posplošeni Fordovi krogi, kjer je $\protect{h=\sqrt{2}/2}$. Sosednji posplošeni Fordovi krogi niso tangentni, pač pa se sekajo.}
 \label{Fig:PosplFord}
 \end{center}
 \end{figure}
@@ -1074,7 +1076,7 @@ Vzemimo Fareyevo zaporedje reda $4$ in poglejmo nekaj razlik.
 Opazimo, da za poljuben $n$ velja $\delta_{L(n)}=0$.
 \end{primer}
 
-\begin{trditev}[Franel -- Landau, 1924]
+\begin{trditev}[Franel-Landau, 1924]
 Za vsak $\varepsilon>0$ velja \( \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) \) natanko tedaj, ko velja Riemannova hipoteza.
 \end{trditev}
 
@@ -1154,9 +1156,10 @@ To pa je ravno koeficient pri $f(r_{v})$ na levi strani. Lema zato res drži.
 %
 \end{dokaz}
 
+%%%
 % Dokaz implikacije v desno
 \subsubsection{Dokaz implikacije v desno izreka~\ref{Izr:RH}}
-%
+
 Naj bo $\varepsilon > 0$. Naj bo $u \in [0,1]$ in definirajmo funkcijo $f(u) = e^{2\pi iu}$. Uporabimo lemo~\ref{Lema:RiemFar} in funkcijo vstavimo v enakost~\eqref{Eq:RiemFar1}; dobimo
 \begin{equation}
 \label{Eq:RiemFar2}
@@ -1178,8 +1181,10 @@ V zadnji neenakosti smo uporabili predpostavko $ \sum_{v=1}^{L(n)}|\delta_{v}| =
 $ \sum_{v=1}^{L(n)}|\delta_{v}| < K(\varepsilon) n^{1/2+\varepsilon}$ za neko konstano $K$, ki je odvisna od $\varepsilon$.
 Od tod sledi, da je $M(n) = o(n^{1/2 + \varepsilon})$, kar smo želeli pokazati.
 
+%%%
 % Bernoullijevi polinomi
 \subsubsection{Bernoullijevi polinomi}
+
 Preden se lotimo dokazovanja obratne implikacije, potrebujemo nekaj novih pojmov. Navedli bomo le najpomembnejše rezultate, ki jih bomo v dokazu potrebovali. Izpeljave niso pretežke, vendar jih bomo tokrat izpustili, saj bi precej povečale obseg dela. Rezultati so povzeti po \cite[poglavje 6.2]{zetafunction}.
 
 \begin{definicija}
@@ -1214,6 +1219,13 @@ Iz definicije sledi, da je $ \bar{B_{n}} $ periodična funkcija s periodo $1$.
 Funkcijo $ \bar{B_{1}}(x) = x - \lfloor x \rfloor - \frac{1}{2} $ bomo potrebovali v dokazu.
 \end{primer}
 
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.4]{bernoulli.png}
+\caption{Graf funkcije $ \bar{B_{1}}(x) = x - \lfloor x \rfloor - \frac{1}{2} $.}
+\end{center}
+\end{figure}
+
 \begin{trditev}
 Naj bo $k \in \mathbb{N}$. Tedaj je
 \begin{equation}
@@ -1226,8 +1238,10 @@ B_{n}(ku) = k^{n-1} \left ( B_{n}(u) + B_{n} \left( u + \frac{1}{k} \right) + \c
 Dokaz za $k=2$ se nahaja v \cite[poglavje 6.2, str.~102--103]{zetafunction}. Za splošen $k$ je dokaz analogen.
 \end{dokaz}
 
+%%%
 % Dokaz implikacije v levo
 \subsubsection{Dokaz implikacije v levo izreka~\ref{Izr:RH}}
+
 Spomnimo se funkcije $ \bar{B_{1}}(x) = x - \lfloor x \rfloor - \frac{1}{2} $ in enačbe~\eqref{Eq:B_{n}(ku)}. Izberimo $n=1$. Funkcija $\bar{B_{1}}$ je periodična s periodo $1$, zato je za $x=ku$ dovolj obravnavati vrednosti $0 \leq u \leq \frac{1}{k}$. Za te vrednosti pa se $\bar{B_{1}}$ ujema s funkcijo $B_{1}$. Enačba~\eqref{Eq:B_{n}(ku)} zato dobi obliko
 \begin{align}
 \label{Eq:bar{B_{1}}(ku)}
@@ -1360,7 +1374,7 @@ Sedaj se vrnimo k enakosti~\eqref{Eq:I1}, upoštevajmo, da je $|I| = I$, kar imp
 \[ I = L(n) \sum_{v=1}^{L(n)} \delta_{v}^2 + \frac{1}{12} < K_{2}(\varepsilon) n^{1+2\varepsilon}, \]
 od koder sledi
 \[ \sum_{v=1}^{L(n)} \delta_{v}^2 < K_{3}(\varepsilon) n^{1+2\varepsilon}. \]
-Cauchy -- Schwarzova neenakost nam da končno oceno
+Cauchy-Schwarzova neenakost nam da končno oceno
 \begin{align*}
 \sum_{v=1}^{L(n)} |\delta_{v}| &= \left| \sum_{v=1}^{L(n)} (\pm1)\delta_{v} \right|
 	\leq \sqrt{\sum_{v=1}^{L(n)} (\pm1)^2}  \sqrt{\sum_{v=1}^{L(n)} \delta_{v}^2} 
@@ -1393,17 +1407,17 @@ kar dokazuje obratno implikacijo.
 
 \bibitem{zetafunction} H.~M.~Edwards, \emph{Riemann's zeta function}, Academic Press, Inc., New York, 1974.
 
-\bibitem{ford} L.~R.~Ford, \emph{Fractions}, v: The American Mathematical Monthly (ur.\ E.~J.~Moulton) \textbf{45}, Mathematical Association of America, 1938, str.\ 586--601.
+\bibitem{ford} L.~R.~Ford, \emph{Fractions}, v: The American Mathematical Monthly (ur.\ E.~J.~Moulton), \textbf{45}, Mathematical Association of America, 1938, str.\ 586--601; dostopno tudi na \url{https://www.maths.ed.ac.uk/~v1ranick/papers/ford.pdf}.
 
 \bibitem{motifofmath} S.~B.~Guthery, \emph{A motif of mathematics}, Docent Press, Boston, 2011; dostopno tudi na \url{https://www.maths.ed.ac.uk/~v1ranick/papers/farey.pdf}.
 
 \bibitem{hardy} G.~H.~Hardy in E.~M.~Wright, \emph{An introduction to the theory of numbers}, 4th ed., Oxford University Press, Oxford, 1960.
 
-\bibitem{bernoulli} P.~Sebah in X.~Gourdon, \emph{Introduction on Bernoulli's numbers}, verzija 12.~6.~2002, [ogled 20.\ 7.\ 2019], dostopno na \url{http://math.ucr.edu/~res/math153/s12/bernoulli-numbers.pdf}.
+\bibitem{britannica} W.~L.~Hosch, \emph{Riemann hypothesis}, [ogled 8.~8.~2019], dostopno na \url{https://www.britannica.com/science/Riemann-hypothesis}.
 
-\bibitem{riemannHyp} J.~Veisdal, \emph{The Riemann hypothesis, explained}, verzija 21.~8.~2016, [ogled 30.\ 4.\ 2019], dostopno na \url{https://medium.com/cantors-paradise/the-riemann-hypothesis-explained-fa01c1f75d3f}.
+\bibitem{bernoulli} P.~Sebah in X.~Gourdon, \emph{Introduction on Bernoulli's numbers}, verzija 12.~6.~2002, [ogled 20.~7.~2019], dostopno na \url{http://math.ucr.edu/~res/math153/s12/bernoulli-numbers.pdf}.
 
-\bibitem{britannica} W.~L.~Hosch, \emph{Riemann hypothesis}, [ogled 8.\ 8.\ 2019], dostopno na \url{https://www.britannica.com/science/Riemann-hypothesis}.
+\bibitem{riemannHyp} J.~Veisdal, \emph{The Riemann hypothesis, explained}, verzija 21.~8.~2016, [ogled 30.~4.~2019], dostopno na \url{https://medium.com/cantors-paradise/the-riemann-hypothesis-explained-fa01c1f75d3f}.
 
 \end{thebibliography}
 
