@@ -1024,14 +1024,14 @@ Izračunajmo vrednosti Mertensove funkcije za nekaj naravnih števil.
 
 Opazimo, da Mertensova funkcija raste počasi, saj se njena vrednost v vsakem naslednjem naravnem številu spremeni kvečjemu za $\pm 1$. Za vsako naravno število $n$ velja $|M(n)| \leq n$.
 
-Naslednjo trditev, ki jo bomo navedli brez dokaza, je leta 1912 dokazal Litllewood\footnote{John Edensor Littlewood, 9.\ 6.\ 1885--6.\ 9.\ 1977, angleški matematik.}. Njeno bistvo je, da Riemannovo hipotezo lahko prevedemo na ekvivalentno trditev, ki opisuje rast Mertensove funkcije. 
+Naslednjo trditev, ki jo bomo navedli brez izpeljave, je leta 1912 dokazal Litllewood\footnote{John Edensor Littlewood, 9.\ 6.\ 1885--6.\ 9.\ 1977, angleški matematik.}. Njeno bistvo je, da Riemannovo hipotezo lahko prevedemo na ekvivalentno trditev, ki opisuje rast Mertensove funkcije. 
 Več podrobnosti o njej si bralec lahko prebere v \cite[poglavje 12.1]{zetafunction}.
 %
 Oglejmo si le idejo za formulacijo trditve.
 
 Če faktorje v Eulerjevi produktni formuli pomnožimo, dobimo na polravnini $\{Re(s)>1\}$ izražavo $ \frac{1}{\zeta(s)} = \sum_{n=1}^{\infty} \frac{\mu(n)}{n^s} $. 
 Po nekaj korakih pridemo do zveze $ \frac{1}{\zeta(s)} = s \int_{0}^{\infty} M(x) x^{-s-1}dx $. 
-Mertensovo funkcijo tu razumemo kot definirano za vse nenegativne vrednosti: $M(0)=0$, funkcija pa je konstantna razen v naravnih številih $n$, kjer ima skok $\mu(n)$.
+Mertensovo funkcijo tu razumemo kot definirano za vse nenegativne vrednosti: predpišemo $M(0)=0$, funkcija pa je konstantna, razen v naravnih številih $n$, kjer ima skok $\mu(n)$.
 Ker za vse $x$ velja $ |M(x)| \leq x $, je na polravnini $\{Re(s)>1\}$ $ \lim_{x \to \infty} x^{-s}M(x) = 0$ in integral $ \int_{0}^{\infty} M(x) x^{-s-1}dx $ na tej polravnini konvergira.
 Če obstaja tako pozitivno število $a$, da funkcija $M(x)$ raste počasneje od funkcije $x^{a}$, potem zgornji integral konvergira na polravnini $\{Re(a-s)<0\} = \{Re(s)>a\}$.
 To pomeni, da je funkcija $ \frac{1}{\zeta(s)} $ na tej polravnini analitična. 
@@ -1043,11 +1043,11 @@ Naslednja trditev pove, da velja celo več. Še prej pa vpeljimo nov pojem.
 \begin{definicija}[Notacija mali o]
 Funkcija $f$ pripada razredu $o(g)$, če absolutna vrednost funkcije $f$ raste počasneje od funkcije $g$, ko gre $x$ proti $\infty$.
 
-Natančneje, $f(x) = o \left(g(x) \right)$, ko $x \to \infty$, če za vsak $\epsilon>0$ obstaja vrednost $x_{0}$, da za vsak $x \geq x_{0}$ velja $|f(x)| < \epsilon \cdot g(x)$.
+Natančneje, $f(x) = o \left(g(x) \right)$, ko $x \to \infty$, če za vsak $\varepsilon>0$ obstaja vrednost $x_{0}$, da za poljuben $x \geq x_{0}$ velja $|f(x)| < \varepsilon \cdot g(x)$.
 \end{definicija}
 
 \begin{trditev}
-Za vsak $\epsilon>0$ velja \( M(n) = o(n^{1/2+\epsilon}) \) natanko tedaj, ko velja Riemannova hipoteza.
+Za vsak $\varepsilon>0$ velja \( M(n) = o(n^{1/2+\varepsilon}) \) natanko tedaj, ko velja Riemannova hipoteza.
 \end{trditev}
 
 Pred drugo ekvivalenco Riemannove hipoteze potrebujemo definicijo, ki sledi.
@@ -1071,13 +1071,15 @@ Vzemimo Fareyevo zaporedje reda $4$ in poglejmo nekaj razlik.
 \( \delta_{2}= \frac{1}{4} - \frac{2}{7} = -\frac{1}{28}, \)
 
 \( \delta_{7}= \frac{1}{1} - \frac{7}{7} = 0. \)
+
+Opazimo, da za poljuben $n$ velja $\delta_{L(n)}=0$.
 \end{primer}
 
 \begin{trditev}[Franel -- Landau, 1924]
-Za vsak $\epsilon>0$ velja \( \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) \) natanko tedaj, ko velja Riemannova hipoteza.
+Za vsak $\varepsilon>0$ velja \( \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) \) natanko tedaj, ko velja Riemannova hipoteza.
 \end{trditev}
 
-Dokaz zgornje trditve izpustimo. Pač pa bomo v nadaljevanju dokazali povezavo med navedenima ekvivalenčnima formulacijama Riemannove hipoteze, ki jo lahko združimo v izrek.
+Dokaz zgornje trditve izpustimo. (Sklic na vir, kjer bralec lahko najde dokaz, se nahaja v~\cite[References, F1, str.~307]{zetafunction}.) Pač pa bomo v nadaljevanju dokazali povezavo med navedenima ekvivalentnima formulacijama Riemannove hipoteze, ki jo lahko združimo v izrek.
 
 \begin{izrek}
 \label{Izr:RH}
@@ -1135,9 +1137,9 @@ M\"obiusova inverzija pa nam da ekvivalenco
 M(n) = \sum_{x=1}^{\infty} \mu(x) D \left( \frac{n}{x} \right) \Longleftrightarrow
 D(n) = \sum_{x=1}^{\infty} M \left( \frac{n}{x} \right).
 \end{align*}
-Naj bosta $p$ in $q$ tuji števili in $0 < p \leq q$, z drugimi besedami, ulomek $\frac{p}{q}$ ustreza nekemu elementu $r_{v}$ Fareyevega zaporedja $F_{n}$.
+Naj bosta celi števili $p$ in $q$ tuji ter $0 < p \leq q$, z drugimi besedami, ulomek $\frac{p}{q}$ ustreza nekemu elementu $r_{v}$ Fareyevega zaporedja $F_{n}$.
 Primerjali bomo koeficiente pri $f(\frac{p}{q})$ na levi in desni strani enakosti~\eqref{Eq:RiemFar1}.
-Ker je $ f(\frac{p}{q}) = f(\frac{2p}{2q}) = f(\frac{3p}{3q}) = \cdots $, je koeficient na desni strani enak 
+Ker je $ f(\frac{p}{q}) = f(\frac{2p}{2q}) = f(\frac{3p}{3q}) = \cdots $, je koeficient pri $f(\frac{p}{q})$ na desni strani enak 
 %
 \begin{align*}
 M \left(\frac{n}{q} \right) + M \left(\frac{n}{2q} \right) + M \left(\frac{n}{3q} \right) + \cdots &= \sum_{l=1}^{\infty} M \left(\frac{n}{ql} \right) \\
@@ -1156,7 +1158,7 @@ To pa je ravno koeficient pri $f(r_{v})$ na levi strani. Lema zato res drži.
 % Dokaz implikacije v desno
 \subsubsection{Dokaz implikacije v desno izreka~\ref{Izr:RH}}
 %
-Naj bo $\varepsilon > 0$. Naj bo $u \in [0,1]$ in definirajmo funkcijo $f(u) = e^{2\pi iu}$. Uporabimo lema~\ref{Lema:RiemFar} in funkcijo vstavimo v enakost~\eqref{Eq:RiemFar1}; dobimo
+Naj bo $\varepsilon > 0$. Naj bo $u \in [0,1]$ in definirajmo funkcijo $f(u) = e^{2\pi iu}$. Uporabimo lemo~\ref{Lema:RiemFar} in funkcijo vstavimo v enakost~\eqref{Eq:RiemFar1}; dobimo
 \begin{equation}
 \label{Eq:RiemFar2}
 	\sum_{v=1}^{L(n)} e^{2\pi i r_{v}} = \sum_{k=1}^{\infty} \sum_{j=1}^{k} e^{2\pi i \frac{j}{k}} M \left(\frac{n}{k} \right).
@@ -1171,10 +1173,10 @@ Ker je $L(n) > 1$, je zadnji sumand enak $0$. Sedaj ocenimo absolutno vrednost z
 	= \sum_{v=1}^{L(n)} \left|e^{2\pi i \delta_{v}} - 1 \right|
 	= \sum_{v=1}^{L(n)} \left|e^{\pi i \delta_{v} } \right| \left|e^{\pi i \delta_{v}} - e^{-\pi i \delta_{v}}\right| \\
 	&= 2 \sum_{v=1}^{L(n)} |\sin{(\pi \delta_{v})}| \leq 2 \sum_{v=1}^{L(n)} |\delta_{v}| \pi = 2 \pi \sum_{v=1}^{L(n)} |\delta_{v}| \\
-	&\leq 2 \pi K(\varepsilon) n^{1/2 + \varepsilon} = K'(\varepsilon) n^{1/2 + \varepsilon}.
+	&< 2 \pi K(\varepsilon) n^{1/2 + \varepsilon} = K'(\varepsilon) n^{1/2 + \varepsilon}.
 \end{align*}
 V zadnji neenakosti smo uporabili predpostavko $ \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) $, kar je ekvivalentno 
-$ \sum_{v=1}^{L(n)}|\delta_{v}| \leq K(\varepsilon) n^{1/2+\varepsilon}$ za neko konstano $K$, ki je odvisna od $\varepsilon$.
+$ \sum_{v=1}^{L(n)}|\delta_{v}| < K(\varepsilon) n^{1/2+\varepsilon}$ za neko konstano $K$, ki je odvisna od $\varepsilon$.
 Od tod sledi, da je $M(n) = o(n^{1/2 + \varepsilon})$, kar smo želeli pokazati.
 
 % Bernoullijevi polinomi
