@@ -390,7 +390,7 @@ Ideje poglavja so povzete po \cite[poglavje 4]{fareyproject} in\cite{ford}.
 
 \begin{definicija}
 Naj bosta $p$ in $q$ tuji si števili v množici celih števil.
-\emph{Fordov\footnote{Lester Randolph Ford~Sr., 25.\ 10.\ 1886 -- 11.\ 11.\ 1967, ameriški matematik.} krog} C($\frac{p}{q}$) je krog v zgornji polravnini, ki se abscisne osi dotika v točki $\frac{p}{q}$, njegov polmer pa meri $\frac{1}{2q^2}$. 
+\emph{Fordov\footnote{Lester Randolph Ford~Sr., 25.\ 10.\ 1886--11.\ 11.\ 1967, ameriški matematik.} krog} C($\frac{p}{q}$) je krog v zgornji polravnini, ki se abscisne osi dotika v točki $\frac{p}{q}$, njegov polmer pa meri $\frac{1}{2q^2}$. 
 \end{definicija}
 
 % slika Fordovi krogi
@@ -422,7 +422,7 @@ Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, za
 % slika pravokotni trikotnik
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.4]{pitagora1.png}
+\includegraphics[scale=0.45]{pitagora1.png}
 \caption{Konstrukcija pravokotnega trikotnika, ki pripada paru Fordovih krogov.}
 \label{Fig:Pitagora}
 \end{center}
@@ -536,8 +536,6 @@ sledi, da sta zaporedna elementa zaporedja $\mathcal{M}$ Fordova soseda. Ulomek 
   &= \frac{p}{q} \pm \frac{1}{q(Q+nq)} = \frac{p}{q} \pm \frac{1}{q^2 \left (n+\frac{Q}{q} \right)}.
 \end{align}
 %
-V limiti, ko gre $n$ preko vseh meja, gre $\frac{P_n}{Q_n}$ proti $\frac{p}{q}.$
-%
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.4]{ford_obroc.png}
@@ -545,6 +543,7 @@ V limiti, ko gre $n$ preko vseh meja, gre $\frac{P_n}{Q_n}$ proti $\frac{p}{q}.$
 \end{center}
 \end{figure}
 %
+V limiti, ko gre $n$ preko vseh meja, gre $\frac{P_n}{Q_n}$ proti $\frac{p}{q}.$
 Opazimo, da Fordovi krogi oblike C($\frac{P_n}{Q_n}$) geometrijsko tvorijo ``obroč'' okoli Fordovega kroga C($\frac{p}{q}$). Z njim so namreč vsi tangentni, prav tako pa so tangentni tudi na svojega predhodnika in naslednika v zaporedju $\mathcal{M}$. Njihova dotikališča z abscisno osjo konvergirajo proti točki $\frac{p}{q},$ ki je dotikališče danega Fordovega kroga C($\frac{p}{q}$), zaradi medsebojne tangentnosti pa so njihovi polmeri vse manjši. Zato ne obstaja Fordov krog, tangenten na C($\frac{p}{q}$), ki ni zgornje oblike in ne seka katerega izmed krogov iz zaporedja $\mathcal{M}$.
 %
 \end{dokaz}
@@ -637,8 +636,8 @@ Nadaljujemo lahko s splošnejšimi Fordovimi krogi, ki so definirani na povsem e
 % slika posplosenih Fordovih krogov
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.5]{posploseni_fordovi_krogi.png}
-\caption{Posplošeni Fordovi krogi, kjer je $\protect{h=\sqrt{2}/2}$.}
+\includegraphics[scale=0.55]{posploseni_fordovi_krogi.png}
+\caption{Posplošeni Fordovi krogi, kjer je $\protect{h=\sqrt{2}/2}$. Sosednji poslpošeni Fordovi krogi niso tangentni, pač pa se sekajo.}
 \label{Fig:PosplFord}
 \end{center}
 \end{figure}
@@ -660,7 +659,7 @@ ki pripada kompleksnim številom, in ga okrajšajmo. Geometrijsko predstavlja to
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.8]{fordove_krogle1.png}
+\includegraphics[scale=0.9]{fordove_krogle1.png}
 \caption{Fordove krogle.}
 \end{center}
 \end{figure}
@@ -1270,7 +1269,10 @@ Funkcija $G$ se zato na intervalu $[r_{v},r_{v+1}]$ izraža s predpisom
 %
 Izrazimo še 
 \[ L(n)r_{v} = L(n) \left( r_{v}-\frac{v}{L(n)}+\frac{v}{L(n)} \right) = L(n) \delta_{v} + v, \]
-\[ L(n)r_{v}-v+\frac{1}{2} = L(n) \delta_{v} + \frac{1}{2} \textrm{ , } L(n)r_{v-1}-v+\frac{1}{2} = L(n) \delta_{v-1} - \frac{1}{2}. \]
+\begin{align*}
+L(n)r_{v}-v+\frac{1}{2} &= L(n) \delta_{v} + \frac{1}{2}, \\
+L(n)r_{v-1}-v+\frac{1}{2} &= L(n) \delta_{v-1} - \frac{1}{2}.
+\end{align*}
 %
 Sedaj lahko izračunamo integral 
 \begin{align}
