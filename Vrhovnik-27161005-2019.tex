@@ -75,7 +75,7 @@ Vse slike, pri katerih ni naveden vir, so avtorske; izdelane so s pomočjo progr
 %
 \subsection{Zgodovina Fareyevega zaporedja}
 
-Vrnimo se k v uvodu omenjeni nalogi o številu ulomkov različnih vrednosti, manjših od $1$, z imenovalci kvečjemu $100$. Prvi odgovor na članek je bila tabela ulomkov z imenovalci manjšimi od $10$, nato pa še dve tabeli z rezultatoma $3055$ in $4851$. Leta 1751 je R.~Flitcon objavil pravilni odgovor $3003$, kateremu je dodal tudi opis postopka. Preden ga razložimo, si oglejmo Eulerjevo funkcijo in njene lastnosti, ki nas bodo pripeljale do rešitve. 
+Vrnimo se k v uvodu omenjeni nalogi o številu ulomkov različnih vrednosti, manjših od $1$, z imenovalci manjšimi od $100$. Prvi odgovor na članek je bila tabela ulomkov z imenovalci manjšimi od $10$, nato pa še dve tabeli z rezultatoma $3055$ in $4851$. Leta 1751 je R.~Flitcon objavil pravilni odgovor $3003$, kateremu je dodal tudi opis postopka. Preden ga razložimo, si oglejmo Eulerjevo funkcijo in njene lastnosti, ki nas bodo pripeljale do rešitve. 
 %
 % Eulerjeva funkcija
 
@@ -84,7 +84,7 @@ Preslikava \( \varphi \colon \mathbb{N} \rightarrow \mathbb{N}\), ki za vsako na
 \end{definicija}
 
 \begin{primer}
-Izračunajmo nekaj vrednosti Eulerjeve funkcije.
+Izračunajmo nekaj vrednosti Eulerjeve funkcije:
 
 \( \varphi(1) = 1, \)
 
@@ -172,7 +172,7 @@ Ekvivalentno, $F_n$ vsebuje vse okrajšane ulomke med $0$ in $1$ z imenovalci, k
 \end{definicija}
 
 \begin{primer}
-Poglejmo si Fareyeva zaporedja najnižjih redov.
+Poglejmo si Fareyeva zaporedja najnižjih redov:
 
 \(F_1 = \left \{\frac{0}{1}, \frac{1}{1} \right \}, \)
 
@@ -186,10 +186,11 @@ Poglejmo si Fareyeva zaporedja najnižjih redov.
 \end{primer}
 
 \begin{opomba}
-Če pogoj $0 \leq p \leq q \leq n$ v definiciji~\ref{def:Farey} omilimo v pogoj $0 \leq p,q \leq n$, okrajšane ulomke z intervala $[0,1]$ razširimo na interval $[0, \infty)$. V primeru, ko za $p$ in $q$ dovoljujemo tudi negativna cela števila, dobimo okrajšane ulomke na celotni realni osi.
+Če pogoj $0 \leq p \leq q \leq n$ v definiciji~\ref{def:Farey} omilimo v pogoj $0 \leq p,q \leq n$, okrajšane ulomke z intervala $[0,1]$ razširimo na interval $[0, \infty)$. 
+V primeru, ko za števili $p$ in $q$ predpišemo $|p|, |q| \leq n$, dobimo okrajšane ulomke na celotni realni osi.
 \end{opomba}
 
-V zgornjih primerih opazimo, da za vsaka sosednja člena Fareyevega zaporedja velja naslednje. Če števec prvega ulomka množimo z imenovalcem drugega in nato vlogi ulomkov zamenjamo, je razlika obeh produktov po absolutni vrednosti enaka $1$. To se bo izkazalo za pomembno opazko, zato vpeljemo pojem, ki sledi.
+V zgornjih primerih opazimo, da za vsaka sosednja člena Fareyevega zaporedja velja naslednje: če števec prvega ulomka množimo z imenovalcem drugega in nato vlogi ulomkov zamenjamo, je razlika obeh produktov po absolutni vrednosti enaka $1$. To se bo izkazalo za pomembno opazko, zato vpeljemo pojem, ki sledi.
 
 \begin{definicija}
 Sosednja člena v Fareyevem zaporedju imenujemo \emph{Fareyeva soseda}.
@@ -198,10 +199,11 @@ Sosednja člena v Fareyevem zaporedju imenujemo \emph{Fareyeva soseda}.
 % medianta
 %
 \begin{definicija}
-Naj bosta $\frac{a}{b}$ in $\frac{c}{d}$ sosednja člena nekega Fareyevega zaporedja. Člen \[\frac{a+c}{b+d} \] imenujemo \emph{medianta}.
+Naj bosta $\frac{a}{b}$ in $\frac{c}{d}$ sosednja člena nekega Fareyevega zaporedja. Ulomek \[\frac{a+c}{b+d} \] imenujemo \emph{medianta}.
 \end{definicija}
 
 \begin{trditev}
+\label{Trd:MedOcena}
 Za medianto okrajšanih ulomkov, kjer je \(\frac{a}{b} < \frac{c}{d}\), velja  \(\frac{a}{b} < \frac{a+c}{b+d} < \frac{c}{d}\) .
 \end{trditev}
 
@@ -216,7 +218,7 @@ Zveza, ki jo dokazujemo, res velja.
 % lastnosti 
 %
 Kako dobimo člen Fareyevega zaporedja reda $(n+1)$?
-Označimo iskani okrajšan ulomek s $\frac{k}{n+1}$. Seveda velja $k, n \in\mathbb{N}$ in $k < n+1$ sta tuji si števili. Zato obstajata enolično določeni naravni števili $a < b$, da velja $a(n+1)-bk=1.$ S preoblikovanjem zadnje enakosti dobimo zvezo $a(n+1-b)-b(k-a)=1,$ kar pomeni, da sta si tudi naravni števili $k-a$ in $n+1-b$ tuji. Brez škode za splošnost naj bo $k-a<n+1-b.$ Zato lahko tvorimo okrajšan ulomek $\frac{k-a}{n+1-b}$, ki pripada nekemu Fareyevemu zaporedju. Prav tako je okrajšan ulomek $\frac{a}{b}$ element nekega Fareyevega zaporedja. Sedaj prepišimo ulomek $\frac{k}{n+1}$ v $\frac{a+(k-a)}{b+(n+1-b)},$ kar pa je medianta ulomkov $\frac{a}{b}$ in $\frac{k-a}{n+1-b}.$ Dokazali smo naslednjo lema.
+Označimo iskani okrajšan ulomek s $\frac{k}{n+1}$. Seveda velja $k, n \in\mathbb{N}$ in $k < n+1$ sta tuji si števili. Zato obstajata enolično določeni naravni števili $a < b$, da velja $a(n+1)-bk=1.$ S preoblikovanjem zadnje enakosti dobimo zvezo $a(n+1-b)-b(k-a)=1,$ kar pomeni, da sta si tudi naravni števili $k-a$ in $n+1-b$ tuji. Brez škode za splošnost naj bo $k-a<n+1-b.$ Zato lahko tvorimo okrajšan ulomek $\frac{k-a}{n+1-b}$, ki pripada nekemu Fareyevemu zaporedju. Prav tako je okrajšan ulomek $\frac{a}{b}$ element nekega Fareyevega zaporedja. Sedaj prepišimo ulomek $\frac{k}{n+1}$ v $\frac{a+(k-a)}{b+(n+1-b)},$ kar pa je medianta ulomkov $\frac{a}{b}$ in $\frac{k-a}{n+1-b}.$ Dokazali smo naslednjo lemo.
 
 \begin{lema}
 \label{lema:EltVišReda}
@@ -228,11 +230,11 @@ Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). Ulomka $\frac{a}{b}$ in 
 \end{trditev}
 
 \begin{dokaz}
-$(\Rightarrow)$ Dokaz bo potekal z indukcijo na red Fareyevega zaporedja, na $n$.
+$(\Rightarrow)$ Denimo, da sta ulomka $\frac{a}{b}$ in $\frac{c}{d}$ Fareyeva soseda v zaporedju $F_{n}$. Trdimo, da velja $bc - ad = 1$. Dokaz bo potekal z indukcijo na red Fareyevega zaporedja, torej na $n$.
 Za $n=1$ je $F_1 = \{\frac{0}{1}, \frac{1}{1}\}$, $bc - ad = 1\cdot1 - 0\cdot1 = 1$, zato osnovni korak velja.
-Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Vemo, da nove člene zaporedja višjega reda dobimo z računanjem mediant. Če je $b+d > n+1,$ potem ulomek $\frac{a+c}{b+d} \notin F_{n+1}$ in je \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{c}{d} \ldots \} \) ter po indukcijski predpostavki velja $bc - ad = 1$. 
-Če je $b+d < n+1,$ je $\frac{a+c}{b+d}$ že nek člen v zaporedju $F_n$, zato uporabimo indukcijsko predpostavko. 
-Preostane še možnost $b+d = n+1$. Po lemi~\ref{lema:EltVišReda} je edina možnost za člen med elementoma $\frac{a}{b}$ in $\frac{c}{d}$ njuna medianta $\frac{a+c}{b+d}$, ki pa je tudi edini nov člen v opazovanem delu zaporedja. To je zato oblike \( F_{n+1} = \{\ldots \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
+Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots , \frac{a}{b}, \frac{c}{d} , \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Vemo, da nove člene zaporedja višjega reda dobimo z računanjem mediant. Če je $b+d > n+1,$ potem ulomek $\frac{a+c}{b+d} \notin F_{n+1}$ in je \( F_{n+1} = \{\ldots , \frac{a}{b}, \frac{c}{d} , \ldots \} \) ter po indukcijski predpostavki velja $bc - ad = 1$. 
+Če je $b+d < n+1,$ je $\frac{a+c}{b+d}$ že nek člen v zaporedju $F_n$; skupaj s trditvijo~\ref{Trd:MedOcena} pa prispemo v protislovje s predpostavko, da sta ulomka $\frac{a}{b}$ in $\frac{c}{d}$ Fareyeva soseda. Ta primer se zato ne more zgoditi. 
+Preostane še možnost $b+d = n+1$. Po lemi~\ref{lema:EltVišReda} je edina možnost za člen med elementoma $\frac{a}{b}$ in $\frac{c}{d}$ njuna medianta $\frac{a+c}{b+d}$, ki pa je tudi edini nov člen v opazovanem delu zaporedja. To je zato oblike \( F_{n+1} = \{\ldots , \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} , \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
 
 $(\Leftarrow)$ Obratno, naj bodo okrajšani ulomki $\frac{a}{b}$, $\frac{p}{q}$ in $\frac{c}{d}$ členi poljubnega Fareyevega zaporedja, za katere velja $\frac{a}{b} <\frac{p}{q} < \frac{c}{d}$ in $bp - aq = qc - pd = 1$. S preureditvijo te enakosti dobimo
 \begin{align*}
@@ -298,7 +300,6 @@ Preden se lotimo dokazovanja zgornje trditve, definirajmo naslednjo oznako in dv
 % notacija veliki O
 \begin{definicija}[Notacija veliki O]
 Funkcija $f$ pripada razredu $O(g)$, če absolutna vrednost funkcije $f$ ne raste hitreje od funkcije $g$, pomnožene s konstanto, ko gre $x$ proti $\infty$.
-
 Natančneje, $f(x) = O \left(g(x) \right)$, ko $x \to \infty$, če obstajata konstanta $K$ in vrednost $x_{0}$, da za vsak $x \geq x_{0}$ velja $|f(x)| < K \cdot g(x)$.
 \end{definicija}
 
@@ -308,8 +309,8 @@ Preslikava \( \mu\colon \mathbb{N} \to \mathbb{N} \), definirana s predpisom
 \begin{equation}
 \mu(n) = \left\{
 \begin{array}{rl}
-0 & \textrm{če je}\ n\ \textrm{deljiv s kvadratom praštevila}\\
-(-1)^p & \textrm{če je}\ n\ \textrm{produkt}\ p\ \textrm{različnih praštevil}
+0 &,\ \textrm{če je}\ n\ \textrm{deljiv s kvadratom praštevila}\\
+(-1)^p &,\ \textrm{če je}\ n\ \textrm{produkt}\ p\ \textrm{različnih praštevil}
 \end{array},
 \right.
 \end{equation}
@@ -317,7 +318,7 @@ se imenuje \emph{M\"obiusova\footnote{August Ferdinand M\"obius, 17.\ 11.\ 1790-
 \end{definicija}
 
 \begin{primer}
-Izračunajmo vrednosti M\"obiusove funkcije za nekaj naravnih števil.
+Izračunajmo vrednosti M\"obiusove funkcije za nekaj naravnih števil:
 
 \( \mu(1)=1, \)
 
@@ -403,7 +404,7 @@ Naj bosta $p$ in $q$ tuji si števili v množici celih števil.
 
 Ker so Fordovi krogi definirani za vsak okrajšan ulomek, lahko poljubnemu racionalnemu številu enolično priredimo Fordov krog. Iz analize vemo, da je množica racionalnih števil gosta podmnožica množice realnih števil, abscisna os pa je geometrijska predstavitev le-te. Zato poljubno majhen interval na abscisni osi vsebuje neskončno mnogo dotikališč Fordovih krogov.
 
-Zaradi simetrije je Fordove kroge dovolj obravnavati na intervalu $[0,1]$, obenem pa se zavedati, da jih lahko induktivno razširimo na celotno realno os. V nadaljevanju bomo s pojmom množica Fordovih krogov označevali množico Fordovih krogov z dotikališči na intervalu $[0,1]$.
+Zaradi simetrije je Fordove kroge dovolj obravnavati na intervalu $[0,1]$, obenem pa se zavedati, da jih lahko periodično razširimo na celotno realno os. V nadaljevanju bomo s pojmom množica Fordovih krogov označevali množico Fordovih krogov z dotikališči na intervalu $[0,1]$.
 
 \begin{opomba}
 Iz definicije zaradi pogoja o tujosti števil $p$ in $q$ neposredno sledi, da je množica Fordovih krogov v bijekciji s Fareyevim zapredjem.
@@ -478,7 +479,7 @@ Denimo, da sta Fordova kroga C($\frac{a}{b}$) in C($\frac{c}{d}$) tangentna. Pot
 \[ \left ( \left | \frac{1}{2b^2} - \frac{1}{2d^2} \right | \right )^2 + \left ( \left| \frac{c}{d} - \frac{a}{b} \right| \right )^2 = \left (\frac{1}{2b^2} + \frac{1}{2d^2} \right )^2. \]
 Ko odpravimo oklepaje, opazimo, da se nekateri členi odštejejo. Nato odpravimo ulomke in novo enakost poenostavimo. Dobimo
 \begin{align*}
-frac{1}{4b^4} - \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} + \frac{c^2}{d^2} - \frac{2ac}{bd} + \frac{a^2}{b^2} &= \frac{1}{4b^4} + \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4}, \\
+\frac{1}{4b^4} - \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4} + \frac{c^2}{d^2} - \frac{2ac}{bd} + \frac{a^2}{b^2} &= \frac{1}{4b^4} + \frac{1}{2b^{2}d^{2}} + \frac{1}{4d^4}, \\
 b^{2}c^{2} - 2abcd + a^{2}d^{2} &= 1, \\
 (bc-ad)^2 &= 1, \\
 |bc-ad|&=1.
@@ -520,7 +521,7 @@ Najprej dokažimo, da sta Fordova kroga C($\frac{p}{q}$) in C($\frac{P_n}{Q_n}$)
 \[ |qP_{n} - pQ_{n}| = |q(P+np) - p(Q+nq)| = |qP+qnp-pQ-pnq| = |qP-pQ| = 1. \]
 Zadnja enakost velja po predpostavki, saj sta C($\frac{p}{q}$) in C($\frac{P}{Q}$) Fordova soseda.
 
-Sedaj preverimo, če obstajajo še Fordovi sosedi, ki niso zgornje oblike. Opazovali bomo zaporedje Fordovih krogov $\mathcal{M} = \{ \mathrm{C}(\frac{P_n}{Q_n}); n\in\Z \}.$
+Sedaj preverimo, če obstajajo še Fordovi sosedi, ki niso zgornje oblike. Opazovali bomo množico Fordovih krogov $\mathcal{M} = \{ \mathrm{C}(\frac{P_n}{Q_n}); n\in\Z \}.$
 Iz računa
 \begin{align}
 |Q_{n}P_{n+1} - P_{n}Q_{n+1}| 
@@ -653,7 +654,7 @@ Tokrat naj bosta števili $p$ in $q$ elementa množice Gaussovih celih števil, 
 \begin{align} 
 \frac{p}{q} = \frac{p'+ip''}{q'+iq''} = \frac{(p'+ip'')(q'-iq'')}{(q'+iq'')(q'-iq'')} = \frac{p'q'+p''q''}{q'^2+q''^2} + i \frac{p''q'-p'q''}{q'^2+q''^2},
 \end{align}
-ki pripada kompleksnim številom, in ga okrajšajmo. Geometrijsko predstavlja točko v Gaussovi $xy$-ravnini z realno in imaginarno komponento. Gaussovo ravnino postavimo v prostor, določen z osjo $z$, pravokotno na Gaussovo ravnino, in opazujmo podprostor, ki pripada pozitivnim vrednostim na $z$-osi. Analogno Fordovim krogom v ravnini pridemo do naslednjega pojma. 
+ki pripada kompleksnim številom, ter okrajšajmo posebej realni in imaginarni del. Geometrijsko predstavlja točko v Gaussovi $xy$-ravnini z realno in imaginarno komponento. Gaussovo ravnino postavimo v prostor, določen z osjo $z$, pravokotno na Gaussovo ravnino, in opazujmo podprostor, ki pripada pozitivnim vrednostim na $z$-osi. Analogno Fordovim krogom v ravnini pridemo do naslednjega pojma. 
 
 \begin{definicija}
 \emph{Fordova krogla} S($\frac{p}{q}$), kjer je $\frac{p}{q}$ okrajšan ulomek v množici kompleksnih števil, je krogla v zgornjem polprostoru, definiranem kot zgoraj, ki se $xy$-ravnine dotika v točki, določeni s $\frac{p}{q}$, njen polmer pa meri $\frac{1}{2|q|^2}.$
@@ -765,7 +766,7 @@ Fordov krog C($\frac{1}{0}$), katerega polmer je neskončen, je premica $\mathbb
 
 \begin{izrek}
 \label{izr:MobDelovanje}
-M\"{o}biusova transformacija slika Fordove kroge v Fordove kroge.
+M\"{o}biusova transformacija $A \in {SL}_{2}(\mathbb{Z})$ slika Fordove kroge v Fordove kroge.
 \end{izrek}
 
 \begin{dokaz}
@@ -800,7 +801,7 @@ in
 \end{array}
 \right]
 \).
-To pomeni, da je vsako M\"{o}biusovo transformacijo moč zapisati kot kompozitum preslikav $z \mapsto z+1$ in $z \mapsto -\frac{1}{z}$, ki ustrezata generatorjema. Trdimo, da M\"{o}biusova transformacija preslika Fordov krog z intervala $ [0,1]$ v Fordov krog z intervala $[n,n+1]$, kjer $n$ pripada množici celih števil. 
+To pomeni, da je vsako M\"{o}biusovo transformacijo moč zapisati kot kompozitum preslikav $z \mapsto z+1$ in $z \mapsto -\frac{1}{z}$, ki ustrezata zgornjima generatorjema. Trdimo, da M\"{o}biusova transformacija preslika Fordov krog z intervala $ [0,1]$ v Fordov krog z intervala $[n,n+1]$, kjer $n$ pripada množici celih števil. 
 
 Preslikava $z \mapsto z+1$ je translacija, zato zgornje očitno velja.
 
@@ -842,14 +843,14 @@ Dana naj bosta Fordova kroga C($\frac{e}{f}$) in C($\frac{g}{h}$). M\"{o}biusova
 \end{lema}
 
 \begin{dokaz}
-Kot v definiciji~\ref{def:MobTransformacija} zapišimo M\"{o}biusovo transformacijo v obliki $f(z) = \frac{az+c}{bz+d}$, kjer so $a,b,c,d \in \mathbb{Z}$ in velja $ad-bc=1$. 
+Kot v definiciji~\ref{def:MobTransformacija} zapišimo M\"{o}biusovo transformacijo v obliki $m(z) = \frac{az+c}{bz+d}$, kjer so $a,b,c,d \in \mathbb{Z}$ in velja $ad-bc=1$. 
 Vzemimo Fordova kroga C($\frac{e}{f}$) in C($\frac{g}{h}$), ter poglejmo, kam se preslikata. 
 Ker velja izrek~\ref{izr:MobDelovanje} in je Fordov krog enolično določen s točko, v kateri se dotika realne osi v kompleksni ravnini, je dovolj poznati sliko te točke.
 Izračunajmo
-\[ f \left(\frac{e}{f} \right) = \frac{a \frac{e}{f} + c}{b \frac{e}{f} + d} = \frac{ae + cf}{be + df}, \]
+\[ m \left(\frac{e}{f} \right) = \frac{a \frac{e}{f} + c}{b \frac{e}{f} + d} = \frac{ae + cf}{be + df}, \]
 od koder sledi, da se Fordov krog C($\frac{e}{f}$) preslika v Fordov krog C($\frac{ae+cf}{be+df}$).
 Podobno,
-\[ f \left(\frac{g}{h} \right) = \frac{a \frac{g}{h} + c}{b \frac{g}{h} + d} = \frac{ag + ch}{bg + dh}, \]
+\[ m \left(\frac{g}{h} \right) = \frac{a \frac{g}{h} + c}{b \frac{g}{h} + d} = \frac{ag + ch}{bg + dh}, \]
 zato se C($\frac{g}{h}$) preslika v C($\frac{ag+ch}{bg+dh}$).
 Označimo \( e' = ae+cf, f' = be+df, g' = ag+ch \) in $h' = bg+dh$. Računajmo
 \[ e'h'-f'g' = (ae+cf)(bg+dh) - (be+df)(ag+ch) = (ad - bc)(eh - fg), \]
@@ -872,7 +873,7 @@ Kroga C($\frac{r}{s}$) in C($\frac{p}{q}$) naj bosta Fordova soseda. Trdimo, da 
 
 Vzemimo točke v presečiščih teh treh krogov. Vemo, da za točke $\alpha$, $\beta$, $\gamma$ obstaja M\"{o}biusova transformacija, ki jih preslika v poljubne točke $\lambda$, $\mu$, $\nu$. Torej obstaja M\"{o}biusova transformacija $M_{1}$, ki izbrane točke v presečiščih preslika v točke $i$, $\frac{1}{2}+\frac{1}{2}i$, $1+i$. Ker M\"{o}biusova transformacija slika Fordove kroge v Fordove kroge, mi pa poznamo sliki dveh točk na vsakem izmed krogov C($\frac{r}{s}$), C($\frac{p}{q}$) in C($\frac{r+p}{s+q}$), poznamo slike vseh treh Fordovih krogov. Te pa so točno C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$).
 
-Sedaj bomo konstruirali zaporedje M\"{o}biusovih transformacij (ki je prav tako M\"{o}biusova transformacija). Začnimo s Fordovima sosedoma C($\frac{r}{s}$) in C($\frac{p}{q}$). Preslikava $M_{1}$ ju preslika v Fordova kroga C($\frac{1}{0}$) in C($\frac{0}{1}$) z medianto, Fordovim krogom, C($\frac{1}{1}$). Kot v prvem delu dokaza izberimo tri točke v presečiščih in jih preslikajmo. Obstaja M\"{o}biusova transformacija $M_{2}$, ki Fordove kroge C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$) zaporedoma preslika v Fordove kroge C($\frac{a}{b}$) in C($\frac{c}{d}$) in C($\frac{a+c}{b+d}$). Nadaljujemo s transformacijo $M_{3}$, ki slednje preslika po vrsti v Fordove kroge C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$), in končajmo s transformacijo $M_{4}$, ki le-te preslika v Fordove kroge C($\frac{r}{s}$), C($\frac{p}{q}$) in C($\frac{r+p}{s+q}$).
+Sedaj bomo konstruirali zaporedje M\"{o}biusovih transformacij (kompozitum katerih je prav tako M\"{o}biusova transformacija). Začnimo s Fordovima sosedoma C($\frac{r}{s}$) in C($\frac{p}{q}$). Preslikava $M_{1}$ ju preslika v Fordova kroga C($\frac{1}{0}$) in C($\frac{0}{1}$) z medianto Fordovim krogom C($\frac{1}{1}$). Kot v prvem delu dokaza izberimo tri točke v presečiščih in jih preslikajmo. Obstaja M\"{o}biusova transformacija $M_{2}$, ki Fordove kroge C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$) zaporedoma preslika v Fordove kroge C($\frac{a}{b}$) in C($\frac{c}{d}$) in C($\frac{a+c}{b+d}$). Nadaljujemo s transformacijo $M_{3}$, ki slednje preslika po vrsti v Fordove kroge C($\frac{1}{0}$), C($\frac{0}{1}$) in C($\frac{1}{1}$), in končajmo s transformacijo $M_{4}$, ki le-te preslika v Fordove kroge C($\frac{r}{s}$), C($\frac{p}{q}$) in C($\frac{r+p}{s+q}$).
 
 Vse zgornje preslikave so M\"{o}biusove transformacije, ki ohranjajo medianto Fordovih krogov (saj velja posledica~\ref{Posl:MobOhr1} ter je C($\frac{1}{1}$) medianta C($\frac{1}{0}$) in C($\frac{0}{1}$)), zato tudi kompozitum $M_{4} \circ M_{3} \circ M_{2} \circ M_{1}$ ohranja medianto. Sledi, da je naš kandidat C($\frac{r+p}{s+q}$) res medianta Fordovih krogov C($\frac{r}{s}$) in C($\frac{p}{q}$). Z drugimi besedami, za poljubna Fordova soseda obstaja enolično določen Fordov krog, ki je tangenten na oba.
 \end{dokaz}
@@ -982,11 +983,11 @@ Zapisali smo jo kot produkt dveh lihih funkcij, kar je soda funkcija. Upoštevam
 \end{dokaz}
 
 Tudi za Bernoullijeva števila oblike $B_{2k}$ obstaja formula, ki pa ni preprosta.
-Za nas so pomembna tista z lihimi indeksi, saj so povezana z Riemannovo zeta funkcijo, ki je podrobno obravnavana v \cite[poglavje 1.5]{zetafunction}. Mi bomo navedli le rezultat. Naj bo $n\in\{0, 1, 2 \dots\}$. Potem velja
+Za nas so pomembna tista z lihimi indeksi, saj so povezana z Riemannovo zeta funkcijo, ki je podrobno obravnavana v \cite[poglavje 1.5]{zetafunction}. Mi bomo navedli le rezultat. Naj bo $n\in\{0, 1, 2, \dots\}$. Potem velja
 \begin{equation}
 	\zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}.
 \end{equation}
-Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6 \dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $\{0<Re(s)<1\}$, o ničlah na njem pa govori naslednji izrek. 
+Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6, \dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $\{0<Re(s)<1\}$, o ničlah na njem pa govori naslednji izrek. 
 
 \begin{figure}[h!]
 \begin{center}
@@ -1014,7 +1015,7 @@ se imenuje \emph{Mertensova\footnote{Franz Mertens, 20.\ 3.\ 1840--5.\ 3.\ 1927,
 \end{definicija}
 
 \begin{primer}
-Izračunajmo vrednosti Mertensove funkcije za nekaj naravnih števil.
+Izračunajmo vrednosti Mertensove funkcije za nekaj naravnih števil:
 
 \( M(2) = \mu(1) + \mu(2) = 1 - 1 = 0, \)
 
@@ -1124,8 +1125,8 @@ Funkcijo $D: \mathbb{R} \to \{0,1\}$ definirajmo s predpisom
 \label{Eq:D(n)}
 D(n) = \left\{
 \begin{array}{rl}
-	1 & \textrm{če}\ n \geq 1 \\
-	0 & \textrm{če}\ n < 1
+	1 &,\ \textrm{če}\ n \geq 1 \\
+	0 &,\ \textrm{če}\ n < 1
 \end{array}.
 \right.
 \end{align}
@@ -1146,8 +1147,8 @@ Ker je $ f(\frac{p}{q}) = f(\frac{2p}{2q}) = f(\frac{3p}{3q}) = \cdots $, je koe
 M \left(\frac{n}{q} \right) + M \left(\frac{n}{2q} \right) + M \left(\frac{n}{3q} \right) + \cdots &= \sum_{l=1}^{\infty} M \left(\frac{n}{ql} \right) \\
 &= D \left(\frac{n}{q} \right) = \left\{
 \begin{array}{rl}
-	1 & \textrm{če}\ n \geq q \\
-	0 & \textrm{če}\ n < q
+	1 &,\ \textrm{če}\ n \geq q \\
+	0 &,\ \textrm{če}\ n < q
 \end{array}.
 \right.
 \end{align*}
