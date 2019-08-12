@@ -218,7 +218,7 @@ Zveza, ki jo dokazujemo, res velja.
 % lastnosti 
 %
 Kako dobimo člen Fareyevega zaporedja reda $(n+1)$?
-Označimo iskani okrajšan ulomek s $\frac{k}{n+1}$. Seveda velja $k, n \in\mathbb{N}$ in $k < n+1$ sta tuji si števili. Zato obstajata enolično določeni naravni števili $a < b$, da velja $a(n+1)-bk=1.$ S preoblikovanjem zadnje enakosti dobimo zvezo $a(n+1-b)-b(k-a)=1,$ kar pomeni, da sta si tudi naravni števili $k-a$ in $n+1-b$ tuji. Brez škode za splošnost naj bo $k-a<n+1-b.$ Zato lahko tvorimo okrajšan ulomek $\frac{k-a}{n+1-b}$, ki pripada nekemu Fareyevemu zaporedju. Prav tako je okrajšan ulomek $\frac{a}{b}$ element nekega Fareyevega zaporedja. Sedaj prepišimo ulomek $\frac{k}{n+1}$ v $\frac{a+(k-a)}{b+(n+1-b)},$ kar pa je medianta ulomkov $\frac{a}{b}$ in $\frac{k-a}{n+1-b}.$ Dokazali smo naslednjo lemo.
+Označimo iskani okrajšan ulomek s $\frac{k}{n+1}$. Seveda velja $k, n \in\mathbb{N}$ in $k < n+1$ sta tuji si števili. Zato obstajata enolično določeni naravni števili $a < b$, da velja $a(n+1)-bk=1.$ S preoblikovanjem zadnje enakosti dobimo zvezo $a(n+1-b)-b(k-a)=1,$ kar pomeni, da sta si tudi celi števili $k-a$ in $n+1-b$ tuji. Brez škode za splošnost naj bo $k-a<n+1-b.$ Zato lahko tvorimo okrajšan ulomek $\frac{k-a}{n+1-b}$, ki pripada nekemu Fareyevemu zaporedju. Opomnimo, da je ulomek $\frac{k-a}{n+1-b}$ pozitiven; iz zadnje enakosti namreč sledi, da sta števec in imenovalec naravni števili. Prav tako je okrajšan ulomek $\frac{a}{b}$ element nekega Fareyevega zaporedja. Sedaj prepišimo ulomek $\frac{k}{n+1}$ v $\frac{a+(k-a)}{b+(n+1-b)},$ kar pa je medianta ulomkov $\frac{a}{b}$ in $\frac{k-a}{n+1-b}.$ Dokazali smo naslednjo lemo.
 
 \begin{lema}
 \label{lema:EltVišReda}
@@ -411,7 +411,7 @@ Iz definicije zaradi pogoja o tujosti števil $p$ in $q$ neposredno sledi, da je
 \end{opomba}
 
 % konstrukcija pravokotnega trikotnika
-Oglejmo si konstrukcijo pravokotnega trikotnika, določenega s parom Fordovih krogov, ki bo ključna pri dokazovanju trditev v tem poglavju. Izberimo okrajšana ulomka $\frac{a}{b}$ in $\frac{c}{d}$, za katera velja $\frac{a}{b} < \frac{c}{d}$, ter jima priredimo ustrezna Fordova kroga. Naj bosta $A$ središče Fordovega kroga C($\frac{a}{b}$) in $B$ središče Fordovega kroga C($\frac{c}{d}$). Če je $b<d$, kar pomeni, da je polmer kroga C($\frac{a}{b}$) večji od polmera kroga C($\frac{c}{d}$), točko $C$ določimo kot presečišče navpične premice skozi točko $A$ z vodoravno premico skozi točko $B$. Sicer je $b>d$, točka $C$ pa presečišče navpične premice skozi točko $B$ z vodoravno premico skozi točko $A$. Primer, ko velja $b=d$, nam da izrojen trikotnik, zato ga izpustimo. Povežimo središči obeh krogov. Točki $D$ in $E$ naj bosta presečišči daljice $AB$ s Fordovima krogoma C($\frac{a}{b}$) in C($\frac{c}{d}$).
+Oglejmo si konstrukcijo pravokotnega trikotnika, določenega s parom Fordovih krogov, ki bo ključna pri dokazovanju trditev v tem poglavju. Izberimo okrajšana ulomka $\frac{a}{b}$ in $\frac{c}{d}$, ter jima priredimo ustrezna Fordova kroga. Naj bosta $A$ središče Fordovega kroga C($\frac{a}{b}$) in $B$ središče Fordovega kroga C($\frac{c}{d}$). Če je $b<d$, kar pomeni, da je polmer kroga C($\frac{a}{b}$) večji od polmera kroga C($\frac{c}{d}$), točko $C$ določimo kot presečišče navpične premice skozi točko $A$ z vodoravno premico skozi točko $B$. Sicer je $b>d$, točka $C$ pa presečišče navpične premice skozi točko $B$ z vodoravno premico skozi točko $A$. Primer, ko velja $b=d$, nam da izrojen trikotnik, zato ga izpustimo. Povežimo središči obeh krogov. Točki $D$ in $E$ naj bosta presečišči daljice $AB$ s Fordovima krogoma C($\frac{a}{b}$) in C($\frac{c}{d}$).
 
 Vemo, da se kroga dotikata abscisne osi zaporedoma v točkah $\frac{a}{b}$ in $\frac{c}{d}$, njuna polmera pa merita $\frac{1}{2b^2}$ in $\frac{1}{2d^2}$. Od tod lahko izračunamo razdalje $|AB|$, $|AC|$ in $|BC|$.
 Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, zato velja Pitagorov izrek
@@ -424,13 +424,13 @@ Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, za
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.45]{pitagora1.png}
-\caption{Konstrukcija pravokotnega trikotnika, ki pripada paru Fordovih krogov.}
+\caption{Konstrukcija pravokotnega trikotnika, ki pripada paru Fordovih krogov. Slika prikazuje primer, ko je $b<d$.}
 \label{Fig:Pitagora}
 \end{center}
 \end{figure}
 
 \begin{opomba}
-Pri konstrukciji smo brez škode za splošnost predpostavili zvezo $\frac{a}{b} < \frac{c}{d}$. Če v splošnem primeru ta ne velja, zamenjamo vlogi ulomkov in postopamo na enak način kot v zgoraj opisanem primeru.
+Enačba~\ref{Eq:Pitagora} velja tako v primeru, ko je $b>d$, kot za $b<d$.
 \end{opomba}
 %
 
@@ -566,7 +566,7 @@ Pravokotna trikotnika, ki pripadata poljubnima paroma Fordovih sosedov, določat
 
 \begin{dokaz}
 %
-Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) ter C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) poljubna različna para Fordovih sosedov. Brez škode za splošnost naj velja $\frac{a}{b}<\frac{c}{d}$, $b<d$ in $\frac{a'}{b'}<\frac{c'}{d'}$, $b'<d'$. Naj prvemu paru Fordovih sosedov pripada pravokotni trikotnik $ABC$, drugemu paru pa pravokotni trikotnik $A'B'C'$. Trdimo, da si trikotnika nista podobna.
+Naj bosta C($\frac{a}{b}$) in C($\frac{c}{d}$) ter C($\frac{a'}{b'}$) in C($\frac{c'}{d'}$) poljubna različna para Fordovih sosedov. Brez škode za splošnost naj velja $b<d$ in $b'<d'$. Naj prvemu paru Fordovih sosedov pripada pravokotni trikotnik $ABC$, drugemu paru pa pravokotni trikotnik $A'B'C'$. Trdimo, da si trikotnika nista podobna.
 
 Pa denimo, da sta si trikotnika $ABC$ in $A'B'C'$ podobna. Tedaj obstaja tako naravno število $\lambda\ne{1}$, da za dolžine stranic obeh pravokotnih trikotnikov veljajo naslednje zveze:
 %
@@ -635,6 +635,7 @@ Enoličnost pitagorejskih trojic je določena do simetrij Fordovih krogov natan�
 
 Do sedaj smo se ukvarjali s Fordovimi krogi, ki so enolično določeni z racionalnim številom. Natančneje, danemu okrajšanemu ulomku $\frac{p}{q}$ smo priredili Fordov krog na zgornji polravnini evklidske ravnine, ki se abscisne osi dotika v točki $\frac{p}{q}$, njegov polmer pa meri $\frac{1}{2q^2}.$
 Nadaljujemo lahko s splošnejšimi Fordovimi krogi, ki so definirani na povsem enak način, le da imajo polmer enak $\frac{1}{2hq^2},$ pri čemer je $h$ poljubno realno število. Imenujemo jih tudi Speiserjevi\footnote{Andreas Speiser, 10.\ 6.\ 1885--12.\ 10.\ 1970, švicarski matematik, ki se je ukvarjal s teorijo števil in teorijo grup.} krogi. Če izberemo $h=1,$ dobimo običajne Fordove kroge.
+Posplošeni Fordovi krogi so povezani z geometrijo modularnih grup in teorijo kvadratnih form.
 
 % slika posplosenih Fordovih krogov
 \begin{figure}[h!]
@@ -764,6 +765,8 @@ Fordov krog C($\frac{1}{0}$), katerega polmer je neskončen, je premica $\mathbb
 \end{center}
 \end{figure}
 
+V nadaljevanju tega razdelka bomo s pojmom množica Fordovih krogov označevali Fordove kroge na celotni realni osi vključno s krogom C($\frac{1}{0}$).
+
 \begin{izrek}
 \label{izr:MobDelovanje}
 M\"{o}biusova transformacija $A \in {SL}_{2}(\mathbb{Z})$ slika Fordove kroge v Fordove kroge.
@@ -801,7 +804,7 @@ in
 \end{array}
 \right]
 \).
-To pomeni, da je vsako M\"{o}biusovo transformacijo moč zapisati kot kompozitum preslikav $z \mapsto z+1$ in $z \mapsto -\frac{1}{z}$, ki ustrezata zgornjima generatorjema. Trdimo, da M\"{o}biusova transformacija preslika Fordov krog z intervala $ [0,1]$ v Fordov krog z intervala $[n,n+1]$, kjer $n$ pripada množici celih števil. 
+To pomeni, da je vsako M\"{o}biusovo transformacijo moč zapisati kot kompozitum preslikav $z \mapsto z+1$ in $z \mapsto -\frac{1}{z}$, ki ustrezata zgornjima generatorjema. Trdimo, da M\"{o}biusova transformacija preslika Fordov krog v Fordov krog. 
 
 Preslikava $z \mapsto z+1$ je translacija, zato zgornje očitno velja.
 
@@ -820,7 +823,9 @@ Preslikajmo original s preslikavo $z \mapsto -\frac{1}{z}$. Enačba slike se gla
 z \bar{z} + \frac{\bar{\alpha}}{R} \bar{z} + \frac{\alpha}{R} z + \frac{1}{R} &= 0.
 \end{align}
 %
-Sedaj vzemimo Fordov krog C($\frac{p}{q}$). Njegov polmer meri $\frac{1}{2q^2}$, središče pa je v točki $\frac{p}{q} +i \frac{1}{2q^2}$.
+% p,q \neq 0
+
+Sedaj vzemimo Fordov krog C($\frac{p}{q}$), za katerega velja $p,q \neq 0$. Njegov polmer meri $\frac{1}{2q^2}$, središče pa je v točki $\frac{p}{q} +i \frac{1}{2q^2}$.
 Izračunajmo
 \[ R = \alpha \bar{\alpha} - r^2 = \left(\frac{p}{q} + i\frac{1}{2q^2} \right) \left(\frac{p}{q} - i\frac{1}{2q^2} \right) - \frac{1}{4q^4} 
 = \frac{p^2}{q^2} + \frac{1}{4q^4} - \frac{1}{4q^4} = \frac{p^2}{q^2} \]
@@ -834,7 +839,12 @@ polmer pa meri
 = \frac{1}{R} \sqrt{|\alpha|^2 - R} =  \frac{1}{R} \frac{1}{2q^2} = \frac{q^2}{2p^2 q^2} = \frac{1}{2p^2}.
 \end{align}
 %
-Dokazali smo, da preslikavi, ki generirata grupo M\"{o}biusovih transformacij, Fordov krog preslikata v Fordov krog z intervala $[n,n+1]$, kjer je $n \in \mathbb{Z}$. Da dobimo Fordov krog z intervala $[0,1]$, moramo prvotno preslikavo komponirati z $n$ translacijami (s korakom $1$ ali $-1$). Ker identiteta slika Fordov krog vase in je kompozitum M\"{o}biusovih transformacij dobro definiran, grupa ${SL}_{2}(\mathbb{Z})$ res deluje na množico Fordovih krogov.
+% p=0 ali q=0
+
+Sliki Fordovih krogov C($\frac{0}{1}$) in C($\frac{1}{0}$) bomo obravnavali posebej. Preslikava $z \mapsto -\frac{1}{z}$ je M\"obiusova transformacija, ki slika premice in krožnice v premice in krožnice, krožnica pa je natanko določena s tremi točkami. Zato v našem primeru zadostuje poznati slike treh točk na Fordovem krogu. Izberimo točke $0$, $i$ in $\frac{1}{2} + \frac{1}{2} i$, ki ležijo na Fordovem krogu C($\frac{0}{1}$). Preslikajo se v točke $-\infty$, $i$ in $-1+i$; te ležijo na premici $x+i$, to je Fordovemu krogu C($\frac{1}{0}$). Zato je slika kroga C($\frac{0}{1}$) Fordov krog C($\frac{1}{0}$). Ker je preslikava bijekcija, se Fordov krog C($\frac{1}{0}$) preslika v C($\frac{0}{1}$).
+
+%
+Dokazali smo, da preslikavi, ki generirata grupo M\"{o}biusovih transformacij, Fordov krog preslikata v Fordov krog. Ker identiteta slika Fordov krog vase in je kompozitum M\"{o}biusovih transformacij dobro definiran, grupa ${SL}_{2}(\mathbb{Z})$ res deluje na množico Fordovih krogov.
 \end{dokaz}
 
 % lastnost mediante in Mobiusova transformacija
