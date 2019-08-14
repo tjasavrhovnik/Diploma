@@ -230,19 +230,22 @@ Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). Ulomka $\frac{a}{b}$ in 
 \end{trditev}
 
 \begin{dokaz}
-$(\Rightarrow)$ Denimo, da sta ulomka $\frac{a}{b}$ in $\frac{c}{d}$ Fareyeva soseda v zaporedju $F_{n}$. Trdimo, da velja $bc - ad = 1$. Dokaz bo potekal z indukcijo na red Fareyevega zaporedja, torej na $n$.
+$(\Rightarrow)$ 
+Denimo, da sta ulomka $\frac{a}{b}$ in $\frac{c}{d}$ Fareyeva soseda v zaporedju $F_{n}$. Trdimo, da velja $bc - ad = 1$. Dokaz bo potekal z indukcijo na red Fareyevega zaporedja, torej na $n$.
 Za $n=1$ je $F_1 = \{\frac{0}{1}, \frac{1}{1}\}$, $bc - ad = 1\cdot1 - 0\cdot1 = 1$, zato osnovni korak velja.
 Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots , \frac{a}{b}, \frac{c}{d} , \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Vemo, da nove člene zaporedja višjega reda dobimo z računanjem mediant. Če je $b+d > n+1,$ potem ulomek $\frac{a+c}{b+d} \notin F_{n+1}$ in je \( F_{n+1} = \{\ldots , \frac{a}{b}, \frac{c}{d} , \ldots \} \) ter po indukcijski predpostavki velja $bc - ad = 1$. 
 Če je $b+d < n+1,$ je $\frac{a+c}{b+d}$ že nek člen v zaporedju $F_n$; skupaj s trditvijo~\ref{Trd:MedOcena} pa prispemo v protislovje s predpostavko, da sta ulomka $\frac{a}{b}$ in $\frac{c}{d}$ Fareyeva soseda. Ta primer se zato ne more zgoditi. 
 Preostane še možnost $b+d = n+1$. Po lemi~\ref{lema:EltVišReda} je edina možnost za člen med elementoma $\frac{a}{b}$ in $\frac{c}{d}$ njuna medianta $\frac{a+c}{b+d}$, ki pa je tudi edini nov člen v opazovanem delu zaporedja. To je zato oblike \( F_{n+1} = \{\ldots , \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} , \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
 
-$(\Leftarrow)$ Obratno, naj bodo okrajšani ulomki $\frac{a}{b}$, $\frac{p}{q}$ in $\frac{c}{d}$ členi poljubnega Fareyevega zaporedja, za katere velja $\frac{a}{b} <\frac{p}{q} < \frac{c}{d}$ in $bp - aq = qc - pd = 1$. S preureditvijo te enakosti dobimo
-\begin{align*}
-bp + pd &= aq + qc, \\
-p(b + d) &= q(a + c), \\
+$(\Leftarrow)$ 
+Vzemimo okrajšane ulomke $\frac{a}{b}$, $\frac{p}{q}$ in $\frac{c}{d}$, ki naj bodo členi nekega Fareyevega zaporedja. Naj zanje velja $\frac{a}{b} <\frac{p}{q} < \frac{c}{d}$ in $bp - aq = qc - pd = 1$. S preureditvijo teh enakosti dobimo
+\begin{align}
+\label{Eq:LastFarSos}
+bp + pd &= aq + qc, \nonumber \\
+p(b + d) &= q(a + c), \nonumber \\
 \frac{p}{q} &= \frac{a+c}{b+d}.
-\end{align*}
-Vidimo, da je $\frac{p}{q}$ medianta ulomkov $\frac{a}{b}$ in $\frac{c}{d},$ od tod pa sledi, da sta $\frac{a}{b}$ in $\frac{p}{q}$ ter $\frac{p}{q}$ in $\frac{c}{d}$ para Fareyevih sosedov.
+\end{align}
+Če v obe enakosti iz predpostavke vstavimo $p=a+c$ in $q=b+d$, dobimo zvezo $b(a+c)-a(b+d)=(b+d)c-(a+c)d=bc-ad=1$. Trdimo, da sta ulomka $\frac{a}{b}$ in $\frac{c}{d}$ Fareyeva soseda v nekem Fareyevem zaporedju. Res, enakost~\ref{Eq:LastFarSos} nam pove, da je ulomek $\frac{p}{q}$ medianta ulomkov $\frac{a}{b}$ in $\frac{c}{d}$, iz definicije mediante pa sledi, da sta ta dva ulomka Fareyeva soseda.
 \end{dokaz}
 
 \begin{lema}
