@@ -433,7 +433,7 @@ Po konstrukciji je trikotnik $ABC$ pravokoten s pravim kotom v oglišču $C$, za
 \end{figure}
 
 \begin{opomba}
-Enačba~\ref{Eq:Pitagora} velja tako v primeru, ko je $b>d$, kot za $b<d$.
+Enačba~\ref{Eq:Pitagora} je neodvisna od realcije med polmeroma Fordovih krogov; velja tako v primeru, ko je $b>d$, kot za $b<d$.
 \end{opomba}
 %
 
@@ -658,7 +658,7 @@ Tokrat naj bosta števili $p$ in $q$ elementa množice Gaussovih celih števil, 
 \begin{align} 
 \frac{p}{q} = \frac{p'+ip''}{q'+iq''} = \frac{(p'+ip'')(q'-iq'')}{(q'+iq'')(q'-iq'')} = \frac{p'q'+p''q''}{q'^2+q''^2} + i \frac{p''q'-p'q''}{q'^2+q''^2},
 \end{align}
-ki pripada kompleksnim številom, ter okrajšajmo posebej realni in imaginarni del. Geometrijsko predstavlja točko v Gaussovi $xy$-ravnini z realno in imaginarno komponento. Gaussovo ravnino postavimo v prostor, določen z osjo $z$, pravokotno na Gaussovo ravnino, in opazujmo podprostor, ki pripada pozitivnim vrednostim na $z$-osi. Analogno Fordovim krogom v ravnini pridemo do naslednjega pojma. 
+ki pripada kompleksnim številom, ter okrajšajmo posebej njegov realni in imaginarni del. Geometrijsko predstavlja točko v Gaussovi $xy$-ravnini z realno in imaginarno komponento. Gaussovo ravnino postavimo v prostor, določen z osjo $z$, pravokotno na Gaussovo ravnino, in opazujmo podprostor, ki pripada pozitivnim vrednostim na $z$-osi. Analogno Fordovim krogom v ravnini pridemo do naslednjega pojma. 
 
 \begin{definicija}
 \emph{Fordova krogla} S($\frac{p}{q}$), kjer je $\frac{p}{q}$ okrajšan ulomek v množici kompleksnih števil, je krogla v zgornjem polprostoru, definiranem kot zgoraj, ki se $xy$-ravnine dotika v točki, določeni s $\frac{p}{q}$, njen polmer pa meri $\frac{1}{2|q|^2}.$
@@ -844,7 +844,7 @@ polmer pa meri
 %
 % p=0 ali q=0
 
-Sliki Fordovih krogov C($\frac{0}{1}$) in C($\frac{1}{0}$) bomo obravnavali posebej. Preslikava $z \mapsto -\frac{1}{z}$ je M\"obiusova transformacija, ki slika premice in krožnice v premice in krožnice, krožnica pa je natanko določena s tremi točkami. Zato v našem primeru zadostuje poznati slike treh točk na Fordovem krogu. Izberimo točke $0$, $i$ in $\frac{1}{2} + \frac{1}{2} i$, ki ležijo na Fordovem krogu C($\frac{0}{1}$). Preslikajo se v točke $-\infty$, $i$ in $-1+i$; te ležijo na premici $x+i$, to je Fordovemu krogu C($\frac{1}{0}$). Zato je slika kroga C($\frac{0}{1}$) Fordov krog C($\frac{1}{0}$). Ker je preslikava bijekcija, se Fordov krog C($\frac{1}{0}$) preslika v C($\frac{0}{1}$).
+Sliki Fordovih krogov C($\frac{0}{1}$) in C($\frac{1}{0}$) bomo obravnavali posebej. Preslikava $z \mapsto -\frac{1}{z}$ je M\"obiusova transformacija, ki slika premice in krožnice v premice in krožnice, krožnica pa je natanko določena s tremi točkami. Zato v našem primeru zadostuje poznati slike treh točk na Fordovem krogu. Izberimo točke $0$, $i$ in $\frac{1}{2} + \frac{1}{2} i$, ki ležijo na Fordovem krogu C($\frac{0}{1}$). Preslikajo se v točke $-\infty$, $i$ in $-1+i$; te ležijo na premici $\{x+i; x \in \mathbb{R} \}$, to je Fordovemu krogu C($\frac{1}{0}$). Zato je slika kroga C($\frac{0}{1}$) Fordov krog C($\frac{1}{0}$). Ker je preslikava bijekcija, se Fordov krog C($\frac{1}{0}$) preslika v C($\frac{0}{1}$).
 
 %
 Dokazali smo, da preslikavi, ki generirata grupo M\"{o}biusovih transformacij, Fordov krog preslikata v Fordov krog. Ker identiteta slika Fordov krog vase in je kompozitum M\"{o}biusovih transformacij dobro definiran, grupa ${SL}_{2}(\mathbb{Z})$ res deluje na množico Fordovih krogov.
@@ -904,7 +904,7 @@ Funkcijo, ki šteje praštevila, manjša od danega števila, označimo s $\pi$. 
 \pi(x) \sim \frac{x}{\log{x}}.
 \end{equation}
 %
-Relativno napako med $\int_{2}^x \frac{dt}{\log{t}}$ in $\pi(x)$ je v sredini 19.~stoletja izračunal Chebyshev, šele nekaj desetletij kasneje pa so Hadamard, von Mangoldt in de~la~Vall\'ee Poussin dokazali izrek o praštevilih in nekaj sorodnih trditev. Zdi se, da nas vse vodijo k Riemannovi domnevi, ob kateri je avtor zapisal, da se mu zdi precej verjetno, da je pravilna, vendar dokaza zanjo ne pozna. Sledila je vrsta neuspešnih dokazov v prid hipotezi, ki vključujejo različna področja matematike, v želji po rešitvi problema pa je nastalo tudi več ekvivalentnih formulacij hipoteze. Čeprav večina matematikov Riemannu pritrjuje, obstajajo študije, ki razlagajo argumente proti njeni pravilnosti.
+Relativno napako med $\int_{2}^x \frac{dt}{\log{t}}$ in $\pi(x)$ je v sredini 19.~stoletja izračunal Čebišev, šele nekaj desetletij kasneje pa so Hadamard, von Mangoldt in de~la~Vall\'ee Poussin dokazali izrek o praštevilih in nekaj sorodnih trditev. Zdi se, da nas vse vodijo k Riemannovi domnevi, ob kateri je avtor zapisal, da se mu zdi precej verjetno, da je pravilna, vendar dokaza zanjo ne pozna. Sledila je vrsta neuspešnih dokazov v prid hipotezi, ki vključujejo različna področja matematike, v želji po rešitvi problema pa je nastalo tudi več ekvivalentnih formulacij hipoteze. Čeprav večina matematikov Riemannu pritrjuje, obstajajo študije, ki razlagajo argumente proti njeni pravilnosti.
 Zgodovina je povzeta po \cite[poglavje 1.1]{zetafunction}.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Praštevila in Riemannova zeta funkcija
@@ -924,7 +924,7 @@ V 1.~polovici 18.~stoletja je Euler definiral realno zeta funkcijo s predpisom
 \zeta &\colon \mathbb{R} \rightarrow \mathbb{R}, \nonumber \\
 \zeta(n) &= \sum_{r=1}^{\infty}\frac{1}{r^n}.
 \end{align}
-Za $n=1$ je enaka harmonični vrsti, ki divergira; za $n>1$ pa dobimo konvergentno vrsto. Zeta funkcija je povezana s praštevili preko formule, ki jo je Euler objavil leta 1737 v knjigi \emph{Variae observationes circa series infinitas}. Zapišimo jo v naslednjem izreku.
+Za $n=1$ je enaka harmonični vrsti, ki divergira, za $n>1$ pa dobimo konvergentno vrsto. Zeta funkcija je povezana s praštevili preko formule, ki jo je Euler objavil leta 1737 v knjigi \emph{Variae observationes circa series infinitas}. Zapišimo jo v naslednjem izreku.
 
 \begin{izrek}[Eulerjeva produktna formula]
 \label{izr:EulProdukt}
@@ -956,12 +956,12 @@ V dokazu smo sledili Eulerju in~\cite{riemannHyp}.
 V 19.~stoletju so začeli računati s kompleksnimi števili, tako je Riemann leta 1859 razširil Eulerjevo definicijo zeta funkcije. Riemannova zeta funkcija množico  $\mathbb{C}\backslash\{1\}$ preslika na množico  $\mathbb{C}$, njen predpis pa podaja definicija~\ref{def:RiemZeta}.
 
 \begin{opomba}
-V izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada spremenljivka $s$. Euler je zvezo namreč formuliral za celoštevilske $s$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, ki ustrezajo $Re(s)>1$.
+V izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada spremenljivka $s$. Euler je zvezo namreč formuliral za celoštevilske $s$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, ki ustrezajo neenakosti $\Re(s)>1$.
 \end{opomba}
 
-Zanimajo nas ničle Riemannove zeta funkcije. Na polravnini $\{Re(s)>1\}$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni, da Riemannova zeta funkcija nima ničel za $Re(s)>1$.
+Zanimajo nas ničle Riemannove zeta funkcije. Na polravnini $\{s; \Re(s)>1\}$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni, da Riemannova zeta funkcija nima ničel za $\Re(s)>1$.
 
-Kako je z ničlami na polravnini $\{Re(s)<0\}$?
+Kako je z ničlami na polravnini $\{s; \Re(s)<0\}$?
 Pomagali si bomo z Bernoullijevimi števili \cite[poglavje 3]{bernoulli}. Naj bo $|z|<2\pi$. \emph{Bernoullijeva\footnote{Jacob~Bernoulli, 27.\ 12.\ 1654--16.\ 8.\ 1705, rojen v družini znamenitih švicarskih matematikov. Med drugim mu pripisujemo odkritje konstante $e$.} števila} $B_{k}$ definiramo preko funkcije
 \begin{equation}
 \label{Eq:Bernoulli}
@@ -973,12 +973,12 @@ Najprej za občutek izračunajmo prvih nekaj Bernoullijevih števil. Funkcijo $G
 G(z) = \left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \cdots \right)^{-1}.
 \end{align*}
 %
-Iščemo polinom\footnote{Polinom ni najbolj korektno poimenovanje, saj nima končne stopnje.} $p(z) = a_{0}+a_{1}z+a_{2}z^2+a_{3}z^3+\cdots$, za katerega bo veljalo
+Iščemo potenčno vrsto $p(z) = a_{0}+a_{1}z+a_{2}z^2+a_{3}z^3+\cdots$, za katerega bo veljalo
 \begin{align*}
 \left(1 + \frac{z}{2!} + \frac{z^2}{3!} + \frac{z^3}{4!} + \cdots \right) p(z) = 1.
 \end{align*}
 %
-Z rekurzivnim računanjem koeficientov pri potencah $z$ dobimo koeficiente polinoma: $a_{0}=1$, $a_{1}=-\frac{1}{2}$, $a_{2}=\frac{1}{12}$, $a_{3}=0$, $a_{4}=-\frac{1}{720}$ itd. Od tod preberemo prvih nekaj Bernoullijevih števil: $B_{0} = 1$, $B_{1} = -\frac{1}{2}$,  $B_{2} = \frac{1}{6}$,  $B_{3} = 0$, $B_{4} = -\frac{1}{30}$.
+Z rekurzivnim računanjem koeficientov pri potencah $z$ dobimo koeficiente polinoma: $a_{0}=1$, $a_{1}=-\frac{1}{2}$, $a_{2}=\frac{1}{12}$, $a_{3}=0$, $a_{4}=-\frac{1}{720}$, \ldots\ Od tod preberemo prvih nekaj Bernoullijevih števil: $B_{0} = 1$, $B_{1} = -\frac{1}{2}$,  $B_{2} = \frac{1}{6}$,  $B_{3} = 0$, $B_{4} = -\frac{1}{30}$.
 Več o njih nam pove naslednja lema.
 
 \begin{lema}
@@ -986,7 +986,7 @@ Naj bo $k \in \mathbb{N}$. Za Bernoullijeva števila velja $B_{2k+1}=0$.
 \end{lema}
 
 \begin{dokaz}
-Spomnimo se funkcije $G$, podane z zvezo~\eqref{Eq:Bernoulli}. Trdimo, da je soda. Oglejmo si novo funkcijo
+Spomnimo se funkcije $G$, definirane v enakosti~\eqref{Eq:Bernoulli}. Oglejmo si novo funkcijo, podano s predpisom $z \mapsto G(z)+\frac{z}{2}$, in jo nekoliko preoblikujmo:
 \begin{align}
 G(z) + \frac{z}{2} = \frac{z}{2} \left( \frac{2}{e^{z}-1}+1 \right) = \frac{z}{2} \frac{e^{z}+1}{e^{z}-1} 
 	= \frac{z}{2} \frac{e^{z/2}+e^{-z/2}}{e^{z/2}-e^{-z/2}} = \frac{z}{2} \coth{\frac{z}{2}}.
@@ -1000,24 +1000,24 @@ Za nas so pomembna tista z lihimi indeksi, saj so povezana z Riemannovo zeta fun
 \begin{equation}
 	\zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}.
 \end{equation}
-Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6, \dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $\{0<Re(s)<1\}$, o ničlah na njem pa govori naslednji izrek. 
+Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6, \dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $\{s; 0<\Re(s)<1\}$, o ničlah na njem pa govori naslednji izrek. 
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.3]{zeta_funkcija.png}
-\caption{Netrivialne ničle Riemannove zeta funkcije ležijo na pasu $\{0<Re(s)<1\}$. Vir slike je~\cite{britannica}.}
+\caption{Netrivialne ničle Riemannove zeta funkcije ležijo na pasu $\{s; 0<\Re(s)<1\}$. Vir slike je~\cite{britannica}.}
 \end{center}
 \end{figure}
 
 \begin{izrek}[Riemannova hipoteza]
-Vse netrivialne ničle Riemannove zeta funkcije ležijo na premici $s=\frac{1}{2}+it$.
+Vse netrivialne ničle Riemannove zeta funkcije ležijo na premici $s=\{\frac{1}{2}+it; t \in \mathbb{R} \}$.
 \end{izrek}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % Ekvivalentne trditve
 \subsection{Ekvivalentne trditve}
 
-Obstaja več ekvivalentnih formulacij Riemannove hipoteze. Dokazali bomo eno izmed njih, ki vključuje Fareyevo zaporedje. Pred tem se spomnimo M\"obiusove funkcije -- srečali smo jo v definiciji~\ref{def:MobFun}. Z njo je povezana naslednja funkcija.
+Obstaja več ekvivalentnih formulacij Riemannove hipoteze. Dokazali bomo eno izmed njih, ki vključuje Fareyevo zaporedje. Pred tem se spomnimo M\"obiusove funkcije $\mu$ -- srečali smo jo v definiciji~\ref{def:MobFun}. Z njo je povezana naslednja funkcija.
 
 \begin{definicija}
 Preslikava $M \colon \mathbb{N} \to \mathbb{N}$, definirana s predpisom
@@ -1044,20 +1044,19 @@ Več podrobnosti o njej si bralec lahko prebere v \cite[poglavje 12.1]{zetafunct
 %
 Oglejmo si le idejo za formulacijo trditve.
 
-Če faktorje v Eulerjevi produktni formuli pomnožimo, dobimo na polravnini $\{Re(s)>1\}$ izražavo $ \frac{1}{\zeta(s)} = \sum_{n=1}^{\infty} \frac{\mu(n)}{n^s} $. 
+Če faktorje v Eulerjevi produktni formuli pomnožimo, dobimo na polravnini $\{s; \Re(s)>1\}$ izražavo $ \frac{1}{\zeta(s)} = \sum_{n=1}^{\infty} \frac{\mu(n)}{n^s} $. 
 Po nekaj korakih pridemo do zveze $ \frac{1}{\zeta(s)} = s \int_{0}^{\infty} M(x) x^{-s-1}dx $. 
 Mertensovo funkcijo tu razumemo kot definirano za vse nenegativne vrednosti: predpišemo $M(0)=0$, funkcija pa je konstantna, razen v naravnih številih $n$, kjer ima skok $\mu(n)$.
-Ker za vse $x$ velja $ |M(x)| \leq x $, je na polravnini $\{Re(s)>1\}$ $ \lim_{x \to \infty} x^{-s}M(x) = 0$ in integral $ \int_{0}^{\infty} M(x) x^{-s-1}dx $ na tej polravnini konvergira.
-Če obstaja tako pozitivno število $a$, da funkcija $M(x)$ raste počasneje od funkcije $x^{a}$, potem zgornji integral konvergira na polravnini $\{Re(a-s)<0\} = \{Re(s)>a\}$.
-To pomeni, da je funkcija $ \frac{1}{\zeta(s)} $ na tej polravnini analitična. 
-Vendar obstajajo ničle funkcije $\zeta(s)$ na premici $s = \frac{1}{2}+it $, torej ima na tej premici funkcija $\frac{1}{\zeta(s)}$ singularnosti.
+Ker za vse $x$ velja $ |M(x)| \leq x $, je na polravnini $\{s; \Re(s)>1\}$ $ \lim_{x \to \infty} x^{-s}M(x) = 0$ in integral $ \int_{0}^{\infty} M(x) x^{-s-1}dx $ na tej polravnini konvergira.
+Če obstaja tako pozitivno število $a$, da funkcija $M$ raste počasneje od funkcije $x \mapsto x^{a}$, potem zgornji integral konvergira na polravnini $\{s; \Re(a-s)<0\} = \{s; \Re(s)>a\}$.
+To pomeni, da je funkcija $s \mapsto \zeta^{-1}(s) $ na tej polravnini analitična. 
+Vendar obstajajo ničle funkcije $\zeta$ na premici $s = \{\frac{1}{2}+it; t \in \mathbb{R} \}$, torej ima na tej premici funkcija $\zeta^{-1}$ singularnosti.
 Od tod sledi, da za poljuben $0<a<\frac{1}{2}$ ne velja $M(x) = o(x^{a})$.
 Naslednja trditev pove, da velja celo več. Še prej pa vpeljimo nov pojem.
 
 % notacija mali o
 \begin{definicija}[Notacija mali o]
-Funkcija $f$ pripada razredu $o(g)$, če absolutna vrednost funkcije $f$ raste počasneje od funkcije $g$, ko gre $x$ proti $\infty$.
-
+Funkcija $x \mapsto f(x)$ pripada razredu $o \left(g(x) \right)$, če absolutna vrednost funkcije $f$ raste počasneje od funkcije $g$, ko gre $x$ proti $\infty$.
 Natančneje, $f(x) = o \left(g(x) \right)$, ko $x \to \infty$, če za vsak $\varepsilon>0$ obstaja vrednost $x_{0}$, da za poljuben $x \geq x_{0}$ velja $|f(x)| < \varepsilon \cdot g(x)$.
 \end{definicija}
 
@@ -1068,14 +1067,14 @@ Za vsak $\varepsilon>0$ velja \( M(n) = o(n^{1/2+\varepsilon}) \) natanko tedaj,
 Pred drugo ekvivalenco Riemannove hipoteze potrebujemo definicijo, ki sledi.
 
 \begin{definicija}
-Naj bosta $L(n)$ dolžina Fareyevega zaporedja reda $n$ in $r_{v}$ njegov v-ti element. Definiramo razliko
+Naj bosta $L(n)$ dolžina Fareyevega zaporedja reda $n$ in $r_{v}$ njegov $v$-ti element. Definiramo razliko
 \begin{equation}
 \delta_{v}= r_{v}-v/L(n).
 \end{equation}
 \end{definicija}
 
 \begin{primer}
-Vzemimo Fareyevo zaporedje reda $4$ in poglejmo nekaj razlik. 
+Vzemimo Fareyevo zaporedje reda $4$ in poglejmo nekaj razlik:
 
 \(F_4 = \left \{\frac{0}{1}, \frac{1}{4}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{1}{1} \right \}, \)
 
@@ -1094,7 +1093,7 @@ Opazimo, da za poljuben $n$ velja $\delta_{L(n)}=0$.
 Za vsak $\varepsilon>0$ velja \( \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) \) natanko tedaj, ko velja Riemannova hipoteza.
 \end{trditev}
 
-Dokaz zgornje trditve izpustimo. (Sklic na vir, kjer bralec lahko najde dokaz, se nahaja v~\cite[References, F1, str.~307]{zetafunction}.) Pač pa bomo v nadaljevanju dokazali povezavo med navedenima ekvivalentnima formulacijama Riemannove hipoteze, ki jo lahko združimo v izrek.
+Dokaz zgornje trditve izpustimo. (Sklic na vir, kjer bralec lahko najde dokaz, se nahaja v~\cite[References, str.~307, F1]{zetafunction}.) Pač pa bomo v nadaljevanju dokazali povezavo med navedenima ekvivalentnima formulacijama Riemannove hipoteze, ki jo lahko združimo v izrek.
 
 \begin{izrek}
 \label{Izr:RH}
@@ -1152,7 +1151,7 @@ M\"obiusova inverzija pa nam da ekvivalenco
 M(n) = \sum_{x=1}^{\infty} \mu(x) D \left( \frac{n}{x} \right) \Longleftrightarrow
 D(n) = \sum_{x=1}^{\infty} M \left( \frac{n}{x} \right).
 \end{align*}
-Naj bosta celi števili $p$ in $q$ tuji ter $0 < p \leq q$, z drugimi besedami, ulomek $\frac{p}{q}$ ustreza nekemu elementu $r_{v}$ Fareyevega zaporedja $F_{n}$.
+Naj bosta celi števili $p$ in $q$ tuji ter $0 < p \leq q \leq n$, z drugimi besedami, ulomek $\frac{p}{q}$ ustreza nekemu elementu $r_{v}$ Fareyevega zaporedja $F_{n}$.
 Primerjali bomo koeficiente pri $f(\frac{p}{q})$ na levi in desni strani enakosti~\eqref{Eq:RiemFar1}.
 Ker je $ f(\frac{p}{q}) = f(\frac{2p}{2q}) = f(\frac{3p}{3q}) = \cdots $, je koeficient pri $f(\frac{p}{q})$ na desni strani enak 
 %
@@ -1189,10 +1188,10 @@ Ker je $L(n) > 1$, je zadnji sumand enak $0$. Sedaj ocenimo absolutno vrednost z
 	= \sum_{v=1}^{L(n)} \left|e^{2\pi i \delta_{v}} - 1 \right|
 	= \sum_{v=1}^{L(n)} \left|e^{\pi i \delta_{v} } \right| \left|e^{\pi i \delta_{v}} - e^{-\pi i \delta_{v}}\right| \\
 	&= 2 \sum_{v=1}^{L(n)} |\sin{(\pi \delta_{v})}| \leq 2 \sum_{v=1}^{L(n)} |\delta_{v}| \pi = 2 \pi \sum_{v=1}^{L(n)} |\delta_{v}| \\
-	&< 2 \pi K(\varepsilon) n^{1/2 + \varepsilon} = K'(\varepsilon) n^{1/2 + \varepsilon}.
+	&< 2 \pi K_{1}(\varepsilon) n^{1/2 + \varepsilon} = K(\varepsilon) n^{1/2 + \varepsilon}.
 \end{align*}
 V zadnji neenakosti smo uporabili predpostavko $ \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) $, kar je ekvivalentno 
-$ \sum_{v=1}^{L(n)}|\delta_{v}| < K(\varepsilon) n^{1/2+\varepsilon}$ za neko konstanto $K$, ki je odvisna od $\varepsilon$.
+$ \sum_{v=1}^{L(n)}|\delta_{v}| < K_{1}(\varepsilon) n^{1/2+\varepsilon}$ za neko konstanto $K_{1}$, ki je odvisna od $\varepsilon$.
 Od tod sledi, da je $M(n) = o(n^{1/2 + \varepsilon})$, kar smo želeli pokazati.
 
 %%%
@@ -1210,7 +1209,7 @@ Naj bo $n \in \mathbb{N} \cup \{0\}.$ \emph{$n$-ti Bernoullijev polinom} $B_{n}$
 \end{definicija}
 
 \begin{primer}
-Zapišimo nekaj Bernoullijevih polinomov najnižjih stopenj. Izračunamo jih tako, da zapišemo polinom $B_{n}(t) = a_{0} + a_{1}t + \cdots + a_{n}t^{n}$ in rekurzivno računamo koeficiente pri potencah $x$ v enakosti~\eqref{Eq:BernPol}.
+Zapišimo nekaj Bernoullijevih polinomov najnižjih stopenj. Izračunamo jih tako, da zapišemo polinom $B_{n}(t) = a_{0} + a_{1}t + \cdots + a_{n}t^{n}$ in rekurzivno računamo koeficiente pri potencah $x$ v enakosti~\eqref{Eq:BernPol}:
 
 \( B_{0}(x) = 1, \)
 
@@ -1284,8 +1283,8 @@ in opazujmo člen s spodnjim celim delom. Ker so členi Fareyevega zaporedja raz
 \[
 \sum_{v=1}^{L(n)} \lfloor u+1-r_v \rfloor = \left\{
 \begin{array}{rl}
-	1 & \textrm{če}\ u = r_{v}\\
-	0 & \textrm{sicer}
+	1 &,\ \textrm{če}\ u = r_{v}\\
+	0 &,\ \textrm{sicer}
 \end{array},
 \right.
 \]
@@ -1349,7 +1348,7 @@ I_{ab} &= \int_{0}^1 \bar{B_{1}}(au) \bar{B_{1}}(bu) du
 	= \frac{1}{a} I_{1b} 
 	= \frac{1}{12ab}.
 \end{align}
-V enakosti~(5) smo upoštevali, da vrednosti $\frac{bk}{a}$ za $k \in \{0,1 \ldots {a-1} \}$ pretečejo vse vrednosti iz množice $\{0, \frac{1}{a} \ldots \frac{a-1}{a}\}$.
+V enakosti~(5) smo upoštevali, da vrednosti $\frac{bk}{a}$ za $k \in \{0,1, \ldots, {a-1} \}$ pretečejo vse vrednosti iz množice $\{0, \frac{1}{a}, \ldots, \frac{a-1}{a}\}$.
 
 Naj bo sedaj $c$ največji skupni delitelj števil $a$ in $b$. Zapišimo $a = c \alpha$ in $b = c \beta$ (seveda sta števili $\alpha$ in $\beta$ tuji). Velja
 \begin{align}
