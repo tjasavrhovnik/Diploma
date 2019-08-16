@@ -80,7 +80,7 @@ Vrnimo se k v uvodu omenjeni nalogi o številu ulomkov različnih vrednosti, man
 % Eulerjeva funkcija
 
 \begin{definicija}
-Preslikava \( \varphi \colon \mathbb{N} \rightarrow \mathbb{N}\), ki za vsako naravno število $n$ prešteje števila, manjša od $n$, ki so $n$ tuja, se imenuje \emph{Eulerjeva funkcija} $\varphi$.
+Preslikava \( \varphi \colon \mathbb{N} \rightarrow \mathbb{N}\), ki za vsako naravno število $n \geq 2$ prešteje števila, manjša od $n$, ki so $n$ tuja, za $n=1$ pa predpišemo $\varphi(1) = 1$, se imenuje \emph{Eulerjeva funkcija} $\varphi$.
 \end{definicija}
 
 \begin{primer}
@@ -302,7 +302,7 @@ Preden se lotimo dokazovanja zgornje trditve, definirajmo naslednjo oznako in dv
 
 % notacija veliki O
 \begin{definicija}[Notacija veliki O]
-Funkcija $f$ pripada razredu $O(g)$, če absolutna vrednost funkcije $f$ ne raste hitreje od funkcije $g$, pomnožene s konstanto, ko gre $x$ proti $\infty$.
+Funkcija $x \mapsto f(x)$ pripada razredu $O \left(g(x) \right)$, če absolutna vrednost funkcije $f$ ne raste hitreje od funkcije $g$, pomnožene s konstanto, ko gre $x$ proti $\infty$.
 Natančneje, $f(x) = O \left(g(x) \right)$, ko $x \to \infty$, če obstajata konstanta $K$ in vrednost $x_{0}$, da za vsak $x \geq x_{0}$ velja $|f(x)| < K \cdot g(x)$.
 \end{definicija}
 
@@ -1037,7 +1037,7 @@ Izračunajmo vrednosti Mertensove funkcije za nekaj naravnih števil:
 \( M(6) = \mu(1) + \mu(2) + \mu(3) + \mu(4) + \mu(5) + \mu(6) = 1 - 1 - 1 + 0 - 1 + 1 = -1. \)
 \end{primer}
 
-Opazimo, da Mertensova funkcija raste počasi, saj se njena vrednost v vsakem naslednjem naravnem številu spremeni kvečjemu za $\pm 1$. Za vsako naravno število $n$ velja $|M(n)| \leq n$.
+Mertensova funkcija ni monotona, njena vrednost pa se v vsakem naslednjem naravnem številu spremeni kvečjemu za $\pm 1$. Za vsako naravno število $n$ velja $|M(n)| \leq n$.
 
 Naslednjo trditev, ki jo bomo navedli brez izpeljave, je leta 1912 dokazal Litllewood\footnote{John Edensor Littlewood, 9.\ 6.\ 1885--6.\ 9.\ 1977, angleški matematik.}. Njeno bistvo je, da Riemannovo hipotezo lahko prevedemo na ekvivalentno trditev, ki opisuje rast Mertensove funkcije. 
 Več podrobnosti o njej si bralec lahko prebere v \cite[poglavje 12.1]{zetafunction}.
@@ -1106,8 +1106,7 @@ Naj bo $\varepsilon > 0$. \( \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilo
 V tem razdelku bomo dokazali glavni izrek~\ref{Izr:RH}, ki Riemannovo hipotezo poveže s Fareyevim zaporedjem. Najprej bomo dokazali lemo, ki bo ključ do dokaza izreka. Še prej pa se spomnimo Eulerjeve produktne formule ter Fourierovih transformacij.
 
 \begin{trditev}[M\"obiusova inverzija]
-\emph{M\"obiusova inverzija} je inverzna Fourierova transformacija Eulerjeve produktne formule \( \zeta(s) \prod_{p} (1-p^{-s}) = 1. \) 
-Izraža se s formulo
+\emph{M\"obiusova inverzija} se izraža s formulo
 \begin{equation}
 g(x) = \sum_{n=1}^{\infty} f(nx) \Longleftrightarrow f(x) = \sum_{n=1}^{\infty} \mu(n) g(nx),
 \end{equation}
