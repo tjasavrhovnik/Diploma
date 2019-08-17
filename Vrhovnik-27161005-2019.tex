@@ -231,7 +231,7 @@ Naj velja \( 0 \leq \frac{a}{b} < \frac{c}{d} \leq 1\). Ulomka $\frac{a}{b}$ in 
 
 \begin{dokaz}
 $(\Rightarrow)$ 
-Denimo, da sta ulomka $\frac{a}{b}$ in $\frac{c}{d}$ Fareyeva soseda v zaporedju $F_{n}$. Trdimo, da velja $bc - ad = 1$. Dokaz bo potekal z indukcijo na red Fareyevega zaporedja, torej na $n$.
+Denimo, da sta ulomka $\frac{a}{b}$ in $\frac{c}{d}$, kjer je $\frac{a}{b} < \frac{c}{d}$, Fareyeva soseda v zaporedju $F_{n}$. Trdimo, da velja $bc - ad = 1$. Dokaz bo potekal z indukcijo na red Fareyevega zaporedja, torej na $n$.
 Za $n=1$ je $F_1 = \{\frac{0}{1}, \frac{1}{1}\}$, $bc - ad = 1\cdot1 - 0\cdot1 = 1$, zato osnovni korak velja.
 Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots , \frac{a}{b}, \frac{c}{d} , \ldots \} \) velja $bc - ad = 1$. Dokažimo, da velja tudi za $F_{n+1}$. Vemo, da nove člene zaporedja višjega reda dobimo z računanjem mediant. Če je $b+d > n+1,$ potem ulomek $\frac{a+c}{b+d} \notin F_{n+1}$ in je \( F_{n+1} = \{\ldots , \frac{a}{b}, \frac{c}{d} , \ldots \} \) ter po indukcijski predpostavki velja $bc - ad = 1$. 
 Če je $b+d < n+1,$ je $\frac{a+c}{b+d}$ že nek člen v zaporedju $F_n$; skupaj s trditvijo~\ref{Trd:MedOcena} pa prispemo v protislovje s predpostavko, da sta ulomka $\frac{a}{b}$ in $\frac{c}{d}$ Fareyeva soseda. Ta primer se zato ne more zgoditi. 
@@ -706,7 +706,7 @@ Sledi, da je $|m-n|=1,$ torej je razlika $m-n \in \{1, -1, i, -i \}.$ Ugotovili 
 \subsection{M\"{o}biusove transformacije na Fordovih krogih}
 
 Zaenkrat smo Fordove kroge obravnavali s pomočjo geometrijskih sredstev. V tem razdelku si bomo z algebro pomagali do nekaterih že znanih rezultatov o Fordovih krogih.
-Geometrijske objekte si bomo predstavljali v kompleksni ravnini, torej bo točka s koordinatama $(x,y)$ opisana s kompleksnim številom $z=x+iy$.
+Geometrijske objekte si bomo predstavljali v kompleksni ravnini, torej bo točka s koordinatama $(x,y)$ opisana s kompleksnim številom $z=x+iy$, pri čemer sta $x, y, \in \mathbb{R}$.
 
 % Mobiusova transformacija
 Najprej se spomnimo naslednjega pojma iz kompleksne analize.
@@ -844,7 +844,7 @@ polmer pa meri
 %
 % p=0 ali q=0
 
-Sliki Fordovih krogov C($\frac{0}{1}$) in C($\frac{1}{0}$) bomo obravnavali posebej. Preslikava $z \mapsto -\frac{1}{z}$ je M\"obiusova transformacija, ki slika premice in krožnice v premice in krožnice, krožnica pa je natanko določena s tremi točkami. Zato v našem primeru zadostuje poznati slike treh točk na Fordovem krogu. Izberimo točke $0$, $i$ in $\frac{1}{2} + \frac{1}{2} i$, ki ležijo na Fordovem krogu C($\frac{0}{1}$). Preslikajo se v točke $-\infty$, $i$ in $-1+i$; te ležijo na premici $\{x+i; x \in \mathbb{R} \}$, to je Fordovemu krogu C($\frac{1}{0}$). Zato je slika kroga C($\frac{0}{1}$) Fordov krog C($\frac{1}{0}$). Ker je preslikava bijekcija, se Fordov krog C($\frac{1}{0}$) preslika v C($\frac{0}{1}$).
+Sliki Fordovih krogov C($\frac{0}{1}$) in C($\frac{1}{0}$) bomo obravnavali posebej. Preslikava $z \mapsto -\frac{1}{z}$ je M\"obiusova transformacija, ki slika premice in krožnice v premice in krožnice, krožnica pa je natanko določena s tremi točkami. Zato v našem primeru zadostuje poznati slike treh točk na Fordovem krogu. Izberimo točke $0$, $i$ in $\frac{1}{2} + \frac{1}{2} i$, ki ležijo na Fordovem krogu C($\frac{0}{1}$). Preslikajo se v točke $-\infty$, $i$ in $-1+i$; te ležijo na premici $\{x+i; x \in \mathbb{R} \}$, to je Fordovem krogu C($\frac{1}{0}$). Zato je slika kroga C($\frac{0}{1}$) Fordov krog C($\frac{1}{0}$). Ker je preslikava bijekcija, se Fordov krog C($\frac{1}{0}$) preslika v C($\frac{0}{1}$).
 
 %
 Dokazali smo, da preslikavi, ki generirata grupo M\"{o}biusovih transformacij, Fordov krog preslikata v Fordov krog. Ker identiteta slika Fordov krog vase in je kompozitum M\"{o}biusovih transformacij dobro definiran, grupa ${SL}_{2}(\mathbb{Z})$ res deluje na množico Fordovih krogov.
