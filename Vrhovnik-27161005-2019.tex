@@ -51,6 +51,7 @@
 
 % matematične operatorje deklarirajte kot take, da jih bo Latex pravilno stavil
 % \DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\re}{Re}
 
 % vstavite svoje definicije ...
 %  \newcommand{}{}
@@ -238,14 +239,24 @@ Po indukcijski predpostavki za zaporedje \( F_n = \{\ldots , \frac{a}{b}, \frac{
 Preostane še možnost $b+d = n+1$. Po lemi~\ref{lema:EltVišReda} je edina možnost za člen med elementoma $\frac{a}{b}$ in $\frac{c}{d}$ njuna medianta $\frac{a+c}{b+d}$, ki pa je tudi edini nov člen v opazovanem delu zaporedja. To je zato oblike \( F_{n+1} = \{\ldots , \frac{a}{b}, \frac{a+c}{b+d}, \frac{c}{d} , \ldots \} \) in $b(a + c) - a(b + d) = ba + bc - ab - ad = bc - ad = 1$, kjer smo v zadnji enakosti uporabili indukcijsko predpostavko. Podobno je $(b + d)c - (a + c)d = bc + dc - ad - cd = bc - ad = 1$. Indukcijski korak je s tem končan. Torej sklep velja za vsa Fareyeva zaporedja.
 
 $(\Leftarrow)$ 
-Vzemimo okrajšane ulomke $\frac{a}{b}$, $\frac{p}{q}$ in $\frac{c}{d}$, ki naj bodo členi nekega Fareyevega zaporedja. Naj zanje velja $\frac{a}{b} <\frac{p}{q} < \frac{c}{d}$ in $bp - aq = qc - pd = 1$. S preureditvijo teh enakosti dobimo
+Naj za okrajšana ulomka $\frac{a}{b}$ in $\frac{c}{d}$ velja $bc-ad=1$. Trdimo, da sta ulomka Fareyeva soseda v nekem Fareyevem zaporedju. 
+Denimo, da to ne drži. Naj v vsakem Fareyevem zaporedju obstaja tak ulomek $\frac{p}{q}$, da velja relacija $\frac{a}{b} <\frac{p}{q} < \frac{c}{d}$, kjer število $q$ ustreza $q \leq \max \{ b,d \}$. (Če v Fareyevem zaporedju $F_{\max \{b,d \}}$ obstaja ulomek, ki leži med ulomkoma $\frac{a}{b}$ in $\frac{c}{d}$, potem ju bo ta ulomek ločil v vsakem Fareyevem zaporedju višjega reda.)
+Izračunajmo razliko med ulomkoma $\frac{c}{d}$ in $\frac{a}{b}$. Velja
 \begin{align}
 \label{Eq:LastFarSos}
-bp + pd &= aq + qc, \nonumber \\
-p(b + d) &= q(a + c), \nonumber \\
-\frac{p}{q} &= \frac{a+c}{b+d}.
+\frac{c}{d} - \frac{a}{b} &= \frac{bc-ad}{bd} = \frac{1}{bd}.
 \end{align}
-Če v obe enakosti iz predpostavke vstavimo $p=a+c$ in $q=b+d$, dobimo zvezo $b(a+c)-a(b+d)=(b+d)c-(a+c)d=bc-ad=1$. Trdimo, da sta ulomka $\frac{a}{b}$ in $\frac{c}{d}$ Fareyeva soseda v nekem Fareyevem zaporedju. Res, enakost~\ref{Eq:LastFarSos} nam pove, da je ulomek $\frac{p}{q}$ medianta ulomkov $\frac{a}{b}$ in $\frac{c}{d}$, iz definicije mediante pa sledi, da sta ta dva ulomka Fareyeva soseda.
+Sedaj si oglejmo dva primera glede na vrednost števila $q$ in ocenimo razliko med ulomkoma $\frac{p}{q}$ in $\frac{a}{b}$ ter $\frac{c}{d}$ in $\frac{p}{q}$.
+
+Če je $q \leq d$, velja 
+$ \frac{p}{q} - \frac{a}{b} = \frac{pb-aq}{qb} \geq \frac{pb-aq}{bd} \geq \frac{1}{bd} $,
+kar je v prostislovju z enakostjo~\ref{Eq:LastFarSos}.
+
+Če je $q \leq b$, ocenimo
+$ \frac{c}{d} - \frac{p}{q} = \frac{cq-pd}{dq} \geq \frac{cq-pd}{bd} \geq \frac{1}{bd} $,
+kar je zopet v protislovju z enakostjo~\ref{Eq:LastFarSos}.
+
+Zato obstaja Fareyevo zaporedje, v katerem noben ulomek ne leži med ulomkoma $\frac{a}{b}$ in $\frac{c}{d}$. Torej sta $\frac{a}{b}$ in $\frac{c}{d}$ res Fareyeva soseda v nekem Fareyevem zaporedju.
 \end{dokaz}
 
 \begin{lema}
@@ -302,8 +313,8 @@ Preden se lotimo dokazovanja zgornje trditve, definirajmo naslednjo oznako in dv
 
 % notacija veliki O
 \begin{definicija}[Notacija veliki O]
-Funkcija $x \mapsto f(x)$ pripada razredu $O \left(g(x) \right)$, če absolutna vrednost funkcije $f$ ne raste hitreje od funkcije $g$, pomnožene s konstanto, ko gre $x$ proti $\infty$.
-Natančneje, $f(x) = O \left(g(x) \right)$, ko $x \to \infty$, če obstajata konstanta $K$ in vrednost $x_{0}$, da za vsak $x \geq x_{0}$ velja $|f(x)| < K \cdot g(x)$.
+Funkcija $f$ pripada razredu $O \left(g(x) \right)$, če absolutna vrednost funkcije $f$ ne raste hitreje od funkcije $g$, pomnožene s konstanto.
+Natančneje, $f(x) = O \left(g(x) \right)$, če obstajata konstanta $K$ in vrednost $x_{0}$, da za vsak $x \geq x_{0}$ velja $|f(x)| < K \cdot g(x)$.
 \end{definicija}
 
 \begin{definicija}
@@ -956,12 +967,12 @@ V dokazu smo sledili Eulerju in~\cite{riemannHyp}.
 V 19.~stoletju so začeli računati s kompleksnimi števili, tako je Riemann leta 1859 razširil Eulerjevo definicijo zeta funkcije. Riemannova zeta funkcija množico  $\mathbb{C}\backslash\{1\}$ preslika na množico  $\mathbb{C}$, njen predpis pa podaja definicija~\ref{def:RiemZeta}.
 
 \begin{opomba}
-V izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada spremenljivka $s$. Euler je zvezo namreč formuliral za celoštevilske $s$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, ki ustrezajo neenakosti $\Re(s)>1$.
+V izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada spremenljivka $s$. Euler je zvezo namreč formuliral za celoštevilske $s$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, ki ustrezajo neenakosti $\re(s)>1$.
 \end{opomba}
 
-Zanimajo nas ničle Riemannove zeta funkcije. Na polravnini $\{s; \Re(s)>1\}$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni, da Riemannova zeta funkcija nima ničel za $\Re(s)>1$.
+Zanimajo nas ničle Riemannove zeta funkcije. Na polravnini $\{s; \re(s)>1\}$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni, da Riemannova zeta funkcija nima ničel za $\re(s)>1$.
 
-Kako je z ničlami na polravnini $\{s; \Re(s)<0\}$?
+Kako je z ničlami na polravnini $\{s; \re(s)<0\}$?
 Pomagali si bomo z Bernoullijevimi števili \cite[poglavje 3]{bernoulli}. Naj bo $|z|<2\pi$. \emph{Bernoullijeva\footnote{Jacob~Bernoulli, 27.\ 12.\ 1654--16.\ 8.\ 1705, rojen v družini znamenitih švicarskih matematikov. Med drugim mu pripisujemo odkritje konstante $e$.} števila} $B_{k}$ definiramo preko funkcije
 \begin{equation}
 \label{Eq:Bernoulli}
@@ -1000,12 +1011,12 @@ Za nas so pomembna tista z lihimi indeksi, saj so povezana z Riemannovo zeta fun
 \begin{equation}
 	\zeta(-n) = (-1)^n \frac{B_{n+1}}{n+1}.
 \end{equation}
-Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6, \dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $\{s; 0<\Re(s)<1\}$, o ničlah na njem pa govori naslednji izrek. 
+Ker so za sode $n$ vrednosti $B_{n+1}=0$, je $\zeta(s)=0$ za $s\in\{-2,-4,-6, \dots\}$. To pa so tudi edine ničle na opazovani polravnini. Imenujemo jih \emph{trivialne ničle} Riemannove zeta funkcije. Ostal je še pas $\{s; 0<\re(s)<1\}$, o ničlah na njem pa govori naslednji izrek. 
 
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.3]{zeta_funkcija.png}
-\caption{Netrivialne ničle Riemannove zeta funkcije ležijo na pasu $\{s; 0<\Re(s)<1\}$. Vir slike je~\cite{britannica}.}
+\caption{Netrivialne ničle Riemannove zeta funkcije ležijo na pasu $\{s; 0<\re(s)<1\}$. Vir slike je~\cite{britannica}.}
 \end{center}
 \end{figure}
 
@@ -1044,11 +1055,11 @@ Več podrobnosti o njej si bralec lahko prebere v \cite[poglavje 12.1]{zetafunct
 %
 Oglejmo si le idejo za formulacijo trditve.
 
-Če faktorje v Eulerjevi produktni formuli pomnožimo, dobimo na polravnini $\{s; \Re(s)>1\}$ izražavo $ \frac{1}{\zeta(s)} = \sum_{n=1}^{\infty} \frac{\mu(n)}{n^s} $. 
+Če faktorje v Eulerjevi produktni formuli pomnožimo, dobimo na polravnini $\{s; \re(s)>1\}$ izražavo $ \frac{1}{\zeta(s)} = \sum_{n=1}^{\infty} \frac{\mu(n)}{n^s} $. 
 Po nekaj korakih pridemo do zveze $ \frac{1}{\zeta(s)} = s \int_{0}^{\infty} M(x) x^{-s-1}dx $. 
 Mertensovo funkcijo tu razumemo kot definirano za vse nenegativne vrednosti: predpišemo $M(0)=0$, funkcija pa je konstantna, razen v naravnih številih $n$, kjer ima skok $\mu(n)$.
-Ker za vse $x$ velja $ |M(x)| \leq x $, je na polravnini $\{s; \Re(s)>1\}$ $ \lim_{x \to \infty} x^{-s}M(x) = 0$ in integral $ \int_{0}^{\infty} M(x) x^{-s-1}dx $ na tej polravnini konvergira.
-Če obstaja tako pozitivno število $a$, da funkcija $M$ raste počasneje od funkcije $x \mapsto x^{a}$, potem zgornji integral konvergira na polravnini $\{s; \Re(a-s)<0\} = \{s; \Re(s)>a\}$.
+Ker za vse $x$ velja $ |M(x)| \leq x $, je na polravnini $\{s; \re(s)>1\}$ $ \lim_{x \to \infty} x^{-s}M(x) = 0$ in integral $ \int_{0}^{\infty} M(x) x^{-s-1}dx $ na tej polravnini konvergira.
+Če obstaja tako pozitivno število $a$, da funkcija $M$ raste počasneje od funkcije $x \mapsto x^{a}$, potem zgornji integral konvergira na polravnini $\{s; \re(a-s)<0\} = \{s; \re(s)>a\}$.
 To pomeni, da je funkcija $s \mapsto \zeta^{-1}(s) $ na tej polravnini analitična. 
 Vendar obstajajo ničle funkcije $\zeta$ na premici $s = \{\frac{1}{2}+it; t \in \mathbb{R} \}$, torej ima na tej premici funkcija $\zeta^{-1}$ singularnosti.
 Od tod sledi, da za poljuben $0<a<\frac{1}{2}$ ne velja $M(x) = o(x^{a})$.
@@ -1056,8 +1067,8 @@ Naslednja trditev pove, da velja celo več. Še prej pa vpeljimo nov pojem.
 
 % notacija mali o
 \begin{definicija}[Notacija mali o]
-Funkcija $x \mapsto f(x)$ pripada razredu $o \left(g(x) \right)$, če absolutna vrednost funkcije $f$ raste počasneje od funkcije $g$, ko gre $x$ proti $\infty$.
-Natančneje, $f(x) = o \left(g(x) \right)$, ko $x \to \infty$, če za vsak $\varepsilon>0$ obstaja vrednost $x_{0}$, da za poljuben $x \geq x_{0}$ velja $|f(x)| < \varepsilon \cdot g(x)$.
+Funkcija $f$ pripada razredu $o \left(g(x) \right)$, če absolutna vrednost funkcije $f$ raste počasneje od funkcije $g$.
+Natančneje, $f(x) = o \left(g(x) \right)$, če za vsak $\varepsilon>0$ obstaja vrednost $x_{0}$, da za poljuben $x \geq x_{0}$ velja $|f(x)| < \varepsilon \cdot g(x)$.
 \end{definicija}
 
 \begin{trditev}
@@ -1093,7 +1104,7 @@ Opazimo, da za poljuben $n$ velja $\delta_{L(n)}=0$.
 Za vsak $\varepsilon>0$ velja \( \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilon}) \) natanko tedaj, ko velja Riemannova hipoteza.
 \end{trditev}
 
-Dokaz zgornje trditve izpustimo. (Sklic na vir, kjer bralec lahko najde dokaz, se nahaja v~\cite[References, str.~307, F1]{zetafunction}.) Pač pa bomo v nadaljevanju dokazali povezavo med navedenima ekvivalentnima formulacijama Riemannove hipoteze, ki jo lahko združimo v izrek.
+Dokaz zgornje trditve izpustimo. V obliki, kot sta ga dokazala Franel in Landau leta 1924, se nahaja v viru~\cite{franel-landau}. Pač pa bomo v nadaljevanju dokazali povezavo med navedenima ekvivalentnima formulacijama Riemannove hipoteze, ki jo lahko združimo v izrek.
 
 \begin{izrek}
 \label{Izr:RH}
@@ -1106,11 +1117,10 @@ Naj bo $\varepsilon > 0$. \( \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilo
 V tem razdelku bomo dokazali glavni izrek~\ref{Izr:RH}, ki Riemannovo hipotezo poveže s Fareyevim zaporedjem. Najprej bomo dokazali lemo, ki bo ključ do dokaza izreka. Še prej pa se spomnimo Eulerjeve produktne formule ter Fourierovih transformacij.
 
 \begin{trditev}[M\"obiusova inverzija]
-\emph{M\"obiusova inverzija} se izraža s formulo
+Naj bosta vrsti $\sum_{n=1}^{\infty} f(nx)$ in $\sum_{n=1}^{\infty} g(nx)$ absolutno konvergentni. Tedaj velja
 \begin{equation}
 g(x) = \sum_{n=1}^{\infty} f(nx) \Longleftrightarrow f(x) = \sum_{n=1}^{\infty} \mu(n) g(nx),
 \end{equation}
-pri čemer sta vrsti $\sum_{n=1}^{\infty} f(nx)$ in $\sum_{n=1}^{\infty} g(nx)$ absolutno konvergentni.
 Formulo lahko zapišemo v ekvivalentni obliki
 \begin{equation}
 \label{Eq:MobInv}
@@ -1419,7 +1429,9 @@ kar dokazuje obratno implikacijo.
 
 \bibitem{zetafunction} H.~M.~Edwards, \emph{Riemann's zeta function}, Academic Press, Inc., New York, 1974.
 
-\bibitem{ford} L.~R.~Ford, \emph{Fractions}, v: The American Mathematical Monthly (ur.\ E.~J.~Moulton), \textbf{45}, Mathematical Association of America, 1938, str.\ 586--601; dostopno tudi na \url{https://www.maths.ed.ac.uk/~v1ranick/papers/ford.pdf}.
+\bibitem{ford} L.~R.~Ford, \emph{Fractions}, The American Mathematical Monthly, \textbf{45}, 1938, str.\ 586--601; dostopno tudi na \url{https://www.maths.ed.ac.uk/~v1ranick/papers/ford.pdf}.
+
+\bibitem{franel-landau} J.~Franel in E.~Landau, \emph{Les suites de Farey et le probl\`eme des nombres premiers}, G\"ottinger Nachr., 1924, str.\ 198--206.
 
 \bibitem{motifofmath} S.~B.~Guthery, \emph{A motif of mathematics}, Docent Press, Boston, 2011; dostopno tudi na \url{https://www.maths.ed.ac.uk/~v1ranick/papers/farey.pdf}.
 
