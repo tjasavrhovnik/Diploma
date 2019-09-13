@@ -319,7 +319,7 @@ Natančneje, $f(x) = O \left(g(x) \right)$, če obstajata konstanta $K$ in vredn
 
 \begin{definicija}
 \label{def:MobFun}
-Preslikava \( \mu\colon \mathbb{N} \to \mathbb{N} \), definirana s predpisom
+Preslikava \( \mu\colon \mathbb{N} \to \{-1,0,1\} \), definirana s predpisom
 \begin{equation}
 \mu(n) = \left\{
 \begin{array}{rl}
@@ -370,29 +370,40 @@ kjer so $p$, $p'$ praštevilski delitelji števila $n$.  Z upoštevanjem M\"obiu
 Sedaj računajmo vsoto 
 %
 \begin{align}
-\label{Eq:DolZap}
+\label{Eq:DolZap1}
 \sum_{i=1}^n \varphi(i)
   &= \sum_{i=1}^n i \sum_{d|i} \frac{\mu(d)}{d} = \sum_{dd'\leq n}d' \mu(d) = 
     \sum_{d=1}^n \mu(d) \sum_{d'=1}^{\left \lfloor \frac{n}{d} \right \rfloor} d' \nonumber \\
   &= \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\left \lfloor \frac{n}{d} \right \rfloor ^2 + \left \lfloor \frac{n}{d} \right \rfloor \right) =
     \frac{1}{2} \sum_{d=1}^{n} \mu(d) \left (\frac{n^2}{d^2} + O \left (\frac{n}{d} \right) \right) \nonumber \\
-  &= \frac{1}{2}n^2 \sum_{d=1}^{n} \frac{\mu(d)}{d^2} + O \left (n \sum_{d=1}^{n} \frac{1}{d} \right ) \nonumber \\
-  &\stackrel{(1)}{=} \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} - \frac{1}{2}n^2 \sum_{d=n+1}^{\infty} \frac{\mu(d)}{d^2} + O(n \ln{n}) \nonumber \\
-  &= \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} + O \left (n^2\sum_{d=n+1}^{\infty} \frac{1}{d^2} \right ) + O(n \ln{n}) \nonumber \\
-  & \stackrel{(2)}{=} \frac{n^2}{2 \zeta(2)} + O(n) + O(n \ln{n}) \stackrel{(3)}{=} \frac{3n^2}{\pi^2} + O(n \ln{n}).
+  &= \frac{1}{2}n^2 \sum_{d=1}^{n} \frac{\mu(d)}{d^2} + O \left (n \sum_{d=1}^{n} \frac{1}{d} \right ).
 \end{align}
 %
-V enakosti~(1) smo zadnji sumand ocenili navzgor s pomočjo Taylorjevega razvoja funkcije $\ln$ kot
+Zadnji sumand ocenimo navzgor s pomočjo Taylorjevega razvoja funkcije $\ln$ kot
 \[ \ln{(1+x)} = \sum_{n=1}^{\infty} (-1)^{n+1} \frac{x^n}{n}.\]
+Izraz~\eqref{Eq:DolZap1} se glasi
+\begin{align}
+\label{Eq:DolZap2}
+\sum_{i=1}^n \varphi(i)
+  &= \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} - \frac{1}{2}n^2 \sum_{d=n+1}^{\infty} \frac{\mu(d)}{d^2} + O(n \ln{n}) \nonumber \\
+  &= \frac{1}{2}n^2 \sum_{d=1}^{\infty} \frac{\mu(d)}{d^2} + O \left (n^2\sum_{d=n+1}^{\infty} \frac{1}{d^2} \right ) + O(n \ln{n}).
+\end{align}
 %
-V enakosti~(2) smo uporabili naslednjo oceno:
+Ocenimo drugi sumand:
 \[ n^2 \sum_{d=n+1}^{\infty} \frac{1}{d^2} \leq n^2 \sum_{d=n+1}^{\infty} \frac{1}{d(d-1)} = 
 n^2 \sum_{d=n+1}^{\infty} \left (- \frac{1}{d} + \frac{1}{d-1} \right ) = n^2 \frac{1}{n} = n.\]
 %
-V enakosti~(3) smo za izračun funkcije $\zeta(2)$ uporabili znano vrednost
+Ker velja tudi $f(n)=n=O(n \ln{n})$, zadostuje le ocena navzgor.
+Izraz~\eqref{Eq:DolZap2} dobi obliko
+\begin{align}
+\label{Eq:DolZap3}
+\sum_{i=1}^n \varphi(i)
+  &= \frac{n^2}{2 \zeta(2)} + O(n) + O(n \ln{n}) = \frac{3n^2}{\pi^2} + O(n \ln{n}),
+\end{align}
+pri čemer smo v zadnji enakosti za izračun funkcije $\zeta(2)$ uporabili znano vrednost
 \[ \zeta(2) = \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}.\]
 %
-Po opombi~\ref{op:AsimptotDolzina} iz izraza~\eqref{Eq:DolZap} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
+Po opombi~\ref{op:AsimptotDolzina} iz izraza~\eqref{Eq:DolZap3} sledi, da je \(|F_n| = \frac{3n^2}{\pi^2} + O(n \ln{n}) \sim\frac{3n^2}{\pi^2}. \)
  %
 \end{dokaz}
 
@@ -401,7 +412,7 @@ Po opombi~\ref{op:AsimptotDolzina} iz izraza~\eqref{Eq:DolZap} sledi, da je \(|F
 \section{Fordovi krogi}
 
 V tem poglavju bomo obravnavali Fordove kroge, ki so tesno povezani s Fareyevim zaporedjem. Večino lastnosti bomo dokazali z uporabo elementarnih geometrijskih sredstev in v analognih trditvah tistim iz prejšnjega poglavja prepoznali geometrijski pomen. Na kratko si bomo ogledali posplošitve Fordovih krogov ter Fordove krogle -- Fordove kroge v treh dimenzijah. V zadnjem razdelku bomo Fordove kroge predstavili v kompleksni ravnini in z algebraičnim znanjem na drugačen način dokazali eno od lastnosti.
-Ideje poglavja so povzete po \cite[poglavje 4]{fareyproject} in\cite{ford}.
+Ideje poglavja so povzete po \cite[poglavje 4]{fareyproject} in \cite{ford}.
 
 \begin{definicija}
 Naj bosta $p$ in $q$ tuji si števili v množici celih števil.
@@ -964,10 +975,10 @@ kar smo želeli pokazati.
 V dokazu smo sledili Eulerju in~\cite{riemannHyp}.
 
 % Riemannova zeta funkcija
-V 19.~stoletju so začeli računati s kompleksnimi števili, tako je Riemann leta 1859 razširil Eulerjevo definicijo zeta funkcije. Riemannova zeta funkcija množico  $\mathbb{C}\backslash\{1\}$ preslika na množico  $\mathbb{C}$, njen predpis pa podaja definicija~\ref{def:RiemZeta}.
+V 19.~stoletju so začeli računati s kompleksnimi števili, tako je Riemann leta 1859 razširil Eulerjevo definicijo zeta funkcije. Riemannova zeta funkcija množico  $\mathbb{C}\backslash\{1\}$ preslika na množico  $\mathbb{C}$ (je surjektivna), njen predpis pa podaja definicija~\ref{def:RiemZeta}.
 
 \begin{opomba}
-V izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada spremenljivka $s$. Euler je zvezo namreč formuliral za celoštevilske $s$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, ki ustrezajo neenakosti $\re(s)>1$.
+V izreku~\ref{izr:EulProdukt} nismo povedali, kateri množici pripada spremenljivka $s$. Euler je zvezo namreč formuliral za celoštevilske $s > 1$, Riemann pa je z razširitvijo funkcije zeta dokazal, da enakost velja za vse $s$, ki ustrezajo neenakosti $\re(s)>1$.
 \end{opomba}
 
 Zanimajo nas ničle Riemannove zeta funkcije. Na polravnini $\{s; \re(s)>1\}$ se funkcija ujema s $\prod_{p}\frac{1}{1-p^{-s}}$. Ker so vsi faktorji $\frac{1}{1-p^{-s}} \neq 0$ in je $\lim_{p\to\infty} \frac{1}{1-p^{-s}} = 1$, je na tej polravnini $\prod_{p}\frac{1}{1-p^{-s}} \neq 0$. To pomeni, da Riemannova zeta funkcija nima ničel za $\re(s)>1$.
@@ -1031,11 +1042,10 @@ Vse netrivialne ničle Riemannove zeta funkcije ležijo na premici $s=\{\frac{1}
 Obstaja več ekvivalentnih formulacij Riemannove hipoteze. Dokazali bomo eno izmed njih, ki vključuje Fareyevo zaporedje. Pred tem se spomnimo M\"obiusove funkcije $\mu$ -- srečali smo jo v definiciji~\ref{def:MobFun}. Z njo je povezana naslednja funkcija.
 
 \begin{definicija}
-Preslikava $M \colon \mathbb{N} \to \mathbb{N}$, definirana s predpisom
+Naj bo $n \in \mathbb{N}$. \emph{Mertensova\footnote{Franz Mertens, 20.\ 3.\ 1840--5.\ 3.\ 1927, poljski matematik.} funkcija} je definirana s predpisom
 \begin{equation}
-M(n)=\sum_{k\leq n}\mu(k),
+M(n)=\sum_{k\leq n}\mu(k).
 \end{equation}
-se imenuje \emph{Mertensova\footnote{Franz Mertens, 20.\ 3.\ 1840--5.\ 3.\ 1927, poljski matematik.} funkcija}.
 \end{definicija}
 
 \begin{primer}
@@ -1050,7 +1060,7 @@ Izračunajmo vrednosti Mertensove funkcije za nekaj naravnih števil:
 
 Mertensova funkcija ni monotona, njena vrednost pa se v vsakem naslednjem naravnem številu spremeni kvečjemu za $\pm 1$. Za vsako naravno število $n$ velja $|M(n)| \leq n$.
 
-Naslednjo trditev, ki jo bomo navedli brez izpeljave, je leta 1912 dokazal Litllewood\footnote{John Edensor Littlewood, 9.\ 6.\ 1885--6.\ 9.\ 1977, angleški matematik.}. Njeno bistvo je, da Riemannovo hipotezo lahko prevedemo na ekvivalentno trditev, ki opisuje rast Mertensove funkcije. 
+Naslednjo trditev, ki jo bomo navedli brez izpeljave, je leta 1912 dokazal Littlewood\footnote{John Edensor Littlewood, 9.\ 6.\ 1885--6.\ 9.\ 1977, angleški matematik.}. Njeno bistvo je, da Riemannovo hipotezo lahko prevedemo na ekvivalentno trditev, ki opisuje rast Mertensove funkcije. 
 Več podrobnosti o njej si bralec lahko prebere v \cite[poglavje 12.1]{zetafunction}.
 %
 Oglejmo si le idejo za formulacijo trditve.
@@ -1114,7 +1124,7 @@ Naj bo $\varepsilon > 0$. \( \sum_{v=1}^{L(n)}|\delta_{v}| = o(n^{1/2+\varepsilo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fareyevo zaporedje in RH
 \subsection{Fareyevo zaporedje in Riemannova hipoteza}
 
-V tem razdelku bomo dokazali glavni izrek~\ref{Izr:RH}, ki Riemannovo hipotezo poveže s Fareyevim zaporedjem. Najprej bomo dokazali lemo, ki bo ključ do dokaza izreka. Še prej pa se spomnimo Eulerjeve produktne formule ter Fourierovih transformacij.
+V tem razdelku bomo dokazali glavni izrek~\ref{Izr:RH}, ki Riemannovo hipotezo poveže s Fareyevim zaporedjem. Najprej bomo dokazali lemo, ki bo ključ do dokaza izreka.
 
 \begin{trditev}[M\"obiusova inverzija]
 Naj bosta vrsti $\sum_{n=1}^{\infty} f(nx)$ in $\sum_{n=1}^{\infty} g(nx)$ absolutno konvergentni. Tedaj velja
@@ -1313,16 +1323,16 @@ L(n)r_{v-1}-v+\frac{1}{2} &= L(n) \delta_{v-1} - \frac{1}{2}.
 Sedaj lahko izračunamo integral 
 \begin{align}
 \label{Eq:I1}
-I &\stackrel{(1)}{=} \sum_{v=1}^{L(n)} \int_{r_{v-1}}^{r_{v}} \left( L(n)u-v-\frac{1}{2}+1 \right)^2 du \nonumber \\
+I &= \sum_{v=1}^{L(n)} \int_{r_{v-1}}^{r_{v}} \left( L(n)u-v-\frac{1}{2}+1 \right)^2 du \nonumber \\
   &= \sum_{v=1}^{L(n)} \frac{(L(n)u-v+\frac{1}{2})^3}{3L(n)} \bigg \arrowvert_{r_{v-1}}^{r_{v}} \nonumber \\
   &= \frac{1}{3L(n)} \sum_{v=1}^{L(n)} \left( \left(L(n) \delta_{v} + \frac{1}{2} \right)^3 - \left(L(n) \delta_{v-1} - \frac{1}{2} \right)^3 \right) \nonumber \\
-  &\stackrel{(2)}{=} \frac{1}{3L(n)} \sum_{v=1}^{L(n)} \left( \left(L(n) \delta_{v} + \frac{1}{2} \right)^3 - \left(L(n) \delta_{v} - \frac{1}{2} \right)^3 \right) \nonumber \\
+  &= \frac{1}{3L(n)} \sum_{v=1}^{L(n)} \left( \left(L(n) \delta_{v} + \frac{1}{2} \right)^3 - \left(L(n) \delta_{v} - \frac{1}{2} \right)^3 \right) \nonumber \\
   &= \frac{1}{3L(n)} \sum_{v=1}^{L(n)} \left(3 \left(L(n) \delta_{v} \right)^2 + \frac{1}{4} \right) \nonumber \\
   &= L(n) \sum_{v=1}^{L(n)} \delta_{v}^2 + \frac{1}{12L(n)} L(n) \nonumber \\
   &= L(n) \sum_{v=1}^{L(n)} \delta_{v}^2 + \frac{1}{12}.
 \end{align}
-Zaradi privzetka, da je $r_{0}=0$ in $r_{L(n)}=1$, enakost~(1) res drži.
-V enakosti~(2) smo upoštevali, da je $\delta_{L(n)}=0$ in $L(n) \delta_{0}-\frac{1}{2} = L(n) \delta_{L(n)}-\frac{1}{2}.$
+Zaradi privzetka, da je $r_{0}=0$ in $r_{L(n)}=1$, prva enakost res drži.
+V četrti enakosti smo upoštevali, da je $\delta_{L(n)}=0$ in $L(n) \delta_{0}-\frac{1}{2} = L(n) \delta_{L(n)}-\frac{1}{2}.$
 
 % 2. primer
 \underline{2.~primer:} $G(u) = \sum_{k=1}^{\infty} \bar{B_{1}}(ku) M \left(\frac{n}{k} \right)$.
@@ -1339,36 +1349,35 @@ in označimo $I_{ab} = \int_{0}^1 \bar{B_{1}}(au) \bar{B_{1}}(bu) du.$ Vrednost 
 Naj bo $b=1$. Tedaj je
 \begin{align}
 I_{a1} &= \int_{0}^1 \bar{B_{1}}(au) \bar{B_{1}}(u) du
-	\stackrel{(1)}{=} \frac{1}{a} \int_{0}^a \bar{B_{1}}(v) \bar{B_{1}} \left(\frac{v}{a} \right) dv \nonumber \\
-	&\stackrel{(2)}{=} \frac{1}{a} \sum_{k=0}^{a-1} \int_{0}^1 \bar{B_{1}}(k+t) \bar{B_{1}} \left(\frac{k}{a}+\frac{t}{a} \right) dt \nonumber \\
-	&\stackrel{(3)}{=} \frac{1}{a} \int_{0}^1 \bar{B_{1}}(t) \bar{B_{1}} \left(a\frac{t}{a} \right) dt
-	\stackrel{(4)}{=} \frac{1}{a} \int_{0}^1 \left( t-\frac{1}{2} \right)^2 dt \nonumber \\
+	= \frac{1}{a} \int_{0}^a \bar{B_{1}}(v) \bar{B_{1}} \left(\frac{v}{a} \right) dv \nonumber \\
+	&= \frac{1}{a} \sum_{k=0}^{a-1} \int_{0}^1 \bar{B_{1}}(k+t) \bar{B_{1}} \left(\frac{k}{a}+\frac{t}{a} \right) dt \nonumber \\
+	&= \frac{1}{a} \int_{0}^1 \bar{B_{1}}(t) \bar{B_{1}} \left(a\frac{t}{a} \right) dt
+	= \frac{1}{a} \int_{0}^1 \left( t-\frac{1}{2} \right)^2 dt \nonumber \\
 	&= \frac{1}{3a} \left( t-\frac{1}{2} \right)^3 \bigg \arrowvert_{0}^{1}
 	= \frac{1}{12a}.
 \end{align}
-V enakostih~(1) in (2) smo zaporedoma uvedli novi spremenljivki $v=au$ in $v=k+t$. V enakosti~(3) smo upoštevali periodičnost funkcije $\bar{B_{1}}$ in zvezo \eqref{Eq:bar{B_{1}}(ku)}. V enakosti~(4) smo uporabili dejstvo, da na intervalu $[0,1]$ velja $\bar{B_{1}}(t) = t-\frac{1}{2}$.
+V integrala smo zaporedoma uvedli novi spremenljivki $v=au$ in $v=k+t$. Nato smo upoštevali periodičnost funkcije $\bar{B_{1}}$ in zvezo \eqref{Eq:bar{B_{1}}(ku)}, ter uporabili dejstvo, da na intervalu $[0,1]$ velja $\bar{B_{1}}(t) = t-\frac{1}{2}$.
 
 Oglejmo si primer, ko sta $a$ in $b$ tuji si števili. Računamo
 \begin{align}
 I_{ab} &= \int_{0}^1 \bar{B_{1}}(au) \bar{B_{1}}(bu) du
 	= \frac{1}{a} \int_{0}^a \bar{B_{1}}(v) \bar{B_{1}} \left(\frac{bv}{a} \right) dv \nonumber \\
 	&= \frac{1}{a} \sum_{k=0}^{a-1} \int_{0}^1 \bar{B_{1}}(k+t) \bar{B_{1}} \left(\frac{bk}{a}+\frac{bt}{a} \right) dt \nonumber \\
-	&\stackrel{(5)}{=} \frac{1}{a} \int_{0}^1 \bar{B_{1}}(t) \bar{B_{1}} \left(a\frac{bt}{a} \right) dt
+	&= \frac{1}{a} \int_{0}^1 \bar{B_{1}}(t) \bar{B_{1}} \left(a\frac{bt}{a} \right) dt
 	= \frac{1}{a} I_{1b} 
 	= \frac{1}{12ab}.
 \end{align}
-V enakosti~(5) smo upoštevali, da vrednosti $\frac{bk}{a}$ za $k \in \{0,1, \ldots, {a-1} \}$ pretečejo vse vrednosti iz množice $\{0, \frac{1}{a}, \ldots, \frac{a-1}{a}\}$.
+V zadnji vrstici smo upoštevali, da vrednosti $\frac{bk}{a}$ za $k \in \{0,1, \ldots, {a-1} \}$ pretečejo vse vrednosti iz množice $\{0, \frac{1}{a}, \ldots, \frac{a-1}{a}\}$.
 
 Naj bo sedaj $c$ največji skupni delitelj števil $a$ in $b$. Zapišimo $a = c \alpha$ in $b = c \beta$ (seveda sta števili $\alpha$ in $\beta$ tuji). Velja
 \begin{align}
 I_{ab} &= \int_{0}^1 \bar{B_{1}}(c \alpha u) \bar{B_{1}}(c \beta u) du
-	\stackrel{(6)}{=} \frac{1}{c} \int_{0}^c \bar{B_{1}}(\alpha t) \bar{B_{1}}(\beta t) dt \nonumber \\
-	&\stackrel{(7)}{=} I_{\alpha \beta}
+	= \frac{1}{c} \int_{0}^c \bar{B_{1}}(\alpha t) \bar{B_{1}}(\beta t) dt \nonumber \\
+	&= I_{\alpha \beta}
 	= \frac{1}{12 \alpha \beta}
 	= \frac{c^2}{12ab}.
 \end{align}
-V enakosti~(6) smo uvedli novo spremenljivko $t=cu$.
-Enakost~(7) sledi iz računa
+V prvem integralu smo uvedli novo spremenljivko $t=cu$, nato pa upoštevali račun
 \begin{align*}
 \int_{k}^{k+1} \bar{B_{1}}(\alpha t) \bar{B_{1}}(\beta t) dt &= \int_{0}^{1} \bar{B_{1}}(\alpha s + \alpha k) \bar{B_{1}}(\beta s + \beta k) ds \\
  	&= \int_{0}^{1} \bar{B_{1}}(\alpha s) \bar{B_{1}}(\beta s) ds = I_{\alpha \beta}.
@@ -1387,10 +1396,10 @@ Naj bo $\varepsilon>0$. Predpostavljamo, da je $M(n) = o(n^{1/2+\varepsilon})$, 
 |I| &< \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} C(\varepsilon)^2 \left( \frac{n}{a} \right)^{1/2+\varepsilon} \left( \frac{n}{b} \right)^{1/2+\varepsilon} \frac{c^2}{12ab} \nonumber \\
   &= n^{1+2\varepsilon} \frac{C(\varepsilon)^2}{12} \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} \frac{c^2}{a^{3/2+\varepsilon} b^{3/2+\varepsilon}} \nonumber \\
   &= n^{1+2\varepsilon} \frac{C(\varepsilon)^2}{12} \sum_{a=1}^{\infty} \sum_{b=1}^{\infty} \frac{c^2}{\alpha^{3/2+\varepsilon} \beta^{3/2+\varepsilon} c^{3+2\varepsilon}} \nonumber \\
-  &\stackrel{(8)}{<} n^{1+2\varepsilon} K_{1}(\varepsilon) \sum_{\alpha=1}^{\infty} \sum_{\beta=1}^{\infty} \sum_{c=1}^{\infty} \frac{1}{\alpha^{3/2} \beta^{3/2} c^{1+2\varepsilon}} \nonumber \\
+  &< n^{1+2\varepsilon} K_{1}(\varepsilon) \sum_{\alpha=1}^{\infty} \sum_{\beta=1}^{\infty} \sum_{c=1}^{\infty} \frac{1}{\alpha^{3/2} \beta^{3/2} c^{1+2\varepsilon}} \nonumber \\
   &= K_{2}(\varepsilon) n^{1+2\varepsilon}.
 \end{align}
-V neenakosti~(8) smo vsoto po tujih si številih $\alpha$ in $\beta$ zamenjali z vsoto po vseh naravnih številih $\alpha$ in $\beta$.
+V zadnji neenakosti smo vsoto po tujih si številih $\alpha$ in $\beta$ zamenjali z vsoto po vseh naravnih številih $\alpha$ in $\beta$.
 
 Sedaj se vrnimo k enakosti~\eqref{Eq:I1}, upoštevajmo, da je $|I| = I$, kar implicira
 \[ I = L(n) \sum_{v=1}^{L(n)} \delta_{v}^2 + \frac{1}{12} < K_{2}(\varepsilon) n^{1+2\varepsilon}, \]
